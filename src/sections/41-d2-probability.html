@@ -1,0 +1,269 @@
+<!--meta
+id: d2
+group: D
+code: D2
+title: Probability sampling: simple random, systematic, stratified
+short: Probability sampling
+-->
+<header class="tab-head">
+  <h1 id="h-d2"><span class="secnum">D2</span>Probability sampling: simple random, systematic, stratified</h1>
+  <p class="lede">In a probability sample every member of the target population has a known, non-zero chance of selection. That known chance is what allows formal statistical inference: sampling distributions, standard errors and confidence intervals all assume random selection.</p>
+  <ul class="tab-facts"><li>About 35 minutes</li><li>Live sampling simulator</li><li>Allocation calculator</li><li>Stata and Python code</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>explain and carry out simple random, systematic and stratified random sampling;</li>
+      <li>allocate a stratified sample proportionately or disproportionately, and weight it back;</li>
+      <li>choose and justify a design for your own study.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="d2-srs">1. Simple random sampling (SRS)</h2>
+  <p>Every unit has an equal probability of selection, \(n/N\), and every possible sample of size \(n\) is equally likely. Draw it with a random number generator applied to the sampling frame, or, for a small frame, by drawing paper slips out of a bowl.</p>
+  <ul>
+    <li><strong>Needs:</strong> a complete list of the population.</li>
+    <li><strong>Strengths:</strong> simple; unbiased; the textbook formulas for standard errors apply directly.</li>
+    <li><strong>Weaknesses:</strong> small subgroups may be under-represented by chance; can be costly when units are spread out.</li>
+  </ul>
+
+  <h2 id="d2-sys">2. Systematic random sampling</h2>
+  <p>Select every \(k\)-th unit from the frame after a random start between 1 and \(k\), where \(k = N/n\) (rounded down). With \(N = 2{,}400\) and \(n = 331\), \(k = 7\); a random start of 2 selects units 2, 9, 16, 23 and so on.</p>
+  <ul>
+    <li><strong>Strengths:</strong> easy in the field, such as every 7th customer leaving a shop or every 10th house on a street; spreads the sample evenly through the list.</li>
+    <li><strong>Weakness:</strong> vulnerable to bias when the list has a pattern that matches \(k\), for example if every 10th house on a street is a corner house, or every 7th day is a Sunday.</li>
+  </ul>
+  <aside class="ex-note"><b>Examiner:</b> Report the interval and the random start, and say how the frame was ordered.</aside>
+
+  <h2 id="d2-strat">3. Stratified random sampling</h2>
+  <p>Partition the population into non-overlapping <span class="term">strata</span> (for example urban/rural, ethnic group, industry, faculty) and draw a separate random sample within each. Stratify on characteristics that are related to your outcome, because that is what improves precision.</p>
+  <dl class="defs">
+    <dt>Proportionate allocation</dt><dd>Each stratum's sample size is proportional to its population size: \(n_h = n \times N_h / N\). Every unit has the same selection probability, so no weights are needed.</dd>
+    <dt>Disproportionate allocation</dt><dd>Small strata are over-sampled to improve precision for subgroup estimates. Selection probabilities differ, so population estimates need design weights \(w_h = N_h / n_h\).</dd>
+  </dl>
+  <table class="bt">
+    <caption><b>Table D2.1.</b> Proportionate and disproportionate stratified random sampling. Adapted from Sekaran and Bougie (2016, Table 13.1)</caption>
+    <thead><tr><th>Job level</th><th class="num">Number of elements</th><th class="num">Proportionate sample (20% of elements)</th><th class="num">Disproportionate sample</th></tr></thead>
+    <tbody>
+      <tr><td>Top management</td><td class="num">10</td><td class="num">2</td><td class="num">7</td></tr>
+      <tr><td>Middle-level management</td><td class="num">30</td><td class="num">6</td><td class="num">15</td></tr>
+      <tr><td>Lower-level management</td><td class="num">50</td><td class="num">10</td><td class="num">20</td></tr>
+      <tr><td>Supervisors</td><td class="num">100</td><td class="num">20</td><td class="num">30</td></tr>
+      <tr><td>Clerks</td><td class="num">500</td><td class="num">100</td><td class="num">60</td></tr>
+      <tr><td>Secretaries</td><td class="num">20</td><td class="num">4</td><td class="num">10</td></tr>
+      <tr class="rule-above"><th>Total</th><td class="num">710</td><td class="num">142</td><td class="num">142</td></tr>
+    </tbody>
+  </table>
+  <p class="table-note">Both columns sample 142 people. The proportionate column gives top management only 2 people, too few to say anything about them; the disproportionate column gives 7, at the cost of needing weights for organisation-wide estimates. Chapter numbers differ between editions of Sekaran and Bougie.</p>
+
+  <h2 id="d2-cluster">4. Cluster and multistage sampling</h2>
+  <p>When there is no list of individuals, or they are spread over a wide area, select <em>groups</em> first (villages, schools, enumeration blocks) and then units within them. National household surveys typically use multistage stratified designs, selecting areas first and then living quarters within them. Cluster samples are cheaper per interview but less precise than an SRS of the same size, because units in a cluster resemble each other. The design effect quantifies the loss (<a href="#d4">D4</a>).</p>
+
+  <h2 id="d2-compare">Choosing a design</h2>
+  <table class="bt">
+    <caption><b>Table D2.2.</b> Probability designs compared</caption>
+    <thead><tr><th>Design</th><th>Needs</th><th>Best when</th><th>Watch out for</th></tr></thead>
+    <tbody>
+      <tr><td>Simple random</td><td>Full list</td><td>Population is fairly homogeneous; list available</td><td>Small subgroups under-represented by chance</td></tr>
+      <tr><td>Systematic</td><td>Ordered list, or a flow of units</td><td>Field selection (customers, houses)</td><td>Periodicity in the list</td></tr>
+      <tr><td>Stratified, proportionate</td><td>List with stratum information</td><td>Strata differ on the outcome</td><td>Too few units in small strata</td></tr>
+      <tr><td>Stratified, disproportionate</td><td>As above</td><td>Subgroup comparisons are a research question</td><td>Must weight for population estimates</td></tr>
+      <tr><td>Cluster / multistage</td><td>List of clusters only</td><td>Widely spread populations; no individual list</td><td>Design effect; clustered standard errors</td></tr>
+    </tbody>
+  </table>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Probability sampling means known, non-zero selection probabilities, which makes inference possible.</li>
+      <li>Stratify on variables related to the outcome; allocate disproportionately when subgroups matter, then weight.</li>
+      <li>Report the frame, design, allocation, random seed or start, and weights.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul><li>Sekaran, U., &amp; Bougie, R. (2016). <i>Research methods for business: A skill-building approach</i> (7th ed.). Wiley.</li></ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="simulator" data-label="Simulator">
+  <h2 id="d2-sim">Draw your own samples</h2>
+  <p>The grid is a sampling frame of 200 SMEs, listed in frame order, coloured by sector. Choose a sample size and a design, and watch which units are selected. Compare how often each design gives every sector its fair share.</p>
+  <div class="calc" data-sim="sampling">
+    <ul class="frame-legend">
+      <li><i style="background: color-mix(in srgb, var(--ink) 25%, var(--paper))"></i>Services (130)</li>
+      <li><i style="background: color-mix(in srgb, var(--foil) 55%, var(--paper))"></i>Manufacturing (40)</li>
+      <li><i style="background: color-mix(in srgb, var(--correct) 35%, var(--paper))"></i>Agriculture (30)</li>
+      <li><i style="background: var(--pen)"></i>Selected</li>
+    </ul>
+    <div class="frame-grid" role="img" aria-label="Sampling frame of 200 units; selected units are highlighted"></div>
+    <div class="calc-grid">
+      <div class="field">
+        <label for="sim-n">Sample size n</label>
+        <input id="sim-n" type="number" min="5" max="100" step="1" value="20">
+      </div>
+    </div>
+    <div class="btn-row">
+      <button type="button" class="btn" data-draw="srs">Simple random</button>
+      <button type="button" class="btn" data-draw="sys">Systematic</button>
+      <button type="button" class="btn" data-draw="strat">Stratified (proportionate)</button>
+      <button type="button" class="btn secondary" data-draw="clear">Clear</button>
+    </div>
+    <p class="sim-log" aria-live="polite"></p>
+  </div>
+
+  <h2 id="d2-alloc">Allocation calculator</h2>
+  <p>Enter the strata sizes and the total sample. The calculator gives the proportionate allocation and, for any disproportionate allocation you enter, the design weights. It opens with Sekaran and Bougie's example.</p>
+  <div class="calc" data-calc="alloc">
+    <div class="calc-grid">
+      <div class="field">
+        <label for="alloc-n">Total sample size n</label>
+        <input id="alloc-n" type="number" min="1" step="1" value="142">
+      </div>
+    </div>
+    <table class="bt narrow alloc-table">
+      <caption><b>Allocation.</b> Edit the white cells</caption>
+      <thead><tr><th>Stratum</th><th class="num">N<sub>h</sub></th><th class="num">Proportionate n<sub>h</sub></th><th class="num">Your n<sub>h</sub></th><th class="num">Weight N<sub>h</sub>/n<sub>h</sub></th></tr></thead>
+      <tbody>
+        <tr><td><input type="text" value="Top management" aria-label="Stratum name"></td><td class="num"><input type="number" class="Nh" value="10" min="0" aria-label="Stratum size"></td><td class="num prop"></td><td class="num"><input type="number" class="nh" value="7" min="0" aria-label="Your stratum sample"></td><td class="num w"></td></tr>
+        <tr><td><input type="text" value="Middle-level management" aria-label="Stratum name"></td><td class="num"><input type="number" class="Nh" value="30" min="0" aria-label="Stratum size"></td><td class="num prop"></td><td class="num"><input type="number" class="nh" value="15" min="0" aria-label="Your stratum sample"></td><td class="num w"></td></tr>
+        <tr><td><input type="text" value="Lower-level management" aria-label="Stratum name"></td><td class="num"><input type="number" class="Nh" value="50" min="0" aria-label="Stratum size"></td><td class="num prop"></td><td class="num"><input type="number" class="nh" value="20" min="0" aria-label="Your stratum sample"></td><td class="num w"></td></tr>
+        <tr><td><input type="text" value="Supervisors" aria-label="Stratum name"></td><td class="num"><input type="number" class="Nh" value="100" min="0" aria-label="Stratum size"></td><td class="num prop"></td><td class="num"><input type="number" class="nh" value="30" min="0" aria-label="Your stratum sample"></td><td class="num w"></td></tr>
+        <tr><td><input type="text" value="Clerks" aria-label="Stratum name"></td><td class="num"><input type="number" class="Nh" value="500" min="0" aria-label="Stratum size"></td><td class="num prop"></td><td class="num"><input type="number" class="nh" value="60" min="0" aria-label="Your stratum sample"></td><td class="num w"></td></tr>
+        <tr><td><input type="text" value="Secretaries" aria-label="Stratum name"></td><td class="num"><input type="number" class="Nh" value="20" min="0" aria-label="Stratum size"></td><td class="num prop"></td><td class="num"><input type="number" class="nh" value="10" min="0" aria-label="Your stratum sample"></td><td class="num w"></td></tr>
+      </tbody>
+      <tbody><tr class="rule-above"><th>Total</th><td class="num tot-N"></td><td class="num tot-prop"></td><td class="num tot-n"></td><td></td></tr></tbody>
+    </table>
+    <p class="calc-explain alloc-note" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="d2-ex">Worked example: sampling 331 SMEs from a frame of 2,400</h2>
+  <p>A hypothetical frame lists 2,400 SMEs in four northern states: 1,560 in services, 480 in manufacturing, 240 in agriculture and 120 in construction. The target is \(n = 331\), the Krejcie–Morgan size for \(N = 2{,}400\). The question is what share of SMEs accept e-wallet payments.</p>
+  <table class="bt">
+    <caption><b>Table D2.3.</b> Allocations for n = 331</caption>
+    <thead><tr><th>Sector</th><th class="num">N<sub>h</sub></th><th class="num">Proportionate n<sub>h</sub></th><th class="num">Disproportionate n<sub>h</sub></th><th class="num">Weight N<sub>h</sub>/n<sub>h</sub></th></tr></thead>
+    <tbody>
+      <tr><td>Services</td><td class="num">1,560</td><td class="num">215</td><td class="num">141</td><td class="num">11.06</td></tr>
+      <tr><td>Manufacturing</td><td class="num">480</td><td class="num">66</td><td class="num">70</td><td class="num">6.86</td></tr>
+      <tr><td>Agriculture</td><td class="num">240</td><td class="num">33</td><td class="num">60</td><td class="num">4.00</td></tr>
+      <tr><td>Construction</td><td class="num">120</td><td class="num">17</td><td class="num">60</td><td class="num">2.00</td></tr>
+      <tr class="rule-above"><th>Total</th><td class="num">2,400</td><td class="num">331</td><td class="num">331</td><td></td></tr>
+    </tbody>
+  </table>
+  <p>With proportionate allocation, construction gets only 17 firms, too few for a separate estimate. The disproportionate design guarantees at least 60 per sector. Because acceptance differs by sector, from 55% in services to 15% in agriculture in this simulated frame, over-sampling small sectors distorts the overall estimate unless you weight:</p>
+  <table class="bt narrow">
+    <caption><b>Table D2.4.</b> Share of SMEs accepting e-wallets (simulated frame)</caption>
+    <thead><tr><th>Estimate</th><th class="num">Value</th></tr></thead>
+    <tbody>
+      <tr><td>True share in the frame</td><td class="num">0.457</td></tr>
+      <tr><td>Disproportionate sample, unweighted</td><td class="num">0.396</td></tr>
+      <tr><td>Disproportionate sample, weighted by N<sub>h</sub>/n<sub>h</sub></td><td class="num">0.467</td></tr>
+    </tbody>
+  </table>
+  <x-listing title="Drawing the samples">
+<x-stata file="01_sampling.do">
+use "$data/sme_sampling_frame.dta", clear
+set seed 20261019                         // makes every draw reproducible: report it
+
+* A. Simple random sampling
+sample 331, count
+
+* B. Systematic: interval k and a random start
+sort sme_id
+local k = floor(_N / 331)                 // k = 7
+local start = runiformint(1, `k')
+generate byte in_sys = (_n >= `start') & mod(_n - `start', `k') == 0
+
+* C. Stratified, proportionate: n_h = n * N_h / N
+bysort sector: generate N_h = _N
+generate n_prop = round(331 * N_h / _N)
+generate double u = runiform()
+bysort sector (u): generate byte in_prop = _n <= n_prop
+
+* D. Disproportionate, with design weights
+generate double w_dis = N_h / n_dis
+mean uses_ewallet_payments [pweight = w_dis] if in_dis
+</x-stata>
+<x-python file="01_sampling.ipynb">
+frame = load("sme_sampling_frame.csv")
+N, n = len(frame), 331
+
+srs = frame.sample(n=n, random_state=20261019)            # A. simple random
+
+k = N // n                                                 # B. systematic, k = 7
+start = int(rng.integers(1, k + 1))
+sys_sample = frame.sort_values("sme_id").iloc[start - 1::k].head(n)
+
+alloc = frame.groupby("sector").size().rename("N_h").to_frame()
+alloc["n_prop"] = (n * alloc["N_h"] / N).round().astype(int)   # C. proportionate
+prop = pd.concat([g.sample(n=alloc.loc[s, "n_prop"], random_state=1) for s, g in frame.groupby("sector")])
+
+dis["w"] = dis["sector"].map(alloc["N_h"] / alloc["n_dis"])    # D. design weights
+np.average(dis["uses_ewallet_payments"], weights=dis["w"])
+</x-python>
+  </x-listing>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="d2-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.1.1 Sampling design</h3>
+      <p><span class="anno">The sampling frame was the 2025 list of 2,400 SMEs registered with the state SME agencies of Kedah, Perlis, Pulau Pinang and Perak.</span><span class="anno-n">1</span> <span class="anno">Because e-wallet acceptance was expected to differ by sector, and sectoral comparisons are a research question (RQ2), a stratified random sample was drawn with sector as the stratifying variable and disproportionate allocation, guaranteeing at least 60 firms per sector.</span><span class="anno-n">2</span> <span class="anno">Within each sector, firms were selected by simple random sampling using Stata's random-number generator (seed 20261019).</span><span class="anno-n">3</span> <span class="anno">Estimates for all SMEs use design weights equal to the inverse of each sector's sampling fraction (Table 3.2).</span><span class="anno-n">4</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>The frame, named, dated and sized.</li>
+      <li>The design, with a justification tied to a research question.</li>
+      <li>How selection was randomised, reproducibly.</li>
+      <li>The consequence for estimation: weights.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Hypothetical study.</figcaption>
+  </figure>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="d2-ws">Worksheet D2</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>A frame lists 6,000 households: 3,600 urban and 2,400 rural. You need n = 361. (a) Give the proportionate allocation. (b) You want equal precision for urban and rural estimates: give an allocation and the design weights. <span class="ws-marks">(6 marks)</span></p>
+      <x-draft key="d2-q1"></x-draft>
+      <x-answer><p>(a) Urban: 361 × 3,600/6,000 = 216.6, so 217; rural: 361 × 2,400/6,000 = 144.4, so 144 (total 361). (b) Equal allocation: 181 urban and 180 rural. Weights: urban 3,600/181 = 19.89; rural 2,400/180 = 13.33. Each sampled urban household represents about 20 households and each rural household about 13.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>You plan to survey every 8th customer leaving a supermarket between 9 a.m. and 9 p.m. on weekdays. Is this systematic sampling? What could bias it? <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="d2-q2"></x-draft>
+      <x-answer><p>It is systematic selection from a flow of customers, which works well in the field, but the population covered is only weekday shoppers at that supermarket. Biases: weekend shoppers and working people who shop in the evening or at weekends are under-represented; groups arriving together may all be skipped or all selected. It is a probability sample of customer visits on surveyed days, not of households. Choose a random start, sample different days and times, and state the target population precisely.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Use the simulator: draw ten proportionate stratified samples and ten simple random samples of n = 20. How does the number of agriculture firms vary across draws under each design, and why? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="d2-q3"></x-draft>
+      <x-answer><p>Proportionate stratified sampling always gives 3 agriculture firms (20 × 30/200). SRS gives a varying number, typically 1 to 6, sometimes 0, because the stratum count is left to chance. Stratification fixes each stratum's share and so removes this source of sampling variation.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="d2-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Disproportionate stratified sampling requires…</legend>
+      <label class="opt"><input type="radio" name="d2q1" data-correct><span>design weights for population estimates<span class="why">Yes, because selection probabilities differ across strata.</span></span></label>
+      <label class="opt"><input type="radio" name="d2q1"><span>no adjustment<span class="why">Unweighted estimates over-represent the over-sampled strata.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. N = 2,400 and n = 331. The systematic sampling interval is…</legend>
+      <label class="opt"><input type="radio" name="d2q2"><span>331<span class="why">That is the sample size.</span></span></label>
+      <label class="opt"><input type="radio" name="d2q2" data-correct><span>7<span class="why">Yes: floor(2,400/331) = 7.</span></span></label>
+      <label class="opt"><input type="radio" name="d2q2"><span>14<span class="why">Check the division.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Stratification improves precision most when strata…</legend>
+      <label class="opt"><input type="radio" name="d2q3" data-correct><span>differ from each other on the outcome<span class="why">Yes: homogeneous within, different between.</span></span></label>
+      <label class="opt"><input type="radio" name="d2q3"><span>are the same size<span class="why">Size is not what matters.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

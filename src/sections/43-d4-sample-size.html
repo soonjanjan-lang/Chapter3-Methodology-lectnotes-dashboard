@@ -1,0 +1,304 @@
+<!--meta
+id: d4
+group: D
+code: D4
+title: How many respondents do we need?
+short: How many respondents?
+-->
+<header class="tab-head">
+  <h1 id="h-d4"><span class="secnum">D4</span>How many respondents do we need?</h1>
+  <p class="lede">Is it 30, the “magic number” of the Central Limit Theorem? 384, from the Krejcie–Morgan table? Or does it depend on statistical power? The short answer: a sample size should be justified by the inference you want to make, not by the size of the population or a rule of thumb.</p>
+  <ul class="tab-facts"><li>About 45 minutes</li><li>Sample-size and power calculators</li><li>Stata and Python code</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>explain why n = 30 is not a sample-size justification;</li>
+      <li>use and critique the Krejcie and Morgan (1970) table;</li>
+      <li>justify a sample size by precision or by power, with adjustments for non-response and design effects.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="d4-30">Is it 30? What the Central Limit Theorem does and does not say</h2>
+  <p>The Central Limit Theorem says that the sampling distribution of a mean approaches a normal distribution as \(n\) grows, whatever the shape of the population. The rule of thumb “\(n \ge 30\)” is a rough guide to when that approximation is good enough for a t-test or a confidence interval on a mean, if the population is not too skewed. For heavily skewed variables such as income, 30 may not be enough even for that.</p>
+  <p>It says nothing about whether 30 observations are <em>enough to answer your question</em>:</p>
+  <ul>
+    <li><strong>Precision:</strong> with 30 respondents, a 95% confidence interval for a proportion near 50% is about ±18 percentage points (\(1.96\sqrt{0.25/30} = 0.179\)).</li>
+    <li><strong>Power:</strong> with 30 per group, a two-sided t-test has only a 48% chance of detecting a medium effect (\(d = 0.5\)); detecting it with 80% probability needs 64 per group.</li>
+    <li><strong>Regression:</strong> with several predictors, 30 observations leave very few degrees of freedom.</li>
+  </ul>
+  <aside class="ex-note"><b>Examiner:</b> “The sample exceeds 30, so the CLT applies” justifies nothing about your sample size. Expect to be asked for a calculation.</aside>
+
+  <h2 id="d4-logic">Two logics for sample size</h2>
+  <table class="bt">
+    <caption><b>Table D4.1.</b> Precision-based and power-based sample sizes</caption>
+    <thead><tr><th></th><th>Precision (estimation)</th><th>Power (hypothesis testing)</th></tr></thead>
+    <tbody>
+      <tr><th>Question</th><td>How accurately do I need to estimate a proportion or mean?</td><td>How likely am I to detect an effect of a given size, if it exists?</td></tr>
+      <tr><th>Inputs</th><td>Confidence level; margin of error \(d\); variability (\(P\) or \(\sigma\)); population size \(N\)</td><td>Significance level \(\alpha\); power \(1-\beta\); minimum effect size of interest; the planned test or model</td></tr>
+      <tr><th>Typical use</th><td>Descriptive surveys: “What share of SMEs accept e-wallets?”</td><td>Comparisons and regression: “Is literacy associated with saving?”</td></tr>
+      <tr><th>Tools</th><td>Krejcie–Morgan / Cochran formula</td><td>G*Power; Stata <code>power</code>; simulation</td></tr>
+    </tbody>
+  </table>
+  <p>Lakens (2022) sets out both approaches, and others, in a single framework. It is the best single reading on sample-size justification.</p>
+
+  <h2 id="d4-km">The Krejcie and Morgan (1970) table</h2>
+  <p>Krejcie and Morgan turned an existing formula for the sample size needed to estimate a population proportion into a lookup table:</p>
+  <div class="formula">
+    $$s = \frac{\chi^2 N P(1-P)}{d^2 (N-1) + \chi^2 P (1-P)}$$
+    <ul class="where">
+      <li>\(s\) = required sample size; \(N\) = population size</li>
+      <li>\(\chi^2\) = chi-square value for 1 degree of freedom at the desired confidence level (3.841 at 95%)</li>
+      <li>\(P\) = population proportion, set to 0.50 because \(P(1-P)\) is largest there, giving the most conservative size</li>
+      <li>\(d\) = margin of error as a proportion (0.05)</li>
+    </ul>
+  </div>
+  <p>The table therefore builds in three choices: <strong>95% confidence, ±5 percentage points, and \(P = 0.5\)</strong>. Its entries agree with the formula to rounding precision. The calculator on the next tab reproduces every entry:</p>
+  <table class="bt narrow">
+    <caption><b>Table D4.2.</b> Selected entries, recalculated from the formula</caption>
+    <thead><tr><th class="num">Population N</th><th class="num">Table value s</th><th class="num">Formula</th></tr></thead>
+    <tbody>
+      <tr><td class="num">100</td><td class="num">80</td><td class="num">79.51</td></tr>
+      <tr><td class="num">1,000</td><td class="num">278</td><td class="num">277.73</td></tr>
+      <tr><td class="num">9,000</td><td class="num">368</td><td class="num">368.46</td></tr>
+      <tr><td class="num">10,000</td><td class="num">370</td><td class="num">369.97</td></tr>
+      <tr><td class="num">50,000</td><td class="num">381</td><td class="num">381.22</td></tr>
+      <tr><td class="num">1,000,000</td><td class="num">384</td><td class="num">384.00</td></tr>
+    </tbody>
+  </table>
+  <p>As \(N\) grows, the finite-population correction vanishes and the formula approaches \(n_0 = z^2 P(1-P)/d^2 = 1.96^2 (0.25)/0.05^2 = 384.16\). That is why the required sample barely grows beyond a population of about 10,000. Sampling precision depends mainly on the sample size, not on the population size. Strictly, rounding down does not guarantee the target precision: for \(N = 50{,}000\) a conservative requirement is 382, not 381. This is a minor point.</p>
+
+  <h3 id="d4-limits">Five limitations of the table</h3>
+  <ol>
+    <li><strong>It assumes probability sampling.</strong> The margin-of-error interpretation relies on random selection (usually SRS), a good frame and ignorable non-response. Collect 370 Google Form responses through WhatsApp groups and you have the same number with no comparable inferential justification. Raising a convenience sample from 370 to 1,000 does not remove selection bias (Baker et al., 2013).</li>
+    <li><strong>It fixes the margin of error at ±5 points.</strong> For N = 10,000, ±3 points needs 965 and ±10 points needs 96. Population size alone does not settle the sample size; the precision you need matters far more.</li>
+    <li><strong>It does not calculate power.</strong> The formula is about estimating one proportion. It ignores the effect size a test should detect. A sample of 370 split into two equal groups of 185 has only 48% power to detect a small difference (\(d = 0.2\)), 82% for \(d = 0.3\) and 99.8% for \(d = 0.5\). Detecting \(d = 0.2\) with 80% power needs 394 per group, 788 in total.</li>
+    <li><strong>It ignores complex designs.</strong> Clustered samples carry a design effect \(DEFF = 1 + (m-1)\rho\), with \(m\) respondents per cluster and intraclass correlation \(\rho\). With DEFF = 1.5, 384 clustered respondents are worth about \(384/1.5 = 256\) independent ones.</li>
+    <li><strong>It gives completed, not invited, responses, and ignores subgroups and regression.</strong> To obtain 370 completed questionnaires at a 60% response rate, invite \(370/0.60 \approx 617\). If a key subgroup is 10% of the sample, it has only about 37 members. Regression precision depends on the variance of the regressors, the residual variance, collinearity and the coefficient of interest, none of which the table considers.</li>
+  </ol>
+  <aside class="ex-note is-query"><b>Examiner:</b> Your target population is 10,000, so the table says 370. What margin of error did you need, and why that one?</aside>
+
+  <h2 id="d4-power">Power analysis</h2>
+  <p>Power is the probability of rejecting a false null hypothesis. A priori power analysis fixes four quantities to find the fourth: significance level (usually 0.05), desired power (usually 0.80), the minimum effect size of substantive interest, and the sample size.</p>
+  <table class="bt">
+    <caption><b>Table D4.3.</b> Cohen's (1992) conventional effect sizes. Prefer an effect size grounded in your own literature or in what would matter for policy</caption>
+    <thead><tr><th>Test</th><th>Effect size</th><th class="num">Small</th><th class="num">Medium</th><th class="num">Large</th></tr></thead>
+    <tbody>
+      <tr><td>Difference in two means</td><td>\(d\)</td><td class="num">0.20</td><td class="num">0.50</td><td class="num">0.80</td></tr>
+      <tr><td>Correlation</td><td>\(r\)</td><td class="num">0.10</td><td class="num">0.30</td><td class="num">0.50</td></tr>
+      <tr><td>Multiple regression</td><td>\(f^2 = R^2/(1-R^2)\)</td><td class="num">0.02</td><td class="num">0.15</td><td class="num">0.35</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li><strong>Two groups:</strong> \(d = 0.2, 0.5, 0.8\) need 394, 64 and 26 per group for 80% power at \(\alpha = 0.05\).</li>
+    <li><strong>Regression, all slopes:</strong> \(f^2 = 0.15\) with 5 predictors needs N = 92 (Faul et al., 2009; Stata <code>power rsquared</code> gives the same).</li>
+    <li><strong>One coefficient with controls:</strong> a small partial effect (\(f^2 = 0.02\)) for one predictor alongside 7 controls needs N = 395. Detecting a small effect of your main variable usually drives the sample size.</li>
+    <li><strong>Logit with a binary outcome:</strong> a widely used guideline is at least 10 events (the rarer outcome) per estimated parameter (Peduzzi et al., 1996). With 8 parameters and 25% of respondents in the rarer category, you need at least \(10 \times 8 / 0.25 = 320\) respondents.</li>
+  </ul>
+  <p>Economics has a power problem: Ioannidis et al. (2017) estimate that the median statistical power in many areas of empirical economics is low, which inflates reported effects. A power analysis in Chapter 3 is good practice, not decoration.</p>
+
+  <h2 id="d4-thumb">Rules of thumb, and their limits</h2>
+  <ul>
+    <li><strong>Green (1991):</strong> N ≥ 50 + 8m to test the overall R², and N ≥ 104 + m for individual predictors (m = number of predictors). Simple, but it ignores effect size; power analysis is better.</li>
+    <li><strong>Five or ten respondents per item</strong> for factor analysis: not a guarantee. Required N depends on loadings, number of items per factor and model complexity.</li>
+    <li><strong>Qualitative interviews:</strong> justified by saturation (Guest et al., 2006) or information power (Malterud et al., 2016), not by statistical formulas.</li>
+  </ul>
+
+  <h2 id="d4-which">Which method for which objective?</h2>
+  <table class="bt">
+    <caption><b>Table D4.4.</b> Choose the sample-size method by the primary inferential objective</caption>
+    <thead><tr><th>Primary research objective</th><th>More appropriate approach</th></tr></thead>
+    <tbody>
+      <tr><td>Estimate a population percentage</td><td>Proportion-based precision calculation, with finite-population correction where appropriate</td></tr>
+      <tr><td>Estimate a population mean</td><td>Confidence-interval precision calculation using the anticipated standard deviation</td></tr>
+      <tr><td>Compare two groups</td><td>Power analysis for the planned difference-in-means or proportions test</td></tr>
+      <tr><td>Correlation analysis</td><td>Power or precision calculation for the correlation coefficient</td></tr>
+      <tr><td>Multiple linear regression</td><td>Power or precision analysis for the primary coefficient or joint hypothesis</td></tr>
+      <tr><td>Logistic regression</td><td>Outcome frequency (events per variable), coefficient precision, or simulation</td></tr>
+      <tr><td>Factor analysis or SEM</td><td>Model-specific precision, factor recovery, or Monte Carlo simulation</td></tr>
+      <tr><td>Difference-in-differences or field experiment</td><td>Minimum detectable effect and design-specific power analysis, including clustering and allocation (McKenzie, 2012)</td></tr>
+      <tr><td>Descriptive non-probability survey</td><td>Justify feasibility and analytical adequacy; acknowledge the limits of population inference</td></tr>
+    </tbody>
+  </table>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>“n ≥ 30” is about the normal approximation, not about precision or power.</li>
+      <li>Krejcie–Morgan is valid for estimating a proportion at ±5 points from a probability sample, and for nothing else.</li>
+      <li>For hypothesis-testing theses, justify n by a priori power for the main coefficient, then inflate for non-response and design effects.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Baker, R., Brick, J. M., Bates, N. A., Battaglia, M., Couper, M. P., Dever, J. A., Gile, K. J., &amp; Tourangeau, R. (2013). Summary report of the AAPOR task force on non-probability sampling. <i>Journal of Survey Statistics and Methodology, 1</i>(2), 90–143.</li>
+      <li>Cohen, J. (1992). A power primer. <i>Psychological Bulletin, 112</i>(1), 155–159.</li>
+      <li>Faul, F., Erdfelder, E., Buchner, A., &amp; Lang, A.-G. (2009). Statistical power analyses using G*Power 3.1: Tests for correlation and regression analyses. <i>Behavior Research Methods, 41</i>(4), 1149–1160.</li>
+      <li>Green, S. B. (1991). How many subjects does it take to do a regression analysis? <i>Multivariate Behavioral Research, 26</i>(3), 499–510.</li>
+      <li>Guest, G., Bunce, A., &amp; Johnson, L. (2006). How many interviews are enough? <i>Field Methods, 18</i>(1), 59–82.</li>
+      <li>Ioannidis, J. P. A., Stanley, T. D., &amp; Doucouliagos, H. (2017). The power of bias in economics research. <i>The Economic Journal, 127</i>(605), F236–F265.</li>
+      <li>Krejcie, R. V., &amp; Morgan, D. W. (1970). Determining sample size for research activities. <i>Educational and Psychological Measurement, 30</i>(3), 607–610. https://doi.org/10.1177/001316447003000308</li>
+      <li>Lakens, D. (2022). Sample size justification. <i>Collabra: Psychology, 8</i>(1), 33267.</li>
+      <li>Malterud, K., Siersma, V. D., &amp; Guassora, A. D. (2016). Sample size in qualitative interview studies: Guided by information power. <i>Qualitative Health Research, 26</i>(13), 1753–1760.</li>
+      <li>McKenzie, D. (2012). Beyond baseline and follow-up: The case for more T in experiments. <i>Journal of Development Economics, 99</i>(2), 210–221.</li>
+      <li>Peduzzi, P., Concato, J., Kemper, E., Holford, T. R., &amp; Feinstein, A. R. (1996). A simulation study of the number of events per variable in logistic regression analysis. <i>Journal of Clinical Epidemiology, 49</i>(12), 1373–1379.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="calculators" data-label="Calculators">
+  <h2 id="d4-calc-km">Sample size for a proportion (Krejcie–Morgan / Cochran)</h2>
+  <div class="calc" data-calc="km">
+    <div class="calc-grid">
+      <div class="field"><label for="km-N">Population size N</label><input id="km-N" type="number" min="1" step="1" value="10000"><span class="hint">Leave empty for a very large population</span></div>
+      <div class="field"><label for="km-conf">Confidence level</label><select id="km-conf"><option value="0.90">90%</option><option value="0.95" selected>95%</option><option value="0.99">99%</option></select></div>
+      <div class="field"><label for="km-d">Margin of error (± percentage points)</label><input id="km-d" type="number" min="0.5" max="25" step="0.5" value="5"></div>
+      <div class="field"><label for="km-P">Expected proportion P (%)</label><input id="km-P" type="number" min="1" max="99" step="1" value="50"><span class="hint">50% is the safe choice</span></div>
+      <div class="field"><label for="km-rr">Expected response rate (%)</label><input id="km-rr" type="number" min="5" max="100" step="1" value="100"></div>
+      <div class="field"><label for="km-deff">Design effect</label><input id="km-deff" type="number" min="1" max="5" step="0.1" value="1"><span class="hint">1 for simple random sampling</span></div>
+    </div>
+    <div class="calc-out">
+      <div class="result"><span class="r-val" id="km-out-s">—</span><span class="r-lab">completed responses (Krejcie–Morgan rounding)</span></div>
+      <div class="result"><span class="r-val" id="km-out-ceil">—</span><span class="r-lab">conservative (rounded up), after design effect</span></div>
+      <div class="result"><span class="r-val" id="km-out-inv">—</span><span class="r-lab">people to invite</span></div>
+    </div>
+    <p class="calc-explain" id="km-explain" aria-live="polite"></p>
+    <svg class="chart" id="km-chart" viewBox="0 0 640 300" role="img" aria-label="Required sample size against population size"></svg>
+    <details class="answer">
+      <summary><span class="when-closed">Show the full Krejcie–Morgan table, recalculated</span><span class="when-open">Hide the table</span></summary>
+      <div class="answer-body"><div class="table-wrap" tabindex="0" role="region" aria-label="Krejcie and Morgan table"><table class="bt" id="km-table"><caption><b>Krejcie and Morgan (1970), Table 1,</b> recalculated from the formula (χ² = 3.841, ±5 points, P = 0.5)</caption><thead><tr><th class="num">N</th><th class="num">S</th><th class="num">N</th><th class="num">S</th><th class="num">N</th><th class="num">S</th></tr></thead><tbody></tbody></table></div></div>
+    </details>
+  </div>
+
+  <h2 id="d4-calc-t">Power for comparing two groups</h2>
+  <div class="calc" data-calc="ttest">
+    <div class="calc-grid">
+      <div class="field"><label for="tt-d">Effect size d</label><div class="range-row"><input id="tt-d" type="range" min="0.05" max="1.2" step="0.05" value="0.2"><output for="tt-d" id="tt-d-out">0.20</output></div></div>
+      <div class="field"><label for="tt-n">Respondents per group</label><input id="tt-n" type="number" min="3" step="1" value="185"></div>
+      <div class="field"><label for="tt-a">Significance level α</label><select id="tt-a"><option value="0.01">0.01</option><option value="0.05" selected>0.05</option><option value="0.10">0.10</option></select></div>
+    </div>
+    <div class="calc-out">
+      <div class="result"><span class="r-val" id="tt-power">—</span><span class="r-lab">power (two-sided t-test)</span></div>
+      <div class="result"><span class="r-val" id="tt-n80">—</span><span class="r-lab">per group for 80% power</span></div>
+      <div class="result"><span class="r-val" id="tt-n90">—</span><span class="r-lab">per group for 90% power</span></div>
+    </div>
+  </div>
+
+  <h2 id="d4-calc-reg">Sample size for multiple regression</h2>
+  <div class="calc" data-calc="reg">
+    <div class="calc-grid">
+      <div class="field"><label for="rg-f2">Effect size f² for the tested predictors</label><input id="rg-f2" type="number" min="0.005" max="1" step="0.005" value="0.15"><span class="hint">0.02 small, 0.15 medium, 0.35 large</span></div>
+      <div class="field"><label for="rg-u">Number of tested predictors</label><input id="rg-u" type="number" min="1" max="50" step="1" value="5"></div>
+      <div class="field"><label for="rg-c">Number of control variables</label><input id="rg-c" type="number" min="0" max="50" step="1" value="0"></div>
+      <div class="field"><label for="rg-pow">Target power</label><select id="rg-pow"><option value="0.8" selected>0.80</option><option value="0.9">0.90</option><option value="0.95">0.95</option></select></div>
+    </div>
+    <div class="calc-out">
+      <div class="result"><span class="r-val" id="rg-N">—</span><span class="r-lab">total sample size N</span></div>
+      <div class="result"><span class="r-val" id="rg-green">—</span><span class="r-lab">Green's (1991) rule 50 + 8m, for comparison</span></div>
+    </div>
+    <p class="calc-explain" id="rg-explain" aria-live="polite"></p>
+  </div>
+  <p class="small">The calculators use exact noncentral F distributions, the method of G*Power, and match Stata's <code>power</code> command: for example N = 92 for f² = 0.15 with five predictors, and 394 per group for d = 0.2.</p>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="d4-ex">Worked example: justifying n for the e-wallet survey</h2>
+  <ol>
+    <li><strong>Descriptive aim (RQ1):</strong> estimate the share of the university's 10,000 undergraduates who use e-wallets within ±5 points at 95% confidence. Krejcie–Morgan: 370 completed questionnaires.</li>
+    <li><strong>Inferential aim (RQ2):</strong> detect a small partial association (\(f^2 = 0.02\)) between perceived security and use, with 7 other predictors, at 80% power: 395 (computed with Stata's <code>power rsquared</code>). This exceeds 370, so 395 becomes the target.</li>
+    <li><strong>Non-response:</strong> at an expected 60% response, invite \(395/0.60 \approx 659\).</li>
+    <li><strong>Design:</strong> stratified by faculty with proportionate allocation, so the design effect is at most 1 and no further inflation is needed.</li>
+  </ol>
+  <x-listing title="The same calculations in code">
+<x-stata file="02_sample_size.do">
+* Krejcie & Morgan for N = 10,000 (program defined in the do-file)
+kmsize, n(10000)
+display round(r(s))                                   // 370
+
+* power for one tested coefficient with 7 controls, small partial f2 = 0.02
+power rsquared `=0.10' `=0.10 + 0.02*(1 - 0.10)/(1 + 0.02)', ncontrol(7) ntested(1) power(0.8)   // N = 395
+
+display ceil(395 / 0.60)                              // invitations: 659
+</x-stata>
+<x-python file="02_sample_size.ipynb">
+print(round(km_size(10000)))                          # 370
+print(reg_n_subset(0.02, tested=1, controls=7))       # 395
+print(int(np.ceil(395 / 0.60)))                       # 659 invitations
+</x-python>
+  </x-listing>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="d4-wu">Two defensible statements</h2>
+  <p>Choose the statement that matches your design, and fill it with your own numbers. The wording alone is not a justification; the calculation is.</p>
+  <figure class="specimen">
+    <div class="sheet">
+      <p><strong>For a probability-based descriptive survey.</strong> The required sample size was determined using the finite-population formula presented by Krejcie and Morgan (1970), assuming a 95% confidence level, a margin of error of ±5 percentage points and a conservative population proportion of 0.50. The calculation assumed simple random sampling. The recruitment target was then adjusted for anticipated non-response.</p>
+      <p><strong>For a hypothesis-testing study.</strong> The target sample size was determined by an a priori power analysis for the primary hypothesis. The calculation specified the minimum effect size of substantive interest, the significance level, the desired power and the analytical model, and allowed for anticipated non-response and the characteristics of the sampling design.</p>
+    </div>
+    <figcaption><b>Template statements.</b> Add the numbers: effect size and its source, α, power, model, resulting N, response-rate assumption, invitations.</figcaption>
+  </figure>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.1.2 Sample size</h3>
+      <p><span class="anno">The sample size was set to meet two requirements.</span><span class="anno-n">1</span> For the descriptive aim, estimating the proportion of e-wallet users within ±5 percentage points at 95% confidence in a population of about 10,000 requires 370 completed questionnaires (Krejcie &amp; Morgan, 1970). <span class="anno">For the main inferential aim, an a priori power analysis showed that detecting a small partial association (f² = 0.02) between perceived security and use, alongside seven other predictors, with 80% power at α = 0.05 requires 395 observations (Faul et al., 2009).</span><span class="anno-n">2</span> <span class="anno">The larger figure was adopted; anticipating a 60% response rate, 659 students were invited.</span><span class="anno-n">3</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>Separate the descriptive and inferential requirements.</li>
+      <li>Every input of the power analysis is stated.</li>
+      <li>The binding constraint, and the non-response inflation.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Hypothetical study.</figcaption>
+  </figure>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="d4-ws">Worksheet D4</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Use the calculator. For N = 5,000, find the completed sample for ±3, ±5 and ±7 points at 95% confidence. What do the results say about the claim that “sample size depends on population size”? <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="d4-q1"></x-draft>
+      <x-answer><p>About 880, 357 and 189 respectively (exact values 879.5, 356.8 and 188.6). Changing the margin of error from ±5 to ±3 points multiplies the sample by about 2.5, while changing N from 5,000 to 1,000,000 at ±5 points only moves it from 357 to 384. Precision, not population size, is the main driver.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>You compare saving between treated and control households in a field experiment with 120 households per arm. What is the power to detect d = 0.3? How many per arm are needed for 80% power? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="d4-q2"></x-draft>
+      <x-answer><p>Power is about 0.64 with 120 per arm; 176 per arm are needed for 80% power at α = 0.05. If households were assigned by village, a design effect would increase this further (McKenzie, 2012).</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A student writes: “Following Krejcie and Morgan (1970), the sample of 384 is adequate for structural equation modelling.” Explain why this is not a justification and what would be. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="d4-q3"></x-draft>
+      <x-answer><p>Krejcie–Morgan concerns the precision of a single proportion from a random sample; it says nothing about estimating an SEM, whose requirements depend on the number of indicators per factor, loadings, model complexity, missing data and the estimator. A justification would use a model-specific power or precision analysis, such as a Monte Carlo simulation of the planned model, or published evidence for models of similar size, plus a check that the sampling design supports the intended inference.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="d4-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. The “n ≥ 30” rule concerns…</legend>
+      <label class="opt"><input type="radio" name="d4q1"><span>the sample size every survey needs<span class="why">No such universal number exists.</span></span></label>
+      <label class="opt"><input type="radio" name="d4q1" data-correct><span>when the normal approximation to a sampling distribution is reasonable<span class="why">Yes, and only roughly.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. The Krejcie–Morgan table assumes…</legend>
+      <label class="opt"><input type="radio" name="d4q2" data-correct><span>95% confidence, ±5 points, P = 0.5 and random sampling<span class="why">Yes.</span></span></label>
+      <label class="opt"><input type="radio" name="d4q2"><span>80% power to detect a medium effect<span class="why">It is not a power calculation.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Cluster sampling with DEFF = 2 means 400 respondents are worth about…</legend>
+      <label class="opt"><input type="radio" name="d4q3" data-correct><span>200 simple-random respondents<span class="why">Yes: 400/2.</span></span></label>
+      <label class="opt"><input type="radio" name="d4q3"><span>800 simple-random respondents<span class="why">Clustering reduces information.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>4. Which is the strongest justification for a hypothesis-testing thesis?</legend>
+      <label class="opt"><input type="radio" name="d4q4"><span>“The sample is larger than 30.”<span class="why">Not a justification.</span></span></label>
+      <label class="opt"><input type="radio" name="d4q4"><span>“The population is 10,000, so 370 is enough.”<span class="why">That is about precision for one proportion.</span></span></label>
+      <label class="opt"><input type="radio" name="d4q4" data-correct><span>An a priori power analysis for the main coefficient, with stated inputs<span class="why">Yes.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

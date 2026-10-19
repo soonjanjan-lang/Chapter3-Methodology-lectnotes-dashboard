@@ -1,0 +1,23 @@
+<!--meta
+id: f4
+group: F
+code: F4
+title: Downloads
+short: Downloads
+-->
+<header class="tab-head">
+  <h1 id="h-f4"><span class="secnum">F4</span>Downloads</h1>
+  <p class="lede">Keep everything. The offline ZIP contains this whole guide, which works without an internet connection, plus the lecture notes as a PDF, worksheets and templates in Word, the Stata do-files, the Jupyter notebooks and the practice datasets.</p>
+</header>
+
+<div class="panel">
+  <div class="wide">
+<!--@DOWNLOADS-->
+  </div>
+  <h3 id="f4-run">Running the code</h3>
+  <dl class="defs">
+    <dt>Stata</dt><dd>Unzip, open Stata, change the working directory to <code>downloads/code</code> (File → Change Working Directory), then run the do-files in order: <code>do 03_data_cleaning.do</code> first, because 04 and 06 use its output. Built-in commands only; Stata 16 or later.</dd>
+    <dt>Python</dt><dd>Open the notebooks in Jupyter, VS Code or Google Colab. The first cell installs any missing package. Run <code>03_data_cleaning.ipynb</code> before 04 and 06. On Colab the data load from this guide's GitHub repository automatically.</dd>
+    <dt>Tested</dt><dd>Every do-file and notebook is run automatically each time this guide is rebuilt, and must finish without a single error before the ZIP is produced.</dd>
+  </dl>
+</div>

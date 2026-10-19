@@ -1,0 +1,168 @@
+<!--meta
+id: c1
+group: C
+code: C1
+title: Levels of measurement: nominal, ordinal, interval, ratio
+short: Levels of measurement
+-->
+<header class="tab-head">
+  <h1 id="h-c1"><span class="secnum">C1</span>Levels of measurement: nominal, ordinal, interval, ratio</h1>
+  <p class="lede">A variable's level of measurement decides which statistics are meaningful and which model suits it as an outcome. Stevens (1946) set out the four levels, often remembered as NOIR.</p>
+  <ul class="tab-facts"><li>About 15 minutes</li><li>Sorting game</li><li>Worksheet with model answers</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>assign any variable to its level of measurement;</li>
+      <li>say which statistics each level permits;</li>
+      <li>explain what the mean of a dummy variable means.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="c1-nominal">Nominal</h2>
+  <p>Values are categories with no inherent order. Examples: gender, ethnicity, industry code, country of birth, marital status. The only meaningful comparison is equal or not equal (=, ≠). Permissible statistics: mode, frequencies, proportions, the chi-square test.</p>
+  <p>Means are meaningless for nominal codes. A “mean gender” is nonsense, even though Stata will obediently compute one if male = 1 and female = 2.</p>
+
+  <h2 id="c1-ordinal">Ordinal</h2>
+  <p>Values have a meaningful order, but the distances between them are not equal, or not known. Examples: income category (B40, M40, T20), a Likert item, academic performance bands (excellent, good, pass). Median and percentiles are meaningful; differences are not. Moving from “agree” to “strongly agree” need not be the same step as from “disagree” to “neutral”.</p>
+
+  <h2 id="c1-interval">Interval</h2>
+  <p>Values have order <em>and</em> equal intervals, but no true zero: zero is just a point on the scale, not the absence of the attribute. Examples: temperature in Celsius (0 °C is not “no temperature”), shoe size, calendar year. Differences are meaningful; ratios are not. 20 °C is not “twice as hot” as 10 °C.</p>
+
+  <h2 id="c1-ratio">Ratio</h2>
+  <p>Interval level plus a true zero that means the absence of the attribute. Examples: income, age, distance, weight, price, GDP, the unemployment rate, number of children, years of schooling. All arithmetic is meaningful: RM 4,000 is twice RM 2,000.</p>
+
+  <table class="bt">
+    <caption><b>Table C1.1.</b> What each level permits</caption>
+    <thead><tr><th>Level</th><th>Order?</th><th>Equal intervals?</th><th>True zero?</th><th>Central tendency</th><th>Typical tests</th><th>As an outcome, model with…</th></tr></thead>
+    <tbody>
+      <tr><th>Nominal</th><td>No</td><td>No</td><td>No</td><td>Mode</td><td>Chi-square</td><td>Logit/probit (binary); multinomial logit</td></tr>
+      <tr><th>Ordinal</th><td>Yes</td><td>No</td><td>No</td><td>Median</td><td>Mann–Whitney, Spearman</td><td>Ordered logit/probit</td></tr>
+      <tr><th>Interval</th><td>Yes</td><td>Yes</td><td>No</td><td>Mean</td><td>t-test, Pearson, regression</td><td>OLS</td></tr>
+      <tr><th>Ratio</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Mean (geometric mean too)</td><td>All of the above</td><td>OLS; logs for elasticities; count models for counts</td></tr>
+    </tbody>
+  </table>
+  <aside class="ex-note"><b>Examiner:</b> Composite scores built from several Likert items are usually treated as interval-like. Say that you do this, and why (<a href="#e3">E3</a>).</aside>
+
+  <h2 id="c1-dummy">The mean of a dummy variable</h2>
+  <p>If gender is coded as a dummy with female = 0 and male = 1, and Stata reports a mean of 0.57, what does it represent? It is the <strong>proportion of observations coded 1</strong>: 57% of the sample is male. This is why dummies are coded 0/1 and named after the category coded 1 (<code>male</code>, or better <code>female</code> with female = 1). The mean then reads directly as a share, and the regression coefficient as the difference from the 0 category.</p>
+  <div class="formula">$$\bar{d} = \frac{1}{n}\sum_{i=1}^{n} d_i = \frac{\#\{d_i = 1\}}{n}$$</div>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Nominal: categories. Ordinal: ordered categories. Interval: equal steps, no true zero. Ratio: equal steps and a true zero.</li>
+      <li>The level limits the statistics and decides the model for an outcome.</li>
+      <li>The mean of a 0/1 dummy is the proportion coded 1.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul><li>Stevens, S. S. (1946). On the theory of scales of measurement. <i>Science, 103</i>(2684), 677–680.</li></ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Sorting game">
+  <h2 id="c1-game">Sort the variables</h2>
+  <p>Choose the level of measurement for each variable. Feedback appears as you choose.</p>
+  <div class="sorter">
+    <div class="sort-item" data-answer="N" data-answer-label="nominal" data-explain="States are categories with no order.">
+      <span>Home state (Kedah, Selangor, Sabah…)</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="O" data-answer-label="ordinal" data-explain="B40 < M40 < T20 is ordered, but the bands are not equal-sized steps.">
+      <span>Income group: B40, M40, T20</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="R" data-answer-label="ratio" data-explain="Zero ringgit means no income, and RM 4,000 is twice RM 2,000.">
+      <span>Monthly household income (RM)</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="I" data-answer-label="interval" data-explain="Equal steps, but 0 °C is not the absence of temperature.">
+      <span>Temperature in Celsius</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="O" data-answer-label="ordinal" data-explain="A single Likert item is ordered categories with unknown spacing.">
+      <span>“I trust e-wallets”: strongly disagree … strongly agree</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="R" data-answer-label="ratio" data-explain="A count: zero means none, and ratios make sense.">
+      <span>Number of children</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="N" data-answer-label="nominal" data-explain="The MSIC code is a label; code 47 is not 'more' than code 10.">
+      <span>Industry (MSIC code)</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="R" data-answer-label="ratio" data-explain="A rate with a true zero (no unemployment).">
+      <span>Unemployment rate (%)</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="O" data-answer-label="ordinal" data-explain="Ordered classes; a first is not a fixed distance above a second upper.">
+      <span>Degree classification (first, second upper, second lower, third)</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <div class="sort-item" data-answer="I" data-answer-label="interval" data-explain="Calendar year has equal steps but year 0 is not 'no time'.">
+      <span>Year of birth</span>
+      <span class="sort-choices"><button type="button" data-choice="N">N</button><button type="button" data-choice="O">O</button><button type="button" data-choice="I">I</button><button type="button" data-choice="R">R</button></span>
+      <p class="sort-feedback" aria-live="polite"></p>
+    </div>
+    <p class="sorter-score small" aria-live="polite"></p>
+  </div>
+  <p class="small">N = nominal, O = ordinal, I = interval, R = ratio.</p>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="c1-ws">Worksheet C1</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>A dummy <code>male</code> (1 = male, 0 = female) has mean 0.57 in a sample of 400. How many women are in the sample, and what does a regression coefficient of −250 on <code>male</code> in a monthly-saving equation mean? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="c1-q1"></x-draft>
+      <x-answer><p>57% are men, so 0.43 × 400 = 172 are women. The coefficient means that men save RM 250 a month less than women on average, holding the other regressors constant.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A student codes ethnicity as 1 = Malay, 2 = Chinese, 3 = Indian, 4 = Others and enters it as one variable in OLS. What is wrong, and what should they do? <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="c1-q2"></x-draft>
+      <x-answer><p>Ethnicity is nominal, so a single 1–4 variable imposes an order and equal spacing that do not exist. The coefficient would be meaningless. Create dummies for each group and omit one as the reference category (<code>i.ethnic</code> in Stata; <code>C(ethnic)</code> in Python). Each coefficient is then the difference from the reference group.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Income can be collected as an exact amount (ratio) or in bands such as B40/M40/T20 (ordinal). Give one advantage of each. <span class="ws-marks">(2 marks)</span></p>
+      <x-draft key="c1-q3"></x-draft>
+      <x-answer><p>Exact amount: more information, allows means, logs and elasticities. Bands: higher response rates and less recall error on a sensitive question; enough for many descriptive purposes. A common compromise asks the exact amount and offers bands to those who decline.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="c1-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Which level has a true zero?</legend>
+      <label class="opt"><input type="radio" name="c1q1"><span>Interval<span class="why">Interval scales have no true zero.</span></span></label>
+      <label class="opt"><input type="radio" name="c1q1" data-correct><span>Ratio<span class="why">Yes.</span></span></label>
+      <label class="opt"><input type="radio" name="c1q1"><span>Ordinal<span class="why">Ordinal scales have order only.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. The median is the most informative centre for…</legend>
+      <label class="opt"><input type="radio" name="c1q2" data-correct><span>an ordinal variable<span class="why">Yes. The median uses order only.</span></span></label>
+      <label class="opt"><input type="radio" name="c1q2"><span>a nominal variable<span class="why">Nominal variables have no order; use the mode.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. An outcome measured as B40, M40 or T20 is best modelled with…</legend>
+      <label class="opt"><input type="radio" name="c1q3"><span>OLS<span class="why">OLS treats the categories as equally spaced numbers.</span></span></label>
+      <label class="opt"><input type="radio" name="c1q3" data-correct><span>ordered logit or probit<span class="why">Yes: an ordered categorical outcome.</span></span></label>
+      <label class="opt"><input type="radio" name="c1q3"><span>multinomial logit<span class="why">That ignores the order, which wastes information.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

@@ -1,0 +1,223 @@
+<!--meta
+id: e3
+group: E
+code: E3
+title: Likert scales and rating scales
+short: Likert and rating scales
+-->
+<header class="tab-head">
+  <h1 id="h-e3"><span class="secnum">E3</span>Likert scales and rating scales</h1>
+  <p class="lede">The first misconception to correct: Likert scales and rating scales are not two mutually exclusive methods. A Likert-type item is one particular kind of rating scale. What matters is what you intend to measure, how respondents answer, and which analyses the answers can legitimately support.</p>
+  <ul class="tab-facts"><li>About 25 minutes</li><li>Format examples</li><li>Which estimator for which outcome</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>distinguish a Likert-type item, a Likert scale and other rating scales;</li>
+      <li>choose a response format to match each construct;</li>
+      <li>choose an estimator for an outcome measured on these scales.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="e3-diff">What is the difference?</h2>
+  <p>A <span class="term">rating scale</span> is the broad category: respondents evaluate something using ordered categories or numerical scores. A <span class="term">Likert-type item</span> is a more specific format that asks for degree of agreement or disagreement with a statement. Strictly, a <span class="term">Likert scale</span> is several related Likert-type items combined (summed or averaged) to measure one underlying construct (Likert, 1932). A single agreement question is a Likert-type <em>item</em>, although many researchers loosely call it a Likert scale.</p>
+
+  <div class="duo">
+    <div class="box">
+      <p class="box-title">Example A: Likert-type item</p>
+      <p>“Using ChatGPT improves my academic productivity.”</p>
+      <fieldset class="demo-scale" aria-label="Likert-type example">
+        <label><input type="radio" name="demo-lik"> 1 Strongly disagree</label>
+        <label><input type="radio" name="demo-lik"> 2 Disagree</label>
+        <label><input type="radio" name="demo-lik"> 3 Neither agree nor disagree</label>
+        <label><input type="radio" name="demo-lik"> 4 Agree</label>
+        <label><input type="radio" name="demo-lik"> 5 Strongly agree</label>
+      </fieldset>
+      <p class="small">Measures agreement with a proposition.</p>
+    </div>
+    <div class="box">
+      <p class="box-title">Example B: numerical rating scale</p>
+      <p>“How satisfied are you with your university's Wi-Fi service?”</p>
+      <div class="demo-rating">
+        <span>Very dissatisfied</span>
+        <input type="range" min="1" max="10" step="1" value="7" aria-label="Satisfaction from 1 to 10" oninput="this.nextElementSibling.textContent=this.value + '/10'">
+        <output>7/10</output>
+        <span>Very satisfied</span>
+      </div>
+      <p class="small">Directly evaluates satisfaction.</p>
+    </div>
+  </div>
+  <p>Both collect subjective evaluations, but the first operationalises agreement with a statement, while the second rates the thing itself.</p>
+
+  <h2 id="e3-compare">Detailed comparison</h2>
+  <table class="bt">
+    <caption><b>Table E3.1.</b> Likert-type items and other rating formats</caption>
+    <thead><tr><th>Characteristic</th><th>Likert-type item</th><th>Other rating-scale formats</th></tr></thead>
+    <tbody>
+      <tr><th>Main purpose</th><td>Agreement, attitudes, beliefs, perceptions</td><td>Satisfaction, intensity, frequency, quality, importance, performance</td></tr>
+      <tr><th>Typical wording</th><td>“I believe AI improves my learning.”</td><td>“How useful is AI for your learning?”</td></tr>
+      <tr><th>Response format</th><td>Strongly disagree to strongly agree</td><td>Very poor to excellent; 0–10; never to always</td></tr>
+      <tr><th>Number of categories</th><td>Commonly 5 or 7</td><td>3, 5, 7, 10, 11, 100 or continuous</td></tr>
+      <tr><th>Measurement level</th><td>Each item is ordinarily ordinal</td><td>Ordinal unless interval properties can be justified</td></tr>
+      <tr><th>Multiple items needed?</th><td>Yes, for a summated Likert scale</td><td>Not necessarily; several ratings can also form a composite</td></tr>
+      <tr><th>Common uses</th><td>Technology acceptance, motivation, attitudes, trust</td><td>Satisfaction surveys, service quality, perceived risk, performance</td></tr>
+    </tbody>
+  </table>
+  <p>A 1–10 rating is not automatically better than a five-point Likert item. More response categories do not by themselves produce interval-level measurement or improve validity (Sullivan &amp; Artino, 2013; Norman, 2010).</p>
+
+  <h2 id="e3-when">When to use each</h2>
+  <p><strong>Agreement items for latent constructs.</strong> To measure perceived usefulness of AI, use several statements on the same five-point agreement format:</p>
+  <table class="bt narrow">
+    <caption><b>Table E3.2.</b> A four-item perceived-usefulness scale</caption>
+    <thead><tr><th>Code</th><th>Statement</th></tr></thead>
+    <tbody>
+      <tr><td>PU1</td><td>Using generative AI improves the quality of my academic work.</td></tr>
+      <tr><td>PU2</td><td>Using generative AI helps me complete assignments more efficiently.</td></tr>
+      <tr><td>PU3</td><td>Using generative AI enhances my academic productivity.</td></tr>
+      <tr><td>PU4</td><td>Using generative AI makes it easier to understand difficult academic concepts.</td></tr>
+    </tbody>
+  </table>
+  <p>If the items represent a common construct and support a defensible composite, one index is the mean:</p>
+  <div class="formula">$$PU_i = \frac{PU1_i + PU2_i + PU3_i + PU4_i}{4}$$</div>
+  <p>Before combining items, assess dimensionality and reliability (<a href="#e4">E4</a>), rather than assuming that four similar statements make a valid scale.</p>
+  <p><strong>Direct ratings for specific evaluations.</strong> “Overall, how satisfied are you with generative AI tools for your academic work?” (very dissatisfied to very satisfied) is direct, quick, and avoids an extra agreement statement. Agreement formats also invite <strong>acquiescence bias</strong>, the tendency to agree whatever the content. An experiment by Revilla, Saris and Krosnick (2014) found that five categories performed better than seven or eleven for the agree–disagree scales they examined. That is evidence for that context, not a universal rule.</p>
+  <aside class="ex-note"><b>Examiner:</b> Choose the format for the construct, construct by construct. One format for every question in the instrument is a habit, not a design decision.</aside>
+
+  <h2 id="e3-pros">Advantages and disadvantages</h2>
+  <div class="duo">
+    <div>
+      <h3>Likert-type agreement format</h3>
+      <table class="bt narrow">
+        <thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead>
+        <tbody>
+          <tr><td>Easy to understand</td><td>Acquiescence bias</td></tr>
+          <tr><td>Convenient for many constructs</td><td>Agreement may not reflect behaviour</td></tr>
+          <tr><td>Measures abstract constructs (trust, motivation)</td><td>Social desirability</td></tr>
+          <tr><td>Multiple items can raise reliability</td><td>Repetition encourages straight-lining</td></tr>
+          <tr><td>Supports multi-item indices</td><td>Ordinal categories complicate analysis</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3>Other rating formats</h3>
+      <table class="bt narrow">
+        <thead><tr><th>Advantages</th><th>Disadvantages</th></tr></thead>
+        <tbody>
+          <tr><td>Tailored to the construct</td><td>Scale points interpreted differently</td></tr>
+          <tr><td>Flexible anchors: frequency, intensity</td><td>Equal numerical steps may not be equal psychological steps</td></tr>
+          <tr><td>Single items reduce burden</td><td>One item may not capture a complex construct</td></tr>
+          <tr><td>Avoids some agreement biases</td><td>Response styles remain</td></tr>
+          <tr><td>Can capture fine distinctions</td><td>Too many categories imply false precision</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <h2 id="e3-econ">Which estimator? It depends on the outcome, not the label</h2>
+  <p>Your choice of econometric method should depend on the measurement properties of the dependent variable, not on whether the questionnaire calls it a Likert or a rating scale.</p>
+  <table class="bt">
+    <caption><b>Table E3.3.</b> Outcome, example and analytical options</caption>
+    <thead><tr><th>Dependent variable</th><th>Example</th><th>Appropriate options</th></tr></thead>
+    <tbody>
+      <tr><td>One five-point agreement item</td><td>Agreement that AI improves productivity</td><td>Ordered logit or probit</td></tr>
+      <tr><td>One five-point satisfaction rating</td><td>Satisfaction with university Wi-Fi</td><td>Ordered logit or probit</td></tr>
+      <tr><td>One 1–10 rating</td><td>Perceived AI usefulness</td><td>Ordered logit/probit; OLS with justification and robustness checks</td></tr>
+      <tr><td>Mean of several validated items</td><td>AI-dependence index</td><td>OLS can be considered; latent-variable models are alternatives</td></tr>
+      <tr><td>Binary</td><td>Uses ChatGPT at least weekly (yes/no)</td><td>Logit, probit, linear probability model</td></tr>
+      <tr><td>Observed frequency</td><td>Number of days using AI in a week</td><td>Count or binomial models</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Is OLS acceptable for Likert data?</strong> The debate is long-running. Individual items are ordinal: moving from 1 to 2 need not equal moving from 4 to 5 (Jamieson, 2004). Norman (2010) shows that parametric methods are robust with such data, and Carifio and Perla (2008) distinguish single items from summated scales. Liddell and Kruschke (2018) show that treating ordinal outcomes as metric can produce wrong conclusions. A defensible rule: for a single five-category outcome, start with an ordered logit or probit. For a validated composite of several items, OLS is reasonable, ideally with a sensitivity check. For complex latent constructs, consider ordinal CFA or SEM.</p>
+
+  <h2 id="e3-behaviour">Perceptions versus behaviour</h2>
+  <table class="bt">
+    <caption><b>Table E3.4.</b> Three ways to ask about AI dependence</caption>
+    <thead><tr><th>Format</th><th>Item</th><th>What it measures</th></tr></thead>
+    <tbody>
+      <tr><td>Agreement</td><td>“I frequently rely on ChatGPT to complete my assignments.”</td><td>Self-reported agreement with a statement about reliance</td></tr>
+      <tr><td>Frequency rating</td><td>“During the past seven days, how often did you use ChatGPT for academic work?” (never / once / 2–3 times / 4–6 times / 7 or more)</td><td>Recalled frequency in ordered categories</td></tr>
+      <tr><td>Behavioural count</td><td>“On how many of the past seven days did you use ChatGPT for academic work?”</td><td>A self-reported count from 0 to 7 (recall error remains)</td></tr>
+    </tbody>
+  </table>
+  <p>For frequency of use, the second and third formats beat the first. But even daily use is not dependence: dependence needs its own definition and, probably, a validated multi-item measure. Choose the measurement format from the construct and research question first, then choose the estimator.</p>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>A Likert-type item is one kind of rating scale; a Likert scale combines several such items.</li>
+      <li>Match the format to each construct: agreement for latent attitudes, direct ratings, frequencies or counts for evaluations and behaviour.</li>
+      <li>The outcome's measurement properties, not its label, decide the estimator.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Carifio, J., &amp; Perla, R. (2008). Resolving the 50-year debate around using and misusing Likert scales. <i>Medical Education, 42</i>(12), 1150–1152.</li>
+      <li>Jamieson, S. (2004). Likert scales: How to (ab)use them. <i>Medical Education, 38</i>(12), 1217–1218.</li>
+      <li>Liddell, T. M., &amp; Kruschke, J. K. (2018). Analyzing ordinal data with metric models: What could possibly go wrong? <i>Journal of Experimental Social Psychology, 79</i>, 328–348.</li>
+      <li>Likert, R. (1932). A technique for the measurement of attitudes. <i>Archives of Psychology, 22</i>(140), 1–55.</li>
+      <li>Norman, G. (2010). Likert scales, levels of measurement and the “laws” of statistics. <i>Advances in Health Sciences Education, 15</i>(5), 625–632.</li>
+      <li>Revilla, M. A., Saris, W. E., &amp; Krosnick, J. A. (2014). Choosing the number of categories in agree–disagree scales. <i>Sociological Methods &amp; Research, 43</i>(1), 73–97.</li>
+      <li>Sullivan, G. M., &amp; Artino, A. R., Jr. (2013). Analyzing and interpreting data from Likert-type scales. <i>Journal of Graduate Medical Education, 5</i>(4), 541–542.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="e3-ex">Worked example: choosing formats for an AI study</h2>
+  <p>A thesis on students' use of generative AI measures eight constructs. Rather than one format throughout, each construct gets the format that fits it.</p>
+  <table class="bt">
+    <caption><b>Table E3.5.</b> Construct and suggested measurement</caption>
+    <thead><tr><th>Construct</th><th>Suggested measurement</th></tr></thead>
+    <tbody>
+      <tr><td>Attitude towards AI</td><td>Five-point agreement items</td></tr>
+      <tr><td>Perceived usefulness</td><td>Agreement items or direct usefulness ratings</td></tr>
+      <tr><td>Trust in AI</td><td>Validated multi-item measure</td></tr>
+      <tr><td>Satisfaction with AI</td><td>Direct five-point satisfaction rating</td></tr>
+      <tr><td>Frequency of AI use</td><td>Explicit frequency categories or counts</td></tr>
+      <tr><td>Time spent using AI</td><td>Hours or minutes over a defined recall period</td></tr>
+      <tr><td>Perceived importance of a policy</td><td>Direct importance rating</td></tr>
+      <tr><td>AI dependence</td><td>Validated multi-item construct, supplemented by behaviour questions</td></tr>
+    </tbody>
+  </table>
+  <p>Questionnaire quality depends on whether items capture the construct, not only on the response scale. Scale development needs content validation, pretesting, tests of dimensionality, reliability and construct validity. Cronbach's alpha alone does not establish validity (<a href="#e4">E4</a>).</p>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="e3-ws">Worksheet E3</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>For each outcome, name the estimator: (a) a single item “I intend to apply for a PTPTN loan” (1–5); (b) the mean of six validated financial-anxiety items (1–5); (c) “How many times did you use Touch 'n Go eWallet last week?” <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="e3-q1"></x-draft>
+      <x-answer><p>(a) Ordered logit or probit, with a test of the parallel-lines assumption. (b) OLS is reasonable for a validated composite, with an ordered-model or latent-variable check. (c) A count model (Poisson or negative binomial), or OLS if counts are spread widely, reported with robustness checks.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Rewrite “I use e-wallets frequently” (strongly disagree to strongly agree) into a behavioural count item, and explain what is gained. <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="e3-q2"></x-draft>
+      <x-answer><p>“On how many of the past seven days did you pay with an e-wallet? (0–7)”. The count has a defined reference period, is less prone to acquiescence, is ratio-level, and means the same to every respondent, whereas “frequently” is interpreted differently by different people.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="e3-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Strictly speaking, a Likert scale is…</legend>
+      <label class="opt"><input type="radio" name="e3q1"><span>any five-point question<span class="why">That is a rating format.</span></span></label>
+      <label class="opt"><input type="radio" name="e3q1" data-correct><span>several agreement items combined to measure one construct<span class="why">Yes.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Acquiescence bias is…</legend>
+      <label class="opt"><input type="radio" name="e3q2" data-correct><span>a tendency to agree regardless of content<span class="why">Yes; a weakness of agree–disagree formats.</span></span></label>
+      <label class="opt"><input type="radio" name="e3q2"><span>always choosing the middle option<span class="why">That is a central-tendency response style.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Does a 1–10 scale give interval-level data automatically?</legend>
+      <label class="opt"><input type="radio" name="e3q3"><span>Yes, because it has more points<span class="why">More points do not guarantee equal intervals.</span></span></label>
+      <label class="opt"><input type="radio" name="e3q3" data-correct><span>No; interval properties must be justified<span class="why">Yes.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

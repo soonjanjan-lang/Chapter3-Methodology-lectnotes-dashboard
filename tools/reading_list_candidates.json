@@ -1,0 +1,506 @@
+[
+ {
+  "key": "carter2007",
+  "topic": "methodology",
+  "q": "Carter Little 2007 Justifying knowledge, justifying method, taking action: epistemologies, methodologies, and methods in qualitative research",
+  "year": 2007,
+  "why": "The clearest published statement of how epistemology, methodology and method nest — the backbone of tab A1."
+ },
+ {
+  "key": "johnson2004",
+  "topic": "methodology",
+  "q": "Johnson Onwuegbuzie 2004 Mixed methods research: a research paradigm whose time has come Educational Researcher",
+  "year": 2004,
+  "why": "Defines mixed-methods research and its pragmatist rationale; useful if your design combines a survey with interviews or FGDs."
+ },
+ {
+  "key": "morgan2007",
+  "topic": "methodology",
+  "q": "Morgan 2007 Paradigms lost and pragmatism regained methodological implications of combining qualitative and quantitative methods",
+  "year": 2007,
+  "why": "Explains paradigms in plain terms and argues for pragmatism as the working philosophy of applied research."
+ },
+ {
+  "key": "angrist2010",
+  "topic": "design",
+  "doi": "10.1257/jep.24.2.3",
+  "year": 2010,
+  "why": "How design-based identification changed empirical economics; read before writing your model-specification justification."
+ },
+ {
+  "key": "imbens2009",
+  "topic": "design",
+  "doi": "10.1257/jel.47.1.5",
+  "year": 2009,
+  "why": "The standard survey of programme-evaluation estimators (matching, DiD, IV, RD) with their identifying assumptions."
+ },
+ {
+  "key": "lee2010",
+  "topic": "design",
+  "doi": "10.1257/jel.48.2.281",
+  "year": 2010,
+  "why": "The practitioner's guide to regression discontinuity — what to report and how to defend an RD design."
+ },
+ {
+  "key": "kiel1995",
+  "topic": "design",
+  "q": "Kiel McClain 1995 House prices during siting decision stages: the case of an incinerator from rumor through operation",
+  "year": 1995,
+  "why": "Source of the pooled cross-section incinerator example used in tab C2 (year81 × nearinc)."
+ },
+ {
+  "key": "williams2006",
+  "topic": "design",
+  "q": "Williams 2006 Generalized ordered logit/partial proportional odds models for ordinal dependent variables Stata Journal",
+  "year": 2006,
+  "why": "Methodological justification for the partial proportional odds model used in the RQ–method table example."
+ },
+ {
+  "key": "christensen2018",
+  "topic": "cleaning",
+  "doi": "10.1257/jel.20171350",
+  "year": 2018,
+  "why": "Why transparent, reproducible data handling (do-files, raw vs clean data) is now expected in economics."
+ },
+ {
+  "key": "stevens1946",
+  "topic": "measurement",
+  "q": "Stevens 1946 On the theory of scales of measurement Science",
+  "year": 1946,
+  "why": "The original nominal–ordinal–interval–ratio typology and the statistics each level permits."
+ },
+ {
+  "key": "jamieson2004",
+  "topic": "scales",
+  "q": "Jamieson 2004 Likert scales: how to (ab)use them Medical Education",
+  "year": 2004,
+  "why": "A short, much-cited warning about treating Likert items as interval data."
+ },
+ {
+  "key": "carifio2008",
+  "topic": "scales",
+  "q": "Carifio Perla 2008 Resolving the 50-year debate around using and misusing Likert scales Medical Education",
+  "year": 2008,
+  "why": "The reply to Jamieson: distinguishes Likert items from Likert scales and defends parametric analysis of summated scales."
+ },
+ {
+  "key": "norman2010",
+  "topic": "scales",
+  "doi": "10.1007/s10459-010-9222-y",
+  "year": 2010,
+  "why": "Shows parametric methods are robust with Likert data — the key reference when you run OLS on a scale score."
+ },
+ {
+  "key": "sullivan2013",
+  "topic": "scales",
+  "doi": "10.4300/JGME-5-4-18",
+  "year": 2013,
+  "why": "Two-page practical guide to analysing and reporting Likert-type data."
+ },
+ {
+  "key": "revilla2014",
+  "topic": "scales",
+  "doi": "10.1177/0049124113509605",
+  "year": 2014,
+  "why": "Experimental evidence on how many response categories agree–disagree scales should have."
+ },
+ {
+  "key": "preston2000",
+  "topic": "scales",
+  "q": "Preston Colman 2000 Optimal number of response categories in rating scales: reliability, validity, discriminating power, and respondent preferences",
+  "year": 2000,
+  "why": "Compares 2- to 11-point and 101-point rating scales on reliability, validity and respondent preference."
+ },
+ {
+  "key": "liddell2018",
+  "topic": "scales",
+  "q": "Liddell Kruschke 2018 Analyzing ordinal data with metric models: what could possibly go wrong",
+  "year": 2018,
+  "why": "Shows when treating ordinal outcomes as metric produces wrong conclusions — the case for ordered models."
+ },
+ {
+  "key": "krejcie1970",
+  "topic": "sampling",
+  "doi": "10.1177/001316447003000308",
+  "year": 1970,
+  "why": "The original sample-size table discussed in tab D4; read it with Lakens (2022)."
+ },
+ {
+  "key": "cohen1992",
+  "topic": "sampling",
+  "q": "Cohen 1992 A power primer Psychological Bulletin",
+  "year": 1992,
+  "why": "Defines small/medium/large effect sizes and gives sample sizes for 80% power across common tests."
+ },
+ {
+  "key": "faul2007",
+  "topic": "sampling",
+  "doi": "10.3758/BF03193146",
+  "year": 2007,
+  "why": "The G*Power 3 paper — cite it when you report an a priori power analysis."
+ },
+ {
+  "key": "faul2009",
+  "topic": "sampling",
+  "doi": "10.3758/BRM.41.4.1149",
+  "year": 2009,
+  "why": "Power analysis for correlation and regression in G*Power 3.1 (the f² approach used in tab D4)."
+ },
+ {
+  "key": "lakens2022",
+  "topic": "sampling",
+  "doi": "10.1525/collabra.33267",
+  "year": 2022,
+  "why": "The best modern guide to justifying a sample size: precision, power, resource constraints and heuristics."
+ },
+ {
+  "key": "green1991",
+  "topic": "sampling",
+  "q": "Green 1991 How many subjects does it take to do a regression analysis Multivariate Behavioral Research",
+  "year": 1991,
+  "why": "Origin of the N ≥ 50 + 8m rule of thumb — and why power analysis does better."
+ },
+ {
+  "key": "peduzzi1996",
+  "topic": "sampling",
+  "q": "Peduzzi Concato Kemper Holford Feinstein 1996 A simulation study of the number of events per variable in logistic regression analysis",
+  "year": 1996,
+  "why": "The events-per-variable guideline for logit models with a binary outcome."
+ },
+ {
+  "key": "ioannidis2017",
+  "topic": "sampling",
+  "q": "Ioannidis Stanley Doucouliagos 2017 The power of bias in economics research Economic Journal",
+  "year": 2017,
+  "why": "Finds most economics studies are underpowered — the economics case for power analysis."
+ },
+ {
+  "key": "mckenzie2012",
+  "topic": "sampling",
+  "q": "McKenzie 2012 Beyond baseline and follow-up: the case for more T in experiments Journal of Development Economics",
+  "year": 2012,
+  "why": "Power and sample-size planning for field experiments with repeated rounds of data."
+ },
+ {
+  "key": "biernacki1981",
+  "topic": "sampling",
+  "q": "Biernacki Waldorf 1981 Snowball sampling: problems and techniques of chain referral sampling",
+  "year": 1981,
+  "why": "The methodological classic on snowball sampling of hidden populations."
+ },
+ {
+  "key": "heckathorn1997",
+  "topic": "sampling",
+  "q": "Heckathorn 1997 Respondent-driven sampling: a new approach to the study of hidden populations Social Problems",
+  "year": 1997,
+  "why": "How respondent-driven sampling improves on snowball sampling for hard-to-reach groups."
+ },
+ {
+  "key": "palinkas2015",
+  "topic": "sampling",
+  "q": "Palinkas Horwitz Green Wisdom Duan Hoagwood 2015 Purposeful sampling for qualitative data collection and analysis in mixed method implementation research",
+  "year": 2015,
+  "why": "Typology of purposive sampling strategies and when each fits."
+ },
+ {
+  "key": "baker2013",
+  "topic": "sampling",
+  "q": "Baker Brick Bates Battaglia Couper Dever Gile Tourangeau 2013 Summary report of the AAPOR task force on non-probability sampling",
+  "year": 2013,
+  "why": "Authoritative review of what can and cannot be inferred from non-probability samples, including online panels."
+ },
+ {
+  "key": "groves2006",
+  "topic": "sampling",
+  "q": "Groves 2006 Nonresponse rates and nonresponse bias in household surveys Public Opinion Quarterly",
+  "year": 2006,
+  "why": "Why a high response rate does not guarantee low nonresponse bias."
+ },
+ {
+  "key": "krosnick1999",
+  "topic": "questionnaire",
+  "q": "Krosnick 1999 Survey research Annual Review of Psychology",
+  "year": 1999,
+  "why": "Evidence-based review of question wording, response options, acquiescence and satisficing."
+ },
+ {
+  "key": "stantcheva2023",
+  "topic": "questionnaire",
+  "q": "Stantcheva 2023 How to run surveys: a guide to creating your own identifying variation and revealing the invisible Annual Review of Economics",
+  "year": 2023,
+  "why": "Survey design written by and for economists: sampling, question design, attention checks, experiments in surveys."
+ },
+ {
+  "key": "bertrand2001",
+  "topic": "questionnaire",
+  "q": "Bertrand Mullainathan 2001 Do people mean what they say? Implications for subjective survey data American Economic Review",
+  "year": 2001,
+  "why": "When subjective survey answers can and cannot be used as variables in economics."
+ },
+ {
+  "key": "meyer2015",
+  "topic": "secondary",
+  "doi": "10.1257/jep.29.4.199",
+  "year": 2015,
+  "why": "Rising nonresponse and measurement error in the big household surveys economists rely on."
+ },
+ {
+  "key": "beatty2007",
+  "topic": "questionnaire",
+  "q": "Beatty Willis 2007 Research synthesis: the practice of cognitive interviewing Public Opinion Quarterly",
+  "year": 2007,
+  "why": "How to pretest questionnaire items with cognitive interviews before the pilot."
+ },
+ {
+  "key": "brislin1970",
+  "topic": "questionnaire",
+  "q": "Brislin 1970 Back-translation for cross-cultural research Journal of Cross-Cultural Psychology",
+  "year": 1970,
+  "why": "The back-translation procedure for English–Malay (or other) questionnaire versions."
+ },
+ {
+  "key": "beaton2000",
+  "topic": "questionnaire",
+  "q": "Beaton Bombardier Guillemin Ferraz 2000 Guidelines for the process of cross-cultural adaptation of self-report measures Spine",
+  "year": 2000,
+  "why": "Step-by-step protocol for adapting an established instrument to a new language and culture."
+ },
+ {
+  "key": "lusardi2014",
+  "topic": "questionnaire",
+  "doi": "10.1257/jel.52.1.5",
+  "year": 2014,
+  "why": "How economists measure financial literacy (the 'Big Three' questions) — an example of an adopted instrument."
+ },
+ {
+  "key": "hinkin1998",
+  "topic": "validity",
+  "q": "Hinkin 1998 A brief tutorial on the development of measures for use in survey questionnaires Organizational Research Methods",
+  "year": 1998,
+  "why": "Step-by-step scale development: item generation, content validity, factor analysis, reliability."
+ },
+ {
+  "key": "boateng2018",
+  "topic": "validity",
+  "doi": "10.3389/fpubh.2018.00149",
+  "year": 2018,
+  "why": "A nine-step primer for developing and validating scales — the practical workflow behind tab E4."
+ },
+ {
+  "key": "podsakoff2003",
+  "topic": "validity",
+  "q": "Podsakoff MacKenzie Lee Podsakoff 2003 Common method biases in behavioral research: a critical review of the literature and recommended remedies",
+  "year": 2003,
+  "why": "Common-method bias in single-source surveys and the procedural remedies to build into your questionnaire."
+ },
+ {
+  "key": "cronbach1951",
+  "topic": "validity",
+  "q": "Cronbach 1951 Coefficient alpha and the internal structure of tests Psychometrika",
+  "year": 1951,
+  "why": "The original coefficient alpha paper."
+ },
+ {
+  "key": "cronbach1955",
+  "topic": "validity",
+  "q": "Cronbach Meehl 1955 Construct validity in psychological tests Psychological Bulletin",
+  "year": 1955,
+  "why": "Where construct validity was defined."
+ },
+ {
+  "key": "campbell1959",
+  "topic": "validity",
+  "q": "Campbell Fiske 1959 Convergent and discriminant validation by the multitrait-multimethod matrix",
+  "year": 1959,
+  "why": "Introduced convergent and discriminant validity."
+ },
+ {
+  "key": "messick1995",
+  "topic": "validity",
+  "q": "Messick 1995 Validity of psychological assessment: validation of inferences from persons' responses and performances as scientific inquiry into score meaning",
+  "year": 1995,
+  "why": "The unified view of validity as evidence for an interpretation — the basis of the modern standards."
+ },
+ {
+  "key": "fornell1981",
+  "topic": "validity",
+  "q": "Fornell Larcker 1981 Evaluating structural equation models with unobservable variables and measurement error Journal of Marketing Research",
+  "year": 1981,
+  "why": "Source of average variance extracted (AVE) and the Fornell–Larcker discriminant-validity criterion."
+ },
+ {
+  "key": "henseler2015",
+  "topic": "validity",
+  "doi": "10.1007/s11747-014-0403-8",
+  "year": 2015,
+  "why": "Introduces the HTMT ratio and shows why Fornell–Larcker often misses discriminant-validity problems."
+ },
+ {
+  "key": "sijtsma2009",
+  "topic": "validity",
+  "doi": "10.1007/s11336-008-9101-0",
+  "year": 2009,
+  "why": "A critique of how Cronbach's alpha is misused and misread."
+ },
+ {
+  "key": "mcneish2018",
+  "topic": "validity",
+  "doi": "10.1037/met0000144",
+  "year": 2018,
+  "why": "Why and how to report omega and other reliability coefficients instead of alpha alone."
+ },
+ {
+  "key": "tavakol2011",
+  "topic": "validity",
+  "q": "Tavakol Dennick 2011 Making sense of Cronbach's alpha International Journal of Medical Education",
+  "year": 2011,
+  "why": "A short, readable explanation of what alpha does and does not tell you."
+ },
+ {
+  "key": "polit2007",
+  "topic": "validity",
+  "q": "Polit Beck Owen 2007 Is the CVI an acceptable indicator of content validity? Appraisal and recommendations",
+  "year": 2007,
+  "why": "How to compute and interpret item- and scale-level content validity indices from expert ratings."
+ },
+ {
+  "key": "lawshe1975",
+  "topic": "validity",
+  "year": 1975,
+  "why": "The content validity ratio (CVR) for expert panels.",
+  "doi": "10.1111/j.1744-6570.1975.tb01393.x"
+ },
+ {
+  "key": "mackenzie2005",
+  "topic": "validity",
+  "q": "MacKenzie Podsakoff Jarvis 2005 The problem of measurement model misspecification in behavioral and organizational research and some recommended solutions",
+  "year": 2005,
+  "why": "Reflective versus formative indicators, and the bias from getting this wrong."
+ },
+ {
+  "key": "shrout1979",
+  "topic": "validity",
+  "q": "Shrout Fleiss 1979 Intraclass correlations: uses in assessing rater reliability Psychological Bulletin",
+  "year": 1979,
+  "why": "Which intraclass correlation to use for test–retest and inter-rater reliability."
+ },
+ {
+  "key": "cohen1960",
+  "topic": "validity",
+  "q": "Cohen 1960 A coefficient of agreement for nominal scales Educational and Psychological Measurement",
+  "year": 1960,
+  "why": "The original kappa statistic for inter-rater reliability."
+ },
+ {
+  "key": "bound1991",
+  "topic": "validity",
+  "q": "Bound Krueger 1991 The extent of measurement error in longitudinal earnings data: do two wrongs make a right",
+  "year": 1991,
+  "why": "Measures reporting error in survey earnings against administrative records — reliability in economics data."
+ },
+ {
+  "key": "morgan1996",
+  "topic": "qualitative",
+  "q": "Morgan 1996 Focus groups Annual Review of Sociology",
+  "year": 1996,
+  "why": "What focus groups are good for, how to run them, and how they combine with surveys."
+ },
+ {
+  "key": "kallio2016",
+  "topic": "qualitative",
+  "q": "Kallio Pietila Johnson Kangasniemi 2016 Systematic methodological review: developing a framework for a qualitative semi-structured interview guide",
+  "year": 2016,
+  "why": "A five-phase framework for building a semi-structured interview guide."
+ },
+ {
+  "key": "guest2006",
+  "topic": "qualitative",
+  "q": "Guest Bunce Johnson 2006 How many interviews are enough? An experiment with data saturation and variability",
+  "year": 2006,
+  "why": "Evidence on when interview data reach saturation."
+ },
+ {
+  "key": "malterud2016",
+  "topic": "qualitative",
+  "q": "Malterud Siersma Guassora 2016 Sample size in qualitative interview studies: guided by information power",
+  "year": 2016,
+  "why": "Justifying the number of interviews with 'information power' rather than saturation alone."
+ },
+ {
+  "key": "braun2006",
+  "topic": "qualitative",
+  "q": "Braun Clarke 2006 Using thematic analysis in psychology Qualitative Research in Psychology",
+  "year": 2006,
+  "why": "The six-phase thematic analysis procedure for interview and FGD data."
+ },
+ {
+  "key": "feenstra2015",
+  "topic": "secondary",
+  "doi": "10.1257/aer.20130954",
+  "year": 2015,
+  "why": "Documentation of the Penn World Table — how to read and cite a major secondary macro dataset."
+ },
+ {
+  "key": "johnson2013",
+  "topic": "secondary",
+  "q": "Johnson Larson Papageorgiou Subramanian 2013 Is newer better? Penn World Table revisions and their impact on growth estimates",
+  "year": 2013,
+  "why": "Shows that dataset revisions can change results — why you must report the exact data version."
+ },
+ {
+  "key": "deaton2005",
+  "topic": "secondary",
+  "q": "Deaton 2005 Measuring poverty in a growing world (or measuring growth in a poor world)",
+  "year": 2005,
+  "why": "Why national accounts and household surveys disagree — a lesson in choosing a data source."
+ },
+ {
+  "key": "einav2014",
+  "topic": "secondary",
+  "q": "Einav Levin 2014 Economics in the age of big data Science",
+  "year": 2014,
+  "why": "New administrative and private-sector data sources and what they offer economic research."
+ },
+ {
+  "key": "wickham2014",
+  "topic": "cleaning",
+  "doi": "10.18637/jss.v059.i10",
+  "year": 2014,
+  "why": "The tidy-data principles: one variable per column, one observation per row."
+ },
+ {
+  "key": "broman2018",
+  "topic": "cleaning",
+  "doi": "10.1080/00031305.2017.1375989",
+  "year": 2018,
+  "why": "Practical rules for organising data in spreadsheets before analysis."
+ },
+ {
+  "key": "vandenbroeck2005",
+  "topic": "cleaning",
+  "doi": "10.1371/journal.pmed.0020267",
+  "year": 2005,
+  "why": "A framework for screening, diagnosing and editing data abnormalities."
+ },
+ {
+  "key": "schafer2002",
+  "topic": "cleaning",
+  "q": "Schafer Graham 2002 Missing data: our view of the state of the art Psychological Methods",
+  "year": 2002,
+  "why": "Missing-data mechanisms (MCAR, MAR, MNAR) and modern handling methods."
+ },
+ {
+  "key": "leys2013",
+  "topic": "cleaning",
+  "q": "Leys Ley Klein Bernard Licata 2013 Detecting outliers: do not use standard deviation around the mean, use absolute deviation around the median",
+  "year": 2013,
+  "why": "A robust rule for flagging outliers during cleaning."
+ },
+ {
+  "key": "wasserstein2016",
+  "topic": "cleaning",
+  "doi": "10.1080/00031305.2016.1154108",
+  "year": 2016,
+  "why": "The ASA statement on p-values — how to report and interpret significance in your results chapter."
+ }
+]

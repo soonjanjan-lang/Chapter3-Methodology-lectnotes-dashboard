@@ -1,0 +1,276 @@
+/* ==========================================================================
+   Layout: the bound cover (rail), the running head, the page
+   ========================================================================== */
+
+.skip-link {
+  position: absolute; left: var(--s-4); top: -4rem; z-index: 100;
+  background: var(--buckram); color: var(--cover-ink);
+  padding: var(--s-2) var(--s-4); border-radius: 6px;
+}
+.skip-link:focus { top: var(--s-4); }
+
+.app {
+  --rail-w: 18rem;
+  display: grid;
+  grid-template-columns: var(--rail-w) minmax(0, 1fr);
+  min-height: 100vh;
+}
+
+/* ---- the rail: navy buckram cover with gold foil ------------------------ */
+.rail {
+  position: sticky; top: 0;
+  height: 100vh; height: 100dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background-color: var(--buckram);
+  /* fine cloth weave: two near-invisible thread directions */
+  background-image:
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.018) 0 1px, transparent 1px 3px),
+    repeating-linear-gradient(90deg, rgb(0 0 0 / 0.07) 0 1px, transparent 1px 3px);
+  color: var(--cover-ink);
+  scrollbar-color: rgb(217 183 108 / 0.4) transparent;
+  display: flex; flex-direction: column;
+}
+
+.cover {
+  padding: var(--s-6) var(--s-5) var(--s-5);
+  text-align: left;
+}
+.cover a { color: inherit; text-decoration: none; display: block; }
+.cover-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--foil);
+  font-size: 2.1rem;
+  line-height: 1.02;
+  margin: 0;
+  letter-spacing: 0.005em;
+}
+.cover-title span { display: block; font-size: 0.62em; font-weight: 400; margin-top: 0.25em; }
+.cover-rule {
+  height: 0; border: 0;
+  border-top: 1px solid var(--foil);
+  margin: var(--s-4) 0 var(--s-3);
+  width: 3.5rem;
+  opacity: 0.85;
+}
+.cover-sub {
+  margin: 0;
+  font-family: var(--font-page);
+  font-style: italic;
+  font-size: var(--fs-small);
+  color: var(--foil-dim);
+  line-height: 1.4;
+}
+
+.rail nav { padding: 0 var(--s-3) var(--s-6); flex: 1; }
+.rail-group {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--fs-small);
+  color: var(--foil-dim);
+  letter-spacing: 0.01em;
+  margin: var(--s-5) var(--s-3) var(--s-2);
+  display: flex; gap: 0.6em; align-items: baseline;
+}
+.rail-group .grp-letter {
+  font-family: var(--font-display);
+  color: var(--foil);
+  font-size: 1.05em;
+}
+.rail ol { list-style: none; margin: 0; padding: 0; }
+.rail li { margin: 0; }
+
+.toc-link {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.4em minmax(0, 1fr) 1.1em;
+  align-items: baseline;
+  gap: 0.35em;
+  padding: 0.42em var(--s-3);
+  border-radius: 6px;
+  color: var(--cover-ink);
+  text-decoration: none;
+  font-size: var(--fs-small);
+  line-height: 1.35;
+  transition: background-color 150ms ease-out, color 150ms ease-out;
+}
+.toc-link:hover { background: var(--buckram-hover); }
+.toc-code {
+  font-family: var(--font-display);
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--foil-dim);
+}
+.toc-tick { width: 1em; height: 1em; color: var(--foil-dim); opacity: 0; align-self: center; }
+.toc-link.is-visited .toc-tick { opacity: 0.9; }
+.toc-link[aria-current="page"] {
+  background: var(--buckram-active);
+  color: #FFFDF6;
+}
+.toc-link[aria-current="page"] .toc-code { color: var(--foil); }
+/* the ribbon bookmark hangs at the cover's edge beside the open section */
+.toc-link[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  right: calc(-1 * var(--s-3));
+  top: 0.25em; bottom: 0.25em;
+  width: 7px;
+  background: var(--foil);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 82%, 0 100%);
+}
+.rail:focus-visible, .toc-link:focus-visible { outline-color: var(--foil); }
+
+.rail-foot {
+  padding: var(--s-4) var(--s-5) var(--s-5);
+  border-top: 1px solid rgb(217 183 108 / 0.18);
+  font-size: var(--fs-small);
+  color: var(--foil-dim);
+  line-height: 1.45;
+}
+.rail-foot p { margin: 0; }
+
+/* ---- the page ----------------------------------------------------------- */
+.page { min-width: 0; display: flex; flex-direction: column; }
+
+.running-head {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: var(--s-4);
+  min-height: 4.1rem;
+  padding: var(--s-2) var(--s-6);
+  background: color-mix(in srgb, var(--paper) 94%, transparent);
+  backdrop-filter: saturate(1.2) blur(6px);
+  -webkit-backdrop-filter: saturate(1.2) blur(6px);
+  border-bottom: 1px solid var(--hairline);
+}
+.rh {
+  flex: 1; min-width: 0;
+  margin: 0;
+  font-family: var(--font-page);
+  font-style: italic;
+  font-size: var(--fs-small);
+  color: var(--ink-2);
+  display: flex; gap: var(--s-4); align-items: baseline;
+  white-space: nowrap; overflow: hidden;
+}
+.rh-chapter { flex: none; }
+/* inside a section the running head names the section (the cover already names the chapter) */
+.rh:has(.rh-section:not(:empty)) .rh-chapter,
+.rh:has(.rh-section:not(:empty)) .rh-section::before { display: none; }
+.rh-section { overflow: hidden; text-overflow: ellipsis; color: var(--ink); }
+.rh-section:empty { display: none; }
+.rh-chapter + .rh-section::before { content: ""; display: inline-block; width: 1.5em; height: 1px; background: var(--hairline); vertical-align: middle; margin-right: var(--s-4); }
+
+.tools { display: flex; align-items: center; gap: var(--s-1); flex: none; }
+.tool-btn {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  min-height: 2.6rem; min-width: 2.6rem;
+  padding: 0 0.6em;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  font-size: var(--fs-small);
+  line-height: 1;
+  transition: background-color 150ms ease-out, border-color 150ms ease-out;
+}
+.tool-btn:hover { background: var(--paper-sunk); }
+.tool-btn[aria-pressed="true"] { background: var(--paper-sunk); border-color: var(--hairline); color: var(--pen); }
+.tool-btn svg { width: 1.25em; height: 1.25em; flex: none; }
+.tool-btn .tool-label { white-space: nowrap; }
+.tool-btn kbd { font-size: var(--fs-min); margin-left: 0.2em; color: var(--ink-2); }
+.tool-sep { width: 1px; height: 1.6rem; background: var(--hairline); margin: 0 var(--s-1); }
+.size-readout { min-width: 3.2em; text-align: center; font-variant-numeric: tabular-nums lining-nums; font-size: var(--fs-small); color: var(--ink-2); }
+.menu-btn { display: none; }
+
+main {
+  container-type: inline-size;
+  container-name: page;
+  flex: 1;
+  padding: var(--s-7) var(--s-6) var(--s-8);
+}
+
+.tab { max-width: 64rem; }
+.tab[hidden] { display: none; }
+
+/* reading column + examiner's margin */
+.panel {
+  display: grid;
+  grid-template-columns: minmax(0, var(--measure));
+  column-gap: var(--s-6);
+  align-items: start;
+}
+.panel > * { grid-column: 1; min-width: 0; }
+@container page (min-width: 50rem) {
+  .panel { grid-template-columns: minmax(0, var(--measure)) minmax(13rem, 17rem); }
+  .panel > .wide, .panel > .table-wrap, .panel > .listing, .panel > .calc { grid-column: 1 / -1; }
+  .panel > .ex-note { grid-column: 2; }
+}
+
+.page-foot {
+  border-top: 1px solid var(--hairline);
+  padding: var(--s-6) var(--s-6) var(--s-7);
+}
+.pager { display: flex; justify-content: space-between; gap: var(--s-5); max-width: 64rem; }
+.pager a {
+  display: flex; flex-direction: column; gap: 0.15em;
+  max-width: 48%;
+  text-decoration: none;
+  color: var(--ink);
+  padding: var(--s-3) var(--s-4);
+  border-radius: 8px;
+  transition: background-color 150ms ease-out;
+}
+.pager a:hover { background: var(--paper-sunk); }
+.pager a[hidden] { visibility: hidden; display: flex; }
+.pager .pager-dir { font-size: var(--fs-small); color: var(--ink-2); }
+.pager .pager-title { font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--pen); }
+.pager .pager-next { text-align: right; margin-left: auto; }
+.colophon { max-width: 64rem; margin: var(--s-6) 0 0; font-size: var(--fs-small); color: var(--ink-2); }
+
+/* ---- narrower screens: the cover becomes a drawer ----------------------- */
+.scrim { display: none; }
+@media (max-width: 1023px) {
+  .app { grid-template-columns: minmax(0, 1fr); }
+  .rail {
+    position: fixed; inset: 0 auto 0 0; z-index: 60;
+    width: min(21rem, 88vw);
+    transform: translateX(-105%);
+    visibility: hidden;
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 240ms;
+  }
+  .rail.is-open { transform: none; visibility: visible; transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1); box-shadow: 8px 0 32px rgb(0 0 0 / 0.25); }
+  .scrim { display: block; position: fixed; inset: 0; z-index: 50; background: rgb(13 18 32 / 0.45); opacity: 0; pointer-events: none; transition: opacity 200ms ease-out; }
+  .scrim.is-open { opacity: 1; pointer-events: auto; }
+  .menu-btn { display: inline-flex; }
+  .running-head { padding: var(--s-2) var(--s-4); }
+  .rh-chapter { display: none; }
+  .rh-chapter + .rh-section::before { display: none; }
+  main { padding: var(--s-6) var(--s-4) var(--s-7); }
+  .page-foot { padding: var(--s-5) var(--s-4) var(--s-6); }
+}
+@media (max-width: 1279px) {
+  .tool-btn .tool-label { display: none; }
+}
+@media (max-width: 699px) {
+  .tools .hide-sm { display: none; }
+  .pager { flex-direction: column; }
+  .pager a { max-width: none; }
+  .pager .pager-next { text-align: left; margin-left: 0; }
+}
+
+/* ---- projector mode ----------------------------------------------------- */
+html.projector .app { grid-template-columns: minmax(0, 1fr); }
+html.projector .rail {
+  position: fixed; inset: 0 auto 0 0; z-index: 60;
+  width: min(24rem, 80vw);
+  transform: translateX(-105%);
+  visibility: hidden;
+  transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 240ms;
+}
+html.projector .rail.is-open { transform: none; visibility: visible; transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1); box-shadow: 8px 0 32px rgb(0 0 0 / 0.25); }
+html.projector .scrim { display: block; position: fixed; inset: 0; z-index: 50; background: rgb(13 18 32 / 0.45); opacity: 0; pointer-events: none; transition: opacity 200ms ease-out; }
+html.projector .scrim.is-open { opacity: 1; pointer-events: auto; }
+html.projector .menu-btn { display: inline-flex; }
+html.projector main { padding-left: var(--s-6); padding-right: var(--s-6); }
+html.projector .tab { max-width: 100%; }
+html.projector { --measure: 60ch; }

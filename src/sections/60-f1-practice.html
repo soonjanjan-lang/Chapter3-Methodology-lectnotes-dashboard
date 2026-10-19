@@ -1,0 +1,104 @@
+<!--meta
+id: f1
+group: F
+code: F1
+title: Worksheets and tutorials
+short: Worksheets and tutorials
+-->
+<header class="tab-head">
+  <h1 id="h-f1"><span class="secnum">F1</span>Worksheets and tutorials</h1>
+  <p class="lede">Every section has a worksheet with model answers. This page collects them, adds an integrated tutorial that takes one study from research questions to model specification, and suggests a teaching sequence.</p>
+</header>
+
+<div class="panel" data-panel="worksheets" data-label="All worksheets">
+  <h2 id="f1-list">Worksheets by section</h2>
+  <table class="bt">
+    <caption><b>Table F1.1.</b> Worksheets, with what each one practises</caption>
+    <thead><tr><th>Worksheet</th><th>Practises</th><th class="num">Questions</th></tr></thead>
+    <tbody>
+      <tr><td><a href="#a1/worksheet">A1 Methodology, design, methods</a></td><td>Placing study elements at the right level</td><td class="num">4</td></tr>
+      <tr><td><a href="#a2/worksheet">A2 Correlation and causation</a></td><td>Claims, threats and wording</td><td class="num">4</td></tr>
+      <tr><td><a href="#b1/worksheet">B1 3.1 Data</a></td><td>Data description; item-to-variable map</td><td class="num">3</td></tr>
+      <tr><td><a href="#b2/worksheet">B2 3.2 RQ–method table</a></td><td>Matching methods to questions</td><td class="num">3</td></tr>
+      <tr><td><a href="#b3/worksheet">B3 3.3 Codebook</a></td><td>Operationalisation and coding</td><td class="num">3</td></tr>
+      <tr><td><a href="#b4/worksheet">B4 3.4 Model specification</a></td><td>Equations, estimators, standard errors</td><td class="num">3</td></tr>
+      <tr><td><a href="#b5/worksheet">B5 Putting it together</a></td><td>Limitations; the submission checklist</td><td class="num">2</td></tr>
+      <tr><td><a href="#c1/worksheet">C1 Levels of measurement</a></td><td>Dummies; nominal variables in regression</td><td class="num">3</td></tr>
+      <tr><td><a href="#c2/worksheet">C2 Data structures</a></td><td>Identifying structures; panel notation</td><td class="num">3</td></tr>
+      <tr><td><a href="#c3/worksheet">C3 Primary data</a></td><td>Choosing methods; non-response</td><td class="num">2</td></tr>
+      <tr><td><a href="#c4/worksheet">C4 Secondary data</a></td><td>Finding and citing datasets</td><td class="num">2</td></tr>
+      <tr><td><a href="#c5/worksheet">C5 Data cleaning</a></td><td>Cleaning rules in Stata and Python</td><td class="num">3</td></tr>
+      <tr><td><a href="#d1/worksheet">D1 Sampling concepts</a></td><td>Population, frame and errors</td><td class="num">2</td></tr>
+      <tr><td><a href="#d2/worksheet">D2 Probability sampling</a></td><td>Allocation and weights</td><td class="num">3</td></tr>
+      <tr><td><a href="#d3/worksheet">D3 Non-probability sampling</a></td><td>Designs and honest reporting</td><td class="num">2</td></tr>
+      <tr><td><a href="#d4/worksheet">D4 How many respondents?</a></td><td>Precision and power calculations</td><td class="num">3</td></tr>
+      <tr><td><a href="#e1/fix">E1 Fix the items</a> and <a href="#e1/worksheet">worksheet</a></td><td>Item writing</td><td class="num">9</td></tr>
+      <tr><td><a href="#e2/worksheet">E2 Adopt and adapt</a></td><td>Choosing and adapting instruments</td><td class="num">2</td></tr>
+      <tr><td><a href="#e3/worksheet">E3 Likert and rating scales</a></td><td>Formats and estimators</td><td class="num">2</td></tr>
+      <tr><td><a href="#e4/worksheet">E4 Validity and reliability</a></td><td>Evaluating evidence; CVI</td><td class="num">4</td></tr>
+    </tbody>
+  </table>
+  <p>Word versions of all worksheets, with and without model answers, are in the offline ZIP (<a href="#f4">F4</a>).</p>
+</div>
+
+<div class="panel" data-panel="tutorial" data-label="Integrated tutorial">
+  <h2 id="f1-tut">Integrated tutorial: from research questions to Chapter 3</h2>
+  <div class="box">
+    <p class="box-title">The case</p>
+    <p>A PhD student plans a thesis on <strong>“Remittances and children's schooling in rural Sabah.”</strong> The student wants to know (1) how many households receive remittances and how much; (2) whether receiving remittances is associated with higher education spending per child; and (3) whether any association is stronger for daughters than for sons. There is no list of households, but the district office keeps a list of the 120 villages in two districts, with their approximate number of households.</p>
+  </div>
+  <p>Work through the six steps. Each has a model answer.</p>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p><strong>Step 1: Classify the research questions</strong> as descriptive, correlational or causal, and say what wording Chapter 4 can use (<a href="#a2">A2</a>).</p>
+      <x-draft key="f1-t1"></x-draft>
+      <x-answer><p>RQ1 is descriptive (proportions and means). RQ2 and RQ3 are correlational: one cross-sectional survey cannot rule out that families who value education both migrate and spend more. Wording: “associated with”. A causal claim would need, for example, variation in remittances caused by shocks in migrants' destinations.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p><strong>Step 2: Design the sample</strong> (<a href="#d2">D2</a>, <a href="#d4">D4</a>). Choose a design, explain how households are selected, and justify the size.</p>
+      <x-draft key="f1-t2"></x-draft>
+      <x-answer><p>Two-stage cluster sample: select 30 villages with probability proportional to size, list all households in each, then select 15 households per village by systematic sampling, giving 450 households. Size: for RQ2, detecting a small partial association (f² = 0.02) with 8 controls at 80% power needs about 400 observations; with an expected design effect of 1 + (15 − 1) × 0.05 = 1.7, the effective sample of 450 is about 265, so either more villages (about 45) or a stated acceptance of lower power. Inflate for 85% response.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p><strong>Step 3: Build the RQ–method table</strong> (<a href="#b2">B2</a>).</p>
+      <x-draft key="f1-t3"></x-draft>
+      <x-answer>
+        <table class="bt narrow"><thead><tr><th>RQ</th><th>Outcome (level)</th><th>Main variable</th><th>Method</th></tr></thead>
+        <tbody><tr><td>RQ1 Incidence and size of remittances</td><td>Receives (binary); amount RM (ratio)</td><td>—</td><td>Weighted proportions and means, design-based SEs</td></tr>
+        <tr><td>RQ2 Remittances and education spending</td><td>Education spending per child (ratio; zeros possible)</td><td>Receives remittances; amount</td><td>OLS on log(1 + spending) or a two-part model; SEs clustered by village</td></tr>
+        <tr><td>RQ3 Daughters versus sons</td><td>Spending per child (child-level)</td><td>Remittances × girl</td><td>Child-level regression with household controls and an interaction; clustered SEs</td></tr></tbody></table>
+      </x-answer>
+    </li>
+    <li class="ws-q">
+      <p><strong>Step 4: Write three codebook rows</strong> (<a href="#b3">B3</a>): the remittance indicator, education spending, and the girl dummy.</p>
+      <x-draft key="f1-t4"></x-draft>
+      <x-answer><p><code>remit</code>: household received money from a member living elsewhere in the past 12 months; item C1; nominal (binary); 1 = yes, 0 = no. <code>edu_spend</code>: spending on fees, books, uniforms, transport and tuition for the child in the past school year, RM; items D3–D7 summed; ratio. <code>girl</code>: child is female; household roster; nominal (binary); 1 = girl, 0 = boy.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p><strong>Step 5: Specify the model for RQ3</strong> with correct subscripts (<a href="#b4">B4</a>, <a href="#c2">C2</a>).</p>
+      <x-draft key="f1-t5"></x-draft>
+      <x-answer><p>\(spend_{ch} = \beta_0 + \beta_1 remit_h + \beta_2 girl_{ch} + \beta_3 (remit_h \times girl_{ch}) + \mathbf{x}_{ch}'\boldsymbol\gamma + \mathbf{w}_h'\boldsymbol\delta + u_{ch}\), for child \(c\) in household \(h\). \(\beta_3\) answers RQ3. Child controls \(\mathbf{x}\): age, school level. Household controls \(\mathbf{w}\): income, parents' education, distance to school. Standard errors clustered by village (the primary sampling unit).</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p><strong>Step 6: Name two limitations</strong> and their consequences (<a href="#b5">B5</a>).</p>
+      <x-draft key="f1-t6"></x-draft>
+      <x-answer><p>(1) Cross-sectional data: remittance-receiving households may differ in unobserved ways (motivation, networks), so estimates are associations. (2) Recall of a year's education spending is error-prone; classical error in the outcome lowers precision but does not bias the coefficients, while systematic under-reporting by some groups would. Also acceptable: the two districts cannot represent all of Sabah.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="plan" data-label="Teaching plan">
+  <h2 id="f1-plan">A suggested six-week sequence</h2>
+  <table class="bt">
+    <caption><b>Table F1.2.</b> One way to teach this material: a 2-hour lecture and a 1-hour tutorial each week</caption>
+    <thead><tr><th>Week</th><th>Lecture</th><th>Tutorial</th><th>Students produce</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td><a href="#home">Start</a>, <a href="#a1">A1</a>, <a href="#a2">A2</a></td><td>Worksheets A1–A2</td><td>Paradigm-and-design paragraph for their own study</td></tr>
+      <tr><td>2</td><td><a href="#c1">C1</a>, <a href="#c2">C2</a>, <a href="#c3">C3</a>, <a href="#c4">C4</a></td><td>Worksheets C1–C2; find a dataset (C4)</td><td>Data-structure decision and data sources</td></tr>
+      <tr><td>3</td><td><a href="#d1">D1</a>, <a href="#d2">D2</a>, <a href="#d3">D3</a></td><td>Simulator; allocation exercise</td><td>Sampling design with justification</td></tr>
+      <tr><td>4</td><td><a href="#d4">D4</a></td><td>Sample-size and power calculators; run <code>02_sample_size</code></td><td>Sample-size justification</td></tr>
+      <tr><td>5</td><td><a href="#e1">E1</a>, <a href="#e2">E2</a>, <a href="#e3">E3</a>, <a href="#e4">E4</a></td><td>Fix the items; CVI; run <code>04_reliability_validity</code></td><td>Draft instrument and adaptation log</td></tr>
+      <tr><td>6</td><td><a href="#b1">B1</a>–<a href="#b5">B5</a>, <a href="#c5">C5</a></td><td>Integrated tutorial; run <code>03</code> and <code>06</code></td><td>Draft Chapter 3 checked against the B5 checklist</td></tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,207 @@
+<!--meta
+id: c5
+group: C
+code: C5
+title: Data cleaning: inspecting, correcting and transforming
+short: Data cleaning
+-->
+<header class="tab-head">
+  <h1 id="h-c5"><span class="secnum">C5</span>Data cleaning: inspecting, correcting and transforming</h1>
+  <p class="lede">Raw data are never ready for analysis. Cleaning means inspecting the data, finding problems, correcting or flagging them by rules you can defend, and creating the variables your models need, all in a script that turns the raw file into the analysis file.</p>
+  <ul class="tab-facts"><li>About 30 minutes</li><li>Full worked example: 414 raw records to 400 clean</li><li>Runnable do-file and notebook</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>run a standard sequence of inspection and cleaning checks;</li>
+      <li>make and document cleaning decisions that an examiner will accept;</li>
+      <li>report data preparation briefly and completely in Chapter 3.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="c5-why">Why clean, and why with a script</h2>
+  <p>Errors in raw data feed straight into your estimates: a keying error of RM 98,000 for a student's monthly allowance shifts the mean and can dominate a regression. A cleaning <em>script</em> (a do-file or notebook) makes every decision visible and repeatable. You can rerun it when you find a new problem, your supervisor can check it, and you can describe it accurately in Chapter 3. Editing cells by hand in Excel leaves no record.</p>
+  <aside class="ex-note"><b>Examiner:</b> Keep the raw file untouched. Save the cleaned data under a new name, and keep the script that links the two (Christensen &amp; Miguel, 2018).</aside>
+
+  <h2 id="c5-checklist">The cleaning checklist</h2>
+  <table class="bt">
+    <caption><b>Table C5.1.</b> Data cleaning tasks, their purpose and Stata commands</caption>
+    <thead><tr><th>Task</th><th>Purpose</th><th>Stata commands, for example</th></tr></thead>
+    <tbody>
+      <tr><td>Inspect structure</td><td>Understand variables, labels, storage types, missingness</td><td><code>describe</code>; <code>codebook</code>; <code>summarize</code>; <code>inspect</code></td></tr>
+      <tr><td>Check duplicates</td><td>Detect repeated IDs or accidental duplicate records</td><td><code>duplicates report id</code>; <code>duplicates list id</code></td></tr>
+      <tr><td>Check missing values</td><td>Identify item non-response and patterns of missingness</td><td><code>misstable summarize</code>; <code>tab var, missing</code></td></tr>
+      <tr><td>Check outliers</td><td>Identify implausible values</td><td><code>summ var, detail</code>; <code>graph box var</code></td></tr>
+      <tr><td>Check coding consistency</td><td>Ensure categories match the codebook</td><td><code>tab gender</code>; <code>tab education, missing</code></td></tr>
+      <tr><td>Recode variables</td><td>Align categories and reference groups</td><td><code>recode educ (1/2=0) (3/4=1), gen(high_educ)</code></td></tr>
+      <tr><td>Generate new variables</td><td>Create dummies, logs, lags, interactions, scale scores</td><td><code>egen score = rowmean(q1 q2 q3)</code>; <code>gen ln_income = ln(income)</code></td></tr>
+      <tr><td>Save the data, original and cleaned</td><td>Preserve the raw data and create a reproducible cleaned file</td><td><code>save clean_data.dta, replace</code>; also save the do-file used to clean the dataset</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="c5-decisions">Rules for cleaning decisions</h2>
+  <dl class="defs">
+    <dt>Missing-value codes</dt><dd>Convert codes such as −9 or 999 to true missing before computing anything (<code>mvdecode</code>).</dd>
+    <dt>Impossible values</dt><dd>Values outside the allowed range (a 6 on a 1–5 scale; 10 days in a week) are errors. Set them to missing unless the original form shows the true value.</dd>
+    <dt>Implausible values</dt><dd>Possible but suspicious (an allowance of RM 98,000). Check the source; if it cannot be verified, set it to missing, winsorise or top-code, and say which. Do not drop real but unusual observations just because they are extreme; robust outlier rules help to flag them (Leys et al., 2013).</dd>
+    <dt>Inconsistent answers</dt><dd>Skip-pattern contradictions (a non-user reporting days of use) are resolved by a stated rule, applied to everyone.</dd>
+    <dt>Incomplete responses</dt><dd>Decide a threshold in advance, for example dropping respondents who answered fewer than half of the scale items.</dd>
+    <dt>Missing data</dt><dd>Report how much is missing for each variable. Listwise deletion is the default; for substantial missingness, consider multiple imputation and explain the assumption (missing at random) it requires (Schafer &amp; Graham, 2002).</dd>
+  </dl>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Clean with a script, never by hand; keep raw and clean files separate.</li>
+      <li>Every change follows a stated rule applied to all observations.</li>
+      <li>Report the path from raw records to the analysis sample, with numbers.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Christensen, G., &amp; Miguel, E. (2018). Transparency, reproducibility, and the credibility of economics research. <i>Journal of Economic Literature, 56</i>(3), 920–980.</li>
+      <li>Leys, C., Ley, C., Klein, O., Bernard, P., &amp; Licata, L. (2013). Detecting outliers: Do not use standard deviation around the mean, use absolute deviation around the median. <i>Journal of Experimental Social Psychology, 49</i>(4), 764–766.</li>
+      <li>Schafer, J. L., &amp; Graham, J. W. (2002). Missing data: Our view of the state of the art. <i>Psychological Methods, 7</i>(2), 147–177.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="c5-ex">Worked example: cleaning the e-wallet survey</h2>
+  <p>The raw file <code>ewallet_survey_raw.csv</code> (hypothetical, in the downloads) has 414 records with the problems students meet in real surveys. Running <code>03_data_cleaning.do</code>, or its notebook, finds and fixes them.</p>
+  <table class="bt">
+    <caption><b>Table C5.2.</b> Problems found and decisions taken</caption>
+    <thead><tr><th>Check</th><th>Found</th><th>Decision</th><th class="num">Records left</th></tr></thead>
+    <tbody>
+      <tr><td>Raw records</td><td></td><td></td><td class="num">414</td></tr>
+      <tr><td>Exact duplicates</td><td>6 records submitted twice</td><td>Drop the second copy</td><td class="num">408</td></tr>
+      <tr><td>Break-offs</td><td>8 respondents answered none of the 15 scale items</td><td>Drop (rule: fewer than half answered)</td><td class="num">400</td></tr>
+      <tr><td>Missing-value codes</td><td>age = 999 (3); allowance = −9 (4); scale items = −9 (10 cells)</td><td>Set to missing</td><td class="num">400</td></tr>
+      <tr><td>Out-of-range scale values</td><td>5 cells coded 0, 6 or 9 on 1–5 items</td><td>Set to missing</td><td class="num">400</td></tr>
+      <tr><td>Implausible values</td><td>age = 150 (1); allowance RM 98,000 and RM 44,000 (2)</td><td>Set to missing (could not be verified)</td><td class="num">400</td></tr>
+      <tr><td>Inconsistent text</td><td>Gender written 12 ways (“F”, “female”, “Male ”…); state names in mixed case and with spaces</td><td>Standardise; create dummy <code>female</code></td><td class="num">400</td></tr>
+      <tr><td>Impossible values</td><td>Days of use in past week = 8, 9, 10 (3)</td><td>Set to missing</td><td class="num">400</td></tr>
+      <tr><td>Skip-pattern contradiction</td><td>4 non-users reported days of use</td><td>Set days to missing</td><td class="num">400</td></tr>
+    </tbody>
+  </table>
+
+  <x-listing title="The key steps (full files in the downloads)">
+<x-stata file="03_data_cleaning.do">
+import delimited using "$data/ewallet_survey_raw.csv", clear varnames(1) case(preserve)
+
+duplicates report                         // identical on every variable?
+duplicates drop
+
+egen n_missing = rowmiss(PU1-PU4 PS1-PS4 EOU1-EOU3 intention finlit1-finlit3)
+drop if n_missing >= 8                    // fewer than half of the 15 scale items answered
+
+mvdecode age, mv(999)
+mvdecode allowance_rm PU1-PU4 PS1-PS4 EOU1-EOU3 intention, mv(-9)
+foreach v of varlist PU1-PU4 PS1-PS4 EOU1-EOU3 intention {
+    quietly replace `v' = . if !inrange(`v', 1, 5)
+}
+replace age = . if !inrange(age, 17, 40)
+replace allowance_rm = . if allowance_rm > 10000
+
+generate byte female = .
+replace female = 1 if inlist(lower(strtrim(gender)), "f", "female")
+replace female = 0 if inlist(lower(strtrim(gender)), "m", "male")
+replace state = proper(strtrim(state))
+
+replace ewallet_days = . if ewallet_days > 7
+replace ewallet_days = . if ewallet_user == 0 & ewallet_days > 0
+
+egen PU = rowmean(PU1-PU4)
+generate ln_allow = ln(allowance_rm)
+save "$data/ewallet_survey_clean.dta", replace
+</x-stata>
+<x-python file="03_data_cleaning.ipynb">
+raw = load("ewallet_survey_raw.csv")
+df = raw.drop_duplicates().copy()
+
+n_missing = df[scale].isna().sum(axis=1)
+df = df[n_missing < 8].copy()             # fewer than half of the 15 scale items answered
+
+df["age"] = df["age"].replace(999, np.nan)
+for v in ["allowance_rm"] + items + ["intention"]:
+    df[v] = df[v].replace(-9, np.nan)
+for v in items + ["intention"]:
+    df.loc[~df[v].between(1, 5), v] = np.nan
+df.loc[~df["age"].between(17, 40), "age"] = np.nan
+df.loc[df["allowance_rm"] > 10000, "allowance_rm"] = np.nan
+
+g = df["gender"].str.strip().str.lower()
+df["female"] = np.select([g.isin(["f", "female"]), g.isin(["m", "male"])], [1, 0], default=np.nan)
+df["state"] = df["state"].str.strip().str.title()
+
+df.loc[df["ewallet_days"] > 7, "ewallet_days"] = np.nan
+df.loc[(df["ewallet_user"] == 0) & (df["ewallet_days"] > 0), "ewallet_days"] = np.nan
+
+df["PU"] = df[["PU1", "PU2", "PU3", "PU4"]].mean(axis=1)
+df["ln_allow"] = np.log(df["allowance_rm"])
+</x-python>
+  </x-listing>
+  <p>Both versions end with the same 400 records and the same means (for example, 58.25% female and 75.25% e-wallet users); the notebook checks this against Stata automatically.</p>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="c5-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.1.5 Data preparation</h3>
+      <p><span class="anno">All cleaning was carried out in a Stata do-file that reads the raw export and writes a separate analysis file (Appendix D).</span><span class="anno-n">1</span> <span class="anno">Of 414 submissions, six exact duplicates and eight break-offs (respondents answering fewer than half of the scale items) were removed, leaving 400.</span><span class="anno-n">2</span> <span class="anno">Missing-value codes, out-of-range responses on the five-point items (five cells), an age of 150 and two monthly allowances above RM 10,000 that could not be verified were set to missing. Days of e-wallet use were set to missing where they exceeded seven (three cases) or contradicted a report of non-use (four cases).</span><span class="anno-n">3</span> <span class="anno">Item non-response is below 2% for every variable, so models use complete cases; the logit sample is 394 because six allowances are missing.</span><span class="anno-n">4</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>Reproducibility: a script, raw and clean files kept separate.</li>
+      <li>The path from submissions to the analysis sample, with reasons.</li>
+      <li>Each rule, and how many cases it affected.</li>
+      <li>How remaining missing data are handled, and its effect on N.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Numbers are from the worked example.</figcaption>
+  </figure>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="c5-ws">Worksheet C5</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Download <code>ewallet_survey_raw.csv</code> and run the do-file or notebook. Then add one more check: list respondents whose <code>ewallet_spend_rm</code> is positive although they are non-users. How many are there, and what rule would you apply? <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="c5-q1"></x-draft>
+      <x-answer><p>Stata: <code>count if ewallet_user == 0 &amp; ewallet_spend_rm &gt; 0 &amp; !missing(ewallet_spend_rm)</code>. In this dataset the answer is zero: spending was generated only for users. In real data, apply the same rule as for days of use (set spending to missing for contradictory non-users), or check the skip logic of the online form. The point is to write the rule before looking at results.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A student drops every observation with income more than three standard deviations above the mean. Give two objections and a better approach. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="c5-q2"></x-draft>
+      <x-answer><p>Objections: (1) the mean and SD are themselves inflated by the outliers, so the rule is unstable; Leys et al. (2013) recommend the median absolute deviation instead; (2) high incomes may be genuine, and dropping them biases the sample and changes the population studied. Better: check suspicious values against the source; set verified errors to missing; for genuine extremes, use logs, top-coding or winsorising, and show results are robust with and without them.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Write the code to create <code>high_educ</code> = 1 for degree holders (education codes 3 and 4) and 0 for codes 1 and 2, keeping missing values missing, in Stata and in Python. <span class="ws-marks">(2 marks)</span></p>
+      <x-draft key="c5-q3"></x-draft>
+      <x-answer><p>Stata: <code>recode educ (1/2 = 0) (3/4 = 1), generate(high_educ)</code> (missing stays missing). Python: <code>df["high_educ"] = df["educ"].map({1: 0, 2: 0, 3: 1, 4: 1})</code> (unmapped and missing become NaN).</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="c5-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. A value of 6 on a 1–5 agreement item is…</legend>
+      <label class="opt"><input type="radio" name="c5q1" data-correct><span>impossible: set to missing unless the paper form shows the true value<span class="why">Yes.</span></span></label>
+      <label class="opt"><input type="radio" name="c5q1"><span>“strongly agree”, so recode to 5<span class="why">You do not know that; it may be a keying error for 1 to 5.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Why should the raw file never be overwritten?</legend>
+      <label class="opt"><input type="radio" name="c5q2" data-correct><span>So every cleaning step can be checked and redone from the original<span class="why">Yes: reproducibility.</span></span></label>
+      <label class="opt"><input type="radio" name="c5q2"><span>Stata cannot save over an existing file<span class="why">It can, with <code>replace</code>, which is exactly the risk.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Which belongs in Chapter 3's data-preparation paragraph?</legend>
+      <label class="opt"><input type="radio" name="c5q3"><span>Only “the data were cleaned”<span class="why">Too vague to evaluate.</span></span></label>
+      <label class="opt"><input type="radio" name="c5q3" data-correct><span>Rules applied, cases affected, and the path from raw records to the analysis sample<span class="why">Yes.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

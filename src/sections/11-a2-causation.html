@@ -1,0 +1,173 @@
+<!--meta
+id: a2
+group: A
+code: A2
+title: Correlation, causation and what your design can claim
+short: Correlation and causation
+-->
+<header class="tab-head">
+  <h1 id="h-a2"><span class="secnum">A2</span>Correlation, causation and what your design can claim</h1>
+  <p class="lede">Every Methodology chapter makes a promise about the kind of answer the study will give. Descriptive, correlational and causal claims need different designs. The threats to a causal reading decide which econometric method you need.</p>
+  <ul class="tab-facts"><li>About 20 minutes</li><li>Worksheet with model answers</li><li>Quiz</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>say whether a research question is descriptive, correlational or causal;</li>
+      <li>name the five classic threats to a causal interpretation and the methods that address each;</li>
+      <li>write claims in Chapter 3 that match what your design can support.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="a2-types">Three kinds of empirical question</h2>
+  <table class="bt">
+    <caption><b>Table A2.1.</b> Descriptive, correlational and causal research</caption>
+    <thead><tr><th>Type</th><th>Research question</th><th>Methods</th><th>How the finding is worded</th></tr></thead>
+    <tbody>
+      <tr><th>Descriptive</th><td>What is the pattern?</td><td>Means, proportions, trends, cross-tabulations</td><td>“The average wage is higher among university graduates than non-graduates.”</td></tr>
+      <tr><th>Correlational (association)</th><td>Are X and Y related, conditional on controls?</td><td>Correlation; regression with observed controls</td><td>“Education is positively associated with wages, conditional on age, gender and location.”</td></tr>
+      <tr><th>Causal</th><td>Does changing X cause Y to change?</td><td>RCT, natural experiment, credible quasi-experimental design with stated identifying assumptions</td><td>“The programme increased wages by X%, under the identifying assumptions discussed.”</td></tr>
+    </tbody>
+  </table>
+  <p>None of these is better than the others. A well-executed descriptive study is worth more than a weak causal one. What matters is that the claim in Chapter 1, the design in Chapter 3 and the wording in Chapter 4 all agree.</p>
+  <aside class="ex-note is-query"><b>Examiner:</b> “Impact”, “effect” and “determinant” are causal words. With a single cross-sectional survey and OLS, write “associated with”.</aside>
+
+  <h2 id="a2-threats">Why a correlation may not be causal</h2>
+  <table class="bt">
+    <caption><b>Table A2.2.</b> Threats to a causal interpretation and the econometric responses</caption>
+    <thead><tr><th>Threat</th><th>Meaning</th><th>Example</th><th>Econometric solution</th></tr></thead>
+    <tbody>
+      <tr><th>Omitted variable bias</th><td>An unobserved factor affects both X and Y.</td><td>Wages = f(education). Ability affects both education and wages.</td><td>Fixed effects, instrumental variables, proxy variables</td></tr>
+      <tr><th>Reverse causality</th><td>X affects Y, but Y also affects X.</td><td>Income = f(training). Higher income may allow more training; more training raises income.</td><td>Lagged X, instrumental variables, difference-in-differences</td></tr>
+      <tr><th>Selection bias</th><td>Individuals choose treatment based on characteristics related to the outcome.</td><td>Salary = f(Harvard). Brilliant students choose Harvard and later earn more anyway.</td><td>Randomised controlled trials, quasi-experimental methods</td></tr>
+      <tr><th>Measurement error</th><td>X or Y is measured with noise.</td><td>Self-reported income is noisy.</td><td>Instrumental variables, structural equation modelling</td></tr>
+      <tr><th>Simultaneity</th><td>X and Y are jointly determined.</td><td>Price and quantity are set together by supply and demand.</td><td>Two- and three-stage least squares (2SLS, 3SLS)</td></tr>
+    </tbody>
+  </table>
+  <aside class="ex-note"><b>Examiner:</b> Name the threat that worries you most and say what your design does about it. Silence reads as unawareness.</aside>
+
+  <h2 id="a2-ovb">Omitted variable bias in one line</h2>
+  <p>Suppose the true model is \(wage_i = \beta_0 + \beta_1 educ_i + \beta_2 ability_i + u_i\), but ability is not in your data. OLS on education alone gives</p>
+  <div class="formula">$$\operatorname{plim}\hat\beta_1 = \beta_1 + \beta_2\,\frac{\operatorname{Cov}(educ, ability)}{\operatorname{Var}(educ)}$$</div>
+  <p>Ability raises wages (\(\beta_2&gt;0\)) and is positively correlated with education, so \(\hat\beta_1\) overstates the return to schooling. The sign of the bias is the product of the two signs. Being able to state it is exactly the kind of reasoning an examiner wants to see in Chapter 3.</p>
+
+  <h2 id="a2-design">From threat to design</h2>
+  <p>The identification strategy is the part of your methods that turns a correlation into a credible causal estimate. Each standard design rests on one assumption that you must state, and test where possible.</p>
+  <table class="bt">
+    <caption><b>Table A2.3.</b> Identification strategies and their key assumptions</caption>
+    <thead><tr><th>Design</th><th>Key assumption</th><th>How you support it in the thesis</th></tr></thead>
+    <tbody>
+      <tr><th>Randomised controlled trial</th><td>Random assignment balances observed and unobserved characteristics.</td><td>Balance table of pre-treatment characteristics.</td></tr>
+      <tr><th>Difference-in-differences</th><td>Parallel trends: without treatment, both groups would have moved together.</td><td>Pre-treatment trends graph; event-study coefficients.</td></tr>
+      <tr><th>Fixed effects (panel)</th><td>The omitted factor does not change over time.</td><td>Argue why the confounder is time-invariant; Hausman test against random effects.</td></tr>
+      <tr><th>Instrumental variables</th><td>The instrument shifts X (relevance) and affects Y only through X (exclusion).</td><td>First-stage F statistic; argument for exclusion.</td></tr>
+      <tr><th>Regression discontinuity</th><td>Units just either side of the cut-off are comparable.</td><td>Density test at the cut-off; covariate balance; bandwidth robustness.</td></tr>
+    </tbody>
+  </table>
+  <p>Angrist and Pischke (2010) explain why design-based identification now dominates applied economics; Imbens and Wooldridge (2009) survey the estimators and their assumptions. Both are on the reading list.</p>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Decide in Chapter 3 whether your study is descriptive, correlational or causal, and word every claim accordingly.</li>
+      <li>Name the main threat to causal interpretation and the method that addresses it.</li>
+      <li>Every identification strategy rests on an assumption; state it and say how you will check it.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Angrist, J. D., &amp; Pischke, J.-S. (2010). The credibility revolution in empirical economics: How better research design is taking the con out of econometrics. <i>Journal of Economic Perspectives, 24</i>(2), 3–30.</li>
+      <li>Imbens, G. W., &amp; Wooldridge, J. M. (2009). Recent developments in the econometrics of program evaluation. <i>Journal of Economic Literature, 47</i>(1), 5–86.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="a2-ex1">Worked example: is perceived usefulness a cause of e-wallet use?</h2>
+  <p>The worked survey in this guide (400 students, hypothetical) finds that a one-point higher perceived-usefulness score is associated with a 12-percentage-point higher probability of using an e-wallet (logit average marginal effect 0.119, see <a href="#b4/example">B4</a>). Can Chapter 4 say that usefulness <em>causes</em> use?</p>
+  <dl class="defs">
+    <dt>Reverse causality</dt><dd>Students who already use e-wallets learn how useful they are. Use may raise perceived usefulness rather than the other way round.</dd>
+    <dt>Omitted variables</dt><dd>General digital confidence may raise both perceived usefulness and use. It is not measured.</dd>
+    <dt>Measurement error</dt><dd>Perceived usefulness is a four-item scale with reliability of about 0.86. Some attenuation is likely (<a href="#e4">E4</a>).</dd>
+  </dl>
+  <p><strong>Verdict:</strong> the design supports an association, not a causal effect. Chapter 3 should say so before any results appear. A causal question would need a different design, for example randomly assigning a short demonstration of e-wallet features and comparing later use.</p>
+
+  <h2 id="a2-ex2">Worked example: an incinerator and house prices</h2>
+  <p>Kiel and McClain (1995) studied house prices near a planned incinerator. Comparing prices near and far from the site in 1981 alone mixes the incinerator's effect with the fact that the area was cheaper all along. The difference-in-differences design compares the <em>change</em> in prices near the site with the change far from it, between 1978 (before the rumour) and 1981 (during construction).</p>
+  <p>In the simulated version used in <a href="#c2/example">C2</a>, the estimated effect is −11,729 (robust SE 3,112), close to the −11,500 built into the simulation. The estimate is causal only if, without the incinerator, prices near and far would have grown at the same rate. That is the parallel-trends assumption, and Chapter 3 must state it.</p>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="a2-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.4.3 Interpretation and identification</h3>
+      <p><span class="anno">The estimates from Equations (3.1)–(3.3) are interpreted as conditional associations rather than causal effects.</span><span class="anno-n">1</span> <span class="anno">Two features of the design prevent a causal reading. First, perceived usefulness and e-wallet use are measured at the same time, so use may shape perceptions as much as perceptions shape use. Second, unobserved digital confidence may influence both.</span><span class="anno-n">2</span> <span class="anno">Accordingly, results in Chapter 4 are described as associations, and the policy implications in Chapter 5 are framed as hypotheses for future experimental work.</span><span class="anno-n">3</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>The claim is stated plainly and early.</li>
+      <li>The specific threats are named, not a generic “correlation is not causation”.</li>
+      <li>It commits later chapters to consistent wording.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Adapt to your study.</figcaption>
+  </figure>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="a2-ws">Worksheet A2</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Classify each research question as descriptive, correlational or causal: (a) What share of Malaysian SMEs accept e-wallet payments? (b) Is firm size associated with e-wallet acceptance, controlling for sector? (c) Did the 2020 e-Tunai Rakyat e-wallet credit increase e-wallet adoption among recipients? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="a2-q1"></x-draft>
+      <x-answer><p>(a) Descriptive: a proportion. (b) Correlational: an association conditional on a control. (c) Causal: it asks about the effect of a policy. It needs a design such as a difference-in-differences or an eligibility-based discontinuity.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A student regresses household saving on whether the household attended a financial-literacy workshop, using a cross-section. Name the most serious threat to a causal reading and the direction of the likely bias. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="a2-q2"></x-draft>
+      <x-answer><p>Selection bias: households that choose to attend are probably more motivated and more financially organised, and these traits also raise saving. The bias is upward, overstating the workshop's effect. Possible fixes are random assignment of workshop invitations, or a DiD comparing saving before and after for attendees and similar non-attendees.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Rewrite this sentence so it matches a single-survey OLS design: “Financial literacy has a significant positive impact on saving, so the government should fund literacy programmes.” <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="a2-q3"></x-draft>
+      <x-answer><p>“Financial literacy is positively associated with saving after controlling for income, age and education. If the association reflects a causal effect, literacy programmes may raise saving, a possibility that future experimental or quasi-experimental research could test.”</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>For a panel of 13 states over 11 years, explain in two sentences why fixed effects address one kind of omitted variable but not another. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="a2-q4"></x-draft>
+      <x-answer><p>State fixed effects remove every influence that is constant over time within a state, such as geography, culture or long-run institutions, even if unobserved. They do not remove omitted factors that change over time within a state, such as a state-specific policy introduced in 2018; those still bias the estimates unless they are measured and controlled for.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="a2-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Ability affects both schooling and wages but is unobserved. This is…</legend>
+      <label class="opt"><input type="radio" name="a2q1" data-correct><span>omitted variable bias<span class="why">Yes: an unobserved factor drives both X and Y.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q1"><span>simultaneity<span class="why">Simultaneity means X and Y are determined together, as with price and quantity.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q1"><span>measurement error<span class="why">The problem is a missing variable, not a noisy one.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Which assumption does difference-in-differences rely on?</legend>
+      <label class="opt"><input type="radio" name="a2q2"><span>The instrument affects Y only through X<span class="why">That is the IV exclusion restriction.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q2" data-correct><span>Parallel trends in the absence of treatment<span class="why">Yes. Show pre-treatment trends to support it.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q2"><span>Units just either side of a cut-off are comparable<span class="why">That is the regression discontinuity assumption.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. With one cross-sectional survey and OLS, the safest wording is…</legend>
+      <label class="opt"><input type="radio" name="a2q3"><span>“X determines Y”<span class="why">Causal wording needs a causal design.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q3" data-correct><span>“X is associated with Y, conditional on the controls”<span class="why">Yes. It matches what OLS on observational data can show.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q3"><span>“X has an impact on Y”<span class="why">“Impact” is a causal word.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>4. Price and quantity are set jointly by supply and demand. A suitable estimator is…</legend>
+      <label class="opt"><input type="radio" name="a2q4" data-correct><span>2SLS with a supply shifter as instrument<span class="why">Yes. Simultaneous equations need instruments that shift one curve only.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q4"><span>OLS with robust standard errors<span class="why">Robust standard errors fix inference, not simultaneity bias.</span></span></label>
+      <label class="opt"><input type="radio" name="a2q4"><span>A logit model<span class="why">Logit is for binary outcomes; it does not address simultaneity.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

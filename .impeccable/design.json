@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T17:30:00+08:00",
+  "title": "Design System: Chapter 3 Methodology dashboard",
+  "extensions": {
+    "colorMeta": {
+      "examiner-red": { "role": "primary", "displayName": "Examiner's Red Pen", "canonical": "#8A1E2C", "tonalRamp": ["#2E0A0F", "#4A1019", "#651722", "#8A1E2C", "#A8414E", "#C57682", "#E2B2B8", "#F5E3E1"] },
+      "gold-foil": { "role": "secondary", "displayName": "Gold Foil", "canonical": "#D9B76C", "tonalRamp": ["#3D3018", "#5E4B25", "#806634", "#A68745", "#D9B76C", "#E4CB93", "#EFDEBA", "#F8F0DF"] },
+      "ink-navy": { "role": "neutral", "displayName": "Ink Navy", "canonical": "#1C2541", "tonalRamp": ["#0D1220", "#141A2E", "#1C2541", "#2A3560", "#3D4560", "#6B7290", "#A3A8BC", "#DCDEE7"] },
+      "ivory-page": { "role": "neutral", "displayName": "Ivory Page", "canonical": "#FBF8F1", "tonalRamp": ["#3B3830", "#6B665A", "#9C9585", "#C6BFAD", "#D8D0BF", "#F2EDE1", "#FBF8F1", "#FFFDF8"] },
+      "buckram-navy": { "role": "neutral", "displayName": "Buckram Navy", "canonical": "#1B2340" },
+      "highlighter": { "role": "tertiary", "displayName": "Highlighter", "canonical": "#F3DE9A" },
+      "correct-green": { "role": "tertiary", "displayName": "Correct Green", "canonical": "#285A40" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display (Computer Modern)", "purpose": "Section titles with inline section codes." },
+      "body": { "displayName": "Body (Source Sans 3)", "purpose": "All running text; 20/19/18px by viewport, user-adjustable 18–28px." },
+      "page-specimen": { "displayName": "Thesis page (Source Serif 4)", "purpose": "Model write-ups and examiner's notes." },
+      "code": { "displayName": "Code (JetBrains Mono)", "purpose": "Stata and Python listings only." }
+    },
+    "shadows": [
+      { "name": "paper-lift", "value": "0 1px 2px rgb(28 37 65 / 0.08), 0 6px 18px -8px rgb(28 37 65 / 0.22)", "purpose": "Thesis-page specimens only." },
+      { "name": "drawer", "value": "8px 0 32px rgb(0 0 0 / 0.25)", "purpose": "Open navigation drawer on narrow screens and in Projector mode." }
+    ],
+    "motion": [
+      { "name": "ease-out-expo", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Panel entrance (220ms) and drawer (240ms)." },
+      { "name": "pen-draw", "value": "950ms cubic-bezier(0.65, 0, 0.35, 1)", "purpose": "The examiner's red pen drawing in once on the Home contents page." },
+      { "name": "state", "value": "150ms ease-out", "purpose": "Hover and selection colour changes." }
+    ],
+    "breakpoints": [
+      { "name": "phone", "value": "699px" },
+      { "name": "drawer", "value": "1023px" },
+      { "name": "tablet-type", "value": "1099px" },
+      { "name": "margin-notes (container)", "value": "50rem" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action in calculators, quizzes and downloads.",
+      "html": "<button class=\"ds-btn-primary\">Check answers</button>",
+      "css": ".ds-btn-primary { display:inline-flex; align-items:center; min-height:2.75rem; padding:.45em 1.15em; border-radius:8px; border:1px solid #8A1E2C; background:#8A1E2C; color:#FBF8F1; font:600 17px/1 'Source Sans 3', system-ui, sans-serif; transition:background-color 150ms ease-out, transform 120ms ease-out; } .ds-btn-primary:hover { background:#7A1A27; } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary:focus-visible { outline:3px solid #8A1E2C; outline-offset:3px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Reset, clear and secondary downloads.",
+      "html": "<button class=\"ds-btn-secondary\">Start again</button>",
+      "css": ".ds-btn-secondary { display:inline-flex; align-items:center; min-height:2.75rem; padding:.45em 1.15em; border-radius:8px; border:1px solid #8A1E2C; background:transparent; color:#8A1E2C; font:600 17px/1 'Source Sans 3', system-ui, sans-serif; transition:background-color 150ms ease-out; } .ds-btn-secondary:hover { background:#F5E3E1; } .ds-btn-secondary:focus-visible { outline:3px solid #8A1E2C; outline-offset:3px; }"
+    },
+    {
+      "name": "Cover navigation",
+      "kind": "nav",
+      "refersTo": "nav-link-active",
+      "description": "Thesis-cover contents with gold codes and a ribbon bookmark on the open section.",
+      "html": "<nav class=\"ds-cover\"><a class=\"ds-toc\" href=\"#\"><span class=\"ds-code\">C1</span>Levels of measurement</a><a class=\"ds-toc ds-current\" href=\"#\"><span class=\"ds-code\">C2</span>Data structures</a></nav>",
+      "css": ".ds-cover { background:#1B2340; padding:12px; width:300px; } .ds-toc { position:relative; display:grid; grid-template-columns:2.4em 1fr; padding:.42em .75rem; border-radius:6px; color:#EFE8D8; text-decoration:none; font:17px/1.35 'Source Sans 3', sans-serif; } .ds-toc:hover { background:#232D52; } .ds-code { font-family:'KaTeX_Main', Georgia, serif; color:#B7A57E; } .ds-current { background:#2A3560; color:#FFFDF6; } .ds-current .ds-code { color:#D9B76C; } .ds-current::after { content:''; position:absolute; right:-12px; top:.25em; bottom:.25em; width:7px; background:#D9B76C; clip-path:polygon(0 0,100% 0,100% 100%,50% 82%,0 100%); }"
+    },
+    {
+      "name": "Examiner's margin note",
+      "kind": "custom",
+      "refersTo": "ex-note",
+      "description": "Red-pen annotation in the margin; the system's signature voice.",
+      "html": "<aside class=\"ds-note\"><b>Examiner:</b> Name the threat that worries you most and say what your design does about it.</aside>",
+      "css": ".ds-note { position:relative; padding-left:1.9rem; max-width:17rem; font:italic 18px/1.5 'Source Serif 4', Georgia, serif; color:#8A1E2C; } .ds-note b { font:650 18px 'Source Sans 3', sans-serif; font-style:normal; } .ds-note::before { content:'\\2713'; position:absolute; left:0; top:0; font-style:normal; }"
+    },
+    {
+      "name": "Booktabs table",
+      "kind": "custom",
+      "refersTo": "table-bt",
+      "description": "Every data table: rules above, under the header, and below; no verticals.",
+      "html": "<table class=\"ds-bt\"><caption><b>Table D4.2.</b> Selected entries</caption><thead><tr><th>N</th><th>s</th></tr></thead><tbody><tr><td>1,000</td><td>278</td></tr><tr><td>10,000</td><td>370</td></tr></tbody></table>",
+      "css": ".ds-bt { border-collapse:collapse; font:18px/1.5 'Source Sans 3', sans-serif; font-variant-numeric:tabular-nums lining-nums; color:#1C2541; } .ds-bt caption { caption-side:top; text-align:left; font:italic 17px 'Source Serif 4', serif; color:#3D4560; padding-bottom:8px; } .ds-bt thead th { border-top:2px solid #1C2541; border-bottom:1px solid #1C2541; text-align:left; padding:.55em .9em; } .ds-bt td { padding:.5em .9em; } .ds-bt tbody tr:last-child td { border-bottom:2px solid #1C2541; }"
+    },
+    {
+      "name": "Sub-tab bar",
+      "kind": "nav",
+      "refersTo": "subtab-active",
+      "description": "Switches the parts of a section.",
+      "html": "<div class=\"ds-tabs\"><button class=\"ds-tab\">Notes</button><button class=\"ds-tab ds-on\">Worked example</button><button class=\"ds-tab\">Worksheet</button></div>",
+      "css": ".ds-tabs { display:flex; gap:4px; border-bottom:1px solid #D8D0BF; } .ds-tab { border:0; background:none; padding:.5rem 1rem; border-bottom:3px solid transparent; margin-bottom:-1px; font:500 17px 'Source Sans 3', sans-serif; color:#3D4560; } .ds-tab:hover { background:#F2EDE1; color:#1C2541; } .ds-on { color:#8A1E2C; font-weight:650; border-bottom-color:#8A1E2C; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bound Thesis, Under Examination",
+    "overview": "The dashboard is a hardbound PhD thesis on the examiner's desk. The frame belongs to the thesis: a navy buckram cover with gold-foil lettering carries the navigation, section heads are set in Computer Modern as LaTeX would set them, and every table follows the booktabs convention of economics papers. The reading column inside that frame stays calm: large, high-contrast sans-serif text at a real measure. The one expressive device is the examiner's red pen, which circles section numbers, writes notes in the margin and marks answers.",
+    "keyCharacteristics": [
+      "Navy buckram rail with flat gold foil; ivory page; one red-pen accent.",
+      "Computer Modern section heads with inline LaTeX-style numbers (A1, 3.2), never eyebrow labels.",
+      "Booktabs tables: three horizontal rules, no verticals, tabular numerals.",
+      "Legibility is a hard floor: body 20px desktop / 18px phone, nothing below 17px, body contrast ≥ 7:1.",
+      "Works offline from a ZIP: self-hosted fonts, maths and code highlighting."
+    ],
+    "rules": [
+      { "name": "The One Pen Rule", "body": "Red appears only where the examiner would write: links, the active state, annotations and marks. Never as decoration.", "section": "colors" },
+      { "name": "The Foil Stays on the Cover Rule", "body": "Gold belongs to the rail and the download banner (the cover). The page never uses it.", "section": "colors" },
+      { "name": "The Seventeen-Pixel Floor Rule", "body": "No visible text renders below 17px. Subscripts use max(17px, 0.72em). Charts are drawn at their real pixel width so their labels never scale down.", "section": "typography" },
+      { "name": "The Number Is the Kicker Rule", "body": "Section heads carry their number inline (A1, 3.2), LaTeX style. Never a tracked-caps label above a heading.", "section": "typography" }
+    ],
+    "dos": [
+      "Do set every table as booktabs (2px rules top and bottom, 1px under the header, no vertical rules).",
+      "Do keep body text at 20/19/18px and every label at 17px or more; check with tools/qa_playwright.py.",
+      "Do put numbers inline in headings (A1, 3.2) and use the red pen only for annotation, links and state.",
+      "Do label hypothetical data as hypothetical."
+    ],
+    "donts": [
+      "Don't add eyebrow or kicker labels above headings.",
+      "Don't use grey for body text or contrast below 7:1 for running text.",
+      "Don't use gold on the page, or red as decoration.",
+      "Don't pair a border with a wide shadow on the same card.",
+      "Don't embed text in SVG diagrams that scale; build text-bearing diagrams in HTML."
+    ]
+  }
+}

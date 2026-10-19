@@ -1,0 +1,201 @@
+<!--meta
+id: b3
+group: B
+code: B3
+title: 3.3 Variables: operationalisation and the codebook
+short: 3.3 Variables and codebook
+-->
+<header class="tab-head">
+  <h1 id="h-b3"><span class="secnum">B3</span>3.3 Variables: operationalisation and the codebook</h1>
+  <p class="lede">A concept in your theory becomes a variable in your data through operationalisation: a definition, a question or source, a level of measurement and a coding rule. The codebook (or data dictionary) records all of this in one table that anyone can check.</p>
+  <ul class="tab-facts"><li>About 25 minutes</li><li>Published example plus three more</li><li>Stata and Python code</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>operationalise a concept into a measurable, coded variable;</li>
+      <li>build a variable operationalisation table for Section 3.3;</li>
+      <li>name, label and code variables so the data and the thesis agree.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="b3-what">From concept to variable</h2>
+  <p><span class="term">Operationalisation</span> answers the question: <em>what exactly will I observe, and how will I record it?</em> “Financial literacy” is a concept. “The number of correct answers to three questions on interest, inflation and diversification, scored 0 to 3” is its operationalisation.</p>
+  <p>For each variable, Section 3.3 should state:</p>
+  <ol>
+    <li>the <strong>variable name</strong> exactly as it appears in your dataset and tables;</li>
+    <li>the <strong>operational definition</strong>, in words;</li>
+    <li>the <strong>questionnaire item or data source</strong> it comes from;</li>
+    <li>the <strong>level of measurement</strong> (nominal, ordinal, interval, ratio; see <a href="#c1">C1</a>);</li>
+    <li>the <strong>coding</strong>: values, units, what 1 means for a dummy, how a composite is built;</li>
+    <li>its <strong>role and expected sign</strong>, with a source for the expectation where possible.</li>
+  </ol>
+
+  <h2 id="b3-soon">A published example</h2>
+  <p>Soon, Kamaruddin and Anuar (2018) studied why flood victims did or did not evacuate during the December 2014 floods. Their Table II is a compact operationalisation table: the variable, the exact questionnaire item, and the coding.</p>
+  <table class="bt">
+    <caption><b>Table B3.1.</b> Questionnaire items and variable operationalisation. Reproduced from Soon et al. (2018, Table II, p. 138)</caption>
+    <thead><tr><th>Variables</th><th>Questionnaire items</th><th>Variable operationalisation</th></tr></thead>
+    <tbody>
+      <tr class="group"><td colspan="3">Dependent variable</td></tr>
+      <tr><td>Evacuee</td><td>Did you evacuate?</td><td>1 if evacuated; 0 otherwise</td></tr>
+      <tr class="group"><td colspan="3">Explanatory variables of interest</td></tr>
+      <tr><td>First-time victim</td><td>Is the December 2014 flood your first experience as a flood victim?</td><td>1 if first-time victim; 0 otherwise</td></tr>
+      <tr><td>Notified to evacuate</td><td>Did you get any evacuation notices from the authority?</td><td>1 if notified; 0 otherwise</td></tr>
+      <tr><td>Programme existence</td><td>Were there any flood awareness programmes held at your community prior to the flood?</td><td>1 if yes; 0 otherwise</td></tr>
+      <tr><td>Joined programme</td><td>Did you participate in any of those programmes?</td><td>1 if participated; 0 otherwise</td></tr>
+      <tr><td>Distance to centre</td><td>How far away would you say your home is from the designated evacuation centre?</td><td>Estimates given in kilometres</td></tr>
+    </tbody>
+  </table>
+  <p>Notice three good habits. Each dummy says what 1 means. The question wording is quoted, so the reader can judge what was really measured. The continuous variable states its unit.</p>
+  <aside class="ex-note"><b>Examiner:</b> “Distance to centre” is the respondent's <em>estimate</em>, not a measured distance. Good operationalisation tables make that visible, and so does the limitations section.</aside>
+
+  <h2 id="b3-codebook">A fuller codebook</h2>
+  <table class="bt">
+    <caption><b>Table B3.2.</b> Variable operationalisation and codebook for a saving study</caption>
+    <thead><tr><th>Variable name</th><th>Operational definition</th><th>Measurement level</th><th>Coding</th><th>Expected sign and source</th></tr></thead>
+    <tbody>
+      <tr><td><code>income</code></td><td>Household income: total monthly household income in RM</td><td>Ratio</td><td>Continuous; top-coded if necessary</td><td>Positive effect on saving; survey item Q12</td></tr>
+      <tr><td><code>female</code></td><td>Gender: respondent identifies as female</td><td>Nominal (binary)</td><td>1 = female, 0 = otherwise</td><td>Ambiguous; demographic control; Q3</td></tr>
+      <tr><td><code>finlit_score</code></td><td>Financial literacy: sum of correct answers to 10 financial-literacy questions</td><td>Interval-like index</td><td>0–10; higher = more literate</td><td>Positive; constructed from Q20–Q29</td></tr>
+      <tr><td><code>save_regular</code></td><td>Saving behaviour: respondent saves money every month</td><td>Nominal (binary)</td><td>1 = yes, 0 = no</td><td>Dependent variable; Q35</td></tr>
+      <tr><td><code>att_risk</code></td><td>Risk attitude: agreement with “I am willing to take financial risks”</td><td>Ordinal</td><td>1 = strongly disagree to 5 = strongly agree</td><td>Control; Q40</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="b3-rules">Naming and coding rules that save you later</h2>
+  <dl class="defs">
+    <dt>Short, lowercase names</dt><dd><code>finlit_score</code>, not <code>Financial Literacy Score (Q20-Q29)</code>. Put the long description in the variable label.</dd>
+    <dt>Name dummies after the category coded 1</dt><dd><code>female</code> (1 = female), never <code>gender</code>. Then the coefficient reads directly as “female versus male”.</dd>
+    <dt>One coding per concept</dt><dd>If agreement items run 1 = strongly disagree to 5 = strongly agree, keep that direction everywhere and reverse-code negatively worded items before building scales.</dd>
+    <dt>Composites say how they are built</dt><dd>“PU = mean of PU1–PU4 (1–5)”, plus the reliability evidence (<a href="#e4">E4</a>).</dd>
+    <dt>Transformations are visible</dt><dd><code>ln_allow</code> = natural log of monthly allowance; state why (skewness, elasticity interpretation).</dd>
+    <dt>Missing values are documented</dt><dd>Which codes (−9, 999) meant missing, and what you did with them (<a href="#c5">C5</a>).</dd>
+  </dl>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Every variable needs a name, definition, source item, level, coding and expected role.</li>
+      <li>Quote the question wording; say what 1 means; state units.</li>
+      <li>The names in the codebook, the dataset and the regression tables must be identical.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Soon, J.-J., Kamaruddin, R., &amp; Anuar, A. R. (2018). Flood victims' evacuation decisions: A semi-nonparametric estimation. <i>International Journal of Emergency Services, 7</i>(2), 134–146. https://doi.org/10.1108/IJES-05-2017-0031</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="b3-ex">Worked example: the codebook for the e-wallet survey</h2>
+  <p>This is the codebook for the clean dataset produced in <a href="#c5">C5</a> (<code>ewallet_survey_clean</code>, 400 respondents, hypothetical). Names match the dataset exactly.</p>
+  <table class="bt">
+    <caption><b>Table B3.3.</b> Codebook, e-wallet survey</caption>
+    <thead><tr><th>Variable</th><th>Definition</th><th>Item</th><th>Level</th><th>Coding</th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td><code>ewallet_user</code></td><td>Used an e-wallet in the past 30 days</td><td>B1</td><td>Nominal (binary)</td><td>1 = yes, 0 = no</td><td>Outcome, RQ2</td></tr>
+      <tr><td><code>ewallet_days</code></td><td>Days an e-wallet was used in the past 7 days</td><td>B2</td><td>Ratio (count)</td><td>0–7</td><td>Outcome, RQ3</td></tr>
+      <tr><td><code>intention</code></td><td>“I intend to keep using e-wallets”</td><td>E1</td><td>Ordinal</td><td>1 = strongly disagree … 5 = strongly agree</td><td>Outcome, RQ4</td></tr>
+      <tr><td><code>PU</code></td><td>Perceived usefulness</td><td>C1–C4</td><td>Interval-like composite</td><td>Mean of four 1–5 items</td><td>Explanatory (+)</td></tr>
+      <tr><td><code>PS</code></td><td>Perceived security</td><td>C5–C8</td><td>Interval-like composite</td><td>Mean of four 1–5 items</td><td>Explanatory (+)</td></tr>
+      <tr><td><code>EOU</code></td><td>Ease of use</td><td>C9–C11</td><td>Interval-like composite</td><td>Mean of three 1–5 items</td><td>Explanatory (+)</td></tr>
+      <tr><td><code>finlit</code></td><td>Financial literacy: correct answers to three questions</td><td>D1–D3</td><td>Interval-like index</td><td>0–3</td><td>Explanatory (+)</td></tr>
+      <tr><td><code>female</code></td><td>Respondent is female</td><td>A1</td><td>Nominal (binary)</td><td>1 = female, 0 = male</td><td>Control</td></tr>
+      <tr><td><code>ln_allow</code></td><td>Natural log of monthly allowance (RM)</td><td>A7</td><td>Ratio (log)</td><td>ln(RM)</td><td>Control (+)</td></tr>
+      <tr><td><code>urban</code></td><td>Hometown is urban</td><td>A6</td><td>Nominal (binary)</td><td>1 = urban, 0 = rural</td><td>Control (+)</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="b3-code">Labelling the variables in code</h3>
+  <p>Variable and value labels make Stata's output and your tables self-explanatory. These lines come from <code>03_data_cleaning.do</code> and its notebook.</p>
+  <x-listing title="Variable labels and a data dictionary">
+<x-stata file="03_data_cleaning.do">
+label variable female   "Female (1 = yes)"
+label variable PU       "Perceived usefulness, mean of PU1-PU4 (1-5)"
+label variable finlit   "Financial literacy score, correct answers (0-3)"
+label define yesno 0 "No" 1 "Yes"
+label values female urban ewallet_user yesno
+
+* the codebook as Stata sees it
+describe ewallet_user ewallet_days intention PU PS EOU finlit female ln_allow urban
+codebook female ewallet_user, compact
+</x-stata>
+<x-python file="03_data_cleaning.ipynb">
+# a data dictionary you can export to Word or Excel for the appendix
+codebook = pd.DataFrame({
+    "variable": ["ewallet_user", "PU", "finlit", "female"],
+    "definition": ["Used an e-wallet in past 30 days", "Perceived usefulness, mean of PU1-PU4",
+                   "Financial literacy, correct answers", "Respondent is female"],
+    "level": ["nominal (binary)", "interval-like", "interval-like", "nominal (binary)"],
+    "coding": ["1 = yes, 0 = no", "1-5", "0-3", "1 = female, 0 = male"],
+})
+codebook.to_excel("codebook.xlsx", index=False)
+clean[codebook["variable"]].describe().T
+</x-python>
+  </x-listing>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="b3-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.3 Variables and measurement</h3>
+      <p><span class="anno">Table 3.3 defines every variable used in the analysis, the questionnaire item it comes from, its level of measurement and its coding.</span><span class="anno-n">1</span> <span class="anno">The three outcome variables differ in measurement level: e-wallet use is binary, days of use is a count from 0 to 7, and intention to continue is ordinal. This difference determines the choice of model in Section 3.4.</span><span class="anno-n">2</span> <span class="anno">Perceived usefulness, perceived security and ease of use are each computed as the mean of their items, after confirming internal consistency (Cronbach's α = 0.86, 0.86 and 0.77) and discriminant validity (all HTMT ratios below 0.51; Section 3.1.4).</span><span class="anno-n">3</span> Monthly allowance enters in logarithms because its distribution is strongly right-skewed.</p>
+    </div>
+    <ol class="anno-notes">
+      <li>Point to the table; do not list variables in prose.</li>
+      <li>Connect measurement level to model choice.</li>
+      <li>Explain how composites are built and give their reliability.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Reliability figures are from the worked example in <a href="#e4">E4</a>.</figcaption>
+  </figure>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="b3-ws">Worksheet B3</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Operationalise “household vulnerability to floods” into two different variables, one binary and one continuous. Give the questionnaire item and the coding for each. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="b3-q1"></x-draft>
+      <x-answer><p>Binary: <code>flooded_before</code>: “Has your home been flooded in the past ten years?” 1 = yes, 0 = no. Continuous: <code>water_depth</code>: “During the December 2014 flood, how deep was the water inside your home, in centimetres?” recorded in cm (ratio). Other good answers include distance to the river in km, or the number of flood events experienced (a count).</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Find four problems in this codebook row: “Gender | Gender of respondent | Scale | 1, 2 | Positive”. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="b3-q2"></x-draft>
+      <x-answer><p>(1) The name should be a dummy named after the category coded 1, such as <code>female</code>. (2) “Scale” is not a measurement level; gender is nominal (binary). (3) The coding “1, 2” does not say which value is which, and should be 0/1 for a dummy. (4) “Positive” is meaningless without saying which category the sign refers to and why; give a source or call it a control.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Your PU scale has four items, and item PU3 is negatively worded (“E-wallets make paying more complicated”). What must you do before computing <code>PU</code>, and how would you record it in the codebook? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="b3-q3"></x-draft>
+      <x-answer><p>Reverse-code PU3 so that higher values mean higher usefulness: <code>PU3r = 6 − PU3</code> on a 1–5 scale. Then compute PU as the mean of PU1, PU2, PU3r and PU4. Record in the codebook “PU3 reverse-coded (6 − PU3) before averaging”, and check that PU3r correlates positively with the other items.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="b3-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Which variable name is best for a dummy equal to 1 for urban households?</legend>
+      <label class="opt"><input type="radio" name="b3q1"><span><code>location</code><span class="why">Ambiguous: which location is 1?</span></span></label>
+      <label class="opt"><input type="radio" name="b3q1" data-correct><span><code>urban</code><span class="why">Yes. The name says what 1 means.</span></span></label>
+      <label class="opt"><input type="radio" name="b3q1"><span><code>Urban/Rural (Q6)</code><span class="why">Too long, with spaces and symbols; put that in the label.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. In Soon et al. (2018), “distance to centre” is…</legend>
+      <label class="opt"><input type="radio" name="b3q2" data-correct><span>a respondent's estimate in kilometres (ratio level)<span class="why">Yes. Ratio level, but measured with recall error.</span></span></label>
+      <label class="opt"><input type="radio" name="b3q2"><span>a binary indicator<span class="why">It is recorded in kilometres.</span></span></label>
+      <label class="opt"><input type="radio" name="b3q2"><span>an ordinal scale<span class="why">Kilometres have equal intervals and a true zero.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Why does the codebook record measurement level?</legend>
+      <label class="opt"><input type="radio" name="b3q3"><span>Universities require it<span class="why">True perhaps, but not the reason.</span></span></label>
+      <label class="opt"><input type="radio" name="b3q3" data-correct><span>It determines which statistics and models are valid<span class="why">Yes. For example, an ordinal outcome calls for an ordinal model.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

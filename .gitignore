@@ -1,0 +1,27 @@
+# Third-party originals and private source notes — kept local only (copyright)
+source-materials/
+
+# Python / tooling caches
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+tools/.cache/
+tools/_qa/
+tools/_run/
+
+# Stata batch-mode logs from the test runner
+downloads/code/*.log
+*.smcl
+
+# Office lock files and OS clutter
+~$*
+.~lock.*
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Impeccable review captures (regenerated on demand)
+.impeccable/review/

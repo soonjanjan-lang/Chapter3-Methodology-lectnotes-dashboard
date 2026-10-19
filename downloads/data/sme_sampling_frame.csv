@@ -1,0 +1,2401 @@
+sme_id,sector,state,employees,size_class,uses_ewallet_payments
+1,Services,Perak,8,Small,0
+2,Services,Kedah,14,Small,0
+3,Services,Pulau Pinang,18,Small,1
+4,Agriculture,Kedah,5,Small,0
+5,Manufacturing,Pulau Pinang,21,Small,1
+6,Services,Kedah,14,Small,1
+7,Agriculture,Kedah,21,Small,0
+8,Services,Kedah,14,Small,1
+9,Services,Kedah,29,Small,0
+10,Agriculture,Perak,5,Small,0
+11,Services,Pulau Pinang,50,Medium,1
+12,Agriculture,Kedah,30,Medium,0
+13,Manufacturing,Perlis,7,Small,0
+14,Manufacturing,Kedah,19,Small,0
+15,Agriculture,Perak,16,Small,0
+16,Manufacturing,Pulau Pinang,3,Micro,1
+17,Services,Pulau Pinang,18,Small,1
+18,Services,Pulau Pinang,7,Small,0
+19,Agriculture,Kedah,9,Small,0
+20,Services,Pulau Pinang,7,Small,1
+21,Services,Perlis,8,Small,0
+22,Agriculture,Pulau Pinang,12,Small,1
+23,Manufacturing,Kedah,12,Small,1
+24,Services,Perak,3,Micro,0
+25,Manufacturing,Perak,9,Small,0
+26,Services,Perak,4,Micro,0
+27,Services,Pulau Pinang,4,Micro,1
+28,Manufacturing,Pulau Pinang,8,Small,0
+29,Services,Kedah,23,Small,1
+30,Services,Pulau Pinang,19,Small,1
+31,Services,Kedah,7,Small,1
+32,Services,Kedah,6,Small,0
+33,Services,Kedah,6,Small,1
+34,Agriculture,Perlis,12,Small,0
+35,Manufacturing,Perak,24,Small,0
+36,Services,Perlis,11,Small,1
+37,Services,Kedah,20,Small,0
+38,Services,Pulau Pinang,14,Small,1
+39,Manufacturing,Perak,40,Medium,1
+40,Services,Kedah,3,Micro,0
+41,Manufacturing,Perlis,2,Micro,1
+42,Services,Kedah,9,Small,0
+43,Manufacturing,Pulau Pinang,19,Small,0
+44,Services,Perak,8,Small,1
+45,Agriculture,Perak,16,Small,0
+46,Services,Pulau Pinang,4,Micro,0
+47,Manufacturing,Perlis,4,Micro,0
+48,Manufacturing,Kedah,6,Small,0
+49,Services,Kedah,22,Small,1
+50,Services,Kedah,20,Small,0
+51,Agriculture,Pulau Pinang,6,Small,0
+52,Services,Kedah,13,Small,1
+53,Services,Perak,7,Small,1
+54,Agriculture,Kedah,11,Small,0
+55,Services,Perak,5,Small,0
+56,Services,Pulau Pinang,11,Small,1
+57,Services,Kedah,6,Small,0
+58,Construction,Perak,11,Small,0
+59,Manufacturing,Perlis,7,Small,0
+60,Manufacturing,Perak,6,Small,1
+61,Services,Pulau Pinang,12,Small,1
+62,Services,Pulau Pinang,8,Small,1
+63,Services,Pulau Pinang,11,Small,1
+64,Services,Pulau Pinang,8,Small,0
+65,Services,Kedah,18,Small,1
+66,Services,Kedah,6,Small,0
+67,Services,Kedah,21,Small,0
+68,Construction,Perlis,34,Medium,0
+69,Manufacturing,Pulau Pinang,9,Small,0
+70,Services,Kedah,49,Medium,0
+71,Construction,Perlis,63,Medium,1
+72,Construction,Pulau Pinang,16,Small,0
+73,Services,Pulau Pinang,4,Micro,1
+74,Agriculture,Pulau Pinang,3,Micro,0
+75,Construction,Kedah,10,Small,0
+76,Services,Perak,50,Medium,1
+77,Services,Perak,18,Small,0
+78,Services,Pulau Pinang,21,Small,1
+79,Manufacturing,Perak,9,Small,0
+80,Services,Perak,6,Small,1
+81,Manufacturing,Kedah,15,Small,0
+82,Services,Kedah,5,Small,1
+83,Services,Kedah,9,Small,0
+84,Agriculture,Pulau Pinang,17,Small,0
+85,Services,Perak,11,Small,0
+86,Services,Pulau Pinang,17,Small,0
+87,Services,Perlis,8,Small,1
+88,Services,Kedah,18,Small,0
+89,Services,Perlis,15,Small,0
+90,Services,Kedah,3,Micro,1
+91,Services,Pulau Pinang,5,Small,1
+92,Agriculture,Pulau Pinang,6,Small,0
+93,Services,Pulau Pinang,19,Small,0
+94,Services,Perlis,14,Small,0
+95,Agriculture,Kedah,14,Small,0
+96,Services,Kedah,13,Small,0
+97,Services,Kedah,19,Small,1
+98,Manufacturing,Kedah,24,Small,0
+99,Services,Kedah,7,Small,0
+100,Services,Kedah,3,Micro,1
+101,Manufacturing,Kedah,19,Small,1
+102,Manufacturing,Kedah,9,Small,0
+103,Manufacturing,Pulau Pinang,11,Small,1
+104,Agriculture,Pulau Pinang,10,Small,0
+105,Services,Perak,5,Small,1
+106,Services,Perak,4,Micro,0
+107,Services,Perlis,25,Small,1
+108,Services,Pulau Pinang,28,Small,1
+109,Services,Kedah,24,Small,0
+110,Services,Kedah,13,Small,1
+111,Services,Kedah,14,Small,1
+112,Manufacturing,Kedah,8,Small,1
+113,Manufacturing,Perlis,12,Small,1
+114,Services,Kedah,8,Small,1
+115,Services,Kedah,7,Small,1
+116,Services,Kedah,13,Small,0
+117,Manufacturing,Perak,47,Medium,0
+118,Manufacturing,Pulau Pinang,3,Micro,0
+119,Services,Kedah,18,Small,1
+120,Manufacturing,Perlis,19,Small,0
+121,Construction,Kedah,4,Micro,0
+122,Services,Perlis,14,Small,1
+123,Services,Perak,12,Small,1
+124,Services,Kedah,8,Small,0
+125,Services,Perlis,7,Small,0
+126,Services,Pulau Pinang,4,Micro,1
+127,Manufacturing,Perlis,47,Medium,0
+128,Manufacturing,Kedah,84,Medium,0
+129,Manufacturing,Kedah,43,Medium,0
+130,Agriculture,Kedah,9,Small,0
+131,Services,Kedah,14,Small,0
+132,Services,Pulau Pinang,15,Small,1
+133,Services,Pulau Pinang,6,Small,0
+134,Services,Kedah,9,Small,1
+135,Manufacturing,Perlis,17,Small,0
+136,Services,Kedah,8,Small,0
+137,Services,Kedah,3,Micro,0
+138,Services,Pulau Pinang,4,Micro,0
+139,Services,Kedah,14,Small,1
+140,Services,Pulau Pinang,8,Small,1
+141,Construction,Perak,9,Small,0
+142,Services,Perlis,35,Medium,1
+143,Services,Kedah,12,Small,1
+144,Construction,Pulau Pinang,6,Small,0
+145,Services,Pulau Pinang,10,Small,1
+146,Services,Kedah,71,Medium,0
+147,Manufacturing,Pulau Pinang,5,Small,0
+148,Services,Kedah,51,Medium,0
+149,Services,Kedah,38,Medium,1
+150,Manufacturing,Perak,10,Small,1
+151,Agriculture,Pulau Pinang,8,Small,0
+152,Services,Perlis,37,Medium,0
+153,Manufacturing,Kedah,13,Small,0
+154,Services,Perak,7,Small,0
+155,Services,Perak,52,Medium,1
+156,Services,Perlis,13,Small,0
+157,Services,Perlis,14,Small,0
+158,Services,Pulau Pinang,11,Small,1
+159,Services,Kedah,9,Small,0
+160,Services,Pulau Pinang,12,Small,0
+161,Services,Kedah,8,Small,0
+162,Manufacturing,Perak,17,Small,0
+163,Services,Pulau Pinang,27,Small,0
+164,Services,Kedah,27,Small,0
+165,Services,Pulau Pinang,30,Medium,1
+166,Services,Kedah,39,Medium,1
+167,Manufacturing,Kedah,21,Small,0
+168,Services,Pulau Pinang,7,Small,1
+169,Agriculture,Perak,25,Small,1
+170,Services,Perak,3,Micro,1
+171,Manufacturing,Kedah,6,Small,0
+172,Agriculture,Pulau Pinang,14,Small,0
+173,Services,Kedah,3,Micro,1
+174,Manufacturing,Pulau Pinang,39,Medium,1
+175,Services,Pulau Pinang,5,Small,1
+176,Manufacturing,Kedah,4,Micro,0
+177,Services,Kedah,6,Small,0
+178,Services,Kedah,6,Small,1
+179,Services,Perak,11,Small,1
+180,Construction,Pulau Pinang,10,Small,0
+181,Services,Kedah,26,Small,1
+182,Services,Pulau Pinang,10,Small,1
+183,Services,Perak,13,Small,0
+184,Services,Pulau Pinang,5,Small,0
+185,Services,Pulau Pinang,17,Small,1
+186,Agriculture,Pulau Pinang,6,Small,0
+187,Manufacturing,Perlis,3,Micro,1
+188,Manufacturing,Pulau Pinang,33,Medium,1
+189,Agriculture,Kedah,5,Small,1
+190,Services,Kedah,5,Small,1
+191,Services,Perak,6,Small,0
+192,Services,Kedah,19,Small,0
+193,Construction,Kedah,4,Micro,1
+194,Services,Pulau Pinang,8,Small,0
+195,Construction,Pulau Pinang,18,Small,1
+196,Services,Pulau Pinang,56,Medium,1
+197,Manufacturing,Perak,9,Small,0
+198,Services,Kedah,11,Small,0
+199,Services,Pulau Pinang,6,Small,1
+200,Manufacturing,Perak,60,Medium,0
+201,Services,Pulau Pinang,10,Small,1
+202,Agriculture,Kedah,10,Small,0
+203,Agriculture,Perak,12,Small,0
+204,Services,Kedah,5,Small,1
+205,Services,Perak,11,Small,1
+206,Services,Pulau Pinang,4,Micro,1
+207,Agriculture,Pulau Pinang,39,Medium,0
+208,Agriculture,Perak,10,Small,0
+209,Services,Perlis,10,Small,1
+210,Services,Perak,30,Medium,1
+211,Services,Kedah,4,Micro,0
+212,Services,Perak,36,Medium,0
+213,Services,Kedah,40,Medium,0
+214,Manufacturing,Kedah,6,Small,1
+215,Services,Perak,20,Small,0
+216,Services,Kedah,10,Small,1
+217,Construction,Kedah,23,Small,0
+218,Manufacturing,Perak,11,Small,1
+219,Manufacturing,Kedah,5,Small,1
+220,Services,Pulau Pinang,19,Small,0
+221,Construction,Perak,9,Small,0
+222,Services,Kedah,13,Small,0
+223,Services,Perak,25,Small,1
+224,Services,Kedah,31,Medium,0
+225,Agriculture,Pulau Pinang,19,Small,0
+226,Services,Kedah,4,Micro,1
+227,Construction,Perak,20,Small,0
+228,Services,Perlis,9,Small,0
+229,Services,Pulau Pinang,27,Small,1
+230,Construction,Pulau Pinang,9,Small,0
+231,Services,Kedah,37,Medium,0
+232,Agriculture,Kedah,17,Small,0
+233,Manufacturing,Perak,11,Small,1
+234,Agriculture,Kedah,14,Small,0
+235,Services,Perak,3,Micro,1
+236,Services,Pulau Pinang,18,Small,1
+237,Services,Pulau Pinang,12,Small,0
+238,Services,Kedah,5,Small,0
+239,Services,Pulau Pinang,15,Small,0
+240,Services,Kedah,14,Small,1
+241,Services,Perak,15,Small,1
+242,Services,Pulau Pinang,10,Small,0
+243,Services,Kedah,21,Small,1
+244,Services,Kedah,22,Small,0
+245,Services,Pulau Pinang,12,Small,1
+246,Services,Perlis,10,Small,0
+247,Agriculture,Kedah,8,Small,0
+248,Services,Perak,7,Small,0
+249,Manufacturing,Perak,18,Small,0
+250,Agriculture,Pulau Pinang,7,Small,0
+251,Manufacturing,Kedah,4,Micro,1
+252,Services,Pulau Pinang,13,Small,1
+253,Services,Perak,28,Small,1
+254,Services,Kedah,9,Small,1
+255,Services,Pulau Pinang,23,Small,1
+256,Services,Perlis,16,Small,1
+257,Services,Kedah,5,Small,1
+258,Services,Perak,14,Small,1
+259,Services,Kedah,10,Small,1
+260,Services,Kedah,19,Small,0
+261,Services,Perak,2,Micro,0
+262,Services,Pulau Pinang,22,Small,0
+263,Agriculture,Kedah,20,Small,0
+264,Services,Pulau Pinang,5,Small,1
+265,Services,Pulau Pinang,27,Small,1
+266,Services,Perak,10,Small,0
+267,Services,Kedah,13,Small,1
+268,Manufacturing,Perak,23,Small,0
+269,Services,Kedah,35,Medium,1
+270,Manufacturing,Pulau Pinang,13,Small,0
+271,Manufacturing,Kedah,20,Small,0
+272,Services,Pulau Pinang,16,Small,1
+273,Services,Pulau Pinang,6,Small,1
+274,Agriculture,Pulau Pinang,45,Medium,0
+275,Agriculture,Perlis,21,Small,0
+276,Manufacturing,Pulau Pinang,12,Small,1
+277,Services,Perak,27,Small,0
+278,Services,Kedah,17,Small,1
+279,Services,Perlis,7,Small,0
+280,Services,Perlis,26,Small,1
+281,Manufacturing,Pulau Pinang,12,Small,1
+282,Services,Pulau Pinang,19,Small,0
+283,Manufacturing,Kedah,25,Small,0
+284,Agriculture,Perlis,25,Small,0
+285,Services,Perak,56,Medium,1
+286,Agriculture,Pulau Pinang,13,Small,0
+287,Services,Pulau Pinang,10,Small,1
+288,Manufacturing,Pulau Pinang,6,Small,0
+289,Manufacturing,Pulau Pinang,7,Small,1
+290,Services,Kedah,20,Small,0
+291,Services,Pulau Pinang,16,Small,0
+292,Services,Perak,6,Small,1
+293,Agriculture,Perak,7,Small,0
+294,Services,Pulau Pinang,8,Small,1
+295,Services,Pulau Pinang,43,Medium,1
+296,Services,Pulau Pinang,5,Small,1
+297,Manufacturing,Pulau Pinang,15,Small,0
+298,Services,Kedah,3,Micro,1
+299,Services,Perak,9,Small,1
+300,Services,Perak,37,Medium,1
+301,Services,Kedah,4,Micro,0
+302,Agriculture,Kedah,30,Medium,0
+303,Manufacturing,Pulau Pinang,3,Micro,0
+304,Services,Kedah,12,Small,0
+305,Manufacturing,Kedah,5,Small,0
+306,Services,Pulau Pinang,11,Small,1
+307,Services,Pulau Pinang,9,Small,0
+308,Agriculture,Kedah,22,Small,0
+309,Agriculture,Pulau Pinang,14,Small,0
+310,Services,Pulau Pinang,13,Small,1
+311,Manufacturing,Pulau Pinang,7,Small,0
+312,Services,Perlis,16,Small,1
+313,Manufacturing,Pulau Pinang,6,Small,1
+314,Services,Kedah,7,Small,1
+315,Services,Pulau Pinang,7,Small,0
+316,Services,Kedah,18,Small,1
+317,Manufacturing,Pulau Pinang,80,Medium,0
+318,Agriculture,Pulau Pinang,11,Small,0
+319,Services,Perlis,59,Medium,0
+320,Manufacturing,Perlis,5,Small,1
+321,Services,Pulau Pinang,7,Small,1
+322,Manufacturing,Perak,17,Small,0
+323,Manufacturing,Pulau Pinang,19,Small,0
+324,Services,Kedah,22,Small,0
+325,Manufacturing,Pulau Pinang,44,Medium,0
+326,Services,Pulau Pinang,10,Small,0
+327,Services,Pulau Pinang,28,Small,1
+328,Manufacturing,Pulau Pinang,14,Small,0
+329,Services,Kedah,2,Micro,0
+330,Services,Pulau Pinang,5,Small,1
+331,Services,Pulau Pinang,7,Small,1
+332,Construction,Kedah,12,Small,1
+333,Manufacturing,Perlis,18,Small,0
+334,Services,Perlis,9,Small,0
+335,Services,Perlis,35,Medium,1
+336,Services,Pulau Pinang,5,Small,0
+337,Manufacturing,Perak,11,Small,1
+338,Services,Perak,25,Small,1
+339,Services,Pulau Pinang,5,Small,1
+340,Manufacturing,Pulau Pinang,33,Medium,1
+341,Manufacturing,Pulau Pinang,25,Small,1
+342,Services,Perak,10,Small,1
+343,Services,Kedah,11,Small,0
+344,Services,Pulau Pinang,11,Small,1
+345,Services,Kedah,12,Small,1
+346,Services,Kedah,33,Medium,1
+347,Manufacturing,Pulau Pinang,18,Small,1
+348,Agriculture,Perlis,4,Micro,0
+349,Manufacturing,Kedah,4,Micro,0
+350,Construction,Perak,19,Small,0
+351,Services,Kedah,2,Micro,1
+352,Manufacturing,Kedah,4,Micro,0
+353,Services,Pulau Pinang,7,Small,1
+354,Services,Kedah,11,Small,1
+355,Services,Kedah,36,Medium,1
+356,Services,Kedah,13,Small,1
+357,Manufacturing,Kedah,243,Medium,0
+358,Manufacturing,Kedah,13,Small,0
+359,Manufacturing,Pulau Pinang,23,Small,1
+360,Services,Kedah,27,Small,0
+361,Services,Perak,10,Small,1
+362,Services,Perak,25,Small,1
+363,Services,Kedah,19,Small,1
+364,Services,Kedah,14,Small,0
+365,Construction,Kedah,7,Small,0
+366,Services,Perak,8,Small,1
+367,Services,Pulau Pinang,22,Small,0
+368,Services,Perak,11,Small,0
+369,Services,Kedah,16,Small,1
+370,Agriculture,Pulau Pinang,16,Small,0
+371,Manufacturing,Kedah,14,Small,0
+372,Services,Pulau Pinang,11,Small,0
+373,Agriculture,Pulau Pinang,18,Small,1
+374,Agriculture,Pulau Pinang,23,Small,0
+375,Services,Perlis,36,Medium,1
+376,Manufacturing,Pulau Pinang,17,Small,0
+377,Construction,Pulau Pinang,7,Small,1
+378,Services,Kedah,7,Small,1
+379,Manufacturing,Perak,19,Small,1
+380,Services,Pulau Pinang,4,Micro,0
+381,Services,Kedah,7,Small,1
+382,Manufacturing,Perak,27,Small,1
+383,Agriculture,Kedah,9,Small,0
+384,Services,Pulau Pinang,7,Small,0
+385,Services,Perak,32,Medium,1
+386,Services,Kedah,2,Micro,0
+387,Services,Perak,11,Small,0
+388,Services,Kedah,8,Small,1
+389,Services,Perlis,8,Small,1
+390,Services,Kedah,24,Small,0
+391,Services,Perak,40,Medium,0
+392,Manufacturing,Kedah,29,Small,0
+393,Services,Pulau Pinang,19,Small,1
+394,Services,Pulau Pinang,15,Small,0
+395,Services,Perlis,9,Small,1
+396,Manufacturing,Pulau Pinang,11,Small,0
+397,Manufacturing,Pulau Pinang,3,Micro,0
+398,Manufacturing,Perak,7,Small,0
+399,Manufacturing,Kedah,19,Small,0
+400,Services,Kedah,10,Small,0
+401,Services,Pulau Pinang,23,Small,0
+402,Services,Kedah,4,Micro,0
+403,Agriculture,Pulau Pinang,7,Small,0
+404,Services,Pulau Pinang,5,Small,0
+405,Manufacturing,Perak,27,Small,0
+406,Services,Kedah,9,Small,1
+407,Manufacturing,Kedah,9,Small,0
+408,Services,Pulau Pinang,4,Micro,0
+409,Construction,Kedah,8,Small,0
+410,Services,Kedah,5,Small,1
+411,Manufacturing,Pulau Pinang,7,Small,1
+412,Agriculture,Kedah,73,Medium,0
+413,Services,Kedah,5,Small,1
+414,Services,Perlis,9,Small,0
+415,Manufacturing,Perak,6,Small,1
+416,Manufacturing,Kedah,34,Medium,0
+417,Services,Kedah,5,Small,0
+418,Construction,Perak,6,Small,0
+419,Services,Kedah,15,Small,0
+420,Services,Kedah,46,Medium,0
+421,Manufacturing,Pulau Pinang,14,Small,1
+422,Services,Kedah,7,Small,0
+423,Construction,Kedah,2,Micro,1
+424,Services,Pulau Pinang,1,Micro,0
+425,Services,Kedah,10,Small,0
+426,Services,Perak,11,Small,1
+427,Services,Perlis,30,Medium,1
+428,Services,Perak,16,Small,1
+429,Services,Kedah,9,Small,1
+430,Manufacturing,Perak,33,Medium,0
+431,Agriculture,Pulau Pinang,49,Medium,0
+432,Construction,Kedah,7,Small,1
+433,Services,Perak,24,Small,1
+434,Services,Kedah,31,Medium,0
+435,Services,Kedah,6,Small,0
+436,Services,Perak,18,Small,0
+437,Manufacturing,Pulau Pinang,11,Small,0
+438,Services,Pulau Pinang,30,Medium,1
+439,Services,Kedah,28,Small,0
+440,Agriculture,Pulau Pinang,3,Micro,0
+441,Services,Perak,9,Small,0
+442,Agriculture,Perlis,36,Medium,0
+443,Manufacturing,Kedah,17,Small,0
+444,Services,Perak,5,Small,1
+445,Agriculture,Kedah,8,Small,1
+446,Agriculture,Pulau Pinang,5,Small,1
+447,Services,Perlis,15,Small,0
+448,Services,Kedah,4,Micro,0
+449,Services,Pulau Pinang,31,Medium,0
+450,Services,Kedah,23,Small,0
+451,Services,Pulau Pinang,47,Medium,0
+452,Services,Kedah,28,Small,0
+453,Services,Kedah,26,Small,0
+454,Manufacturing,Kedah,24,Small,1
+455,Services,Perak,18,Small,1
+456,Agriculture,Kedah,3,Micro,0
+457,Services,Kedah,18,Small,1
+458,Agriculture,Kedah,6,Small,1
+459,Services,Perak,2,Micro,0
+460,Services,Kedah,43,Medium,1
+461,Manufacturing,Kedah,11,Small,0
+462,Services,Perlis,3,Micro,0
+463,Services,Kedah,15,Small,0
+464,Services,Kedah,16,Small,0
+465,Services,Pulau Pinang,13,Small,1
+466,Agriculture,Pulau Pinang,40,Medium,0
+467,Services,Kedah,5,Small,0
+468,Services,Pulau Pinang,24,Small,1
+469,Services,Kedah,5,Small,0
+470,Services,Kedah,17,Small,0
+471,Services,Pulau Pinang,19,Small,1
+472,Services,Kedah,8,Small,1
+473,Services,Perak,100,Medium,1
+474,Agriculture,Kedah,3,Micro,0
+475,Manufacturing,Kedah,4,Micro,1
+476,Services,Kedah,8,Small,0
+477,Services,Pulau Pinang,6,Small,1
+478,Services,Pulau Pinang,30,Medium,0
+479,Services,Kedah,7,Small,0
+480,Services,Pulau Pinang,35,Medium,0
+481,Services,Pulau Pinang,8,Small,1
+482,Services,Kedah,22,Small,0
+483,Manufacturing,Kedah,22,Small,0
+484,Services,Perlis,12,Small,1
+485,Manufacturing,Perlis,21,Small,1
+486,Services,Kedah,15,Small,0
+487,Manufacturing,Perak,70,Medium,0
+488,Manufacturing,Kedah,88,Medium,0
+489,Services,Pulau Pinang,9,Small,0
+490,Manufacturing,Perak,17,Small,1
+491,Services,Kedah,30,Medium,0
+492,Manufacturing,Perak,18,Small,1
+493,Manufacturing,Kedah,62,Medium,0
+494,Services,Kedah,112,Medium,1
+495,Manufacturing,Kedah,3,Micro,0
+496,Construction,Perlis,7,Small,0
+497,Manufacturing,Perlis,35,Medium,1
+498,Construction,Perak,18,Small,0
+499,Services,Pulau Pinang,6,Small,0
+500,Services,Perak,9,Small,0
+501,Services,Kedah,13,Small,0
+502,Manufacturing,Kedah,47,Medium,0
+503,Manufacturing,Kedah,5,Small,1
+504,Services,Pulau Pinang,14,Small,1
+505,Services,Pulau Pinang,40,Medium,1
+506,Services,Pulau Pinang,28,Small,1
+507,Services,Kedah,10,Small,1
+508,Manufacturing,Kedah,9,Small,0
+509,Agriculture,Kedah,3,Micro,0
+510,Manufacturing,Pulau Pinang,3,Micro,0
+511,Services,Kedah,6,Small,0
+512,Services,Kedah,23,Small,0
+513,Services,Kedah,23,Small,0
+514,Manufacturing,Perlis,34,Medium,1
+515,Services,Pulau Pinang,24,Small,1
+516,Services,Kedah,21,Small,0
+517,Agriculture,Pulau Pinang,13,Small,0
+518,Agriculture,Kedah,6,Small,0
+519,Services,Kedah,32,Medium,1
+520,Services,Kedah,8,Small,0
+521,Services,Pulau Pinang,3,Micro,1
+522,Services,Kedah,16,Small,1
+523,Construction,Kedah,12,Small,0
+524,Services,Perak,93,Medium,0
+525,Services,Kedah,9,Small,1
+526,Agriculture,Perak,15,Small,0
+527,Construction,Perak,5,Small,0
+528,Services,Pulau Pinang,20,Small,1
+529,Services,Perak,14,Small,1
+530,Manufacturing,Pulau Pinang,6,Small,0
+531,Agriculture,Perak,14,Small,0
+532,Services,Kedah,4,Micro,1
+533,Manufacturing,Pulau Pinang,18,Small,0
+534,Manufacturing,Kedah,8,Small,0
+535,Manufacturing,Perlis,15,Small,0
+536,Manufacturing,Kedah,5,Small,0
+537,Services,Kedah,6,Small,1
+538,Services,Kedah,10,Small,1
+539,Construction,Kedah,22,Small,0
+540,Services,Perak,12,Small,1
+541,Manufacturing,Kedah,2,Micro,1
+542,Services,Kedah,19,Small,1
+543,Services,Kedah,10,Small,1
+544,Manufacturing,Kedah,19,Small,0
+545,Construction,Kedah,29,Small,0
+546,Services,Kedah,22,Small,1
+547,Manufacturing,Kedah,6,Small,0
+548,Services,Kedah,8,Small,1
+549,Agriculture,Perlis,17,Small,0
+550,Manufacturing,Pulau Pinang,26,Small,1
+551,Services,Kedah,6,Small,0
+552,Manufacturing,Pulau Pinang,7,Small,0
+553,Construction,Perak,5,Small,0
+554,Services,Pulau Pinang,15,Small,0
+555,Services,Pulau Pinang,6,Small,0
+556,Services,Pulau Pinang,83,Medium,0
+557,Services,Pulau Pinang,22,Small,1
+558,Services,Kedah,30,Medium,1
+559,Agriculture,Pulau Pinang,18,Small,0
+560,Manufacturing,Kedah,7,Small,0
+561,Services,Pulau Pinang,2,Micro,0
+562,Services,Perak,38,Medium,0
+563,Services,Perak,14,Small,1
+564,Manufacturing,Kedah,3,Micro,1
+565,Agriculture,Pulau Pinang,132,Medium,1
+566,Manufacturing,Kedah,21,Small,0
+567,Services,Kedah,44,Medium,1
+568,Services,Kedah,9,Small,1
+569,Services,Perak,3,Micro,0
+570,Manufacturing,Kedah,6,Small,1
+571,Construction,Kedah,22,Small,1
+572,Manufacturing,Perak,2,Micro,1
+573,Agriculture,Perlis,7,Small,0
+574,Services,Perak,29,Small,1
+575,Services,Kedah,28,Small,0
+576,Services,Kedah,12,Small,1
+577,Services,Perlis,2,Micro,1
+578,Services,Kedah,9,Small,0
+579,Services,Pulau Pinang,33,Medium,1
+580,Services,Perak,23,Small,1
+581,Services,Kedah,8,Small,1
+582,Services,Kedah,15,Small,1
+583,Construction,Kedah,18,Small,0
+584,Services,Kedah,8,Small,0
+585,Services,Perlis,6,Small,1
+586,Services,Perak,6,Small,1
+587,Services,Perak,6,Small,1
+588,Services,Perak,10,Small,0
+589,Services,Perak,11,Small,1
+590,Services,Pulau Pinang,18,Small,1
+591,Services,Pulau Pinang,18,Small,0
+592,Manufacturing,Kedah,10,Small,0
+593,Services,Pulau Pinang,2,Micro,1
+594,Manufacturing,Perlis,18,Small,1
+595,Services,Pulau Pinang,5,Small,1
+596,Services,Kedah,50,Medium,1
+597,Services,Kedah,9,Small,0
+598,Services,Kedah,78,Medium,1
+599,Services,Kedah,19,Small,0
+600,Services,Kedah,47,Medium,1
+601,Services,Pulau Pinang,13,Small,1
+602,Manufacturing,Kedah,17,Small,0
+603,Services,Pulau Pinang,8,Small,0
+604,Services,Kedah,8,Small,0
+605,Construction,Pulau Pinang,8,Small,0
+606,Services,Perak,21,Small,0
+607,Services,Pulau Pinang,5,Small,0
+608,Manufacturing,Pulau Pinang,26,Small,0
+609,Services,Pulau Pinang,9,Small,0
+610,Manufacturing,Pulau Pinang,19,Small,0
+611,Agriculture,Kedah,5,Small,1
+612,Services,Kedah,12,Small,1
+613,Services,Pulau Pinang,3,Micro,1
+614,Manufacturing,Pulau Pinang,7,Small,0
+615,Manufacturing,Perak,9,Small,0
+616,Manufacturing,Perlis,5,Small,0
+617,Services,Perak,9,Small,0
+618,Services,Perak,12,Small,1
+619,Services,Pulau Pinang,12,Small,1
+620,Services,Kedah,3,Micro,1
+621,Services,Pulau Pinang,9,Small,0
+622,Manufacturing,Perak,9,Small,0
+623,Manufacturing,Pulau Pinang,6,Small,1
+624,Services,Perak,5,Small,1
+625,Services,Perlis,57,Medium,1
+626,Services,Perak,22,Small,1
+627,Manufacturing,Kedah,25,Small,0
+628,Services,Kedah,30,Medium,0
+629,Services,Perlis,5,Small,1
+630,Manufacturing,Pulau Pinang,9,Small,1
+631,Services,Kedah,3,Micro,1
+632,Services,Perak,13,Small,1
+633,Services,Pulau Pinang,3,Micro,0
+634,Manufacturing,Kedah,6,Small,0
+635,Services,Kedah,20,Small,0
+636,Manufacturing,Perlis,17,Small,1
+637,Services,Kedah,5,Small,0
+638,Manufacturing,Pulau Pinang,5,Small,1
+639,Manufacturing,Pulau Pinang,33,Medium,1
+640,Services,Pulau Pinang,16,Small,1
+641,Services,Pulau Pinang,7,Small,1
+642,Services,Pulau Pinang,12,Small,1
+643,Services,Kedah,12,Small,1
+644,Services,Perlis,5,Small,1
+645,Agriculture,Kedah,7,Small,1
+646,Manufacturing,Kedah,2,Micro,0
+647,Manufacturing,Kedah,13,Small,0
+648,Services,Kedah,12,Small,0
+649,Services,Kedah,26,Small,1
+650,Agriculture,Kedah,26,Small,0
+651,Manufacturing,Perlis,8,Small,1
+652,Services,Kedah,43,Medium,0
+653,Construction,Perak,6,Small,0
+654,Services,Perak,24,Small,1
+655,Services,Pulau Pinang,7,Small,0
+656,Manufacturing,Perlis,7,Small,0
+657,Services,Perlis,4,Micro,1
+658,Manufacturing,Kedah,10,Small,0
+659,Services,Perak,77,Medium,0
+660,Services,Kedah,12,Small,0
+661,Services,Pulau Pinang,16,Small,1
+662,Services,Pulau Pinang,8,Small,1
+663,Services,Kedah,17,Small,1
+664,Manufacturing,Kedah,19,Small,0
+665,Services,Pulau Pinang,16,Small,1
+666,Services,Perlis,35,Medium,0
+667,Manufacturing,Kedah,11,Small,0
+668,Manufacturing,Pulau Pinang,16,Small,0
+669,Services,Perak,41,Medium,0
+670,Services,Pulau Pinang,19,Small,1
+671,Services,Kedah,6,Small,0
+672,Agriculture,Pulau Pinang,33,Medium,0
+673,Services,Kedah,19,Small,0
+674,Construction,Perak,6,Small,0
+675,Services,Kedah,6,Small,0
+676,Construction,Kedah,8,Small,0
+677,Services,Pulau Pinang,22,Small,1
+678,Services,Kedah,15,Small,0
+679,Manufacturing,Perak,25,Small,0
+680,Construction,Pulau Pinang,94,Medium,0
+681,Services,Kedah,49,Medium,1
+682,Services,Pulau Pinang,12,Small,0
+683,Services,Kedah,7,Small,0
+684,Services,Kedah,36,Medium,1
+685,Services,Kedah,6,Small,1
+686,Services,Kedah,6,Small,1
+687,Services,Kedah,10,Small,1
+688,Agriculture,Perak,14,Small,0
+689,Services,Perak,9,Small,1
+690,Services,Pulau Pinang,14,Small,1
+691,Services,Perak,2,Micro,0
+692,Services,Kedah,8,Small,0
+693,Manufacturing,Kedah,11,Small,0
+694,Services,Pulau Pinang,20,Small,0
+695,Services,Perlis,15,Small,1
+696,Services,Kedah,9,Small,0
+697,Services,Pulau Pinang,97,Medium,1
+698,Construction,Pulau Pinang,26,Small,1
+699,Services,Pulau Pinang,19,Small,0
+700,Services,Kedah,14,Small,1
+701,Services,Pulau Pinang,16,Small,0
+702,Services,Pulau Pinang,6,Small,0
+703,Manufacturing,Kedah,5,Small,0
+704,Manufacturing,Perlis,13,Small,0
+705,Services,Pulau Pinang,3,Micro,1
+706,Services,Kedah,18,Small,0
+707,Services,Kedah,8,Small,0
+708,Services,Pulau Pinang,20,Small,0
+709,Services,Perak,12,Small,1
+710,Construction,Perak,6,Small,1
+711,Services,Perak,6,Small,0
+712,Services,Perak,8,Small,0
+713,Manufacturing,Kedah,34,Medium,1
+714,Manufacturing,Perak,36,Medium,0
+715,Manufacturing,Pulau Pinang,10,Small,1
+716,Services,Perak,12,Small,1
+717,Services,Kedah,6,Small,1
+718,Services,Perak,37,Medium,1
+719,Agriculture,Perak,14,Small,0
+720,Construction,Pulau Pinang,7,Small,0
+721,Agriculture,Pulau Pinang,4,Micro,0
+722,Construction,Kedah,17,Small,0
+723,Services,Kedah,56,Medium,0
+724,Agriculture,Kedah,12,Small,1
+725,Construction,Kedah,6,Small,0
+726,Services,Perlis,6,Small,1
+727,Services,Kedah,7,Small,1
+728,Agriculture,Kedah,2,Micro,0
+729,Services,Kedah,24,Small,0
+730,Services,Kedah,7,Small,0
+731,Services,Kedah,3,Micro,0
+732,Services,Kedah,2,Micro,0
+733,Services,Perlis,15,Small,1
+734,Manufacturing,Perlis,13,Small,0
+735,Services,Perak,37,Medium,1
+736,Services,Pulau Pinang,25,Small,0
+737,Services,Perak,8,Small,1
+738,Services,Pulau Pinang,3,Micro,1
+739,Services,Kedah,13,Small,1
+740,Services,Kedah,7,Small,0
+741,Services,Pulau Pinang,12,Small,0
+742,Services,Kedah,3,Micro,0
+743,Agriculture,Pulau Pinang,9,Small,0
+744,Services,Pulau Pinang,9,Small,0
+745,Manufacturing,Kedah,4,Micro,0
+746,Services,Kedah,3,Micro,0
+747,Manufacturing,Kedah,2,Micro,0
+748,Agriculture,Pulau Pinang,12,Small,0
+749,Services,Perak,30,Medium,0
+750,Services,Kedah,11,Small,0
+751,Services,Kedah,2,Micro,0
+752,Agriculture,Pulau Pinang,11,Small,0
+753,Services,Pulau Pinang,3,Micro,1
+754,Agriculture,Pulau Pinang,13,Small,0
+755,Services,Perak,48,Medium,0
+756,Services,Kedah,15,Small,1
+757,Manufacturing,Perak,2,Micro,0
+758,Services,Pulau Pinang,27,Small,1
+759,Services,Kedah,14,Small,0
+760,Services,Pulau Pinang,55,Medium,1
+761,Services,Kedah,17,Small,0
+762,Agriculture,Kedah,20,Small,0
+763,Agriculture,Pulau Pinang,3,Micro,0
+764,Services,Kedah,37,Medium,1
+765,Services,Pulau Pinang,4,Micro,1
+766,Services,Kedah,3,Micro,1
+767,Services,Perak,17,Small,1
+768,Services,Perlis,20,Small,1
+769,Manufacturing,Perak,38,Medium,0
+770,Agriculture,Pulau Pinang,29,Small,0
+771,Services,Kedah,15,Small,1
+772,Services,Perak,14,Small,1
+773,Services,Pulau Pinang,23,Small,1
+774,Services,Pulau Pinang,15,Small,0
+775,Manufacturing,Kedah,16,Small,1
+776,Services,Kedah,3,Micro,1
+777,Services,Pulau Pinang,10,Small,1
+778,Services,Pulau Pinang,8,Small,0
+779,Services,Perak,17,Small,1
+780,Construction,Perak,6,Small,0
+781,Services,Pulau Pinang,24,Small,0
+782,Manufacturing,Pulau Pinang,20,Small,1
+783,Agriculture,Perlis,5,Small,0
+784,Services,Perak,11,Small,0
+785,Services,Perlis,17,Small,0
+786,Services,Pulau Pinang,5,Small,0
+787,Services,Pulau Pinang,2,Micro,0
+788,Services,Pulau Pinang,9,Small,1
+789,Services,Perak,13,Small,1
+790,Manufacturing,Pulau Pinang,11,Small,1
+791,Services,Kedah,27,Small,0
+792,Manufacturing,Perak,14,Small,1
+793,Manufacturing,Kedah,44,Medium,0
+794,Services,Perak,7,Small,1
+795,Services,Pulau Pinang,45,Medium,1
+796,Services,Perak,9,Small,0
+797,Services,Kedah,17,Small,1
+798,Manufacturing,Perak,3,Micro,0
+799,Construction,Perak,6,Small,1
+800,Services,Pulau Pinang,30,Medium,1
+801,Manufacturing,Kedah,12,Small,1
+802,Agriculture,Perak,11,Small,0
+803,Services,Kedah,4,Micro,0
+804,Services,Kedah,21,Small,0
+805,Services,Pulau Pinang,5,Small,1
+806,Services,Kedah,38,Medium,1
+807,Services,Perak,18,Small,0
+808,Services,Pulau Pinang,7,Small,1
+809,Services,Kedah,6,Small,0
+810,Manufacturing,Pulau Pinang,7,Small,0
+811,Services,Pulau Pinang,15,Small,0
+812,Manufacturing,Pulau Pinang,13,Small,0
+813,Services,Kedah,3,Micro,0
+814,Manufacturing,Kedah,15,Small,1
+815,Manufacturing,Pulau Pinang,5,Small,0
+816,Manufacturing,Perak,53,Medium,0
+817,Services,Kedah,3,Micro,0
+818,Manufacturing,Pulau Pinang,24,Small,0
+819,Services,Kedah,4,Micro,1
+820,Services,Kedah,15,Small,0
+821,Services,Pulau Pinang,30,Medium,1
+822,Services,Kedah,16,Small,1
+823,Agriculture,Kedah,4,Micro,0
+824,Manufacturing,Pulau Pinang,3,Micro,1
+825,Services,Perlis,39,Medium,0
+826,Services,Perak,6,Small,0
+827,Services,Pulau Pinang,21,Small,0
+828,Services,Kedah,30,Medium,0
+829,Manufacturing,Kedah,3,Micro,0
+830,Services,Kedah,60,Medium,1
+831,Services,Perlis,10,Small,1
+832,Services,Perak,9,Small,0
+833,Services,Pulau Pinang,5,Small,1
+834,Manufacturing,Perak,13,Small,1
+835,Agriculture,Kedah,16,Small,0
+836,Services,Pulau Pinang,27,Small,0
+837,Services,Kedah,27,Small,0
+838,Services,Perak,26,Small,1
+839,Services,Pulau Pinang,10,Small,1
+840,Manufacturing,Perak,10,Small,0
+841,Services,Kedah,12,Small,1
+842,Services,Kedah,13,Small,1
+843,Services,Perlis,32,Medium,0
+844,Services,Perak,24,Small,0
+845,Services,Perlis,10,Small,1
+846,Services,Perak,5,Small,0
+847,Services,Perak,3,Micro,0
+848,Construction,Pulau Pinang,9,Small,0
+849,Manufacturing,Pulau Pinang,11,Small,0
+850,Manufacturing,Pulau Pinang,3,Micro,1
+851,Services,Pulau Pinang,8,Small,0
+852,Manufacturing,Kedah,14,Small,1
+853,Services,Kedah,13,Small,1
+854,Services,Perak,4,Micro,0
+855,Services,Perak,6,Small,0
+856,Services,Perlis,4,Micro,1
+857,Manufacturing,Pulau Pinang,23,Small,0
+858,Services,Kedah,14,Small,0
+859,Services,Perak,105,Medium,0
+860,Services,Pulau Pinang,7,Small,0
+861,Construction,Perlis,40,Medium,1
+862,Services,Perak,11,Small,0
+863,Services,Perlis,12,Small,1
+864,Services,Kedah,27,Small,1
+865,Services,Kedah,3,Micro,1
+866,Services,Kedah,4,Micro,0
+867,Services,Kedah,40,Medium,0
+868,Services,Kedah,26,Small,1
+869,Manufacturing,Kedah,55,Medium,1
+870,Agriculture,Perak,18,Small,0
+871,Services,Kedah,7,Small,0
+872,Services,Pulau Pinang,23,Small,1
+873,Manufacturing,Pulau Pinang,8,Small,0
+874,Services,Kedah,10,Small,1
+875,Services,Kedah,10,Small,0
+876,Services,Pulau Pinang,6,Small,0
+877,Services,Kedah,69,Medium,0
+878,Services,Kedah,20,Small,0
+879,Services,Pulau Pinang,12,Small,1
+880,Services,Kedah,15,Small,1
+881,Services,Kedah,7,Small,1
+882,Services,Kedah,8,Small,1
+883,Construction,Kedah,12,Small,0
+884,Services,Pulau Pinang,14,Small,0
+885,Services,Perlis,2,Micro,0
+886,Services,Pulau Pinang,34,Medium,1
+887,Services,Kedah,3,Micro,1
+888,Manufacturing,Pulau Pinang,5,Small,0
+889,Services,Perak,4,Micro,1
+890,Agriculture,Pulau Pinang,12,Small,0
+891,Services,Perak,3,Micro,1
+892,Manufacturing,Pulau Pinang,25,Small,0
+893,Agriculture,Kedah,20,Small,0
+894,Services,Pulau Pinang,24,Small,1
+895,Services,Pulau Pinang,21,Small,1
+896,Manufacturing,Pulau Pinang,8,Small,0
+897,Services,Pulau Pinang,13,Small,1
+898,Services,Kedah,5,Small,1
+899,Services,Perak,8,Small,1
+900,Services,Pulau Pinang,16,Small,0
+901,Services,Kedah,4,Micro,0
+902,Services,Perak,9,Small,1
+903,Services,Pulau Pinang,7,Small,1
+904,Services,Kedah,23,Small,1
+905,Services,Perak,17,Small,1
+906,Agriculture,Perak,8,Small,0
+907,Services,Kedah,21,Small,1
+908,Services,Kedah,58,Medium,0
+909,Services,Kedah,28,Small,0
+910,Services,Pulau Pinang,12,Small,1
+911,Construction,Kedah,12,Small,0
+912,Manufacturing,Kedah,5,Small,0
+913,Services,Pulau Pinang,7,Small,1
+914,Services,Pulau Pinang,14,Small,0
+915,Services,Kedah,15,Small,1
+916,Services,Kedah,4,Micro,1
+917,Services,Pulau Pinang,4,Micro,1
+918,Agriculture,Perlis,4,Micro,1
+919,Services,Kedah,5,Small,1
+920,Services,Pulau Pinang,7,Small,1
+921,Services,Pulau Pinang,10,Small,0
+922,Manufacturing,Pulau Pinang,4,Micro,1
+923,Services,Perlis,6,Small,1
+924,Services,Kedah,3,Micro,0
+925,Agriculture,Kedah,9,Small,0
+926,Services,Perlis,13,Small,0
+927,Agriculture,Perlis,7,Small,0
+928,Services,Perak,3,Micro,0
+929,Agriculture,Kedah,85,Medium,1
+930,Services,Kedah,6,Small,1
+931,Services,Pulau Pinang,15,Small,0
+932,Manufacturing,Kedah,2,Micro,0
+933,Manufacturing,Kedah,6,Small,0
+934,Agriculture,Kedah,12,Small,0
+935,Services,Kedah,10,Small,0
+936,Services,Perlis,12,Small,0
+937,Manufacturing,Perak,11,Small,0
+938,Services,Kedah,6,Small,1
+939,Services,Kedah,5,Small,1
+940,Agriculture,Kedah,9,Small,0
+941,Services,Pulau Pinang,6,Small,0
+942,Manufacturing,Kedah,7,Small,0
+943,Services,Perak,15,Small,0
+944,Agriculture,Perak,13,Small,0
+945,Manufacturing,Kedah,7,Small,0
+946,Services,Kedah,26,Small,0
+947,Services,Pulau Pinang,10,Small,0
+948,Services,Kedah,9,Small,0
+949,Manufacturing,Perlis,21,Small,1
+950,Services,Pulau Pinang,13,Small,1
+951,Manufacturing,Pulau Pinang,3,Micro,0
+952,Manufacturing,Pulau Pinang,15,Small,1
+953,Agriculture,Pulau Pinang,3,Micro,0
+954,Construction,Pulau Pinang,8,Small,0
+955,Services,Perak,13,Small,1
+956,Services,Pulau Pinang,18,Small,1
+957,Services,Pulau Pinang,5,Small,0
+958,Manufacturing,Perlis,8,Small,0
+959,Manufacturing,Pulau Pinang,20,Small,0
+960,Services,Kedah,59,Medium,0
+961,Construction,Perlis,56,Medium,0
+962,Services,Kedah,21,Small,1
+963,Construction,Pulau Pinang,43,Medium,0
+964,Services,Pulau Pinang,7,Small,0
+965,Manufacturing,Kedah,9,Small,1
+966,Services,Pulau Pinang,21,Small,1
+967,Services,Perak,21,Small,1
+968,Services,Pulau Pinang,3,Micro,1
+969,Services,Perlis,28,Small,1
+970,Services,Pulau Pinang,5,Small,1
+971,Services,Kedah,10,Small,0
+972,Manufacturing,Pulau Pinang,4,Micro,1
+973,Services,Pulau Pinang,8,Small,0
+974,Agriculture,Perak,26,Small,0
+975,Manufacturing,Kedah,4,Micro,0
+976,Manufacturing,Perak,6,Small,0
+977,Manufacturing,Perak,11,Small,0
+978,Services,Kedah,17,Small,0
+979,Construction,Perlis,46,Medium,0
+980,Services,Kedah,12,Small,1
+981,Services,Pulau Pinang,26,Small,0
+982,Manufacturing,Pulau Pinang,3,Micro,0
+983,Services,Kedah,7,Small,1
+984,Agriculture,Perak,2,Micro,0
+985,Services,Perlis,28,Small,0
+986,Services,Perak,7,Small,1
+987,Agriculture,Perlis,18,Small,1
+988,Services,Kedah,5,Small,1
+989,Agriculture,Perlis,5,Small,0
+990,Manufacturing,Pulau Pinang,5,Small,1
+991,Services,Pulau Pinang,6,Small,1
+992,Manufacturing,Perak,8,Small,1
+993,Agriculture,Perak,3,Micro,1
+994,Manufacturing,Perak,11,Small,1
+995,Services,Pulau Pinang,17,Small,0
+996,Manufacturing,Pulau Pinang,3,Micro,1
+997,Services,Kedah,3,Micro,1
+998,Manufacturing,Kedah,4,Micro,0
+999,Services,Pulau Pinang,5,Small,1
+1000,Services,Pulau Pinang,46,Medium,1
+1001,Services,Kedah,20,Small,1
+1002,Services,Perak,4,Micro,1
+1003,Services,Perak,111,Medium,1
+1004,Manufacturing,Perak,21,Small,1
+1005,Manufacturing,Kedah,4,Micro,1
+1006,Manufacturing,Perak,3,Micro,0
+1007,Services,Perlis,14,Small,0
+1008,Services,Perak,3,Micro,1
+1009,Services,Kedah,12,Small,0
+1010,Services,Perak,22,Small,0
+1011,Services,Pulau Pinang,5,Small,1
+1012,Manufacturing,Perak,6,Small,0
+1013,Services,Kedah,5,Small,0
+1014,Services,Pulau Pinang,32,Medium,1
+1015,Services,Perlis,18,Small,0
+1016,Manufacturing,Perak,16,Small,0
+1017,Services,Kedah,21,Small,1
+1018,Services,Pulau Pinang,10,Small,0
+1019,Services,Perlis,6,Small,1
+1020,Services,Kedah,14,Small,1
+1021,Services,Perak,23,Small,1
+1022,Construction,Pulau Pinang,9,Small,0
+1023,Services,Kedah,9,Small,1
+1024,Services,Pulau Pinang,5,Small,1
+1025,Services,Pulau Pinang,35,Medium,1
+1026,Services,Pulau Pinang,20,Small,1
+1027,Services,Pulau Pinang,13,Small,1
+1028,Construction,Kedah,13,Small,0
+1029,Services,Perak,15,Small,1
+1030,Services,Pulau Pinang,12,Small,0
+1031,Services,Kedah,25,Small,1
+1032,Manufacturing,Pulau Pinang,13,Small,0
+1033,Services,Kedah,21,Small,1
+1034,Services,Kedah,12,Small,1
+1035,Manufacturing,Pulau Pinang,7,Small,0
+1036,Services,Perlis,29,Small,1
+1037,Services,Pulau Pinang,30,Medium,0
+1038,Services,Pulau Pinang,41,Medium,0
+1039,Manufacturing,Pulau Pinang,8,Small,0
+1040,Manufacturing,Perak,7,Small,0
+1041,Services,Kedah,3,Micro,1
+1042,Services,Kedah,11,Small,1
+1043,Services,Kedah,6,Small,0
+1044,Manufacturing,Kedah,30,Medium,0
+1045,Services,Kedah,5,Small,1
+1046,Services,Perak,25,Small,0
+1047,Services,Perak,4,Micro,1
+1048,Services,Kedah,10,Small,1
+1049,Services,Perlis,32,Medium,1
+1050,Services,Pulau Pinang,8,Small,1
+1051,Services,Pulau Pinang,15,Small,0
+1052,Agriculture,Pulau Pinang,20,Small,0
+1053,Services,Pulau Pinang,4,Micro,0
+1054,Agriculture,Pulau Pinang,77,Medium,0
+1055,Services,Kedah,4,Micro,1
+1056,Agriculture,Kedah,9,Small,0
+1057,Services,Perak,13,Small,1
+1058,Services,Pulau Pinang,15,Small,0
+1059,Manufacturing,Perak,26,Small,0
+1060,Services,Kedah,30,Medium,1
+1061,Services,Pulau Pinang,4,Micro,0
+1062,Manufacturing,Kedah,10,Small,0
+1063,Services,Pulau Pinang,3,Micro,1
+1064,Services,Pulau Pinang,14,Small,0
+1065,Manufacturing,Kedah,6,Small,0
+1066,Services,Pulau Pinang,15,Small,1
+1067,Services,Kedah,3,Micro,1
+1068,Services,Kedah,5,Small,1
+1069,Services,Kedah,17,Small,1
+1070,Services,Perak,20,Small,1
+1071,Services,Pulau Pinang,8,Small,0
+1072,Services,Kedah,8,Small,1
+1073,Services,Pulau Pinang,7,Small,1
+1074,Services,Pulau Pinang,7,Small,1
+1075,Manufacturing,Perlis,7,Small,1
+1076,Services,Pulau Pinang,101,Medium,0
+1077,Agriculture,Pulau Pinang,20,Small,0
+1078,Agriculture,Perlis,3,Micro,0
+1079,Services,Pulau Pinang,8,Small,1
+1080,Manufacturing,Kedah,5,Small,0
+1081,Services,Pulau Pinang,13,Small,0
+1082,Construction,Kedah,69,Medium,0
+1083,Services,Kedah,32,Medium,0
+1084,Agriculture,Pulau Pinang,12,Small,0
+1085,Services,Perak,15,Small,0
+1086,Services,Kedah,10,Small,1
+1087,Services,Perak,5,Small,1
+1088,Manufacturing,Pulau Pinang,7,Small,0
+1089,Services,Kedah,28,Small,1
+1090,Services,Kedah,3,Micro,1
+1091,Services,Kedah,32,Medium,1
+1092,Services,Pulau Pinang,83,Medium,0
+1093,Services,Perlis,12,Small,0
+1094,Services,Kedah,29,Small,0
+1095,Manufacturing,Perak,13,Small,0
+1096,Services,Perak,9,Small,1
+1097,Services,Kedah,3,Micro,0
+1098,Agriculture,Kedah,6,Small,0
+1099,Services,Perlis,42,Medium,1
+1100,Services,Kedah,12,Small,1
+1101,Agriculture,Pulau Pinang,9,Small,0
+1102,Agriculture,Perlis,42,Medium,0
+1103,Services,Pulau Pinang,10,Small,1
+1104,Services,Kedah,3,Micro,1
+1105,Manufacturing,Kedah,7,Small,1
+1106,Manufacturing,Kedah,40,Medium,1
+1107,Construction,Pulau Pinang,29,Small,0
+1108,Agriculture,Kedah,9,Small,0
+1109,Manufacturing,Kedah,22,Small,1
+1110,Services,Kedah,10,Small,1
+1111,Services,Pulau Pinang,94,Medium,0
+1112,Services,Pulau Pinang,21,Small,0
+1113,Services,Kedah,31,Medium,0
+1114,Services,Perak,17,Small,0
+1115,Services,Kedah,29,Small,1
+1116,Construction,Kedah,20,Small,0
+1117,Services,Kedah,13,Small,1
+1118,Agriculture,Kedah,8,Small,0
+1119,Services,Kedah,9,Small,0
+1120,Services,Kedah,11,Small,1
+1121,Services,Pulau Pinang,23,Small,1
+1122,Services,Kedah,20,Small,0
+1123,Services,Perlis,39,Medium,0
+1124,Services,Pulau Pinang,10,Small,1
+1125,Services,Perlis,14,Small,1
+1126,Services,Pulau Pinang,3,Micro,0
+1127,Services,Perlis,7,Small,0
+1128,Manufacturing,Kedah,7,Small,0
+1129,Services,Perlis,12,Small,1
+1130,Services,Kedah,13,Small,0
+1131,Manufacturing,Kedah,8,Small,0
+1132,Agriculture,Pulau Pinang,16,Small,0
+1133,Services,Kedah,8,Small,1
+1134,Services,Kedah,11,Small,1
+1135,Services,Pulau Pinang,7,Small,1
+1136,Services,Kedah,13,Small,0
+1137,Manufacturing,Pulau Pinang,7,Small,0
+1138,Construction,Pulau Pinang,9,Small,0
+1139,Services,Kedah,6,Small,0
+1140,Services,Kedah,4,Micro,0
+1141,Services,Kedah,34,Medium,0
+1142,Services,Kedah,6,Small,1
+1143,Services,Kedah,28,Small,1
+1144,Manufacturing,Kedah,8,Small,0
+1145,Manufacturing,Kedah,11,Small,0
+1146,Services,Kedah,12,Small,0
+1147,Manufacturing,Perak,6,Small,0
+1148,Services,Kedah,3,Micro,0
+1149,Services,Kedah,21,Small,0
+1150,Services,Pulau Pinang,13,Small,0
+1151,Construction,Kedah,3,Micro,1
+1152,Manufacturing,Pulau Pinang,6,Small,0
+1153,Services,Pulau Pinang,7,Small,1
+1154,Services,Pulau Pinang,28,Small,1
+1155,Services,Perlis,17,Small,0
+1156,Services,Kedah,11,Small,0
+1157,Services,Kedah,28,Small,1
+1158,Manufacturing,Perlis,15,Small,1
+1159,Services,Perak,6,Small,1
+1160,Manufacturing,Perlis,4,Micro,0
+1161,Services,Perak,25,Small,1
+1162,Services,Kedah,3,Micro,1
+1163,Construction,Pulau Pinang,30,Medium,0
+1164,Services,Kedah,3,Micro,1
+1165,Services,Kedah,6,Small,0
+1166,Services,Perak,31,Medium,1
+1167,Manufacturing,Kedah,23,Small,1
+1168,Services,Pulau Pinang,29,Small,1
+1169,Services,Kedah,4,Micro,1
+1170,Services,Kedah,8,Small,1
+1171,Agriculture,Pulau Pinang,10,Small,0
+1172,Manufacturing,Pulau Pinang,8,Small,0
+1173,Services,Kedah,7,Small,1
+1174,Services,Pulau Pinang,14,Small,1
+1175,Services,Kedah,11,Small,1
+1176,Services,Perlis,5,Small,1
+1177,Services,Kedah,7,Small,1
+1178,Services,Pulau Pinang,9,Small,1
+1179,Services,Pulau Pinang,11,Small,1
+1180,Services,Kedah,9,Small,0
+1181,Services,Kedah,3,Micro,1
+1182,Agriculture,Pulau Pinang,12,Small,0
+1183,Agriculture,Perak,16,Small,1
+1184,Services,Kedah,41,Medium,1
+1185,Services,Kedah,7,Small,1
+1186,Manufacturing,Pulau Pinang,23,Small,1
+1187,Agriculture,Pulau Pinang,7,Small,0
+1188,Services,Kedah,32,Medium,1
+1189,Agriculture,Pulau Pinang,10,Small,0
+1190,Services,Kedah,12,Small,0
+1191,Services,Kedah,9,Small,0
+1192,Construction,Kedah,13,Small,0
+1193,Manufacturing,Kedah,13,Small,1
+1194,Services,Kedah,4,Micro,0
+1195,Services,Pulau Pinang,19,Small,0
+1196,Services,Pulau Pinang,5,Small,1
+1197,Services,Pulau Pinang,10,Small,1
+1198,Services,Kedah,25,Small,1
+1199,Services,Perak,9,Small,1
+1200,Services,Perlis,7,Small,1
+1201,Agriculture,Pulau Pinang,47,Medium,0
+1202,Agriculture,Perak,37,Medium,0
+1203,Services,Kedah,37,Medium,1
+1204,Services,Perak,27,Small,0
+1205,Services,Pulau Pinang,17,Small,1
+1206,Services,Kedah,13,Small,0
+1207,Services,Perlis,4,Micro,1
+1208,Services,Kedah,5,Small,0
+1209,Construction,Pulau Pinang,6,Small,1
+1210,Manufacturing,Perlis,28,Small,1
+1211,Services,Perlis,91,Medium,0
+1212,Services,Kedah,22,Small,0
+1213,Manufacturing,Kedah,10,Small,0
+1214,Services,Kedah,36,Medium,1
+1215,Construction,Kedah,11,Small,0
+1216,Manufacturing,Pulau Pinang,9,Small,0
+1217,Manufacturing,Pulau Pinang,11,Small,1
+1218,Agriculture,Perak,29,Small,0
+1219,Services,Perak,33,Medium,0
+1220,Services,Perak,14,Small,0
+1221,Services,Pulau Pinang,5,Small,0
+1222,Services,Kedah,23,Small,0
+1223,Services,Pulau Pinang,6,Small,1
+1224,Services,Perlis,5,Small,1
+1225,Services,Kedah,7,Small,0
+1226,Services,Pulau Pinang,5,Small,0
+1227,Services,Kedah,6,Small,1
+1228,Services,Kedah,49,Medium,1
+1229,Services,Kedah,5,Small,1
+1230,Manufacturing,Pulau Pinang,10,Small,0
+1231,Services,Kedah,4,Micro,1
+1232,Agriculture,Kedah,6,Small,0
+1233,Manufacturing,Kedah,8,Small,0
+1234,Services,Kedah,12,Small,1
+1235,Services,Kedah,12,Small,1
+1236,Services,Pulau Pinang,10,Small,0
+1237,Manufacturing,Kedah,6,Small,0
+1238,Services,Kedah,39,Medium,0
+1239,Services,Kedah,20,Small,0
+1240,Manufacturing,Pulau Pinang,7,Small,0
+1241,Services,Pulau Pinang,9,Small,0
+1242,Services,Pulau Pinang,8,Small,0
+1243,Services,Pulau Pinang,11,Small,1
+1244,Services,Kedah,7,Small,1
+1245,Services,Pulau Pinang,20,Small,0
+1246,Services,Kedah,24,Small,0
+1247,Agriculture,Kedah,10,Small,1
+1248,Services,Perak,15,Small,0
+1249,Manufacturing,Perak,7,Small,1
+1250,Services,Perak,32,Medium,1
+1251,Services,Pulau Pinang,8,Small,0
+1252,Services,Kedah,17,Small,1
+1253,Agriculture,Kedah,15,Small,0
+1254,Services,Pulau Pinang,5,Small,0
+1255,Manufacturing,Perlis,3,Micro,0
+1256,Services,Kedah,6,Small,0
+1257,Services,Pulau Pinang,5,Small,0
+1258,Agriculture,Perak,7,Small,0
+1259,Services,Pulau Pinang,10,Small,0
+1260,Services,Kedah,10,Small,1
+1261,Services,Pulau Pinang,7,Small,1
+1262,Services,Kedah,49,Medium,0
+1263,Manufacturing,Kedah,4,Micro,0
+1264,Services,Pulau Pinang,24,Small,1
+1265,Services,Pulau Pinang,20,Small,1
+1266,Services,Perlis,6,Small,0
+1267,Manufacturing,Kedah,62,Medium,0
+1268,Services,Pulau Pinang,34,Medium,1
+1269,Services,Kedah,14,Small,0
+1270,Agriculture,Kedah,16,Small,0
+1271,Services,Perak,12,Small,0
+1272,Services,Perak,19,Small,0
+1273,Agriculture,Pulau Pinang,7,Small,1
+1274,Manufacturing,Kedah,30,Medium,0
+1275,Services,Perak,26,Small,1
+1276,Services,Kedah,8,Small,1
+1277,Services,Pulau Pinang,4,Micro,1
+1278,Services,Pulau Pinang,29,Small,1
+1279,Agriculture,Perlis,13,Small,0
+1280,Services,Kedah,6,Small,1
+1281,Manufacturing,Perlis,39,Medium,0
+1282,Agriculture,Pulau Pinang,13,Small,0
+1283,Services,Kedah,4,Micro,0
+1284,Manufacturing,Kedah,25,Small,1
+1285,Manufacturing,Pulau Pinang,5,Small,1
+1286,Services,Perak,3,Micro,0
+1287,Manufacturing,Kedah,6,Small,0
+1288,Services,Perak,9,Small,0
+1289,Services,Perak,3,Micro,1
+1290,Services,Kedah,85,Medium,1
+1291,Agriculture,Perak,14,Small,0
+1292,Services,Pulau Pinang,13,Small,0
+1293,Services,Perlis,9,Small,1
+1294,Manufacturing,Pulau Pinang,14,Small,0
+1295,Services,Perlis,6,Small,0
+1296,Services,Perak,9,Small,1
+1297,Agriculture,Kedah,30,Medium,0
+1298,Services,Pulau Pinang,9,Small,1
+1299,Manufacturing,Kedah,13,Small,1
+1300,Services,Kedah,9,Small,1
+1301,Services,Pulau Pinang,57,Medium,0
+1302,Services,Pulau Pinang,31,Medium,1
+1303,Services,Pulau Pinang,16,Small,1
+1304,Services,Pulau Pinang,21,Small,1
+1305,Services,Pulau Pinang,15,Small,1
+1306,Manufacturing,Kedah,14,Small,0
+1307,Services,Pulau Pinang,125,Medium,0
+1308,Manufacturing,Pulau Pinang,2,Micro,0
+1309,Services,Kedah,10,Small,0
+1310,Services,Perak,12,Small,1
+1311,Services,Pulau Pinang,25,Small,1
+1312,Services,Kedah,4,Micro,0
+1313,Services,Perak,7,Small,1
+1314,Construction,Kedah,16,Small,0
+1315,Services,Pulau Pinang,3,Micro,1
+1316,Services,Perak,18,Small,1
+1317,Services,Perlis,76,Medium,1
+1318,Services,Pulau Pinang,5,Small,0
+1319,Manufacturing,Perlis,3,Micro,0
+1320,Services,Perak,20,Small,0
+1321,Agriculture,Perak,9,Small,0
+1322,Services,Pulau Pinang,70,Medium,0
+1323,Services,Perak,8,Small,1
+1324,Manufacturing,Perak,7,Small,1
+1325,Manufacturing,Perlis,31,Medium,0
+1326,Construction,Perak,34,Medium,0
+1327,Manufacturing,Pulau Pinang,29,Small,1
+1328,Agriculture,Pulau Pinang,84,Medium,0
+1329,Services,Pulau Pinang,19,Small,1
+1330,Services,Perak,12,Small,0
+1331,Services,Kedah,7,Small,1
+1332,Services,Kedah,10,Small,0
+1333,Services,Kedah,8,Small,1
+1334,Construction,Kedah,7,Small,1
+1335,Services,Kedah,5,Small,1
+1336,Services,Kedah,2,Micro,0
+1337,Manufacturing,Kedah,16,Small,1
+1338,Services,Perak,16,Small,1
+1339,Services,Perak,3,Micro,0
+1340,Services,Pulau Pinang,24,Small,1
+1341,Agriculture,Pulau Pinang,2,Micro,1
+1342,Construction,Perak,7,Small,0
+1343,Services,Perak,12,Small,1
+1344,Services,Pulau Pinang,8,Small,0
+1345,Manufacturing,Kedah,21,Small,1
+1346,Services,Pulau Pinang,32,Medium,1
+1347,Services,Perak,32,Medium,0
+1348,Services,Perak,12,Small,0
+1349,Construction,Kedah,46,Medium,0
+1350,Manufacturing,Perak,8,Small,1
+1351,Manufacturing,Pulau Pinang,7,Small,1
+1352,Services,Pulau Pinang,7,Small,1
+1353,Agriculture,Perak,6,Small,0
+1354,Agriculture,Kedah,8,Small,0
+1355,Services,Kedah,4,Micro,1
+1356,Services,Kedah,3,Micro,1
+1357,Services,Pulau Pinang,43,Medium,0
+1358,Services,Perak,18,Small,0
+1359,Construction,Kedah,26,Small,0
+1360,Services,Perak,15,Small,0
+1361,Manufacturing,Perlis,5,Small,1
+1362,Agriculture,Kedah,34,Medium,0
+1363,Services,Perak,21,Small,0
+1364,Services,Kedah,4,Micro,0
+1365,Services,Perak,21,Small,1
+1366,Services,Kedah,2,Micro,0
+1367,Services,Perlis,27,Small,1
+1368,Services,Pulau Pinang,6,Small,0
+1369,Services,Perak,27,Small,1
+1370,Manufacturing,Pulau Pinang,6,Small,1
+1371,Services,Pulau Pinang,28,Small,1
+1372,Construction,Pulau Pinang,15,Small,0
+1373,Agriculture,Perak,19,Small,0
+1374,Manufacturing,Kedah,14,Small,0
+1375,Services,Perak,17,Small,0
+1376,Agriculture,Pulau Pinang,20,Small,0
+1377,Construction,Kedah,22,Small,1
+1378,Services,Perlis,2,Micro,0
+1379,Services,Perak,8,Small,1
+1380,Services,Kedah,7,Small,1
+1381,Services,Kedah,9,Small,0
+1382,Services,Pulau Pinang,10,Small,1
+1383,Services,Kedah,65,Medium,0
+1384,Services,Kedah,18,Small,1
+1385,Services,Pulau Pinang,4,Micro,1
+1386,Services,Kedah,8,Small,0
+1387,Services,Kedah,26,Small,1
+1388,Services,Pulau Pinang,5,Small,0
+1389,Services,Perak,13,Small,1
+1390,Agriculture,Perak,7,Small,0
+1391,Manufacturing,Perlis,15,Small,1
+1392,Agriculture,Pulau Pinang,9,Small,0
+1393,Services,Perak,11,Small,1
+1394,Services,Kedah,9,Small,1
+1395,Services,Pulau Pinang,6,Small,0
+1396,Manufacturing,Perak,32,Medium,0
+1397,Services,Perak,15,Small,1
+1398,Services,Kedah,12,Small,1
+1399,Services,Pulau Pinang,43,Medium,1
+1400,Services,Perlis,14,Small,1
+1401,Manufacturing,Perlis,11,Small,1
+1402,Services,Pulau Pinang,13,Small,0
+1403,Services,Perak,8,Small,0
+1404,Construction,Kedah,6,Small,0
+1405,Services,Pulau Pinang,56,Medium,1
+1406,Services,Kedah,6,Small,0
+1407,Agriculture,Kedah,33,Medium,0
+1408,Services,Kedah,16,Small,0
+1409,Services,Kedah,4,Micro,0
+1410,Services,Pulau Pinang,9,Small,0
+1411,Agriculture,Pulau Pinang,6,Small,0
+1412,Services,Pulau Pinang,10,Small,0
+1413,Services,Perlis,23,Small,1
+1414,Services,Kedah,5,Small,1
+1415,Manufacturing,Kedah,5,Small,0
+1416,Services,Pulau Pinang,4,Micro,0
+1417,Manufacturing,Kedah,39,Medium,1
+1418,Services,Perlis,12,Small,1
+1419,Services,Perak,15,Small,0
+1420,Manufacturing,Perak,13,Small,1
+1421,Services,Kedah,4,Micro,0
+1422,Services,Perak,47,Medium,0
+1423,Manufacturing,Kedah,5,Small,1
+1424,Services,Kedah,2,Micro,0
+1425,Manufacturing,Perak,20,Small,1
+1426,Manufacturing,Pulau Pinang,5,Small,0
+1427,Services,Pulau Pinang,26,Small,1
+1428,Manufacturing,Kedah,20,Small,0
+1429,Services,Perak,12,Small,0
+1430,Manufacturing,Kedah,20,Small,0
+1431,Services,Kedah,21,Small,1
+1432,Services,Kedah,7,Small,1
+1433,Services,Kedah,6,Small,1
+1434,Services,Pulau Pinang,4,Micro,1
+1435,Manufacturing,Pulau Pinang,8,Small,0
+1436,Services,Kedah,6,Small,0
+1437,Services,Kedah,5,Small,1
+1438,Services,Pulau Pinang,6,Small,1
+1439,Services,Perak,104,Medium,0
+1440,Services,Pulau Pinang,19,Small,1
+1441,Services,Perak,4,Micro,0
+1442,Services,Perak,46,Medium,1
+1443,Manufacturing,Kedah,3,Micro,0
+1444,Services,Kedah,10,Small,1
+1445,Services,Pulau Pinang,5,Small,1
+1446,Services,Perlis,5,Small,1
+1447,Manufacturing,Perak,7,Small,0
+1448,Services,Pulau Pinang,16,Small,0
+1449,Manufacturing,Perak,29,Small,0
+1450,Services,Pulau Pinang,3,Micro,0
+1451,Agriculture,Kedah,8,Small,0
+1452,Services,Pulau Pinang,5,Small,1
+1453,Services,Kedah,17,Small,1
+1454,Services,Perak,22,Small,1
+1455,Services,Perlis,4,Micro,1
+1456,Services,Perlis,6,Small,0
+1457,Manufacturing,Kedah,6,Small,0
+1458,Services,Pulau Pinang,20,Small,1
+1459,Services,Kedah,7,Small,0
+1460,Agriculture,Kedah,6,Small,0
+1461,Services,Kedah,6,Small,0
+1462,Services,Perlis,6,Small,0
+1463,Services,Perlis,12,Small,1
+1464,Services,Perak,51,Medium,0
+1465,Manufacturing,Kedah,3,Micro,0
+1466,Services,Kedah,6,Small,1
+1467,Services,Pulau Pinang,15,Small,1
+1468,Manufacturing,Perak,2,Micro,1
+1469,Services,Pulau Pinang,15,Small,1
+1470,Agriculture,Pulau Pinang,15,Small,0
+1471,Services,Perak,11,Small,0
+1472,Manufacturing,Pulau Pinang,4,Micro,0
+1473,Services,Kedah,51,Medium,1
+1474,Services,Kedah,13,Small,1
+1475,Services,Perak,9,Small,0
+1476,Services,Perak,29,Small,0
+1477,Manufacturing,Pulau Pinang,3,Micro,0
+1478,Manufacturing,Perlis,6,Small,0
+1479,Manufacturing,Kedah,3,Micro,1
+1480,Services,Perak,9,Small,1
+1481,Services,Perak,12,Small,0
+1482,Services,Pulau Pinang,8,Small,0
+1483,Services,Pulau Pinang,9,Small,0
+1484,Agriculture,Kedah,19,Small,0
+1485,Services,Kedah,6,Small,1
+1486,Services,Perak,8,Small,1
+1487,Services,Perlis,4,Micro,1
+1488,Manufacturing,Kedah,17,Small,1
+1489,Services,Perak,8,Small,0
+1490,Services,Perak,44,Medium,1
+1491,Services,Pulau Pinang,7,Small,1
+1492,Services,Kedah,17,Small,1
+1493,Services,Perak,15,Small,0
+1494,Services,Kedah,4,Micro,0
+1495,Services,Kedah,20,Small,0
+1496,Services,Perak,16,Small,1
+1497,Construction,Perak,25,Small,0
+1498,Manufacturing,Perak,23,Small,0
+1499,Services,Pulau Pinang,9,Small,0
+1500,Services,Kedah,42,Medium,1
+1501,Services,Perak,15,Small,0
+1502,Services,Kedah,21,Small,0
+1503,Manufacturing,Kedah,3,Micro,0
+1504,Services,Kedah,3,Micro,1
+1505,Services,Kedah,3,Micro,0
+1506,Services,Pulau Pinang,10,Small,1
+1507,Services,Kedah,11,Small,0
+1508,Agriculture,Kedah,18,Small,0
+1509,Services,Kedah,12,Small,0
+1510,Manufacturing,Perlis,3,Micro,0
+1511,Services,Kedah,7,Small,0
+1512,Agriculture,Kedah,38,Medium,1
+1513,Services,Kedah,28,Small,1
+1514,Agriculture,Pulau Pinang,3,Micro,1
+1515,Services,Pulau Pinang,8,Small,0
+1516,Services,Pulau Pinang,4,Micro,0
+1517,Services,Kedah,15,Small,0
+1518,Construction,Perlis,26,Small,0
+1519,Manufacturing,Kedah,22,Small,0
+1520,Agriculture,Perak,5,Small,0
+1521,Services,Kedah,7,Small,1
+1522,Manufacturing,Pulau Pinang,10,Small,0
+1523,Manufacturing,Pulau Pinang,49,Medium,1
+1524,Services,Kedah,14,Small,0
+1525,Manufacturing,Perak,12,Small,0
+1526,Agriculture,Pulau Pinang,12,Small,0
+1527,Services,Kedah,13,Small,0
+1528,Services,Perak,6,Small,0
+1529,Services,Pulau Pinang,5,Small,0
+1530,Services,Kedah,7,Small,1
+1531,Services,Kedah,9,Small,1
+1532,Services,Perak,7,Small,1
+1533,Manufacturing,Perak,20,Small,0
+1534,Manufacturing,Perak,11,Small,1
+1535,Services,Pulau Pinang,21,Small,1
+1536,Services,Pulau Pinang,6,Small,1
+1537,Services,Kedah,2,Micro,0
+1538,Construction,Perak,7,Small,1
+1539,Services,Kedah,23,Small,1
+1540,Services,Kedah,13,Small,1
+1541,Services,Perak,2,Micro,1
+1542,Manufacturing,Kedah,7,Small,0
+1543,Services,Perlis,6,Small,0
+1544,Construction,Kedah,9,Small,0
+1545,Services,Pulau Pinang,6,Small,1
+1546,Services,Kedah,10,Small,0
+1547,Services,Kedah,7,Small,1
+1548,Agriculture,Kedah,7,Small,0
+1549,Services,Perlis,24,Small,0
+1550,Manufacturing,Perlis,13,Small,0
+1551,Services,Kedah,9,Small,1
+1552,Services,Kedah,4,Micro,0
+1553,Agriculture,Kedah,5,Small,0
+1554,Manufacturing,Perak,7,Small,0
+1555,Services,Perak,15,Small,1
+1556,Services,Kedah,3,Micro,1
+1557,Manufacturing,Perak,13,Small,0
+1558,Services,Kedah,35,Medium,1
+1559,Services,Kedah,13,Small,1
+1560,Manufacturing,Kedah,4,Micro,1
+1561,Services,Perak,25,Small,1
+1562,Services,Kedah,11,Small,0
+1563,Agriculture,Perak,19,Small,0
+1564,Services,Pulau Pinang,24,Small,1
+1565,Services,Kedah,19,Small,1
+1566,Services,Pulau Pinang,10,Small,1
+1567,Services,Kedah,5,Small,1
+1568,Manufacturing,Pulau Pinang,76,Medium,0
+1569,Services,Perak,6,Small,0
+1570,Services,Pulau Pinang,24,Small,1
+1571,Services,Perak,5,Small,0
+1572,Services,Kedah,33,Medium,1
+1573,Manufacturing,Perlis,59,Medium,1
+1574,Manufacturing,Perak,24,Small,0
+1575,Manufacturing,Perak,6,Small,1
+1576,Manufacturing,Kedah,9,Small,0
+1577,Services,Kedah,40,Medium,1
+1578,Manufacturing,Kedah,41,Medium,1
+1579,Services,Pulau Pinang,19,Small,0
+1580,Manufacturing,Pulau Pinang,14,Small,1
+1581,Services,Pulau Pinang,44,Medium,1
+1582,Services,Perlis,18,Small,0
+1583,Services,Kedah,15,Small,1
+1584,Services,Kedah,24,Small,0
+1585,Manufacturing,Perak,16,Small,1
+1586,Services,Pulau Pinang,31,Medium,1
+1587,Agriculture,Perak,42,Medium,0
+1588,Services,Kedah,17,Small,1
+1589,Services,Kedah,2,Micro,0
+1590,Services,Kedah,12,Small,0
+1591,Services,Kedah,8,Small,0
+1592,Services,Perak,5,Small,1
+1593,Services,Kedah,8,Small,0
+1594,Services,Kedah,35,Medium,1
+1595,Agriculture,Perlis,4,Micro,0
+1596,Services,Kedah,8,Small,0
+1597,Services,Perlis,6,Small,1
+1598,Construction,Perak,4,Micro,0
+1599,Services,Pulau Pinang,4,Micro,0
+1600,Manufacturing,Kedah,18,Small,1
+1601,Manufacturing,Perak,4,Micro,0
+1602,Services,Perlis,55,Medium,0
+1603,Construction,Perak,10,Small,0
+1604,Construction,Pulau Pinang,15,Small,0
+1605,Services,Pulau Pinang,18,Small,0
+1606,Agriculture,Kedah,3,Micro,1
+1607,Manufacturing,Kedah,27,Small,0
+1608,Services,Pulau Pinang,13,Small,1
+1609,Services,Perak,10,Small,0
+1610,Services,Kedah,18,Small,0
+1611,Services,Kedah,13,Small,0
+1612,Services,Kedah,12,Small,0
+1613,Services,Kedah,4,Micro,1
+1614,Services,Pulau Pinang,10,Small,0
+1615,Manufacturing,Perlis,19,Small,0
+1616,Construction,Pulau Pinang,6,Small,0
+1617,Agriculture,Kedah,22,Small,1
+1618,Agriculture,Kedah,8,Small,0
+1619,Manufacturing,Kedah,18,Small,1
+1620,Services,Perlis,12,Small,0
+1621,Services,Perak,5,Small,1
+1622,Services,Kedah,9,Small,1
+1623,Manufacturing,Kedah,7,Small,0
+1624,Services,Kedah,6,Small,0
+1625,Construction,Kedah,6,Small,1
+1626,Manufacturing,Kedah,2,Micro,1
+1627,Services,Perak,9,Small,0
+1628,Agriculture,Pulau Pinang,10,Small,1
+1629,Manufacturing,Kedah,5,Small,1
+1630,Construction,Kedah,3,Micro,0
+1631,Services,Pulau Pinang,19,Small,0
+1632,Services,Perak,15,Small,1
+1633,Agriculture,Perlis,28,Small,0
+1634,Services,Pulau Pinang,27,Small,0
+1635,Services,Perak,5,Small,1
+1636,Services,Kedah,11,Small,0
+1637,Services,Pulau Pinang,10,Small,1
+1638,Services,Kedah,23,Small,1
+1639,Services,Pulau Pinang,5,Small,1
+1640,Manufacturing,Kedah,5,Small,1
+1641,Services,Kedah,32,Medium,1
+1642,Services,Perak,5,Small,1
+1643,Services,Perak,12,Small,0
+1644,Services,Perlis,13,Small,1
+1645,Manufacturing,Kedah,4,Micro,0
+1646,Services,Kedah,6,Small,1
+1647,Services,Kedah,6,Small,1
+1648,Services,Perlis,7,Small,0
+1649,Services,Kedah,5,Small,1
+1650,Services,Pulau Pinang,24,Small,1
+1651,Agriculture,Pulau Pinang,8,Small,0
+1652,Services,Pulau Pinang,24,Small,0
+1653,Services,Kedah,22,Small,0
+1654,Manufacturing,Pulau Pinang,3,Micro,0
+1655,Services,Pulau Pinang,22,Small,0
+1656,Services,Perak,7,Small,1
+1657,Services,Pulau Pinang,20,Small,0
+1658,Services,Pulau Pinang,25,Small,1
+1659,Manufacturing,Kedah,33,Medium,0
+1660,Services,Perak,25,Small,1
+1661,Manufacturing,Pulau Pinang,10,Small,1
+1662,Manufacturing,Perak,7,Small,0
+1663,Services,Pulau Pinang,12,Small,1
+1664,Services,Perlis,13,Small,0
+1665,Manufacturing,Kedah,12,Small,0
+1666,Services,Perak,9,Small,0
+1667,Services,Kedah,18,Small,1
+1668,Services,Perlis,8,Small,0
+1669,Services,Perak,14,Small,0
+1670,Services,Kedah,13,Small,1
+1671,Services,Kedah,29,Small,1
+1672,Services,Perlis,7,Small,0
+1673,Services,Perak,7,Small,1
+1674,Construction,Pulau Pinang,6,Small,0
+1675,Agriculture,Kedah,21,Small,0
+1676,Services,Perak,15,Small,1
+1677,Services,Kedah,9,Small,0
+1678,Agriculture,Kedah,48,Medium,0
+1679,Services,Perak,5,Small,1
+1680,Construction,Perak,22,Small,1
+1681,Services,Perlis,15,Small,0
+1682,Agriculture,Perlis,8,Small,0
+1683,Agriculture,Pulau Pinang,5,Small,0
+1684,Services,Perak,6,Small,0
+1685,Services,Kedah,23,Small,1
+1686,Services,Perlis,4,Micro,0
+1687,Services,Perak,9,Small,0
+1688,Manufacturing,Perak,6,Small,1
+1689,Services,Perak,11,Small,0
+1690,Manufacturing,Perak,6,Small,0
+1691,Services,Kedah,7,Small,1
+1692,Services,Perlis,4,Micro,0
+1693,Services,Pulau Pinang,12,Small,1
+1694,Agriculture,Pulau Pinang,6,Small,0
+1695,Construction,Kedah,11,Small,0
+1696,Agriculture,Pulau Pinang,3,Micro,0
+1697,Manufacturing,Kedah,4,Micro,1
+1698,Agriculture,Pulau Pinang,8,Small,0
+1699,Manufacturing,Pulau Pinang,6,Small,0
+1700,Services,Kedah,9,Small,1
+1701,Services,Pulau Pinang,6,Small,1
+1702,Services,Kedah,19,Small,1
+1703,Services,Pulau Pinang,16,Small,0
+1704,Services,Pulau Pinang,27,Small,1
+1705,Services,Kedah,18,Small,0
+1706,Services,Perlis,29,Small,1
+1707,Services,Kedah,28,Small,0
+1708,Services,Pulau Pinang,14,Small,0
+1709,Services,Pulau Pinang,8,Small,1
+1710,Services,Kedah,10,Small,1
+1711,Services,Pulau Pinang,12,Small,0
+1712,Manufacturing,Perak,6,Small,0
+1713,Manufacturing,Pulau Pinang,8,Small,1
+1714,Services,Kedah,26,Small,0
+1715,Manufacturing,Kedah,20,Small,1
+1716,Services,Perlis,6,Small,0
+1717,Services,Kedah,5,Small,1
+1718,Services,Perak,7,Small,0
+1719,Services,Kedah,3,Micro,0
+1720,Manufacturing,Kedah,25,Small,1
+1721,Manufacturing,Kedah,15,Small,0
+1722,Services,Perlis,4,Micro,0
+1723,Construction,Pulau Pinang,9,Small,1
+1724,Agriculture,Kedah,6,Small,0
+1725,Services,Perak,32,Medium,0
+1726,Services,Kedah,4,Micro,0
+1727,Services,Kedah,6,Small,1
+1728,Agriculture,Pulau Pinang,43,Medium,0
+1729,Services,Kedah,45,Medium,0
+1730,Agriculture,Perak,42,Medium,1
+1731,Manufacturing,Pulau Pinang,15,Small,0
+1732,Manufacturing,Kedah,8,Small,0
+1733,Services,Pulau Pinang,6,Small,1
+1734,Services,Pulau Pinang,21,Small,1
+1735,Services,Kedah,6,Small,0
+1736,Services,Pulau Pinang,10,Small,1
+1737,Services,Kedah,10,Small,0
+1738,Services,Perak,26,Small,0
+1739,Services,Perak,6,Small,0
+1740,Agriculture,Pulau Pinang,25,Small,0
+1741,Construction,Perak,7,Small,0
+1742,Services,Kedah,7,Small,0
+1743,Agriculture,Kedah,5,Small,0
+1744,Services,Kedah,13,Small,0
+1745,Services,Perak,10,Small,1
+1746,Services,Perak,12,Small,1
+1747,Services,Kedah,8,Small,1
+1748,Services,Kedah,12,Small,1
+1749,Services,Kedah,45,Medium,1
+1750,Construction,Perlis,16,Small,1
+1751,Services,Pulau Pinang,26,Small,1
+1752,Services,Kedah,11,Small,0
+1753,Services,Pulau Pinang,11,Small,0
+1754,Manufacturing,Perak,30,Medium,0
+1755,Services,Kedah,115,Medium,1
+1756,Agriculture,Pulau Pinang,7,Small,0
+1757,Manufacturing,Perlis,17,Small,1
+1758,Services,Perlis,8,Small,0
+1759,Services,Perak,17,Small,0
+1760,Services,Perak,13,Small,1
+1761,Services,Kedah,7,Small,1
+1762,Services,Perak,4,Micro,1
+1763,Manufacturing,Perak,3,Micro,0
+1764,Services,Kedah,34,Medium,1
+1765,Manufacturing,Pulau Pinang,12,Small,1
+1766,Services,Kedah,11,Small,0
+1767,Services,Pulau Pinang,18,Small,1
+1768,Agriculture,Kedah,11,Small,0
+1769,Services,Kedah,69,Medium,1
+1770,Services,Kedah,13,Small,0
+1771,Services,Pulau Pinang,26,Small,0
+1772,Services,Kedah,13,Small,0
+1773,Services,Pulau Pinang,4,Micro,0
+1774,Manufacturing,Pulau Pinang,18,Small,1
+1775,Services,Kedah,14,Small,1
+1776,Agriculture,Kedah,8,Small,0
+1777,Services,Kedah,36,Medium,1
+1778,Manufacturing,Kedah,20,Small,0
+1779,Services,Pulau Pinang,22,Small,1
+1780,Manufacturing,Kedah,4,Micro,0
+1781,Manufacturing,Kedah,8,Small,0
+1782,Manufacturing,Kedah,3,Micro,1
+1783,Services,Perlis,19,Small,1
+1784,Services,Kedah,28,Small,0
+1785,Services,Pulau Pinang,7,Small,1
+1786,Construction,Perlis,84,Medium,0
+1787,Services,Kedah,5,Small,1
+1788,Agriculture,Perlis,14,Small,0
+1789,Services,Kedah,3,Micro,1
+1790,Manufacturing,Perak,3,Micro,0
+1791,Services,Kedah,15,Small,1
+1792,Services,Kedah,12,Small,0
+1793,Construction,Pulau Pinang,64,Medium,0
+1794,Manufacturing,Perak,14,Small,0
+1795,Services,Perak,35,Medium,1
+1796,Services,Pulau Pinang,6,Small,0
+1797,Manufacturing,Kedah,19,Small,0
+1798,Services,Kedah,37,Medium,1
+1799,Services,Kedah,12,Small,0
+1800,Services,Kedah,37,Medium,1
+1801,Agriculture,Kedah,29,Small,0
+1802,Services,Kedah,14,Small,0
+1803,Services,Perlis,5,Small,1
+1804,Manufacturing,Kedah,7,Small,0
+1805,Services,Kedah,3,Micro,1
+1806,Services,Pulau Pinang,26,Small,0
+1807,Construction,Perlis,42,Medium,1
+1808,Services,Kedah,15,Small,0
+1809,Services,Perak,16,Small,0
+1810,Services,Kedah,3,Micro,1
+1811,Agriculture,Kedah,29,Small,0
+1812,Services,Perlis,4,Micro,0
+1813,Services,Pulau Pinang,7,Small,1
+1814,Services,Perak,63,Medium,1
+1815,Manufacturing,Pulau Pinang,17,Small,0
+1816,Services,Kedah,6,Small,0
+1817,Services,Kedah,6,Small,0
+1818,Services,Perlis,14,Small,1
+1819,Services,Pulau Pinang,30,Medium,0
+1820,Services,Perak,14,Small,0
+1821,Services,Kedah,12,Small,1
+1822,Services,Kedah,17,Small,1
+1823,Construction,Kedah,21,Small,0
+1824,Services,Perlis,4,Micro,0
+1825,Services,Perak,3,Micro,1
+1826,Manufacturing,Kedah,34,Medium,0
+1827,Services,Perak,6,Small,1
+1828,Manufacturing,Pulau Pinang,2,Micro,0
+1829,Services,Kedah,7,Small,1
+1830,Manufacturing,Kedah,10,Small,0
+1831,Services,Perak,8,Small,0
+1832,Services,Pulau Pinang,31,Medium,1
+1833,Services,Pulau Pinang,5,Small,0
+1834,Services,Pulau Pinang,11,Small,1
+1835,Services,Kedah,4,Micro,0
+1836,Services,Perak,66,Medium,1
+1837,Services,Perlis,4,Micro,1
+1838,Services,Pulau Pinang,3,Micro,1
+1839,Services,Perlis,20,Small,0
+1840,Services,Pulau Pinang,13,Small,1
+1841,Services,Kedah,4,Micro,1
+1842,Services,Perak,18,Small,0
+1843,Services,Kedah,21,Small,1
+1844,Services,Perak,8,Small,0
+1845,Manufacturing,Kedah,17,Small,1
+1846,Construction,Kedah,24,Small,0
+1847,Manufacturing,Pulau Pinang,19,Small,0
+1848,Services,Perlis,8,Small,0
+1849,Services,Kedah,10,Small,0
+1850,Services,Kedah,8,Small,1
+1851,Manufacturing,Perak,8,Small,0
+1852,Manufacturing,Pulau Pinang,10,Small,0
+1853,Services,Perlis,8,Small,1
+1854,Services,Pulau Pinang,10,Small,1
+1855,Services,Kedah,10,Small,1
+1856,Services,Pulau Pinang,9,Small,1
+1857,Services,Pulau Pinang,17,Small,1
+1858,Services,Perak,4,Micro,1
+1859,Agriculture,Kedah,6,Small,0
+1860,Manufacturing,Perlis,7,Small,0
+1861,Services,Kedah,6,Small,1
+1862,Services,Pulau Pinang,16,Small,0
+1863,Services,Kedah,13,Small,0
+1864,Services,Perak,10,Small,1
+1865,Agriculture,Kedah,9,Small,0
+1866,Services,Kedah,17,Small,1
+1867,Services,Kedah,22,Small,0
+1868,Services,Pulau Pinang,23,Small,1
+1869,Services,Pulau Pinang,9,Small,0
+1870,Services,Perlis,12,Small,1
+1871,Services,Kedah,3,Micro,1
+1872,Services,Pulau Pinang,9,Small,1
+1873,Construction,Kedah,69,Medium,1
+1874,Services,Kedah,6,Small,0
+1875,Agriculture,Perak,24,Small,0
+1876,Manufacturing,Kedah,18,Small,1
+1877,Services,Pulau Pinang,5,Small,1
+1878,Services,Perak,3,Micro,1
+1879,Services,Kedah,6,Small,0
+1880,Services,Perlis,32,Medium,0
+1881,Services,Pulau Pinang,26,Small,1
+1882,Agriculture,Pulau Pinang,19,Small,0
+1883,Services,Pulau Pinang,8,Small,0
+1884,Services,Kedah,19,Small,0
+1885,Agriculture,Perak,5,Small,0
+1886,Agriculture,Perlis,23,Small,0
+1887,Manufacturing,Kedah,16,Small,0
+1888,Services,Kedah,20,Small,0
+1889,Services,Perlis,155,Medium,0
+1890,Services,Pulau Pinang,125,Medium,1
+1891,Services,Perak,6,Small,1
+1892,Services,Kedah,13,Small,0
+1893,Manufacturing,Kedah,11,Small,0
+1894,Services,Kedah,15,Small,0
+1895,Agriculture,Perak,85,Medium,0
+1896,Agriculture,Perak,5,Small,0
+1897,Services,Pulau Pinang,10,Small,1
+1898,Manufacturing,Pulau Pinang,35,Medium,1
+1899,Services,Perak,7,Small,1
+1900,Manufacturing,Kedah,45,Medium,1
+1901,Services,Perak,12,Small,0
+1902,Services,Pulau Pinang,10,Small,1
+1903,Services,Kedah,19,Small,1
+1904,Services,Perak,9,Small,1
+1905,Services,Pulau Pinang,26,Small,1
+1906,Construction,Pulau Pinang,50,Medium,1
+1907,Services,Pulau Pinang,2,Micro,1
+1908,Services,Perak,27,Small,0
+1909,Manufacturing,Kedah,3,Micro,1
+1910,Services,Kedah,3,Micro,0
+1911,Services,Perak,22,Small,1
+1912,Construction,Perak,15,Small,1
+1913,Services,Pulau Pinang,15,Small,1
+1914,Services,Kedah,6,Small,0
+1915,Agriculture,Kedah,7,Small,0
+1916,Services,Kedah,9,Small,1
+1917,Agriculture,Pulau Pinang,3,Micro,0
+1918,Services,Pulau Pinang,17,Small,0
+1919,Services,Perlis,9,Small,0
+1920,Services,Pulau Pinang,18,Small,1
+1921,Agriculture,Perlis,2,Micro,1
+1922,Agriculture,Perlis,2,Micro,0
+1923,Services,Pulau Pinang,7,Small,0
+1924,Services,Kedah,9,Small,1
+1925,Services,Pulau Pinang,17,Small,1
+1926,Services,Kedah,7,Small,1
+1927,Manufacturing,Pulau Pinang,6,Small,1
+1928,Services,Pulau Pinang,5,Small,0
+1929,Services,Pulau Pinang,24,Small,1
+1930,Services,Perak,12,Small,0
+1931,Services,Pulau Pinang,48,Medium,1
+1932,Services,Perak,10,Small,0
+1933,Services,Kedah,15,Small,0
+1934,Manufacturing,Perlis,10,Small,0
+1935,Services,Perlis,9,Small,1
+1936,Services,Kedah,15,Small,1
+1937,Services,Kedah,4,Micro,1
+1938,Manufacturing,Kedah,7,Small,0
+1939,Services,Kedah,15,Small,0
+1940,Services,Pulau Pinang,6,Small,1
+1941,Manufacturing,Kedah,2,Micro,0
+1942,Manufacturing,Kedah,7,Small,0
+1943,Manufacturing,Kedah,4,Micro,1
+1944,Services,Kedah,15,Small,1
+1945,Manufacturing,Perlis,4,Micro,0
+1946,Manufacturing,Pulau Pinang,5,Small,1
+1947,Manufacturing,Perak,11,Small,0
+1948,Services,Kedah,8,Small,0
+1949,Services,Kedah,17,Small,0
+1950,Services,Kedah,12,Small,1
+1951,Manufacturing,Perak,9,Small,0
+1952,Services,Perlis,18,Small,0
+1953,Services,Pulau Pinang,14,Small,1
+1954,Services,Kedah,7,Small,1
+1955,Manufacturing,Kedah,24,Small,0
+1956,Services,Kedah,10,Small,1
+1957,Services,Perlis,16,Small,0
+1958,Services,Perak,10,Small,0
+1959,Services,Perak,15,Small,0
+1960,Manufacturing,Pulau Pinang,7,Small,1
+1961,Manufacturing,Pulau Pinang,15,Small,1
+1962,Services,Kedah,13,Small,1
+1963,Services,Kedah,10,Small,1
+1964,Manufacturing,Perlis,11,Small,0
+1965,Manufacturing,Pulau Pinang,8,Small,1
+1966,Services,Kedah,17,Small,0
+1967,Services,Pulau Pinang,41,Medium,1
+1968,Construction,Kedah,6,Small,1
+1969,Construction,Pulau Pinang,9,Small,0
+1970,Services,Perak,4,Micro,1
+1971,Construction,Pulau Pinang,8,Small,0
+1972,Services,Perak,11,Small,0
+1973,Manufacturing,Pulau Pinang,15,Small,1
+1974,Manufacturing,Kedah,4,Micro,1
+1975,Services,Kedah,6,Small,1
+1976,Services,Pulau Pinang,11,Small,1
+1977,Construction,Perlis,136,Medium,0
+1978,Services,Pulau Pinang,12,Small,0
+1979,Services,Perlis,12,Small,0
+1980,Agriculture,Kedah,6,Small,1
+1981,Services,Kedah,8,Small,0
+1982,Services,Kedah,2,Micro,0
+1983,Manufacturing,Pulau Pinang,6,Small,0
+1984,Construction,Perak,6,Small,1
+1985,Construction,Perlis,8,Small,0
+1986,Services,Perlis,8,Small,1
+1987,Manufacturing,Pulau Pinang,65,Medium,0
+1988,Agriculture,Kedah,24,Small,0
+1989,Services,Perak,10,Small,1
+1990,Services,Kedah,3,Micro,0
+1991,Construction,Pulau Pinang,48,Medium,0
+1992,Services,Kedah,7,Small,0
+1993,Construction,Kedah,5,Small,1
+1994,Services,Perak,10,Small,0
+1995,Services,Kedah,9,Small,0
+1996,Agriculture,Kedah,35,Medium,0
+1997,Services,Pulau Pinang,12,Small,1
+1998,Manufacturing,Perak,16,Small,0
+1999,Construction,Pulau Pinang,18,Small,1
+2000,Services,Kedah,39,Medium,1
+2001,Services,Pulau Pinang,19,Small,1
+2002,Manufacturing,Pulau Pinang,10,Small,0
+2003,Manufacturing,Perlis,8,Small,0
+2004,Manufacturing,Perak,4,Micro,0
+2005,Manufacturing,Kedah,5,Small,1
+2006,Services,Perak,2,Micro,1
+2007,Services,Pulau Pinang,26,Small,1
+2008,Services,Kedah,6,Small,0
+2009,Manufacturing,Pulau Pinang,7,Small,0
+2010,Services,Pulau Pinang,20,Small,1
+2011,Services,Kedah,8,Small,1
+2012,Services,Perak,13,Small,1
+2013,Construction,Perlis,6,Small,0
+2014,Manufacturing,Kedah,8,Small,1
+2015,Manufacturing,Kedah,11,Small,1
+2016,Services,Perlis,43,Medium,0
+2017,Agriculture,Pulau Pinang,3,Micro,0
+2018,Services,Kedah,5,Small,0
+2019,Manufacturing,Pulau Pinang,14,Small,0
+2020,Services,Pulau Pinang,18,Small,1
+2021,Services,Perak,8,Small,1
+2022,Manufacturing,Perak,11,Small,1
+2023,Services,Kedah,10,Small,0
+2024,Services,Kedah,19,Small,1
+2025,Manufacturing,Perak,4,Micro,0
+2026,Manufacturing,Pulau Pinang,10,Small,1
+2027,Services,Perlis,34,Medium,1
+2028,Manufacturing,Kedah,26,Small,0
+2029,Agriculture,Kedah,7,Small,0
+2030,Services,Pulau Pinang,15,Small,1
+2031,Services,Kedah,5,Small,0
+2032,Services,Kedah,16,Small,1
+2033,Services,Kedah,15,Small,0
+2034,Agriculture,Kedah,11,Small,0
+2035,Services,Kedah,15,Small,1
+2036,Construction,Perak,9,Small,0
+2037,Services,Kedah,28,Small,1
+2038,Services,Kedah,23,Small,1
+2039,Services,Perlis,19,Small,0
+2040,Services,Kedah,28,Small,1
+2041,Services,Kedah,29,Small,1
+2042,Services,Kedah,12,Small,0
+2043,Services,Kedah,19,Small,1
+2044,Services,Kedah,11,Small,0
+2045,Manufacturing,Perak,3,Micro,0
+2046,Services,Kedah,30,Medium,1
+2047,Manufacturing,Pulau Pinang,10,Small,0
+2048,Services,Pulau Pinang,10,Small,1
+2049,Manufacturing,Pulau Pinang,62,Medium,0
+2050,Services,Pulau Pinang,10,Small,1
+2051,Services,Perak,8,Small,1
+2052,Agriculture,Pulau Pinang,3,Micro,0
+2053,Services,Perlis,14,Small,0
+2054,Agriculture,Perak,12,Small,0
+2055,Manufacturing,Pulau Pinang,7,Small,1
+2056,Services,Perak,28,Small,1
+2057,Services,Kedah,8,Small,1
+2058,Manufacturing,Perak,4,Micro,0
+2059,Manufacturing,Perak,7,Small,1
+2060,Services,Pulau Pinang,9,Small,1
+2061,Manufacturing,Pulau Pinang,9,Small,0
+2062,Services,Pulau Pinang,11,Small,1
+2063,Services,Perak,5,Small,1
+2064,Services,Perlis,5,Small,1
+2065,Services,Kedah,3,Micro,1
+2066,Services,Kedah,9,Small,0
+2067,Services,Kedah,38,Medium,1
+2068,Manufacturing,Kedah,25,Small,1
+2069,Services,Kedah,4,Micro,1
+2070,Services,Kedah,7,Small,1
+2071,Manufacturing,Pulau Pinang,30,Medium,0
+2072,Manufacturing,Pulau Pinang,8,Small,0
+2073,Services,Kedah,7,Small,0
+2074,Agriculture,Kedah,4,Micro,0
+2075,Agriculture,Kedah,49,Medium,0
+2076,Services,Kedah,26,Small,1
+2077,Services,Perak,5,Small,0
+2078,Manufacturing,Perak,24,Small,0
+2079,Services,Kedah,5,Small,1
+2080,Agriculture,Kedah,12,Small,0
+2081,Services,Perak,30,Medium,0
+2082,Services,Pulau Pinang,5,Small,0
+2083,Services,Pulau Pinang,5,Small,1
+2084,Services,Pulau Pinang,5,Small,0
+2085,Services,Perlis,10,Small,1
+2086,Services,Pulau Pinang,21,Small,0
+2087,Services,Perak,22,Small,0
+2088,Services,Perlis,44,Medium,1
+2089,Services,Pulau Pinang,52,Medium,1
+2090,Services,Pulau Pinang,19,Small,1
+2091,Manufacturing,Kedah,3,Micro,0
+2092,Manufacturing,Pulau Pinang,5,Small,0
+2093,Services,Kedah,17,Small,1
+2094,Services,Pulau Pinang,13,Small,1
+2095,Services,Perak,9,Small,1
+2096,Manufacturing,Perak,7,Small,1
+2097,Services,Kedah,15,Small,0
+2098,Agriculture,Pulau Pinang,4,Micro,0
+2099,Agriculture,Perlis,9,Small,0
+2100,Services,Kedah,15,Small,0
+2101,Services,Perlis,32,Medium,0
+2102,Manufacturing,Perlis,32,Medium,0
+2103,Services,Perlis,6,Small,1
+2104,Services,Kedah,4,Micro,1
+2105,Services,Kedah,11,Small,1
+2106,Services,Perak,14,Small,1
+2107,Services,Perak,3,Micro,0
+2108,Agriculture,Kedah,3,Micro,0
+2109,Manufacturing,Pulau Pinang,6,Small,0
+2110,Services,Kedah,9,Small,0
+2111,Services,Kedah,13,Small,0
+2112,Services,Pulau Pinang,9,Small,1
+2113,Services,Pulau Pinang,10,Small,0
+2114,Services,Pulau Pinang,23,Small,1
+2115,Agriculture,Pulau Pinang,8,Small,0
+2116,Manufacturing,Perlis,8,Small,0
+2117,Services,Pulau Pinang,3,Micro,0
+2118,Agriculture,Kedah,14,Small,0
+2119,Construction,Pulau Pinang,25,Small,0
+2120,Manufacturing,Pulau Pinang,18,Small,0
+2121,Services,Perlis,5,Small,0
+2122,Manufacturing,Kedah,27,Small,1
+2123,Services,Perak,8,Small,1
+2124,Services,Kedah,48,Medium,0
+2125,Services,Pulau Pinang,13,Small,0
+2126,Services,Kedah,29,Small,0
+2127,Services,Kedah,13,Small,1
+2128,Services,Kedah,12,Small,1
+2129,Services,Pulau Pinang,6,Small,1
+2130,Services,Pulau Pinang,6,Small,1
+2131,Manufacturing,Kedah,27,Small,0
+2132,Services,Perlis,5,Small,1
+2133,Construction,Pulau Pinang,42,Medium,0
+2134,Services,Kedah,3,Micro,1
+2135,Services,Pulau Pinang,10,Small,1
+2136,Construction,Kedah,7,Small,0
+2137,Services,Pulau Pinang,47,Medium,1
+2138,Services,Kedah,7,Small,1
+2139,Services,Perak,7,Small,0
+2140,Services,Kedah,6,Small,1
+2141,Services,Perlis,19,Small,1
+2142,Services,Pulau Pinang,9,Small,1
+2143,Services,Pulau Pinang,10,Small,0
+2144,Services,Pulau Pinang,3,Micro,0
+2145,Services,Pulau Pinang,8,Small,0
+2146,Services,Perak,8,Small,1
+2147,Agriculture,Pulau Pinang,6,Small,0
+2148,Manufacturing,Kedah,47,Medium,0
+2149,Manufacturing,Perak,86,Medium,0
+2150,Services,Perlis,10,Small,0
+2151,Agriculture,Perlis,7,Small,0
+2152,Services,Perak,19,Small,1
+2153,Services,Perak,21,Small,1
+2154,Manufacturing,Kedah,5,Small,1
+2155,Services,Pulau Pinang,17,Small,1
+2156,Manufacturing,Perlis,7,Small,0
+2157,Services,Perlis,8,Small,0
+2158,Agriculture,Kedah,9,Small,0
+2159,Services,Pulau Pinang,23,Small,1
+2160,Manufacturing,Pulau Pinang,12,Small,1
+2161,Manufacturing,Kedah,15,Small,0
+2162,Services,Pulau Pinang,12,Small,0
+2163,Construction,Kedah,3,Micro,0
+2164,Manufacturing,Kedah,34,Medium,0
+2165,Services,Kedah,10,Small,0
+2166,Services,Kedah,7,Small,0
+2167,Services,Pulau Pinang,5,Small,0
+2168,Services,Perlis,4,Micro,1
+2169,Services,Kedah,13,Small,1
+2170,Services,Kedah,27,Small,0
+2171,Services,Kedah,10,Small,1
+2172,Services,Pulau Pinang,8,Small,0
+2173,Manufacturing,Kedah,15,Small,0
+2174,Manufacturing,Pulau Pinang,2,Micro,0
+2175,Services,Kedah,12,Small,0
+2176,Manufacturing,Pulau Pinang,8,Small,0
+2177,Manufacturing,Kedah,19,Small,0
+2178,Services,Pulau Pinang,28,Small,0
+2179,Services,Pulau Pinang,9,Small,1
+2180,Services,Pulau Pinang,4,Micro,1
+2181,Services,Kedah,20,Small,0
+2182,Services,Kedah,11,Small,1
+2183,Services,Kedah,18,Small,0
+2184,Services,Perak,21,Small,1
+2185,Services,Pulau Pinang,11,Small,0
+2186,Services,Perlis,6,Small,0
+2187,Manufacturing,Kedah,14,Small,0
+2188,Services,Pulau Pinang,12,Small,1
+2189,Services,Pulau Pinang,36,Medium,0
+2190,Services,Perak,13,Small,1
+2191,Services,Perak,31,Medium,1
+2192,Services,Pulau Pinang,24,Small,1
+2193,Manufacturing,Perlis,13,Small,0
+2194,Services,Kedah,2,Micro,0
+2195,Services,Pulau Pinang,5,Small,1
+2196,Services,Kedah,20,Small,0
+2197,Services,Kedah,24,Small,0
+2198,Agriculture,Kedah,6,Small,0
+2199,Construction,Pulau Pinang,3,Micro,0
+2200,Agriculture,Kedah,86,Medium,0
+2201,Manufacturing,Kedah,10,Small,0
+2202,Services,Pulau Pinang,3,Micro,1
+2203,Services,Pulau Pinang,17,Small,1
+2204,Services,Pulau Pinang,41,Medium,1
+2205,Services,Kedah,2,Micro,1
+2206,Services,Perlis,12,Small,1
+2207,Manufacturing,Pulau Pinang,7,Small,0
+2208,Services,Kedah,11,Small,0
+2209,Services,Pulau Pinang,19,Small,0
+2210,Agriculture,Kedah,5,Small,1
+2211,Services,Pulau Pinang,5,Small,1
+2212,Services,Perak,4,Micro,0
+2213,Manufacturing,Pulau Pinang,25,Small,1
+2214,Agriculture,Pulau Pinang,29,Small,0
+2215,Manufacturing,Kedah,5,Small,0
+2216,Services,Perlis,30,Medium,1
+2217,Services,Pulau Pinang,7,Small,0
+2218,Services,Kedah,11,Small,1
+2219,Agriculture,Perlis,8,Small,0
+2220,Services,Perlis,9,Small,1
+2221,Services,Pulau Pinang,38,Medium,0
+2222,Services,Kedah,13,Small,1
+2223,Services,Pulau Pinang,6,Small,1
+2224,Services,Pulau Pinang,46,Medium,1
+2225,Services,Perak,59,Medium,1
+2226,Manufacturing,Pulau Pinang,12,Small,0
+2227,Manufacturing,Pulau Pinang,46,Medium,1
+2228,Services,Pulau Pinang,55,Medium,1
+2229,Services,Kedah,7,Small,0
+2230,Services,Kedah,3,Micro,0
+2231,Services,Kedah,4,Micro,1
+2232,Services,Kedah,4,Micro,1
+2233,Services,Kedah,7,Small,1
+2234,Services,Pulau Pinang,56,Medium,1
+2235,Services,Perak,8,Small,1
+2236,Services,Pulau Pinang,7,Small,0
+2237,Manufacturing,Kedah,42,Medium,0
+2238,Services,Pulau Pinang,9,Small,1
+2239,Services,Kedah,17,Small,1
+2240,Services,Pulau Pinang,70,Medium,1
+2241,Services,Pulau Pinang,4,Micro,1
+2242,Services,Kedah,5,Small,1
+2243,Agriculture,Kedah,9,Small,0
+2244,Agriculture,Perak,13,Small,0
+2245,Services,Perak,12,Small,0
+2246,Construction,Kedah,17,Small,0
+2247,Services,Kedah,4,Micro,0
+2248,Manufacturing,Perlis,8,Small,0
+2249,Services,Perak,4,Micro,0
+2250,Services,Perak,10,Small,1
+2251,Services,Perak,17,Small,1
+2252,Manufacturing,Perak,18,Small,1
+2253,Manufacturing,Pulau Pinang,13,Small,0
+2254,Manufacturing,Kedah,28,Small,0
+2255,Services,Kedah,4,Micro,1
+2256,Services,Kedah,10,Small,1
+2257,Agriculture,Perak,15,Small,0
+2258,Services,Kedah,3,Micro,0
+2259,Services,Perlis,128,Medium,0
+2260,Services,Pulau Pinang,7,Small,0
+2261,Services,Perak,26,Small,0
+2262,Construction,Kedah,9,Small,0
+2263,Manufacturing,Pulau Pinang,11,Small,0
+2264,Services,Kedah,11,Small,0
+2265,Agriculture,Kedah,48,Medium,0
+2266,Services,Kedah,11,Small,0
+2267,Services,Pulau Pinang,20,Small,0
+2268,Services,Pulau Pinang,21,Small,1
+2269,Manufacturing,Kedah,17,Small,0
+2270,Services,Kedah,21,Small,1
+2271,Services,Pulau Pinang,6,Small,1
+2272,Services,Pulau Pinang,3,Micro,0
+2273,Manufacturing,Kedah,8,Small,1
+2274,Services,Perlis,6,Small,1
+2275,Services,Kedah,2,Micro,0
+2276,Services,Perlis,32,Medium,1
+2277,Services,Kedah,3,Micro,0
+2278,Services,Pulau Pinang,49,Medium,0
+2279,Manufacturing,Perak,4,Micro,0
+2280,Services,Kedah,6,Small,1
+2281,Construction,Kedah,21,Small,1
+2282,Agriculture,Perak,18,Small,1
+2283,Manufacturing,Kedah,30,Medium,0
+2284,Services,Kedah,12,Small,0
+2285,Services,Pulau Pinang,9,Small,0
+2286,Services,Kedah,2,Micro,1
+2287,Services,Pulau Pinang,15,Small,1
+2288,Services,Perak,9,Small,0
+2289,Services,Pulau Pinang,10,Small,0
+2290,Services,Pulau Pinang,17,Small,1
+2291,Services,Kedah,38,Medium,1
+2292,Services,Perak,6,Small,0
+2293,Services,Kedah,9,Small,0
+2294,Services,Pulau Pinang,8,Small,0
+2295,Services,Kedah,3,Micro,1
+2296,Services,Perlis,26,Small,0
+2297,Agriculture,Perlis,8,Small,1
+2298,Services,Kedah,3,Micro,1
+2299,Services,Pulau Pinang,13,Small,1
+2300,Services,Kedah,11,Small,0
+2301,Services,Kedah,13,Small,0
+2302,Services,Perak,4,Micro,0
+2303,Services,Pulau Pinang,4,Micro,0
+2304,Services,Perak,11,Small,0
+2305,Services,Kedah,21,Small,1
+2306,Services,Kedah,5,Small,1
+2307,Manufacturing,Perlis,11,Small,1
+2308,Services,Pulau Pinang,8,Small,0
+2309,Construction,Kedah,13,Small,0
+2310,Manufacturing,Kedah,21,Small,0
+2311,Agriculture,Perak,19,Small,1
+2312,Services,Kedah,31,Medium,1
+2313,Agriculture,Perak,54,Medium,0
+2314,Services,Kedah,7,Small,1
+2315,Services,Kedah,31,Medium,0
+2316,Manufacturing,Kedah,8,Small,0
+2317,Manufacturing,Pulau Pinang,10,Small,1
+2318,Manufacturing,Kedah,7,Small,0
+2319,Services,Perak,17,Small,0
+2320,Services,Kedah,3,Micro,1
+2321,Services,Pulau Pinang,4,Micro,1
+2322,Services,Kedah,6,Small,0
+2323,Agriculture,Pulau Pinang,4,Micro,0
+2324,Services,Kedah,3,Micro,1
+2325,Services,Perlis,11,Small,1
+2326,Manufacturing,Pulau Pinang,8,Small,1
+2327,Services,Pulau Pinang,5,Small,0
+2328,Agriculture,Pulau Pinang,16,Small,0
+2329,Manufacturing,Pulau Pinang,40,Medium,0
+2330,Manufacturing,Kedah,5,Small,1
+2331,Agriculture,Perak,26,Small,0
+2332,Manufacturing,Pulau Pinang,5,Small,0
+2333,Manufacturing,Pulau Pinang,27,Small,0
+2334,Services,Pulau Pinang,23,Small,0
+2335,Services,Kedah,5,Small,1
+2336,Services,Kedah,60,Medium,1
+2337,Services,Pulau Pinang,5,Small,1
+2338,Services,Perak,3,Micro,1
+2339,Agriculture,Pulau Pinang,6,Small,0
+2340,Services,Kedah,14,Small,0
+2341,Services,Perak,6,Small,0
+2342,Manufacturing,Kedah,5,Small,0
+2343,Services,Pulau Pinang,25,Small,1
+2344,Agriculture,Perak,17,Small,0
+2345,Manufacturing,Pulau Pinang,7,Small,0
+2346,Services,Kedah,60,Medium,1
+2347,Manufacturing,Perlis,3,Micro,0
+2348,Services,Kedah,6,Small,1
+2349,Manufacturing,Pulau Pinang,5,Small,1
+2350,Services,Perlis,8,Small,1
+2351,Services,Pulau Pinang,11,Small,1
+2352,Services,Kedah,20,Small,1
+2353,Services,Kedah,7,Small,1
+2354,Services,Kedah,16,Small,0
+2355,Services,Kedah,8,Small,1
+2356,Services,Pulau Pinang,48,Medium,1
+2357,Services,Perlis,4,Micro,0
+2358,Construction,Kedah,8,Small,1
+2359,Manufacturing,Pulau Pinang,18,Small,0
+2360,Manufacturing,Pulau Pinang,27,Small,0
+2361,Agriculture,Perak,16,Small,0
+2362,Manufacturing,Perak,14,Small,1
+2363,Services,Kedah,49,Medium,0
+2364,Services,Perak,11,Small,0
+2365,Services,Kedah,12,Small,0
+2366,Services,Kedah,6,Small,0
+2367,Construction,Kedah,26,Small,0
+2368,Services,Perak,12,Small,1
+2369,Services,Pulau Pinang,3,Micro,1
+2370,Services,Kedah,3,Micro,0
+2371,Services,Perlis,2,Micro,1
+2372,Services,Pulau Pinang,13,Small,0
+2373,Services,Kedah,14,Small,1
+2374,Services,Pulau Pinang,29,Small,1
+2375,Construction,Kedah,6,Small,0
+2376,Services,Kedah,2,Micro,0
+2377,Services,Kedah,12,Small,1
+2378,Agriculture,Pulau Pinang,9,Small,1
+2379,Services,Perak,8,Small,0
+2380,Services,Kedah,17,Small,0
+2381,Manufacturing,Pulau Pinang,4,Micro,1
+2382,Construction,Pulau Pinang,10,Small,0
+2383,Services,Kedah,9,Small,0
+2384,Manufacturing,Kedah,15,Small,1
+2385,Services,Perak,39,Medium,1
+2386,Services,Perak,5,Small,0
+2387,Services,Pulau Pinang,15,Small,1
+2388,Manufacturing,Perak,11,Small,1
+2389,Services,Perlis,12,Small,1
+2390,Agriculture,Pulau Pinang,38,Medium,0
+2391,Manufacturing,Kedah,42,Medium,0
+2392,Agriculture,Pulau Pinang,7,Small,0
+2393,Agriculture,Kedah,17,Small,0
+2394,Agriculture,Pulau Pinang,11,Small,0
+2395,Services,Perak,6,Small,1
+2396,Agriculture,Perak,20,Small,0
+2397,Services,Perak,15,Small,1
+2398,Manufacturing,Pulau Pinang,28,Small,1
+2399,Agriculture,Perlis,14,Small,0
+2400,Services,Kedah,8,Small,0

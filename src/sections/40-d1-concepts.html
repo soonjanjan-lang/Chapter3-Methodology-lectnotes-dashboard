@@ -1,0 +1,127 @@
+<!--meta
+id: d1
+group: D
+code: D1
+title: Population, sampling frame and sample
+short: Sampling concepts
+-->
+<header class="tab-head">
+  <h1 id="h-d1"><span class="secnum">D1</span>Population, sampling frame and sample</h1>
+  <p class="lede">Before choosing a sampling design you must be precise about whom your findings describe, which list you can actually draw from, and the units you select. Most sampling problems that examiners find start here, not in the formula.</p>
+  <ul class="tab-facts"><li>About 15 minutes</li><li>Worksheet with model answers</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>distinguish population, target population, sampling frame, sampling unit and sample;</li>
+      <li>identify coverage problems in a sampling frame;</li>
+      <li>separate sampling error from non-sampling error.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="d1-terms">From population to sample</h2>
+  <figure class="fig wide">
+    <div class="nest">
+      <div class="nest-l nest-1">
+        <p class="nest-name">Population</p>
+        <p class="nest-q">Everyone or everything the theory is about</p>
+        <p class="nest-eg">All young adults in Malaysia.</p>
+        <div class="nest-l nest-2">
+          <p class="nest-name">Target population</p>
+          <p class="nest-q">The defined group your findings will describe</p>
+          <p class="nest-eg">Full-time undergraduates at one public university, Semester 1, 2025/26.</p>
+          <div class="nest-l nest-3">
+            <p class="nest-name">Sampling frame</p>
+            <p class="nest-q">The list you actually draw from</p>
+            <p class="nest-eg">The registrar's enrolment list. It misses students on leave and includes some who have withdrawn. From it you draw the <strong>sample</strong>: the units you select and observe.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <figcaption><b>Figure D1.1.</b> Each layer is narrower than the one around it. Generalising from the sample to the target population needs a good frame and a good design. Going on to the wider population is an argument, not a statistical inference.</figcaption>
+  </figure>
+
+  <dl class="defs">
+    <dt>Population</dt><dd>The full set of units the research question concerns.</dd>
+    <dt>Target population</dt><dd>The population defined precisely by who, where and when. Your conclusions apply here.</dd>
+    <dt>Sampling frame</dt><dd>A list or procedure that identifies the units you can select: enrolment records, the SSM company register, DOSM enumeration blocks, a membership list.</dd>
+    <dt>Element (unit of analysis)</dt><dd>The unit you measure and analyse: a student, a household, a firm.</dd>
+    <dt>Sampling unit</dt><dd>The unit you select. It can differ from the element: you may select villages, then households within them.</dd>
+    <dt>Sample</dt><dd>The units selected. The <em>achieved</em> sample is the subset who actually respond.</dd>
+    <dt>Census</dt><dd>Observing every unit in the target population, which is sensible when it is small (for example, every licensed commercial bank).</dd>
+  </dl>
+
+  <h2 id="d1-frame">Frame problems</h2>
+  <ul>
+    <li><strong>Undercoverage</strong>: units missing from the frame. An online panel misses people without internet; a telephone directory misses mobile-only households.</li>
+    <li><strong>Overcoverage</strong>: ineligible units on the frame, such as closed firms still registered, or graduates still on an alumni list.</li>
+    <li><strong>Duplicates</strong>: units listed twice have twice the chance of selection.</li>
+    <li><strong>Clustering</strong>: one frame entry covers several elements, such as one address with several households.</li>
+  </ul>
+  <aside class="ex-note is-query"><b>Examiner:</b> “The population is all SMEs in Malaysia.” Which list did you sample from, and who is not on it?</aside>
+
+  <h2 id="d1-errors">Two kinds of error</h2>
+  <table class="bt">
+    <caption><b>Table D1.1.</b> Sampling and non-sampling error</caption>
+    <thead><tr><th>Error</th><th>Cause</th><th>Shrinks with a larger sample?</th><th>What helps</th></tr></thead>
+    <tbody>
+      <tr><td>Sampling error</td><td>Chance: observing a sample, not everyone</td><td>Yes, in proportion to \(1/\sqrt{n}\)</td><td>Larger probability samples; stratification</td></tr>
+      <tr><td>Coverage error</td><td>The frame misses or adds units</td><td>No</td><td>A better frame; weighting to known totals</td></tr>
+      <tr><td>Non-response error</td><td>Those who respond differ from those who do not</td><td>No</td><td>Reminders, incentives; non-response analysis (Groves, 2006)</td></tr>
+      <tr><td>Measurement error</td><td>Questions measure poorly; recall; social desirability</td><td>No</td><td>Good questionnaire design and pretesting (<a href="#e1">E1</a>)</td></tr>
+    </tbody>
+  </table>
+  <p>A large sample cures only the first row. A survey of 5,000 self-selected respondents can be more biased than a well-run random sample of 400.</p>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Define the target population by who, where and when; name the frame and its gaps.</li>
+      <li>The sampling unit and the unit of analysis can differ.</li>
+      <li>Only sampling error falls as n rises; coverage, non-response and measurement error do not.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul><li>Groves, R. M. (2006). Nonresponse rates and nonresponse bias in household surveys. <i>Public Opinion Quarterly, 70</i>(5), 646–675.</li></ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="d1-ws">Worksheet D1</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>For the study “Digital payment adoption among hawkers in George Town”, define the target population, a feasible sampling frame, the sampling unit and the unit of analysis. Identify one coverage problem with your frame. <span class="ws-marks">(5 marks)</span></p>
+      <x-draft key="d1-q1"></x-draft>
+      <x-answer><p>Target population: licensed hawkers operating within the George Town municipal area in 2026. Frame: the city council's hawker licence register. Sampling unit: the licensed stall (from the register). Unit of analysis: the hawker (stall operator). Coverage problem: unlicensed hawkers are missing (undercoverage), and licences held for stalls no longer trading are included (overcoverage). Describe both and check eligibility at the start of each interview.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A student argues: “My online survey has 2,000 responses, so sampling error is tiny and my results represent all Malaysian youth.” Evaluate the claim. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="d1-q2"></x-draft>
+      <x-answer><p>A large n reduces sampling error only for a probability sample, where sampling error is defined. A self-selected online sample has undercoverage (youth without internet or outside the sharing networks) and self-selection bias, neither of which falls with n. The results describe the respondents and perhaps similar young people, not all Malaysian youth. Comparing the sample with national demographics and weighting can help, but cannot remove bias on unmeasured characteristics.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="d1-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. The registrar's enrolment list is the…</legend>
+      <label class="opt"><input type="radio" name="d1q1"><span>target population<span class="why">The list represents the population; it is not the population itself.</span></span></label>
+      <label class="opt"><input type="radio" name="d1q1" data-correct><span>sampling frame<span class="why">Yes.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Which error falls as sample size grows?</legend>
+      <label class="opt"><input type="radio" name="d1q2" data-correct><span>Sampling error<span class="why">Yes, roughly with \(1/\sqrt{n}\).</span></span></label>
+      <label class="opt"><input type="radio" name="d1q2"><span>Non-response error<span class="why">More respondents of the same kind do not fix who is missing.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Selecting villages, then households in each village, makes the village the…</legend>
+      <label class="opt"><input type="radio" name="d1q3" data-correct><span>primary sampling unit<span class="why">Yes; the household is the unit of analysis.</span></span></label>
+      <label class="opt"><input type="radio" name="d1q3"><span>unit of analysis<span class="why">You analyse households.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

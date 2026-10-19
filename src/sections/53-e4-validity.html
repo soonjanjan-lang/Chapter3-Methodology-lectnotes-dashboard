@@ -1,0 +1,499 @@
+<!--meta
+id: e4
+group: E
+code: E4
+title: Validity and reliability
+short: Validity and reliability
+-->
+<header class="tab-head">
+  <h1 id="h-e4"><span class="secnum">E4</span>Validity and reliability</h1>
+  <p class="lede">Validity asks whether you are measuring the right thing, and whether your interpretations are justified. Reliability asks whether you are measuring it consistently. A measure can be reliable without being valid, so both have to be established, and for your questionnaire they are established with evidence from your own data.</p>
+  <ul class="tab-facts"><li>About 50 minutes</li><li>Interactive validity–reliability tree</li><li>Three calculators</li><li>Full worked example with code</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>explain every type of validity and reliability, with an economics example and a way to measure it;</li>
+      <li>assess a questionnaire's reliability (alpha, omega/CR) and validity (content, convergent, discriminant, criterion);</li>
+      <li>report the evidence in Chapter 3 without the common mistakes.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="e4-what">What validity and reliability mean</h2>
+  <dl class="defs">
+    <dt>Validity</dt><dd>Are we measuring what we intend to measure, and are the interpretations and conclusions we draw justified? Modern measurement theory treats validity as the degree to which evidence and theory support particular interpretations of scores for particular purposes (Messick, 1995). So the rigorous question is not “is this questionnaire valid?” but “are these scores valid for this interpretation, in this population, for this purpose?”</dd>
+    <dt>Reliability</dt><dd>How consistent, stable or precise are the measurements under conditions where they should agree?</dd>
+  </dl>
+
+  <figure class="fig wide">
+    <div class="targets">
+      <div class="target-cell">
+        <svg viewBox="0 0 200 200" class="target" aria-hidden="true"><g class="rings"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="32"/><circle cx="100" cy="100" r="13"/></g><g class="dots"><circle cx="142" cy="44" r="5.5"/><circle cx="152" cy="52" r="5.5"/><circle cx="138" cy="56" r="5.5"/><circle cx="148" cy="38" r="5.5"/><circle cx="157" cy="44" r="5.5"/><circle cx="145" cy="62" r="5.5"/></g></svg>
+        <p><strong>Reliable, not valid</strong><br>Consistent but systematically off target</p>
+      </div>
+      <div class="target-cell">
+        <svg viewBox="0 0 200 200" class="target" aria-hidden="true"><g class="rings"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="32"/><circle cx="100" cy="100" r="13"/></g><g class="dots"><circle cx="40" cy="70" r="5.5"/><circle cx="150" cy="60" r="5.5"/><circle cx="62" cy="150" r="5.5"/><circle cx="160" cy="138" r="5.5"/><circle cx="100" cy="30" r="5.5"/><circle cx="120" cy="165" r="5.5"/><circle cx="35" cy="118" r="5.5"/></g></svg>
+        <p><strong>Low reliability</strong><br>Scattered around the target: right on average, unreliable each time</p>
+      </div>
+      <div class="target-cell">
+        <svg viewBox="0 0 200 200" class="target" aria-hidden="true"><g class="rings"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="32"/><circle cx="100" cy="100" r="13"/></g><g class="dots"><circle cx="30" cy="62" r="5.5"/><circle cx="70" cy="34" r="5.5"/><circle cx="48" cy="96" r="5.5"/><circle cx="96" cy="58" r="5.5"/><circle cx="24" cy="128" r="5.5"/><circle cx="82" cy="20" r="5.5"/></g></svg>
+        <p><strong>Not reliable, not valid</strong><br>Scattered and off target</p>
+      </div>
+      <div class="target-cell">
+        <svg viewBox="0 0 200 200" class="target" aria-hidden="true"><g class="rings"><circle cx="100" cy="100" r="92"/><circle cx="100" cy="100" r="72"/><circle cx="100" cy="100" r="52"/><circle cx="100" cy="100" r="32"/><circle cx="100" cy="100" r="13"/></g><g class="dots"><circle cx="97" cy="97" r="5.5"/><circle cx="106" cy="102" r="5.5"/><circle cx="99" cy="108" r="5.5"/><circle cx="92" cy="104" r="5.5"/><circle cx="104" cy="93" r="5.5"/></g></svg>
+        <p><strong>Reliable and valid</strong><br>Consistent and on target</p>
+      </div>
+    </div>
+    <figcaption><b>Figure E4.1.</b> Reliability and validity as shots at a target. The centre is the true value of the construct; each dot is one measurement. Redrawn for this guide.</figcaption>
+  </figure>
+
+  <p>The same idea with numbers: an object truly weighs 70 kg, and four scales each weigh it four times.</p>
+  <table class="bt">
+    <caption><b>Table E4.1.</b> Random and systematic measurement error</caption>
+    <thead><tr><th>Scale</th><th>Readings (kg)</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>A</td><td>70.0, 70.1, 69.9, 70.0</td><td>Accurate and consistent</td></tr>
+      <tr><td>B</td><td>75.0, 75.1, 74.9, 75.0</td><td>Consistent but systematically wrong: reliable, not valid</td></tr>
+      <tr><td>C</td><td>67, 73, 69, 72</td><td>Varies around the correct value: poorly reliable</td></tr>
+      <tr><td>D</td><td>75, 78, 73, 77</td><td>Both biased and variable</td></tr>
+    </tbody>
+  </table>
+  <p><strong>Random error</strong> (distraction, inconsistent interpretation, changing conditions) makes measurements fluctuate and mainly threatens <em>reliability</em>. <strong>Systematic error</strong> (consistently overstating income; a miscalibrated instrument; items that capture a different concept) pushes measurements one way and mainly threatens <em>validity</em>, possibly alongside high reliability. Both can happen at once.</p>
+
+  <h2 id="e4-broader">Validity in the wider research context</h2>
+  <p>Measurement validity is one of several kinds of validity a thesis must address.</p>
+  <table class="bt">
+    <caption><b>Table E4.2.</b> Dimensions of validity</caption>
+    <thead><tr><th>Dimension</th><th>Central question</th><th>Economics example</th></tr></thead>
+    <tbody>
+      <tr><td>Measurement or construct validity</td><td>Do the variables measure the theoretical constructs?</td><td>Does the questionnaire capture financial literacy rather than financial confidence?</td></tr>
+      <tr><td>Internal validity</td><td>Is the estimated causal relationship credible?</td><td>Does training raise wages, or are abler workers more likely to be trained? (<a href="#a2">A2</a>)</td></tr>
+      <tr><td>External validity</td><td>Do findings apply beyond the study setting?</td><td>Can a study of one university's students represent all Malaysian students?</td></tr>
+      <tr><td>Statistical conclusion validity</td><td>Are the statistical inferences justified?</td><td>Were standard errors appropriate and power sufficient? (<a href="#d4">D4</a>)</td></tr>
+      <tr><td>Ecological validity</td><td>Do the conditions resemble real settings?</td><td>Do hypothetical purchase choices reflect actual purchases?</td></tr>
+    </tbody>
+  </table>
+  <p>A study can have excellent measurement validity and reliability yet poor internal validity, if its identification strategy is weak. Similarly, measurement <em>reliability</em> is not the same as <em>reproducibility</em> (getting the same results from the same data and code) or <em>replicability</em> (finding the same result in new data). In qualitative research, quality is usually judged through trustworthiness: credibility, transferability, dependability and confirmability.</p>
+
+  <h2 id="e4-tree">Every type of validity and reliability</h2>
+  <p>The traditional classification (adapted from Sekaran and Bougie, 2016, Figure 12.1) splits the “goodness” of measures into reliability and validity. Select any box to see its meaning, an economics example, how to assess it, and a guideline.</p>
+  <div class="vr-layout wide">
+    <div class="vr-tree" role="tree" aria-label="Types of reliability and validity">
+      <ul>
+        <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn vr-root" data-node="goodness">Goodness of data</button>
+          <ul role="group">
+            <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn vr-l1" data-node="reliability">Reliability</button>
+              <ul role="group">
+                <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn" data-node="stability">Stability</button>
+                  <ul role="group">
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="testretest">Test–retest reliability</button></li>
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="parallel">Parallel-form reliability</button></li>
+                  </ul></li>
+                <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn" data-node="consistency">Consistency</button>
+                  <ul role="group">
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="interitem">Inter-item consistency reliability</button></li>
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="splithalf">Split-half reliability</button></li>
+                  </ul></li>
+              </ul></li>
+            <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn vr-l1" data-node="validity">Validity (are we measuring the right thing?)</button>
+              <ul role="group">
+                <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn" data-node="content">Logical validity (content)</button>
+                  <ul role="group"><li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="face">Face validity</button></li></ul></li>
+                <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn" data-node="criterion">Criterion-related validity</button>
+                  <ul role="group">
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="predictive">Predictive</button></li>
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="concurrent">Concurrent</button></li>
+                  </ul></li>
+                <li role="treeitem" aria-expanded="true"><button type="button" class="vr-btn" data-node="construct">Congruent validity (construct)</button>
+                  <ul role="group">
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="convergent">Convergent</button></li>
+                    <li role="treeitem"><button type="button" class="vr-btn vr-leaf" data-node="discriminant">Discriminant</button></li>
+                  </ul></li>
+              </ul></li>
+          </ul></li>
+      </ul>
+    </div>
+    <div class="vr-detail" aria-live="polite">
+      <div class="vr-info" data-info="goodness">
+        <h3>Goodness of data</h3>
+        <p>Before data are analysed, the measures that produced them must be shown to be good: <strong>reliable</strong> (consistent) and <strong>valid</strong> (measuring the intended concept). Reliability is necessary for validity but not sufficient.</p>
+        <p class="small">Select a box on the left for detail.</p>
+      </div>
+      <div class="vr-info" data-info="reliability" hidden>
+        <h3>Reliability</h3>
+        <p><strong>Question:</strong> do the measurements agree with themselves, over time (stability) and across items (consistency)?</p>
+        <p>A reliable measure of perceived financial insecurity gives similar scores when nothing has changed, and its items move together.</p>
+        <p class="small">Reliability is a property of scores in a sample, not of a printed questionnaire. Report it for your data.</p>
+      </div>
+      <div class="vr-info" data-info="stability" hidden>
+        <h3>Stability</h3>
+        <p><strong>Question:</strong> does the measure give the same result when the construct has not changed?</p>
+        <p>Assessed by repeating the measurement (test–retest) or by using equivalent versions (parallel forms). Only meaningful for constructs expected to be stable over the interval.</p>
+      </div>
+      <div class="vr-info" data-info="testretest" hidden>
+        <h3>Test–retest reliability</h3>
+        <p><strong>Meaning:</strong> the same respondents complete the same instrument twice, under comparable conditions.</p>
+        <p><strong>Economics example:</strong> 50 students take a financial-knowledge test and retake it two weeks later, with no teaching in between. High agreement is evidence of temporal stability.</p>
+        <p><strong>How to assess:</strong> intraclass correlation coefficient (ICC) for continuous scores (choose the form carefully: Shrout &amp; Fleiss, 1979); weighted kappa for categories. Pearson's r measures association and can stay high even when everyone scores higher the second time.</p>
+        <p><strong>Guideline:</strong> ICC below 0.50 poor, 0.50–0.75 moderate, 0.75–0.90 good, above 0.90 excellent (Koo &amp; Li, 2016).</p>
+        <p class="small">Choose the interval with care: too short and people remember answers; too long and the construct may genuinely change. Financial anxiety may change after a scholarship or a job loss, and that is real change, not unreliability.</p>
+      </div>
+      <div class="vr-info" data-info="parallel" hidden>
+        <h3>Parallel-form reliability</h3>
+        <p><strong>Meaning:</strong> two equivalent versions of an instrument give comparable scores.</p>
+        <p><strong>Economics example:</strong> two versions of a financial-literacy quiz with different numbers in the compound-interest and inflation questions, so that a pre-test and post-test around a workshop do not reward memory.</p>
+        <p><strong>How to assess:</strong> correlation, or agreement, between scores on the two forms in the same respondents.</p>
+        <p class="small">Equivalence is hard to achieve. Check that the forms have similar means and variances.</p>
+      </div>
+      <div class="vr-info" data-info="consistency" hidden>
+        <h3>Consistency</h3>
+        <p><strong>Question:</strong> do the items meant to measure one construct hang together?</p>
+        <p>Assessed by inter-item consistency (Cronbach's alpha, McDonald's omega) and by split-half reliability. Internal consistency is not the same as stability over time.</p>
+      </div>
+      <div class="vr-info" data-info="interitem" hidden>
+        <h3>Inter-item consistency reliability</h3>
+        <p><strong>Meaning:</strong> respondents answer the items of one scale consistently, because the items reflect the same construct.</p>
+        <p><strong>Economics example:</strong> the four perceived-usefulness items in the e-wallet survey give α = 0.86 (worked example).</p>
+        <p><strong>How to assess:</strong> Cronbach's alpha (Cronbach, 1951),
+          \(\alpha = \frac{k}{k-1}\left(1 - \frac{\sum \sigma_i^2}{\sigma_T^2}\right)\); McDonald's omega from a factor model, preferable when loadings differ (McNeish, 2018).</p>
+        <p><strong>Guideline:</strong> 0.70 is the usual minimum for research use, 0.80+ good; above 0.95 may mean redundant items. These are conventions, not laws.</p>
+        <p class="small">Alpha rises with the number of items even when items do not improve; it does not show the scale measures one dimension; and it is not evidence of validity (Sijtsma, 2009). Compute it per scale, never across the whole questionnaire.</p>
+      </div>
+      <div class="vr-info" data-info="splithalf" hidden>
+        <h3>Split-half reliability</h3>
+        <p><strong>Meaning:</strong> scores on two halves of a scale (for example odd and even items) agree.</p>
+        <p><strong>Example:</strong> a ten-question knowledge test split into odd and even questions, with r = 0.70 between the halves.</p>
+        <p><strong>How to assess:</strong> correlate the halves, then correct for halving the length with the Spearman–Brown formula, \(r_{SB} = \frac{2r}{1+r}\): here \(2(0.70)/1.70 = 0.82\).</p>
+        <p class="small">The result depends on how you split. Alpha is the average of all possible split-half coefficients, which is one reason it is reported more often.</p>
+      </div>
+      <div class="vr-info" data-info="validity" hidden>
+        <h3>Validity</h3>
+        <p><strong>Question:</strong> are we measuring the right thing?</p>
+        <p>Traditional textbooks distinguish content, criterion-related and construct validity. Modern theory treats these as different sources of evidence for one validity argument (the AERA, APA and NCME <i>Standards</i>; Messick, 1995). See the five sources of evidence below the tree.</p>
+      </div>
+      <div class="vr-info" data-info="content" hidden>
+        <h3>Logical (content) validity</h3>
+        <p><strong>Meaning:</strong> the items cover the relevant dimensions of the construct, and only those.</p>
+        <p><strong>Economics example:</strong> financial literacy defined as knowledge of interest, inflation, diversification and debt. A questionnaire that asks only about interest omits half the domain (construct under-representation), however well its items are written.</p>
+        <p><strong>How to assess:</strong> a panel of experts rates each item's relevance on a 4-point scale. Item-level CVI = share of experts rating it 3 or 4; scale-level CVI (S-CVI/Ave) = mean of the I-CVIs. Lawshe's (1975) content validity ratio is an alternative.</p>
+        <p><strong>Guideline:</strong> I-CVI ≥ 0.78 with six or more experts; S-CVI/Ave ≥ 0.90 (Polit et al., 2007). Use the CVI calculator in the Calculators tab.</p>
+        <p class="small">Expert agreement supports item content; it does not show respondents understand the items, or that the expected structure holds in the data.</p>
+      </div>
+      <div class="vr-info" data-info="face" hidden>
+        <h3>Face validity</h3>
+        <p><strong>Meaning:</strong> the instrument <em>looks</em> as if it measures the construct, to respondents and lay reviewers.</p>
+        <p><strong>Economics example:</strong> “Using an e-wallet makes my payments more efficient” looks like a usefulness item; “I enjoy shopping with my friends” does not.</p>
+        <p><strong>How to assess:</strong> ask a few target respondents and reviewers whether items seem understandable, relevant and appropriate; cognitive interviews go further.</p>
+        <p class="small">The weakest form of evidence: necessary for cooperation, never sufficient on its own.</p>
+      </div>
+      <div class="vr-info" data-info="criterion" hidden>
+        <h3>Criterion-related validity</h3>
+        <p><strong>Question:</strong> do scores relate as expected to an independently measured outcome (the criterion)?</p>
+        <p>Split into concurrent (criterion measured at the same time) and predictive (criterion measured later). The evidence is only as good as the criterion: monthly spending is not a valid benchmark for financial literacy, because spending also reflects income.</p>
+      </div>
+      <div class="vr-info" data-info="predictive" hidden>
+        <h3>Predictive validity</h3>
+        <p><strong>Meaning:</strong> scores predict a relevant future outcome.</p>
+        <p><strong>Economics example:</strong> an intention-to-use scale collected in March predicts the number of e-wallet transactions recorded over the following three months.</p>
+        <p><strong>How to assess:</strong> correlation or regression of the later criterion on the score; for a binary criterion, classification accuracy or AUC.</p>
+        <p class="small">Prediction is not causation, and attrition between waves can bias the estimate.</p>
+      </div>
+      <div class="vr-info" data-info="concurrent" hidden>
+        <h3>Concurrent validity</h3>
+        <p><strong>Meaning:</strong> scores relate to a criterion measured at about the same time, or distinguish groups known to differ.</p>
+        <p><strong>Economics example:</strong> self-reported e-wallet use compared with the same month's transaction records; a financial-knowledge test on which finance graduates outscore other graduates (known-groups comparison).</p>
+        <p><strong>How to assess:</strong> correlation with the criterion; difference in means between known groups.</p>
+      </div>
+      <div class="vr-info" data-info="construct" hidden>
+        <h3>Congruent (construct) validity</h3>
+        <p><strong>Meaning:</strong> the instrument measures the theoretical construct it claims to, especially a latent one such as trust, confidence or perceived security (Cronbach &amp; Meehl, 1955).</p>
+        <p><strong>How to assess:</strong> factor analysis (EFA when the structure is uncertain, CFA to test a hypothesised structure), plus convergent and discriminant evidence.</p>
+        <p class="small">Passing KMO and Bartlett's tests shows only that the data can be factor-analysed, not that the construct is valid.</p>
+      </div>
+      <div class="vr-info" data-info="convergent" hidden>
+        <h3>Convergent validity</h3>
+        <p><strong>Meaning:</strong> measures that should be related are related: a scale's items load strongly on their factor, and the score correlates with other measures of the same construct.</p>
+        <p><strong>Economics example:</strong> students who score high on perceived e-wallet security also score high on an established scale of trust in digital-payment security.</p>
+        <p><strong>How to assess:</strong> standardised loadings; average variance extracted, \(AVE = \overline{\lambda^2}\); composite reliability, \(CR = (\sum\lambda)^2 / [(\sum\lambda)^2 + \sum(1-\lambda^2)]\) (Fornell &amp; Larcker, 1981).</p>
+        <p><strong>Guideline:</strong> loadings ≥ 0.70, AVE ≥ 0.50, CR ≥ 0.70, as rules of thumb, not laws. CR is really a reliability coefficient.</p>
+      </div>
+      <div class="vr-info" data-info="discriminant" hidden>
+        <h3>Discriminant validity</h3>
+        <p><strong>Meaning:</strong> measures of constructs that should differ do differ (Campbell &amp; Fiske, 1959).</p>
+        <p><strong>Economics example:</strong> perceived usefulness (“e-wallets help me pay efficiently”) and ease of use (“learning to use an e-wallet is easy”) are related but distinct; their scales should not collapse into one factor.</p>
+        <p><strong>How to assess:</strong> Fornell–Larcker criterion (√AVE of each construct exceeds its correlations with other constructs); heterotrait–monotrait ratio (HTMT), which detects problems the Fornell–Larcker criterion misses (Henseler et al., 2015); cross-loadings.</p>
+        <p><strong>Guideline:</strong> HTMT below 0.85 (strict) or 0.90 (lenient).</p>
+      </div>
+    </div>
+  </div>
+
+  <h2 id="e4-aera">The modern view: five sources of validity evidence</h2>
+  <table class="bt">
+    <caption><b>Table E4.3.</b> Sources of validity evidence (Standards for Educational and Psychological Testing, 2014)</caption>
+    <thead><tr><th>Source of evidence</th><th>How it applies to a questionnaire</th></tr></thead>
+    <tbody>
+      <tr><td>Test content</td><td>Are the questions relevant and sufficiently comprehensive? (expert review, CVI)</td></tr>
+      <tr><td>Response processes</td><td>Do respondents understand and answer as intended? (cognitive interviews)</td></tr>
+      <tr><td>Internal structure</td><td>Do relationships among items fit the proposed dimensions? (EFA, CFA, reliability)</td></tr>
+      <tr><td>Relations to other variables</td><td>Are relationships with other measures, behaviours and criteria plausible? (convergent, discriminant, criterion evidence)</td></tr>
+      <tr><td>Consequences of testing</td><td>What are the intended and unintended consequences of using the scores?</td></tr>
+    </tbody>
+  </table>
+  <p>Validation accumulates evidence rather than passing one statistical test. Response processes deserve special attention: a student may read “monthly income” as their parents' household income when you meant their own income from all sources. An expert would accept the item; only a cognitive interview reveals the misunderstanding.</p>
+  <aside class="ex-note is-query"><b>Examiner:</b> Your financial-confidence items have α = 0.95. Do they measure financial <em>literacy</em>? High reliability does not make a scale valid for its intended construct.</aside>
+
+  <h2 id="e4-which">Which evidence for which kind of variable?</h2>
+  <table class="bt">
+    <caption><b>Table E4.4.</b> Matching validity and reliability evidence to the variable</caption>
+    <thead><tr><th>Variable or instrument</th><th>Validity evidence to prioritise</th><th>Reliability</th></tr></thead>
+    <tbody>
+      <tr><td>Demographics (age, sex, faculty)</td><td>Clear definitions and coding; factual accuracy</td><td>Data verification</td></tr>
+      <tr><td>A factual measure (monthly income)</td><td>Reference period; comparison with records if possible</td><td>Repeatability if stable</td></tr>
+      <tr><td>Objective knowledge test</td><td>Content coverage; item difficulty; criterion evidence</td><td>KR-20 or alpha (with care); test–retest</td></tr>
+      <tr><td>Multi-item attitude scale</td><td>Content; response processes; factor structure; convergent and discriminant</td><td>Alpha, omega; test–retest as appropriate</td></tr>
+      <tr><td>Formative index (asset-based wealth index)</td><td>Content coverage; indicator justification; criterion evidence</td><td>Alpha generally inappropriate</td></tr>
+      <tr><td>Open-ended answers that are coded</td><td>Coding validity; meaningful categories</td><td>Inter-rater agreement (Cohen's kappa; Cohen, 1960)</td></tr>
+    </tbody>
+  </table>
+  <p>Not every index should be judged by alpha. In a <strong>reflective</strong> model the construct causes its indicators, so they should correlate (perceived security drives answers to the security items). In a <strong>formative</strong> index the indicators define the construct and need not correlate: home ownership and vehicle ownership in a wealth index. Using alpha to validate a formative index is a conceptual error (MacKenzie et al., 2005).</p>
+
+  <h2 id="e4-econ">Why reliability matters for your regression</h2>
+  <p>If the true model is \(Y_i = \alpha + \beta X_i^* + \varepsilon_i\) but you observe \(X_i = X_i^* + u_i\) with classical measurement error, OLS converges to</p>
+  <div class="formula">$$\operatorname{plim}\hat\beta = \beta\,\frac{\operatorname{Var}(X^*)}{\operatorname{Var}(X^*) + \operatorname{Var}(u)}$$</div>
+  <p>The fraction is the reliability ratio. With reliability 0.70, a true coefficient of 0.50 is estimated near 0.35: attenuation bias. The result holds for classical error in a regressor; non-classical errors can bias in other directions, and error in the dependent variable has different consequences. Measurement reliability is not just a psychometric nicety; it changes your coefficients (Bound &amp; Krueger, 1991, show how large reporting error is in survey earnings).</p>
+
+  <h2 id="e4-mistakes">Common mistakes in theses</h2>
+  <table class="bt">
+    <caption><b>Table E4.5.</b> What students write, why it fails, and what to do instead</caption>
+    <thead><tr><th>Common statement or practice</th><th>Why it is a problem</th><th>Better approach</th></tr></thead>
+    <tbody>
+      <tr><td>“Cronbach's alpha exceeds 0.70; therefore the questionnaire is valid.”</td><td>Alpha cannot establish validity.</td><td>Report reliability separately from validity evidence.</td></tr>
+      <tr><td>“The questionnaire was validated by three experts.”</td><td>Expert review is only part of the evidence.</td><td>Say what the experts assessed; add respondent and empirical evidence.</td></tr>
+      <tr><td>“The questionnaire is reliable because it was adopted from a published article.”</td><td>Reliability depends on the population and context.</td><td>Estimate reliability in the current sample.</td></tr>
+      <tr><td>One alpha for the entire questionnaire</td><td>Unrelated constructs and demographics are not one scale.</td><td>Compute coefficients for each scale or subscale.</td></tr>
+      <tr><td>Dropping every item that lowers alpha</td><td>Can destroy content coverage.</td><td>Weigh theoretical relevance and factor structure first.</td></tr>
+      <tr><td>“KMO and Bartlett's test confirm construct validity.”</td><td>They assess factorability only.</td><td>Evaluate factor structure and other evidence.</td></tr>
+      <tr><td>Treating a large sample as proof of validity</td><td>Size cannot fix poor concepts or biased items.</td><td>Improve measurement design and evaluate the instrument.</td></tr>
+      <tr><td>Assuming a validated scale transfers to a new language or population</td><td>Meanings and functioning may differ.</td><td>Check linguistic, cultural and empirical equivalence (measurement invariance).</td></tr>
+    </tbody>
+  </table>
+  <p>Other threats to watch: <strong>social desirability</strong> (overstating saving discipline); <strong>recall bias</strong> (spending over six months; shorter reference periods help); and <strong>common-method bias</strong> when all variables come from one questionnaire at one time. Reduce it with careful design and separated measurement where possible; Harman's single-factor test alone does not show it is absent (Podsakoff et al., 2003). Finally, a valid questionnaire does not make an unrepresentative sample representative: sampling is a separate issue (<a href="#d3">D3</a>).</p>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Reliability is consistency; validity is meaning. Reliable does not mean valid.</li>
+      <li>Collect several kinds of validity evidence (content, response process, structure, relations to other variables) and report reliability per scale, from your own data.</li>
+      <li>Report alpha and omega/CR, AVE and HTMT with their limits; never let one coefficient stand in for validity.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>American Educational Research Association, American Psychological Association, &amp; National Council on Measurement in Education. (2014). <i>Standards for educational and psychological testing</i>. AERA.</li>
+      <li>Bound, J., &amp; Krueger, A. B. (1991). The extent of measurement error in longitudinal earnings data: Do two wrongs make a right? <i>Journal of Labor Economics, 9</i>(1), 1–24.</li>
+      <li>Campbell, D. T., &amp; Fiske, D. W. (1959). Convergent and discriminant validation by the multitrait-multimethod matrix. <i>Psychological Bulletin, 56</i>(2), 81–105.</li>
+      <li>Cohen, J. (1960). A coefficient of agreement for nominal scales. <i>Educational and Psychological Measurement, 20</i>(1), 37–46.</li>
+      <li>Cronbach, L. J. (1951). Coefficient alpha and the internal structure of tests. <i>Psychometrika, 16</i>(3), 297–334.</li>
+      <li>Cronbach, L. J., &amp; Meehl, P. E. (1955). Construct validity in psychological tests. <i>Psychological Bulletin, 52</i>(4), 281–302.</li>
+      <li>Fornell, C., &amp; Larcker, D. F. (1981). Evaluating structural equation models with unobservable variables and measurement error. <i>Journal of Marketing Research, 18</i>(1), 39–50.</li>
+      <li>Henseler, J., Ringle, C. M., &amp; Sarstedt, M. (2015). A new criterion for assessing discriminant validity in variance-based structural equation modeling. <i>Journal of the Academy of Marketing Science, 43</i>(1), 115–135.</li>
+      <li>Koo, T. K., &amp; Li, M. Y. (2016). A guideline of selecting and reporting intraclass correlation coefficients for reliability research. <i>Journal of Chiropractic Medicine, 15</i>(2), 155–163.</li>
+      <li>Lawshe, C. H. (1975). A quantitative approach to content validity. <i>Personnel Psychology, 28</i>(4), 563–575.</li>
+      <li>MacKenzie, S. B., Podsakoff, P. M., &amp; Jarvis, C. B. (2005). The problem of measurement model misspecification in behavioral and organizational research and some recommended solutions. <i>Journal of Applied Psychology, 90</i>(4), 710–730.</li>
+      <li>McNeish, D. (2018). Thanks coefficient alpha, we'll take it from here. <i>Psychological Methods, 23</i>(3), 412–433.</li>
+      <li>Messick, S. (1995). Validity of psychological assessment. <i>American Psychologist, 50</i>(9), 741–749.</li>
+      <li>Podsakoff, P. M., MacKenzie, S. B., Lee, J.-Y., &amp; Podsakoff, N. P. (2003). Common method biases in behavioral research. <i>Journal of Applied Psychology, 88</i>(5), 879–903.</li>
+      <li>Polit, D. F., Beck, C. T., &amp; Owen, S. V. (2007). Is the CVI an acceptable indicator of content validity? Appraisal and recommendations. <i>Research in Nursing &amp; Health, 30</i>(4), 459–467.</li>
+      <li>Sekaran, U., &amp; Bougie, R. (2016). <i>Research methods for business: A skill-building approach</i> (7th ed.). Wiley.</li>
+      <li>Shrout, P. E., &amp; Fleiss, J. L. (1979). Intraclass correlations: Uses in assessing rater reliability. <i>Psychological Bulletin, 86</i>(2), 420–428.</li>
+      <li>Sijtsma, K. (2009). On the use, the misuse, and the very limited usefulness of Cronbach's alpha. <i>Psychometrika, 74</i>(1), 107–120.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="calculators" data-label="Calculators">
+  <h2 id="e4-calc-alpha">How the number of items moves alpha</h2>
+  <p>For standardised, equally intercorrelated items, \(\alpha = \dfrac{k\bar r}{1 + (k-1)\bar r}\). Hold the average inter-item correlation fixed and add items: alpha rises although no pair of items has improved.</p>
+  <div class="calc" data-calc="alpha">
+    <div class="calc-grid">
+      <div class="field"><label for="al-k">Number of items k</label><div class="range-row"><input id="al-k" type="range" min="2" max="20" step="1" value="4"><output id="al-k-out">4</output></div></div>
+      <div class="field"><label for="al-r">Average inter-item correlation r̄</label><div class="range-row"><input id="al-r" type="range" min="0.05" max="0.9" step="0.05" value="0.5"><output id="al-r-out">0.50</output></div></div>
+    </div>
+    <div class="calc-out"><div class="result"><span class="r-val" id="al-out">—</span><span class="r-lab">Cronbach's alpha</span></div></div>
+    <p class="calc-explain" id="al-explain"></p>
+  </div>
+
+  <h2 id="e4-calc-cvi">Content validity index</h2>
+  <p>For each item, enter how many experts rated it 3 (“quite relevant”) or 4 (“highly relevant”) on the 4-point relevance scale.</p>
+  <div class="calc" data-calc="cvi">
+    <div class="calc-grid">
+      <div class="field"><label for="cvi-n">Number of experts</label><input id="cvi-n" type="number" min="2" max="20" step="1" value="5"></div>
+      <div class="field"><label for="cvi-items">Experts rating each item 3 or 4 (comma-separated, one number per item)</label><input id="cvi-items" type="text" value="5, 4, 5, 3, 5, 4"></div>
+    </div>
+    <div class="calc-out">
+      <div class="result"><span class="r-val" id="cvi-ave">—</span><span class="r-lab">S-CVI/Ave (mean of item CVIs)</span></div>
+      <div class="result"><span class="r-val" id="cvi-ua">—</span><span class="r-lab">S-CVI/UA (share of items all experts accepted)</span></div>
+    </div>
+    <p class="calc-explain" id="cvi-explain" aria-live="polite"></p>
+  </div>
+
+  <h2 id="e4-calc-att">Attenuation: what unreliability does to a coefficient</h2>
+  <div class="calc" data-calc="atten">
+    <div class="calc-grid">
+      <div class="field"><label for="at-b">True coefficient β</label><input id="at-b" type="number" step="0.05" value="0.5"></div>
+      <div class="field"><label for="at-rel">Reliability of the regressor</label><div class="range-row"><input id="at-rel" type="range" min="0.3" max="1" step="0.05" value="0.7"><output id="at-rel-out">0.70</output></div></div>
+    </div>
+    <div class="calc-out"><div class="result"><span class="r-val" id="at-out">—</span><span class="r-lab">what OLS converges to</span></div></div>
+  </div>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="e4-ex">Worked example: assessing the e-wallet scales</h2>
+  <p>Three reflective constructs, all five-point agreement items, 400 respondents (hypothetical). Computed with <code>04_reliability_validity.do</code> and its notebook.</p>
+  <table class="bt">
+    <caption><b>Table E4.6.</b> Reliability and convergent validity</caption>
+    <thead><tr><th>Construct</th><th class="num">Items</th><th class="num">Loadings</th><th class="num">Cronbach's α</th><th class="num">CR (ω)</th><th class="num">AVE</th><th class="num">√AVE</th></tr></thead>
+    <tbody>
+      <tr><td>Perceived usefulness (PU)</td><td class="num">4</td><td class="num">0.75–0.80</td><td class="num">0.856</td><td class="num">0.856</td><td class="num">0.597</td><td class="num">0.773</td></tr>
+      <tr><td>Perceived security (PS)</td><td class="num">4</td><td class="num">0.78–0.79</td><td class="num">0.863</td><td class="num">0.863</td><td class="num">0.612</td><td class="num">0.782</td></tr>
+      <tr><td>Ease of use (EOU)</td><td class="num">3</td><td class="num">0.70–0.75</td><td class="num">0.775</td><td class="num">0.775</td><td class="num">0.535</td><td class="num">0.731</td></tr>
+    </tbody>
+  </table>
+  <table class="bt narrow">
+    <caption><b>Table E4.7.</b> Discriminant validity: latent correlations (Fornell–Larcker) and HTMT</caption>
+    <thead><tr><th>Pair</th><th class="num">Latent correlation</th><th class="num">Smaller √AVE of the pair</th><th class="num">HTMT</th></tr></thead>
+    <tbody>
+      <tr><td>PU – PS</td><td class="num">0.447</td><td class="num">0.773</td><td class="num">0.449</td></tr>
+      <tr><td>PU – EOU</td><td class="num">0.498</td><td class="num">0.731</td><td class="num">0.501</td></tr>
+      <tr><td>PS – EOU</td><td class="num">0.376</td><td class="num">0.731</td><td class="num">0.379</td></tr>
+    </tbody>
+  </table>
+  <p class="table-note">Overall KMO = 0.86. Every √AVE exceeds the construct's correlations, and every HTMT is well below 0.85. All values are from simulated teaching data.</p>
+  <p><strong>Reading the results.</strong> All three scales meet the conventional benchmarks for reliability (α and CR above 0.70) and convergent validity (AVE above 0.50), and the constructs are clearly distinct. These numbers alone would <em>not</em> establish validity: Chapter 3 should also report the content review, the cognitive pretest and the adaptation from Davis (1989) (<a href="#e2">E2</a>).</p>
+  <x-listing title="Computing the evidence">
+<x-stata file="04_reliability_validity.do">
+use "$data/ewallet_survey_clean.dta", clear
+
+* internal consistency, item by item
+alpha PU1-PU4, item
+alpha PS1-PS4, item
+alpha EOU1-EOU3, item
+
+* structure: do the 11 items form three factors?
+factor PU1-PU4 PS1-PS4 EOU1-EOU3, ml factors(3)
+rotate, promax
+estat kmo
+
+* CR and AVE from one-factor CFAs (program crave defined in the do-file)
+crave PU1-PU4
+display "CR = " r(cr) "   AVE = " r(ave)
+
+* Fornell-Larcker: latent correlations from a joint CFA
+sem (Usefulness -> PU1-PU4) (Security -> PS1-PS4) (EaseOfUse -> EOU1-EOU3), ///
+    latent(Usefulness Security EaseOfUse) nocapslatent standardized nolog
+</x-stata>
+<x-python file="04_reliability_validity.ipynb">
+from statsmodels.multivariate.factor import Factor
+
+def cronbach_alpha(d):
+    C = d.cov()
+    k = C.shape[0]
+    return k / (k - 1) * (1 - np.trace(C.values) / C.values.sum())
+
+for name, cols in constructs.items():
+    lam = np.abs(Factor(df[cols].dropna(), n_factor=1, method="ml").fit().loadings[:, 0])
+    cr = lam.sum()**2 / (lam.sum()**2 + (1 - lam**2).sum())
+    print(name, round(cronbach_alpha(df[cols]), 3), round(cr, 3), round((lam**2).mean(), 3))
+
+# HTMT = mean heterotrait r / sqrt(mean monotrait r of i x of j)
+Rall = df[items].corr()
+</x-python>
+  </x-listing>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="e4-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.3.2 Reliability and validity of the measures</h3>
+      <p><span class="anno">Content validity was assessed by three experts in consumer finance and survey methodology, who rated each adapted item's relevance; all item-level CVIs were at least 0.80. Cognitive interviews with five students led to the rewording of two items.</span><span class="anno-n">1</span> <span class="anno">In the main sample, a confirmatory factor analysis supported the three-factor structure, with all standardised loadings between 0.70 and 0.80.</span><span class="anno-n">2</span> <span class="anno">Reliability was acceptable for every scale: Cronbach's α was 0.86 (PU), 0.86 (PS) and 0.77 (EOU), and composite reliability took the same values. Average variance extracted exceeded 0.50 for all three constructs, supporting convergent validity.</span><span class="anno-n">3</span> <span class="anno">Discriminant validity was supported by both the Fornell–Larcker criterion, with each √AVE above the construct's correlations, and the HTMT ratio, all below 0.51 against a threshold of 0.85 (Henseler et al., 2015).</span><span class="anno-n">4</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>Content and response-process evidence come first, before any statistics.</li>
+      <li>Internal structure.</li>
+      <li>Reliability per scale, and convergent validity, kept separate.</li>
+      <li>Discriminant validity by two criteria, with the source of the threshold.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Present the figures in a table; the prose interprets them.</figcaption>
+  </figure>
+  <h3 id="e4-levels">How much validation is enough?</h3>
+  <table class="bt">
+    <caption><b>Table E4.8.</b> Proportionate expectations</caption>
+    <thead><tr><th>Level</th><th>Suitable expectation</th></tr></thead>
+    <tbody>
+      <tr><td>Undergraduate project</td><td>Clear constructs, literature-based items, supervisor review, pretest, pilot, basic reliability checks</td></tr>
+      <tr><td>Master's dissertation</td><td>Stronger theoretical justification, documented content review, factor analysis and reliability where applicable</td></tr>
+      <tr><td>PhD thesis or journal article</td><td>A validity argument proportionate to the instrument: documented provenance, measurement models, reliability evidence, robustness checks, transparent limitations</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="e4-ws">Worksheet E4</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>A student measures “financial literacy” with three items: “I am confident managing my finances”, “I am good at financial decisions”, “I understand how to manage money”. Alpha is 0.95. Evaluate the measure's reliability and validity. <span class="ws-marks">(5 marks)</span></p>
+      <x-draft key="e4-q1"></x-draft>
+      <x-answer><p>Reliability is very high, possibly too high (near-redundant items). But the items measure financial <em>confidence</em> (self-assessed competence), not financial literacy as objective knowledge, so content and construct validity are poor for the intended construct. A better measure would test knowledge of interest, inflation and diversification (Lusardi &amp; Mitchell, 2014). The case shows that high reliability does not imply validity.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Using the CVI calculator: six experts rate five items; the numbers rating each item 3 or 4 are 6, 6, 5, 4, 6. Compute the I-CVIs, S-CVI/Ave and S-CVI/UA, and decide which item to revise. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="e4-q2"></x-draft>
+      <x-answer><p>I-CVIs: 1.00, 1.00, 0.83, 0.67, 1.00. S-CVI/Ave = 4.50/5 = 0.90. S-CVI/UA = 3/5 = 0.60 (items with I-CVI = 1). Item 4 (0.67) is below the 0.78 guideline for six or more experts (Polit et al., 2007): revise or replace it, then ask the experts again.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Explain why calculating Cronbach's alpha for an asset-based wealth index (house, car, motorcycle, fridge, internet) is inappropriate, and say how you would support its validity instead. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="e4-q3"></x-draft>
+      <x-answer><p>The index is formative: the assets jointly define wealth and need not be correlated (a household may own a car but no motorcycle), so low inter-item correlation is not a defect, and alpha assumes a reflective model. Support validity with content coverage (the assets that matter for wealth in Malaysia), justification of indicators and weights (for example, principal components), and criterion evidence such as correlation with reported income or expenditure.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A two-week test–retest of a financial-anxiety scale gives Pearson r = 0.85, but the mean rose by 0.6 points because exams started in week two. What does this tell you, and which statistic would be better? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="e4-q3b"></x-draft>
+      <x-answer><p>Pearson r shows that respondents kept their rank order, but it ignores the systematic shift in level, which here reflects a real change in anxiety (exams), not unreliability. An absolute-agreement ICC would be lower and more informative about agreement; better still, choose a retest interval with no expected change, since anxiety is not stable across exam periods.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="e4-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. A bathroom scale reads 75 kg every time for a 70 kg person. It is…</legend>
+      <label class="opt"><input type="radio" name="e4q1" data-correct><span>reliable but not valid<span class="why">Yes: consistent, systematically wrong.</span></span></label>
+      <label class="opt"><input type="radio" name="e4q1"><span>valid but not reliable<span class="why">It is consistent, so it is reliable.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. HTMT is used to assess…</legend>
+      <label class="opt"><input type="radio" name="e4q2"><span>internal consistency<span class="why">That is alpha or omega.</span></span></label>
+      <label class="opt"><input type="radio" name="e4q2" data-correct><span>discriminant validity<span class="why">Yes (Henseler et al., 2015).</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Intention scores predicting transactions over the next three months is evidence of…</legend>
+      <label class="opt"><input type="radio" name="e4q3" data-correct><span>predictive validity<span class="why">Yes: criterion measured later.</span></span></label>
+      <label class="opt"><input type="radio" name="e4q3"><span>face validity<span class="why">Face validity is about appearance.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>4. AVE ≥ 0.50 is a benchmark for…</legend>
+      <label class="opt"><input type="radio" name="e4q4" data-correct><span>convergent validity<span class="why">Yes: on average, the factor explains at least half the indicators' variance.</span></span></label>
+      <label class="opt"><input type="radio" name="e4q4"><span>content validity<span class="why">Content validity is judged by experts, not AVE.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>5. Classical measurement error in a regressor with reliability 0.6 makes OLS…</legend>
+      <label class="opt"><input type="radio" name="e4q5" data-correct><span>converge to 0.6 × β (attenuation towards zero)<span class="why">Yes.</span></span></label>
+      <label class="opt"><input type="radio" name="e4q5"><span>unbiased but less precise<span class="why">Error in X biases the slope; error in Y would only reduce precision.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

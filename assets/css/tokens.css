@@ -1,0 +1,161 @@
+/* ==========================================================================
+   Design tokens — "the bound thesis"
+   Navy buckram cover (rail), gold foil, ivory pages, examiner's red pen.
+   Every colour and size in the site comes from here.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/source-sans-3-wght-normal.woff2") format("woff2");
+  font-weight: 200 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Source Sans 3";
+  src: url("../fonts/source-sans-3-wght-italic.woff2") format("woff2");
+  font-weight: 200 900; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source-serif-4-opsz-normal.woff2") format("woff2");
+  font-weight: 200 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../fonts/source-serif-4-opsz-italic.woff2") format("woff2");
+  font-weight: 200 900; font-style: italic; font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../fonts/jetbrains-mono-wght-normal.woff2") format("woff2");
+  font-weight: 100 800; font-style: normal; font-display: swap;
+}
+
+:root {
+  /* ---- type families ---------------------------------------------------- */
+  --font-display: "KaTeX_Main", "Latin Modern Roman", "CMU Serif", "Source Serif 4", Georgia, serif; /* Computer Modern: the LaTeX thesis voice */
+  --font-body: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-page: "Source Serif 4", Georgia, "Times New Roman", serif; /* thesis-page specimens */
+  --font-code: "JetBrains Mono", Consolas, "Courier New", monospace;
+
+  /* ---- type scale (rem = the reader's chosen base size) ------------------
+     html font-size is the base: 20px desktop, 19px tablet, 18px phone,
+     adjustable 18–28px. Nothing renders below 17px. */
+  --fs-min: 17px;
+  --fs-small: max(var(--fs-min), 0.875rem);
+  --fs-body: 1rem;
+  --fs-lede: 1.15rem;
+  --fs-h4: 1.1rem;
+  --fs-h3: 1.35rem;
+  --fs-h2: 1.8rem;
+  --fs-h1: clamp(2.1rem, 1.4rem + 2.2vw, 2.6rem);
+  --fs-display: clamp(2.4rem, 1.5rem + 3vw, 3.4rem);
+  --fs-code: max(var(--fs-min), 0.9rem);
+  --fs-table: max(var(--fs-min), 0.92rem);
+
+  --lh-body: 1.7;
+  --lh-tight: 1.18;
+  --measure: 68ch;
+
+  /* ---- space (one rhythm) ----------------------------------------------- */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+
+  /* ---- light theme: ivory pages ----------------------------------------- */
+  --paper: #FBF8F1;          /* page ground */
+  --paper-sunk: #F2EDE1;     /* listings, form wells */
+  --paper-raised: #FFFDF8;   /* thesis-page specimen sheet */
+  --ink: #1C2541;            /* body text, 14.2:1 */
+  --ink-2: #3D4560;          /* secondary text, 8.9:1 */
+  --rule: #1C2541;           /* booktabs heavy rules */
+  --hairline: #D8D0BF;       /* light rules, borders */
+  --pen: #8A1E2C;            /* examiner's red pen: links, marks, active, 8.6:1 */
+  --pen-wash: #F5E3E1;       /* red-pen tint for wrong answers */
+  --highlight: #F3DE9A;      /* highlighter behind key terms */
+  --correct: #285A40;        /* correct-answer text, AAA */
+  --correct-wash: #E1EEE4;
+  --focus: #8A1E2C;
+  --shadow: 0 1px 2px rgb(28 37 65 / 0.06), 0 8px 24px -12px rgb(28 37 65 / 0.18);
+
+  /* ---- the bound cover (navigation rail) -------------------------------- */
+  --buckram: #1B2340;
+  --buckram-hover: #232D52;
+  --buckram-active: #2A3560;
+  --foil: #D9B76C;           /* gold foil, 8.0:1 on buckram */
+  --foil-dim: #B7A57E;       /* group labels, 6.4:1 */
+  --cover-ink: #EFE8D8;      /* rail text, 12.6:1 */
+
+  /* code highlighting (Stata / Python) */
+  --code-kw: #8A1E2C;
+  --code-str: #285A40;
+  --code-num: #6A4A00;
+  --code-com: #5A6178;
+  --code-fn: #1F3F8F;
+
+  color-scheme: light;
+}
+
+/* ---- dark theme: night reading on the buckram itself -------------------- */
+:root[data-theme="dark"] {
+  --paper: #141A2E;
+  --paper-sunk: #1C2440;
+  --paper-raised: #1A2138;
+  --ink: #EFE8D8;
+  --ink-2: #C8C0AF;
+  --rule: #EFE8D8;
+  --hairline: #39425F;
+  --pen: #F0968A;
+  --pen-wash: #3A2230;
+  --highlight: #5A4A22;
+  --correct: #8FCBA8;
+  --correct-wash: #1D3529;
+  --focus: #F0968A;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 28px -12px rgb(0 0 0 / 0.6);
+  --buckram: #0D1220;
+  --buckram-hover: #151C30;
+  --buckram-active: #1E2742;
+  --foil: #E2C27A;
+  --foil-dim: #BBA67A;
+  --cover-ink: #EFE8D8;
+  --code-kw: #F0968A;
+  --code-str: #8FCBA8;
+  --code-num: #E2C27A;
+  --code-com: #9AA3BC;
+  --code-fn: #9DB8F5;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #141A2E;
+    --paper-sunk: #1C2440;
+    --paper-raised: #1A2138;
+    --ink: #EFE8D8;
+    --ink-2: #C8C0AF;
+    --rule: #EFE8D8;
+    --hairline: #39425F;
+    --pen: #F0968A;
+    --pen-wash: #3A2230;
+    --highlight: #5A4A22;
+    --correct: #8FCBA8;
+    --correct-wash: #1D3529;
+    --focus: #F0968A;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 10px 28px -12px rgb(0 0 0 / 0.6);
+    --buckram: #0D1220;
+    --buckram-hover: #151C30;
+    --buckram-active: #1E2742;
+    --foil: #E2C27A;
+    --foil-dim: #BBA67A;
+    --cover-ink: #EFE8D8;
+    --code-kw: #F0968A;
+    --code-str: #8FCBA8;
+    --code-num: #E2C27A;
+    --code-com: #9AA3BC;
+    --code-fn: #9DB8F5;
+    color-scheme: dark;
+  }
+}

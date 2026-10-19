@@ -1,0 +1,2262 @@
+{
+  "checked": "2026-10-19",
+  "entries": [
+    {
+      "key": "carter2007",
+      "topic": "methodology",
+      "why": "The clearest published statement of how epistemology, methodology and method nest — the backbone of tab A1.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/1049732307306927",
+      "type": "journal-article",
+      "title": "Justifying Knowledge, Justifying Method, Taking Action: Epistemologies, Methodologies, and Methods in Qualitative Research",
+      "journal": "Qualitative Health Research",
+      "year": 2007,
+      "volume": "17",
+      "issue": "10",
+      "pages": "1316-1328",
+      "authors": [
+        {
+          "family": "Carter",
+          "given": "Stacy M."
+        },
+        {
+          "family": "Little",
+          "given": "Miles"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "johnson2004",
+      "topic": "methodology",
+      "why": "Defines mixed-methods research and its pragmatist rationale; useful if your design combines a survey with interviews or FGDs.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.3102/0013189x033007014",
+      "type": "journal-article",
+      "title": "Mixed Methods Research: A Research Paradigm Whose Time Has Come",
+      "journal": "Educational Researcher",
+      "year": 2004,
+      "volume": "33",
+      "issue": "7",
+      "pages": "14-26",
+      "authors": [
+        {
+          "family": "Johnson",
+          "given": "R. Burke"
+        },
+        {
+          "family": "Onwuegbuzie",
+          "given": "Anthony J."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "morgan2007",
+      "topic": "methodology",
+      "why": "Explains paradigms in plain terms and argues for pragmatism as the working philosophy of applied research.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/2345678906292462",
+      "type": "journal-article",
+      "title": "Paradigms Lost and Pragmatism Regained",
+      "journal": "Journal of Mixed Methods Research",
+      "year": 2007,
+      "volume": "1",
+      "issue": "1",
+      "pages": "48-76",
+      "authors": [
+        {
+          "family": "Morgan",
+          "given": "David L."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "angrist2010",
+      "topic": "design",
+      "why": "How design-based identification changed empirical economics; read before writing your model-specification justification.",
+      "status": "verified",
+      "doi": "10.1257/jep.24.2.3",
+      "type": "journal-article",
+      "title": "The Credibility Revolution in Empirical Economics: How Better Research Design is Taking the Con out of Econometrics",
+      "journal": "Journal of Economic Perspectives",
+      "year": 2010,
+      "volume": "24",
+      "issue": "2",
+      "pages": "3-30",
+      "authors": [
+        {
+          "family": "Angrist",
+          "given": "Joshua D"
+        },
+        {
+          "family": "Pischke",
+          "given": "Jörn-Steffen"
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jep.24.2.3",
+        "kind": "Free full text",
+        "oa_status": "closed",
+        "host": "publisher (free to read)"
+      }
+    },
+    {
+      "key": "imbens2009",
+      "topic": "design",
+      "why": "The standard survey of programme-evaluation estimators (matching, DiD, IV, RD) with their identifying assumptions.",
+      "status": "verified",
+      "doi": "10.1257/jel.47.1.5",
+      "type": "journal-article",
+      "title": "Recent Developments in the Econometrics of Program Evaluation",
+      "journal": "Journal of Economic Literature",
+      "year": 2009,
+      "volume": "47",
+      "issue": "1",
+      "pages": "5-86",
+      "authors": [
+        {
+          "family": "Imbens",
+          "given": "Guido W"
+        },
+        {
+          "family": "Wooldridge",
+          "given": "Jeffrey M"
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.aeaweb.org/articles/pdf/doi/10.1257/jel.47.1.5",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "Journal of Economic Literature"
+      }
+    },
+    {
+      "key": "lee2010",
+      "topic": "design",
+      "why": "The practitioner's guide to regression discontinuity — what to report and how to defend an RD design.",
+      "status": "verified",
+      "doi": "10.1257/jel.48.2.281",
+      "type": "journal-article",
+      "title": "Regression Discontinuity Designs in Economics",
+      "journal": "Journal of Economic Literature",
+      "year": 2010,
+      "volume": "48",
+      "issue": "2",
+      "pages": "281-355",
+      "authors": [
+        {
+          "family": "Lee",
+          "given": "David S"
+        },
+        {
+          "family": "Lemieux",
+          "given": "Thomas"
+        }
+      ],
+      "fulltext": {
+        "url": "http://www.nber.org/papers/w14723.pdf",
+        "kind": "PDF",
+        "oa_status": "green",
+        "host": "RePEc: Research Papers in Economics"
+      }
+    },
+    {
+      "key": "kiel1995",
+      "topic": "design",
+      "why": "Source of the pooled cross-section incinerator example used in tab C2 (year81 × nearinc).",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1006/jeem.1995.1016",
+      "type": "journal-article",
+      "title": "House Prices during Siting Decision Stages: The Case of an Incinerator from Rumor through Operation",
+      "journal": "Journal of Environmental Economics and Management",
+      "year": 1995,
+      "volume": "28",
+      "issue": "2",
+      "pages": "241-255",
+      "authors": [
+        {
+          "family": "Kiel",
+          "given": "Katherine A."
+        },
+        {
+          "family": "McClain",
+          "given": "Katherine T."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "williams2006",
+      "topic": "design",
+      "why": "Methodological justification for the partial proportional odds model used in the RQ–method table example.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/1536867x0600600104",
+      "type": "journal-article",
+      "title": "Generalized Ordered Logit/Partial Proportional Odds Models for Ordinal Dependent Variables",
+      "journal": "The Stata Journal: Promoting communications on statistics and Stata",
+      "year": 2006,
+      "volume": "6",
+      "issue": "1",
+      "pages": "58-82",
+      "authors": [
+        {
+          "family": "Williams",
+          "given": "Richard"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "bronze",
+        "tried": [
+          "https://journals.sagepub.com/doi/pdf/10.1177/1536867X0600600104",
+          "http://ageconsearch.umn.edu/record/117557",
+          "https://doi.org/10.1177/1536867x0600600104"
+        ]
+      }
+    },
+    {
+      "key": "christensen2018",
+      "topic": "cleaning",
+      "why": "Why transparent, reproducible data handling (do-files, raw vs clean data) is now expected in economics.",
+      "status": "verified",
+      "doi": "10.1257/jel.20171350",
+      "type": "journal-article",
+      "title": "Transparency, Reproducibility, and the Credibility of Economics Research",
+      "journal": "Journal of Economic Literature",
+      "year": 2018,
+      "volume": "56",
+      "issue": "3",
+      "pages": "920-980",
+      "authors": [
+        {
+          "family": "Christensen",
+          "given": "Garret"
+        },
+        {
+          "family": "Miguel",
+          "given": "Edward"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "hybrid",
+        "tried": [
+          "https://www.aeaweb.org/articles/pdf/doi/10.1257/jel.20171350",
+          "https://doi.org/10.1257/jel.20171350"
+        ]
+      }
+    },
+    {
+      "key": "stevens1946",
+      "topic": "measurement",
+      "why": "The original nominal–ordinal–interval–ratio typology and the statistics each level permits.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1126/science.103.2684.677",
+      "type": "journal-article",
+      "title": "On the Theory of Scales of Measurement",
+      "journal": "Science",
+      "year": 1946,
+      "volume": "103",
+      "issue": "2684",
+      "pages": "677-680",
+      "authors": [
+        {
+          "family": "Stevens",
+          "given": "S. S."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "jamieson2004",
+      "topic": "scales",
+      "why": "A short, much-cited warning about treating Likert items as interval data.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1111/j.1365-2929.2004.02012.x",
+      "type": "journal-article",
+      "title": "Likert scales: how to (ab)use them",
+      "journal": "Medical Education",
+      "year": 2004,
+      "volume": "38",
+      "issue": "12",
+      "pages": "1217-1218",
+      "authors": [
+        {
+          "family": "Jamieson",
+          "given": "Susan"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "carifio2008",
+      "topic": "scales",
+      "why": "The reply to Jamieson: distinguishes Likert items from Likert scales and defends parametric analysis of summated scales.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1111/j.1365-2923.2008.03172.x",
+      "type": "journal-article",
+      "title": "Resolving the 50‐year debate around using and misusing Likert scales",
+      "journal": "Medical Education",
+      "year": 2008,
+      "volume": "42",
+      "issue": "12",
+      "pages": "1150-1152",
+      "authors": [
+        {
+          "family": "Carifio",
+          "given": "James"
+        },
+        {
+          "family": "Perla",
+          "given": "Rocco"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "norman2010",
+      "topic": "scales",
+      "why": "Shows parametric methods are robust with Likert data — the key reference when you run OLS on a scale score.",
+      "status": "verified",
+      "doi": "10.1007/s10459-010-9222-y",
+      "type": "journal-article",
+      "title": "Likert scales, levels of measurement and the “laws” of statistics",
+      "journal": "Advances in Health Sciences Education",
+      "year": 2010,
+      "volume": "15",
+      "issue": "5",
+      "pages": "625-632",
+      "authors": [
+        {
+          "family": "Norman",
+          "given": "Geoff"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "sullivan2013",
+      "topic": "scales",
+      "why": "Two-page practical guide to analysing and reporting Likert-type data.",
+      "status": "verified",
+      "doi": "10.4300/jgme-5-4-18",
+      "type": "journal-article",
+      "title": "Analyzing and Interpreting Data From Likert-Type Scales",
+      "journal": "Journal of Graduate Medical Education",
+      "year": 2013,
+      "volume": "5",
+      "issue": "4",
+      "pages": "541-542",
+      "authors": [
+        {
+          "family": "Sullivan",
+          "given": "Gail M."
+        },
+        {
+          "family": "Artino",
+          "given": "Anthony R."
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/3886444",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "PubMed Central"
+      }
+    },
+    {
+      "key": "revilla2014",
+      "topic": "scales",
+      "why": "Experimental evidence on how many response categories agree–disagree scales should have.",
+      "status": "verified",
+      "doi": "10.1177/0049124113509605",
+      "type": "journal-article",
+      "title": "Choosing the Number of Categories in Agree–Disagree Scales",
+      "journal": "Sociological Methods & Research",
+      "year": 2014,
+      "volume": "43",
+      "issue": "1",
+      "pages": "73-97",
+      "authors": [
+        {
+          "family": "Revilla",
+          "given": "Melanie A."
+        },
+        {
+          "family": "Saris",
+          "given": "Willem E."
+        },
+        {
+          "family": "Krosnick",
+          "given": "Jon A."
+        }
+      ],
+      "fulltext": {
+        "url": "http://hdl.handle.net/10230/28305",
+        "kind": "Free full text",
+        "oa_status": "green",
+        "host": "Repositori digital de la UPF (Universitat Pompeu Fabra)"
+      }
+    },
+    {
+      "key": "preston2000",
+      "topic": "scales",
+      "why": "Compares 2- to 11-point and 101-point rating scales on reliability, validity and respondent preference.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1016/s0001-6918(99)00050-5",
+      "type": "journal-article",
+      "title": "Optimal number of response categories in rating scales: reliability, validity, discriminating power, and respondent preferences",
+      "journal": "Acta Psychologica",
+      "year": 2000,
+      "volume": "104",
+      "issue": "1",
+      "pages": "1-15",
+      "authors": [
+        {
+          "family": "Preston",
+          "given": "Carolyn C"
+        },
+        {
+          "family": "Colman",
+          "given": "Andrew M"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "green",
+        "tried": [
+          "https://figshare.com/articles/journal_contribution/Optimal_Number_of_Response_Categories_in_Rating_Scales_Reliability_Validity_Discriminating_Power_and_Respondent_Preferences/10080995"
+        ]
+      }
+    },
+    {
+      "key": "liddell2018",
+      "topic": "scales",
+      "why": "Shows when treating ordinal outcomes as metric produces wrong conclusions — the case for ordered models.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1016/j.jesp.2018.08.009",
+      "type": "journal-article",
+      "title": "Analyzing ordinal data with metric models: What could possibly go wrong?",
+      "journal": "Journal of Experimental Social Psychology",
+      "year": 2018,
+      "volume": "79",
+      "issue": null,
+      "pages": "328-348",
+      "authors": [
+        {
+          "family": "Liddell",
+          "given": "Torrin M."
+        },
+        {
+          "family": "Kruschke",
+          "given": "John K."
+        }
+      ],
+      "fulltext": {
+        "url": "https://osf.io/9h3et",
+        "kind": "Free full text",
+        "oa_status": "gold",
+        "host": "OSF Preprints (OSF Preprints)"
+      }
+    },
+    {
+      "key": "krejcie1970",
+      "topic": "sampling",
+      "why": "The original sample-size table discussed in tab D4; read it with Lakens (2022).",
+      "status": "verified",
+      "doi": "10.1177/001316447003000308",
+      "type": "journal-article",
+      "title": "Determining Sample Size for Research Activities",
+      "journal": "Educational and Psychological Measurement",
+      "year": 1970,
+      "volume": "30",
+      "issue": "3",
+      "pages": "607-610",
+      "authors": [
+        {
+          "family": "Krejcie",
+          "given": "Robert V."
+        },
+        {
+          "family": "Morgan",
+          "given": "Daryle W."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "cohen1992",
+      "topic": "sampling",
+      "why": "Defines small/medium/large effect sizes and gives sample sizes for 80% power across common tests.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/0033-2909.112.1.155",
+      "type": "journal-article",
+      "title": "A power primer.",
+      "journal": "Psychological Bulletin",
+      "year": 1992,
+      "volume": "112",
+      "issue": "1",
+      "pages": "155-159",
+      "authors": [
+        {
+          "family": "Cohen",
+          "given": "Jacob"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "faul2007",
+      "topic": "sampling",
+      "why": "The G*Power 3 paper — cite it when you report an a priori power analysis.",
+      "status": "verified",
+      "doi": "10.3758/bf03193146",
+      "type": "journal-article",
+      "title": "G*Power 3: A flexible statistical power analysis program for the social, behavioral, and biomedical sciences",
+      "journal": "Behavior Research Methods",
+      "year": 2007,
+      "volume": "39",
+      "issue": "2",
+      "pages": "175-191",
+      "authors": [
+        {
+          "family": "Faul",
+          "given": "Franz"
+        },
+        {
+          "family": "Erdfelder",
+          "given": "Edgar"
+        },
+        {
+          "family": "Lang",
+          "given": "Albert-Georg"
+        },
+        {
+          "family": "Buchner",
+          "given": "Axel"
+        }
+      ],
+      "fulltext": {
+        "url": "https://link.springer.com/content/pdf/10.3758%2FBF03193146.pdf",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "Behavior Research Methods"
+      }
+    },
+    {
+      "key": "faul2009",
+      "topic": "sampling",
+      "why": "Power analysis for correlation and regression in G*Power 3.1 (the f² approach used in tab D4).",
+      "status": "verified",
+      "doi": "10.3758/brm.41.4.1149",
+      "type": "journal-article",
+      "title": "Statistical power analyses using G*Power 3.1: Tests for correlation and regression analyses",
+      "journal": "Behavior Research Methods",
+      "year": 2009,
+      "volume": "41",
+      "issue": "4",
+      "pages": "1149-1160",
+      "authors": [
+        {
+          "family": "Faul",
+          "given": "Franz"
+        },
+        {
+          "family": "Erdfelder",
+          "given": "Edgar"
+        },
+        {
+          "family": "Buchner",
+          "given": "Axel"
+        },
+        {
+          "family": "Lang",
+          "given": "Albert-Georg"
+        }
+      ],
+      "fulltext": {
+        "url": "https://link.springer.com/content/pdf/10.3758/BRM.41.4.1149.pdf",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "Behavior Research Methods"
+      }
+    },
+    {
+      "key": "lakens2022",
+      "topic": "sampling",
+      "why": "The best modern guide to justifying a sample size: precision, power, resource constraints and heuristics.",
+      "status": "verified",
+      "doi": "10.1525/collabra.33267",
+      "type": "journal-article",
+      "title": "Sample Size Justification",
+      "journal": "Collabra: Psychology",
+      "year": 2022,
+      "volume": "8",
+      "issue": "1",
+      "pages": "33267",
+      "authors": [
+        {
+          "family": "Lakens",
+          "given": "Daniël"
+        }
+      ],
+      "fulltext": {
+        "url": "https://psyarxiv.com/9d3yf/download",
+        "kind": "Free full text",
+        "oa_status": "gold",
+        "host": "psyarxiv.com"
+      }
+    },
+    {
+      "key": "green1991",
+      "topic": "sampling",
+      "why": "Origin of the N ≥ 50 + 8m rule of thumb — and why power analysis does better.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1207/s15327906mbr2603_7",
+      "type": "journal-article",
+      "title": "How Many Subjects Does It Take To Do A Regression Analysis",
+      "journal": "Multivariate Behavioral Research",
+      "year": 1991,
+      "volume": "26",
+      "issue": "3",
+      "pages": "499-510",
+      "authors": [
+        {
+          "family": "Green",
+          "given": "Samuel B."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "peduzzi1996",
+      "topic": "sampling",
+      "why": "The events-per-variable guideline for logit models with a binary outcome.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1016/s0895-4356(96)00236-3",
+      "type": "journal-article",
+      "title": "A simulation study of the number of events per variable in logistic regression analysis",
+      "journal": "Journal of Clinical Epidemiology",
+      "year": 1996,
+      "volume": "49",
+      "issue": "12",
+      "pages": "1373-1379",
+      "authors": [
+        {
+          "family": "Peduzzi",
+          "given": "Peter"
+        },
+        {
+          "family": "Concato",
+          "given": "John"
+        },
+        {
+          "family": "Kemper",
+          "given": "Elizabeth"
+        },
+        {
+          "family": "Holford",
+          "given": "Theodore R."
+        },
+        {
+          "family": "Feinstein",
+          "given": "Alvan R."
+        }
+      ],
+      "fulltext": {
+        "url": "https://doi.org/10.1016/s0895-4356(96)00236-3",
+        "kind": "Free full text",
+        "oa_status": "hybrid",
+        "host": "publisher"
+      }
+    },
+    {
+      "key": "ioannidis2017",
+      "topic": "sampling",
+      "why": "Finds most economics studies are underpowered — the economics case for power analysis.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1111/ecoj.12461",
+      "type": "journal-article",
+      "title": "The Power of Bias in Economics Research",
+      "journal": "The Economic Journal",
+      "year": 2017,
+      "volume": "127",
+      "issue": "605",
+      "pages": "F236-F265",
+      "authors": [
+        {
+          "family": "Ioannidis",
+          "given": "John P. A."
+        },
+        {
+          "family": "Stanley",
+          "given": "T. D."
+        },
+        {
+          "family": "Doucouliagos",
+          "given": "Hristos"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "green",
+        "tried": [
+          "https://figshare.com/articles/journal_contribution/The_power_of_bias_in_economics_research/20826892"
+        ]
+      }
+    },
+    {
+      "key": "mckenzie2012",
+      "topic": "sampling",
+      "why": "Power and sample-size planning for field experiments with repeated rounds of data.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1016/j.jdeveco.2012.01.002",
+      "type": "journal-article",
+      "title": "Beyond baseline and follow-up: The case for more T in experiments",
+      "journal": "Journal of Development Economics",
+      "year": 2012,
+      "volume": "99",
+      "issue": "2",
+      "pages": "210-221",
+      "authors": [
+        {
+          "family": "McKenzie",
+          "given": "David"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "biernacki1981",
+      "topic": "sampling",
+      "why": "The methodological classic on snowball sampling of hidden populations.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/004912418101000205",
+      "type": "journal-article",
+      "title": "Snowball Sampling: Problems and Techniques of Chain Referral Sampling",
+      "journal": "Sociological Methods & Research",
+      "year": 1981,
+      "volume": "10",
+      "issue": "2",
+      "pages": "141-163",
+      "authors": [
+        {
+          "family": "Biernacki",
+          "given": "Patrick"
+        },
+        {
+          "family": "Waldorf",
+          "given": "Dan"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "heckathorn1997",
+      "topic": "sampling",
+      "why": "How respondent-driven sampling improves on snowball sampling for hard-to-reach groups.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1525/sp.1997.44.2.03x0221m",
+      "type": "journal-article",
+      "title": "Respondent-Driven Sampling: A New Approach to the Study of Hidden Populations",
+      "journal": "Social Problems",
+      "year": 1997,
+      "volume": "44",
+      "issue": "2",
+      "pages": "174-199",
+      "authors": [
+        {
+          "family": "Heckathorn",
+          "given": "Douglas D."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "palinkas2015",
+      "topic": "sampling",
+      "why": "Typology of purposive sampling strategies and when each fits.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1007/s10488-013-0528-y",
+      "type": "journal-article",
+      "title": "Purposeful Sampling for Qualitative Data Collection and Analysis in Mixed Method Implementation Research",
+      "journal": "Administration and Policy in Mental Health and Mental Health Services Research",
+      "year": 2015,
+      "volume": "42",
+      "issue": "5",
+      "pages": "533-544",
+      "authors": [
+        {
+          "family": "Palinkas",
+          "given": "Lawrence A."
+        },
+        {
+          "family": "Horwitz",
+          "given": "Sarah M."
+        },
+        {
+          "family": "Green",
+          "given": "Carla A."
+        },
+        {
+          "family": "Wisdom",
+          "given": "Jennifer P."
+        },
+        {
+          "family": "Duan",
+          "given": "Naihua"
+        },
+        {
+          "family": "Hoagwood",
+          "given": "Kimberly"
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/4012002",
+        "kind": "Free full text",
+        "oa_status": "green",
+        "host": "PubMed Central"
+      }
+    },
+    {
+      "key": "baker2013",
+      "topic": "sampling",
+      "why": "Authoritative review of what can and cannot be inferred from non-probability samples, including online panels.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1093/jssam/smt008",
+      "type": "journal-article",
+      "title": "Summary Report of the AAPOR Task Force on Non-probability Sampling",
+      "journal": "Journal of Survey Statistics and Methodology",
+      "year": 2013,
+      "volume": "1",
+      "issue": "2",
+      "pages": "90-143",
+      "authors": [
+        {
+          "family": "Baker",
+          "given": "R."
+        },
+        {
+          "family": "Brick",
+          "given": "J. M."
+        },
+        {
+          "family": "Bates",
+          "given": "N. A."
+        },
+        {
+          "family": "Battaglia",
+          "given": "M."
+        },
+        {
+          "family": "Couper",
+          "given": "M. P."
+        },
+        {
+          "family": "Dever",
+          "given": "J. A."
+        },
+        {
+          "family": "Gile",
+          "given": "K. J."
+        },
+        {
+          "family": "Tourangeau",
+          "given": "R."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "groves2006",
+      "topic": "sampling",
+      "why": "Why a high response rate does not guarantee low nonresponse bias.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1093/poq/nfl033",
+      "type": "journal-article",
+      "title": "Nonresponse Rates and Nonresponse Bias in Household Surveys",
+      "journal": "Public Opinion Quarterly",
+      "year": 2006,
+      "volume": "70",
+      "issue": "5",
+      "pages": "646-675",
+      "authors": [
+        {
+          "family": "Groves",
+          "given": "Robert M."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "krosnick1999",
+      "topic": "questionnaire",
+      "why": "Evidence-based review of question wording, response options, acquiescence and satisficing.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1146/annurev.psych.50.1.537",
+      "type": "journal-article",
+      "title": "Survey research",
+      "journal": "Annual Review of Psychology",
+      "year": 1999,
+      "volume": "50",
+      "issue": "1",
+      "pages": "537-567",
+      "authors": [
+        {
+          "family": "Krosnick",
+          "given": "Jon A."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "stantcheva2023",
+      "topic": "questionnaire",
+      "why": "Survey design written by and for economists: sampling, question design, attention checks, experiments in surveys.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1146/annurev-economics-091622-010157",
+      "type": "journal-article",
+      "title": "How to Run Surveys: A Guide to Creating Your Own Identifying Variation and Revealing the Invisible",
+      "journal": "Annual Review of Economics",
+      "year": 2023,
+      "volume": "15",
+      "issue": "1",
+      "pages": "205-234",
+      "authors": [
+        {
+          "family": "Stantcheva",
+          "given": "Stefanie"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "hybrid",
+        "tried": [
+          "https://www.annualreviews.org/doi/pdf/10.1146/annurev-economics-091622-010157",
+          "https://doi.org/10.1146/annurev-economics-091622-010157"
+        ]
+      }
+    },
+    {
+      "key": "bertrand2001",
+      "topic": "questionnaire",
+      "why": "When subjective survey answers can and cannot be used as variables in economics.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1257/aer.91.2.67",
+      "type": "journal-article",
+      "title": "Do People Mean What They Say? Implications for Subjective Survey Data",
+      "journal": "American Economic Review",
+      "year": 2001,
+      "volume": "91",
+      "issue": "2",
+      "pages": "67-72",
+      "authors": [
+        {
+          "family": "Bertrand",
+          "given": "Marianne"
+        },
+        {
+          "family": "Mullainathan",
+          "given": "Sendhil"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "meyer2015",
+      "topic": "secondary",
+      "why": "Rising nonresponse and measurement error in the big household surveys economists rely on.",
+      "status": "verified",
+      "doi": "10.1257/jep.29.4.199",
+      "type": "journal-article",
+      "title": "Household Surveys in Crisis",
+      "journal": "Journal of Economic Perspectives",
+      "year": 2015,
+      "volume": "29",
+      "issue": "4",
+      "pages": "199-226",
+      "authors": [
+        {
+          "family": "Meyer",
+          "given": "Bruce D."
+        },
+        {
+          "family": "Mok",
+          "given": "Wallace K. C."
+        },
+        {
+          "family": "Sullivan",
+          "given": "James X."
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jep.29.4.199",
+        "kind": "Free full text",
+        "oa_status": "closed",
+        "host": "publisher (free to read)"
+      }
+    },
+    {
+      "key": "beatty2007",
+      "topic": "questionnaire",
+      "why": "How to pretest questionnaire items with cognitive interviews before the pilot.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1093/poq/nfm006",
+      "type": "journal-article",
+      "title": "Research Synthesis: The Practice of Cognitive Interviewing",
+      "journal": "Public Opinion Quarterly",
+      "year": 2007,
+      "volume": "71",
+      "issue": "2",
+      "pages": "287-311",
+      "authors": [
+        {
+          "family": "Beatty",
+          "given": "P. C."
+        },
+        {
+          "family": "Willis",
+          "given": "G. B."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "bronze",
+        "tried": [
+          "https://academic.oup.com/poq/article-pdf/71/2/287/5436696/nfm006.pdf",
+          "https://doi.org/10.1093/poq/nfm006"
+        ]
+      }
+    },
+    {
+      "key": "brislin1970",
+      "topic": "questionnaire",
+      "why": "The back-translation procedure for English–Malay (or other) questionnaire versions.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/135910457000100301",
+      "type": "journal-article",
+      "title": "Back-Translation for Cross-Cultural Research",
+      "journal": "Journal of Cross-Cultural Psychology",
+      "year": 1970,
+      "volume": "1",
+      "issue": "3",
+      "pages": "185-216",
+      "authors": [
+        {
+          "family": "Brislin",
+          "given": "Richard W."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "beaton2000",
+      "topic": "questionnaire",
+      "why": "Step-by-step protocol for adapting an established instrument to a new language and culture.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1097/00007632-200012150-00014",
+      "type": "journal-article",
+      "title": "Guidelines for the Process of Cross-Cultural Adaptation of Self-Report Measures",
+      "journal": "Spine",
+      "year": 2000,
+      "volume": "25",
+      "issue": "24",
+      "pages": "3186-3191",
+      "authors": [
+        {
+          "family": "Beaton",
+          "given": "Dorcas E."
+        },
+        {
+          "family": "Bombardier",
+          "given": "Claire"
+        },
+        {
+          "family": "Guillemin",
+          "given": "Francis"
+        },
+        {
+          "family": "Ferraz",
+          "given": "Marcos Bosi"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "lusardi2014",
+      "topic": "questionnaire",
+      "why": "How economists measure financial literacy (the 'Big Three' questions) — an example of an adopted instrument.",
+      "status": "verified",
+      "doi": "10.1257/jel.52.1.5",
+      "type": "journal-article",
+      "title": "The Economic Importance of Financial Literacy: Theory and Evidence",
+      "journal": "Journal of Economic Literature",
+      "year": 2014,
+      "volume": "52",
+      "issue": "1",
+      "pages": "5-44",
+      "authors": [
+        {
+          "family": "Lusardi",
+          "given": "Annamaria"
+        },
+        {
+          "family": "Mitchell",
+          "given": "Olivia S."
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/5450829",
+        "kind": "Free full text",
+        "oa_status": "green",
+        "host": "PubMed Central"
+      }
+    },
+    {
+      "key": "hinkin1998",
+      "topic": "validity",
+      "why": "Step-by-step scale development: item generation, content validity, factor analysis, reliability.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/109442819800100106",
+      "type": "journal-article",
+      "title": "A Brief Tutorial on the Development of Measures for Use in Survey Questionnaires",
+      "journal": "Organizational Research Methods",
+      "year": 1998,
+      "volume": "1",
+      "issue": "1",
+      "pages": "104-121",
+      "authors": [
+        {
+          "family": "Hinkin",
+          "given": "Timothy R."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "boateng2018",
+      "topic": "validity",
+      "why": "A nine-step primer for developing and validating scales — the practical workflow behind tab E4.",
+      "status": "verified",
+      "doi": "10.3389/fpubh.2018.00149",
+      "type": "journal-article",
+      "title": "Best Practices for Developing and Validating Scales for Health, Social, and Behavioral Research: A Primer",
+      "journal": "Frontiers in Public Health",
+      "year": 2018,
+      "volume": "6",
+      "issue": null,
+      "pages": "149",
+      "authors": [
+        {
+          "family": "Boateng",
+          "given": "Godfred O."
+        },
+        {
+          "family": "Neilands",
+          "given": "Torsten B."
+        },
+        {
+          "family": "Frongillo",
+          "given": "Edward A."
+        },
+        {
+          "family": "Melgar-Quiñonez",
+          "given": "Hugo R."
+        },
+        {
+          "family": "Young",
+          "given": "Sera L."
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.frontiersin.org/articles/10.3389/fpubh.2018.00149/pdf",
+        "kind": "PDF",
+        "oa_status": "gold",
+        "host": "Frontiers in Public Health"
+      }
+    },
+    {
+      "key": "podsakoff2003",
+      "topic": "validity",
+      "why": "Common-method bias in single-source surveys and the procedural remedies to build into your questionnaire.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/0021-9010.88.5.879",
+      "type": "journal-article",
+      "title": "Common method biases in behavioral research: A critical review of the literature and recommended remedies.",
+      "journal": "Journal of Applied Psychology",
+      "year": 2003,
+      "volume": "88",
+      "issue": "5",
+      "pages": "879-903",
+      "authors": [
+        {
+          "family": "Podsakoff",
+          "given": "Philip M."
+        },
+        {
+          "family": "MacKenzie",
+          "given": "Scott B."
+        },
+        {
+          "family": "Lee",
+          "given": "Jeong-Yeon"
+        },
+        {
+          "family": "Podsakoff",
+          "given": "Nathan P."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "cronbach1951",
+      "topic": "validity",
+      "why": "The original coefficient alpha paper.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1007/bf02310555",
+      "type": "journal-article",
+      "title": "Coefficient Alpha and the Internal Structure of Tests",
+      "journal": "Psychometrika",
+      "year": 1951,
+      "volume": "16",
+      "issue": "3",
+      "pages": "297-334",
+      "authors": [
+        {
+          "family": "Cronbach",
+          "given": "Lee J."
+        }
+      ],
+      "fulltext": {
+        "url": "https://link.springer.com/content/pdf/10.1007/BF02310555.pdf",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "Psychometrika"
+      }
+    },
+    {
+      "key": "cronbach1955",
+      "topic": "validity",
+      "why": "Where construct validity was defined.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/h0040957",
+      "type": "journal-article",
+      "title": "Construct validity in psychological tests.",
+      "journal": "Psychological Bulletin",
+      "year": 1955,
+      "volume": "52",
+      "issue": "4",
+      "pages": "281-302",
+      "authors": [
+        {
+          "family": "Cronbach",
+          "given": "Lee J."
+        },
+        {
+          "family": "Meehl",
+          "given": "Paul E."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "green",
+        "tried": [
+          "https://conservancy.umn.edu/bitstreams/1531d762-af5a-4515-95f3-90c01ac994be/download",
+          "http://hdl.handle.net/11299/184279"
+        ]
+      }
+    },
+    {
+      "key": "campbell1959",
+      "topic": "validity",
+      "why": "Introduced convergent and discriminant validity.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/h0046016",
+      "type": "journal-article",
+      "title": "Convergent and discriminant validation by the multitrait-multimethod matrix.",
+      "journal": "Psychological Bulletin",
+      "year": 1959,
+      "volume": "56",
+      "issue": "2",
+      "pages": "81-105",
+      "authors": [
+        {
+          "family": "Campbell",
+          "given": "Donald T."
+        },
+        {
+          "family": "Fiske",
+          "given": "Donald W."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "green",
+        "tried": []
+      }
+    },
+    {
+      "key": "messick1995",
+      "topic": "validity",
+      "why": "The unified view of validity as evidence for an interpretation — the basis of the modern standards.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/0003-066x.50.9.741",
+      "type": "journal-article",
+      "title": "Validity of psychological assessment: Validation of inferences from persons' responses and performances as scientific inquiry into score meaning.",
+      "journal": "American Psychologist",
+      "year": 1995,
+      "volume": "50",
+      "issue": "9",
+      "pages": "741-749",
+      "authors": [
+        {
+          "family": "Messick",
+          "given": "Samuel"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "fornell1981",
+      "topic": "validity",
+      "why": "Source of average variance extracted (AVE) and the Fornell–Larcker discriminant-validity criterion.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.2307/3151312",
+      "type": "journal-article",
+      "title": "Evaluating Structural Equation Models with Unobservable Variables and Measurement Error",
+      "journal": "Journal of Marketing Research",
+      "year": 1981,
+      "volume": "18",
+      "issue": "1",
+      "pages": "39",
+      "authors": [
+        {
+          "family": "Fornell",
+          "given": "Claes"
+        },
+        {
+          "family": "Larcker",
+          "given": "David F."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "henseler2015",
+      "topic": "validity",
+      "why": "Introduces the HTMT ratio and shows why Fornell–Larcker often misses discriminant-validity problems.",
+      "status": "verified",
+      "doi": "10.1007/s11747-014-0403-8",
+      "type": "journal-article",
+      "title": "A new criterion for assessing discriminant validity in variance-based structural equation modeling",
+      "journal": "Journal of the Academy of Marketing Science",
+      "year": 2015,
+      "volume": "43",
+      "issue": "1",
+      "pages": "115-135",
+      "authors": [
+        {
+          "family": "Henseler",
+          "given": "Jörg"
+        },
+        {
+          "family": "Ringle",
+          "given": "Christian M."
+        },
+        {
+          "family": "Sarstedt",
+          "given": "Marko"
+        }
+      ],
+      "fulltext": {
+        "url": "https://link.springer.com/content/pdf/10.1007/s11747-014-0403-8.pdf",
+        "kind": "Free full text",
+        "oa_status": "hybrid",
+        "host": "Journal of the Academy of Marketing Science"
+      }
+    },
+    {
+      "key": "sijtsma2009",
+      "topic": "validity",
+      "why": "A critique of how Cronbach's alpha is misused and misread.",
+      "status": "verified",
+      "doi": "10.1007/s11336-008-9101-0",
+      "type": "journal-article",
+      "title": "On the Use, the Misuse, and the Very Limited Usefulness of Cronbach’s Alpha",
+      "journal": "Psychometrika",
+      "year": 2009,
+      "volume": "74",
+      "issue": "1",
+      "pages": "107-120",
+      "authors": [
+        {
+          "family": "Sijtsma",
+          "given": "Klaas"
+        }
+      ],
+      "fulltext": {
+        "url": "https://link.springer.com/content/pdf/10.1007/s11336-008-9101-0.pdf",
+        "kind": "Free full text",
+        "oa_status": "hybrid",
+        "host": "Psychometrika"
+      }
+    },
+    {
+      "key": "mcneish2018",
+      "topic": "validity",
+      "why": "Why and how to report omega and other reliability coefficients instead of alpha alone.",
+      "status": "verified",
+      "doi": "10.1037/met0000144",
+      "type": "journal-article",
+      "title": "Thanks coefficient alpha, we’ll take it from here.",
+      "journal": "Psychological Methods",
+      "year": 2018,
+      "volume": "23",
+      "issue": "3",
+      "pages": "412-433",
+      "authors": [
+        {
+          "family": "McNeish",
+          "given": "Daniel"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "tavakol2011",
+      "topic": "validity",
+      "why": "A short, readable explanation of what alpha does and does not tell you.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.5116/ijme.4dfb.8dfd",
+      "type": "journal-article",
+      "title": "Making sense of Cronbach's alpha",
+      "journal": "International Journal of Medical Education",
+      "year": 2011,
+      "volume": "2",
+      "issue": null,
+      "pages": "53-55",
+      "authors": [
+        {
+          "family": "Tavakol",
+          "given": "Mohsen"
+        },
+        {
+          "family": "Dennick",
+          "given": "Reg"
+        }
+      ],
+      "fulltext": {
+        "url": "https://www.ijme.net/archive/2/cronbachs-alpha.pdf",
+        "kind": "PDF",
+        "oa_status": "hybrid",
+        "host": "International Journal of Medical Education"
+      }
+    },
+    {
+      "key": "polit2007",
+      "topic": "validity",
+      "why": "How to compute and interpret item- and scale-level content validity indices from expert ratings.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1002/nur.20199",
+      "type": "journal-article",
+      "title": "Is the CVI an acceptable indicator of content validity? Appraisal and recommendations",
+      "journal": "Research in Nursing & Health",
+      "year": 2007,
+      "volume": "30",
+      "issue": "4",
+      "pages": "459-467",
+      "authors": [
+        {
+          "family": "Polit",
+          "given": "Denise F."
+        },
+        {
+          "family": "Beck",
+          "given": "Cheryl Tatano"
+        },
+        {
+          "family": "Owen",
+          "given": "Steven V."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "lawshe1975",
+      "topic": "validity",
+      "why": "The content validity ratio (CVR) for expert panels.",
+      "status": "verified",
+      "doi": "10.1111/j.1744-6570.1975.tb01393.x",
+      "type": "journal-article",
+      "title": "A quantitative approach to content validity",
+      "journal": "Personnel Psychology",
+      "year": 1975,
+      "volume": "28",
+      "issue": "4",
+      "pages": "563-575",
+      "authors": [
+        {
+          "family": "LAWSHE",
+          "given": "C. H."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "mackenzie2005",
+      "topic": "validity",
+      "why": "Reflective versus formative indicators, and the bias from getting this wrong.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/0021-9010.90.4.710",
+      "type": "journal-article",
+      "title": "The Problem of Measurement Model Misspecification in Behavioral and Organizational Research and Some Recommended Solutions.",
+      "journal": "Journal of Applied Psychology",
+      "year": 2005,
+      "volume": "90",
+      "issue": "4",
+      "pages": "710-730",
+      "authors": [
+        {
+          "family": "MacKenzie",
+          "given": "Scott B."
+        },
+        {
+          "family": "Podsakoff",
+          "given": "Philip M."
+        },
+        {
+          "family": "Jarvis",
+          "given": "Cheryl Burke"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "shrout1979",
+      "topic": "validity",
+      "why": "Which intraclass correlation to use for test–retest and inter-rater reliability.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/0033-2909.86.2.420",
+      "type": "journal-article",
+      "title": "Intraclass correlations: Uses in assessing rater reliability.",
+      "journal": "Psychological Bulletin",
+      "year": 1979,
+      "volume": "86",
+      "issue": "2",
+      "pages": "420-428",
+      "authors": [
+        {
+          "family": "Shrout",
+          "given": "Patrick E."
+        },
+        {
+          "family": "Fleiss",
+          "given": "Joseph L."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "cohen1960",
+      "topic": "validity",
+      "why": "The original kappa statistic for inter-rater reliability.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/001316446002000104",
+      "type": "journal-article",
+      "title": "A Coefficient of Agreement for Nominal Scales",
+      "journal": "Educational and Psychological Measurement",
+      "year": 1960,
+      "volume": "20",
+      "issue": "1",
+      "pages": "37-46",
+      "authors": [
+        {
+          "family": "Cohen",
+          "given": "Jacob"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "bound1991",
+      "topic": "validity",
+      "why": "Measures reporting error in survey earnings against administrative records — reliability in economics data.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1086/298256",
+      "type": "journal-article",
+      "title": "The Extent of Measurement Error in Longitudinal Earnings Data: Do Two Wrongs Make a Right?",
+      "journal": "Journal of Labor Economics",
+      "year": 1991,
+      "volume": "9",
+      "issue": "1",
+      "pages": "1-24",
+      "authors": [
+        {
+          "family": "Bound",
+          "given": "John"
+        },
+        {
+          "family": "Krueger",
+          "given": "Alan B."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "morgan1996",
+      "topic": "qualitative",
+      "why": "What focus groups are good for, how to run them, and how they combine with surveys.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1146/annurev.soc.22.1.129",
+      "type": "journal-article",
+      "title": "Focus Groups",
+      "journal": "Annual Review of Sociology",
+      "year": 1996,
+      "volume": "22",
+      "issue": "1",
+      "pages": "129-152",
+      "authors": [
+        {
+          "family": "Morgan",
+          "given": "David L."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "kallio2016",
+      "topic": "qualitative",
+      "why": "A five-phase framework for building a semi-structured interview guide.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1111/jan.13031",
+      "type": "journal-article",
+      "title": "Systematic methodological review: developing a framework for a qualitative semi‐structured interview guide",
+      "journal": "Journal of Advanced Nursing",
+      "year": 2016,
+      "volume": "72",
+      "issue": "12",
+      "pages": "2954-2965",
+      "authors": [
+        {
+          "family": "Kallio",
+          "given": "Hanna"
+        },
+        {
+          "family": "Pietilä",
+          "given": "Anna‐Maija"
+        },
+        {
+          "family": "Johnson",
+          "given": "Martin"
+        },
+        {
+          "family": "Kangasniemi",
+          "given": "Mari"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "bronze",
+        "tried": [
+          "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/jan.13031",
+          "http://usir.salford.ac.uk/id/eprint/39197/1/jan13031%20Martin%20Johnson%20June%202016.pdf",
+          "https://doi.org/10.1111/jan.13031"
+        ]
+      }
+    },
+    {
+      "key": "guest2006",
+      "topic": "qualitative",
+      "why": "Evidence on when interview data reach saturation.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/1525822x05279903",
+      "type": "journal-article",
+      "title": "How Many Interviews Are Enough?",
+      "journal": "Field Methods",
+      "year": 2006,
+      "volume": "18",
+      "issue": "1",
+      "pages": "59-82",
+      "authors": [
+        {
+          "family": "Guest",
+          "given": "Greg"
+        },
+        {
+          "family": "Bunce",
+          "given": "Arwen"
+        },
+        {
+          "family": "Johnson",
+          "given": "Laura"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "malterud2016",
+      "topic": "qualitative",
+      "why": "Justifying the number of interviews with 'information power' rather than saturation alone.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1177/1049732315617444",
+      "type": "journal-article",
+      "title": "Sample Size in Qualitative Interview Studies",
+      "journal": "Qualitative Health Research",
+      "year": 2016,
+      "volume": "26",
+      "issue": "13",
+      "pages": "1753-1760",
+      "authors": [
+        {
+          "family": "Malterud",
+          "given": "Kirsti"
+        },
+        {
+          "family": "Siersma",
+          "given": "Volkert Dirk"
+        },
+        {
+          "family": "Guassora",
+          "given": "Ann Dorrit"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "braun2006",
+      "topic": "qualitative",
+      "why": "The six-phase thematic analysis procedure for interview and FGD data.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1191/1478088706qp063oa",
+      "type": "journal-article",
+      "title": "Using thematic analysis in psychology",
+      "journal": "Qualitative Research in Psychology",
+      "year": 2006,
+      "volume": "3",
+      "issue": "2",
+      "pages": "77-101",
+      "authors": [
+        {
+          "family": "Braun",
+          "given": "Virginia"
+        },
+        {
+          "family": "Clarke",
+          "given": "Victoria"
+        }
+      ],
+      "fulltext": {
+        "url": "https://hal.science/hal-04848132v1/file/Zanni%20et%20al.%20-%20Representations%20and%20lived%20experiences%20of%20sexual%20he.pdf",
+        "kind": "Free full text",
+        "oa_status": "hybrid",
+        "host": "HAL (Le Centre pour la Communication Scientifique Directe)"
+      }
+    },
+    {
+      "key": "feenstra2015",
+      "topic": "secondary",
+      "why": "Documentation of the Penn World Table — how to read and cite a major secondary macro dataset.",
+      "status": "verified",
+      "doi": "10.1257/aer.20130954",
+      "type": "journal-article",
+      "title": "The Next Generation of the Penn World Table",
+      "journal": "American Economic Review",
+      "year": 2015,
+      "volume": "105",
+      "issue": "10",
+      "pages": "3150-3182",
+      "authors": [
+        {
+          "family": "Feenstra",
+          "given": "Robert C."
+        },
+        {
+          "family": "Inklaar",
+          "given": "Robert"
+        },
+        {
+          "family": "Timmer",
+          "given": "Marcel P."
+        }
+      ],
+      "fulltext": {
+        "url": "https://research.rug.nl/en/publications/fa928891-5a39-40ac-ab8e-81e43e5cefe9",
+        "kind": "Free full text",
+        "oa_status": "green",
+        "host": "University of Groningen research database (University of Groningen / Centre for Information Technology)"
+      }
+    },
+    {
+      "key": "johnson2013",
+      "topic": "secondary",
+      "why": "Shows that dataset revisions can change results — why you must report the exact data version.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1016/j.jmoneco.2012.10.022",
+      "type": "journal-article",
+      "title": "Is newer better? Penn World Table Revisions and their impact on growth estimates",
+      "journal": "Journal of Monetary Economics",
+      "year": 2013,
+      "volume": "60",
+      "issue": "2",
+      "pages": "255-274",
+      "authors": [
+        {
+          "family": "Johnson",
+          "given": "Simon"
+        },
+        {
+          "family": "Larson",
+          "given": "William"
+        },
+        {
+          "family": "Papageorgiou",
+          "given": "Chris"
+        },
+        {
+          "family": "Subramanian",
+          "given": "Arvind"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "deaton2005",
+      "topic": "secondary",
+      "why": "Why national accounts and household surveys disagree — a lesson in choosing a data source.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1162/0034653053327612",
+      "type": "journal-article",
+      "title": "Measuring Poverty in a Growing World (or Measuring Growth in a Poor World)",
+      "journal": "Review of Economics and Statistics",
+      "year": 2005,
+      "volume": "87",
+      "issue": "1",
+      "pages": "1-19",
+      "authors": [
+        {
+          "family": "Deaton",
+          "given": "Angus"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "green",
+        "tried": []
+      }
+    },
+    {
+      "key": "einav2014",
+      "topic": "secondary",
+      "why": "New administrative and private-sector data sources and what they offer economic research.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1126/science.1243089",
+      "type": "journal-article",
+      "title": "Economics in the age of big data",
+      "journal": "Science",
+      "year": 2014,
+      "volume": "346",
+      "issue": "6210",
+      "pages": "1243089",
+      "authors": [
+        {
+          "family": "Einav",
+          "given": "Liran"
+        },
+        {
+          "family": "Levin",
+          "given": "Jonathan"
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "wickham2014",
+      "topic": "cleaning",
+      "why": "The tidy-data principles: one variable per column, one observation per row.",
+      "status": "verified",
+      "doi": "10.18637/jss.v059.i10",
+      "type": "journal-article",
+      "title": "Tidy Data",
+      "journal": "Journal of Statistical Software",
+      "year": 2014,
+      "volume": "59",
+      "issue": "10",
+      "pages": null,
+      "authors": [
+        {
+          "family": "Wickham",
+          "given": "Hadley"
+        }
+      ],
+      "fulltext": {
+        "url": "https://doi.org/10.18637/jss.v059.i10",
+        "kind": "Free full text",
+        "oa_status": "diamond",
+        "host": "publisher"
+      }
+    },
+    {
+      "key": "broman2018",
+      "topic": "cleaning",
+      "why": "Practical rules for organising data in spreadsheets before analysis.",
+      "status": "verified",
+      "doi": "10.1080/00031305.2017.1375989",
+      "type": "journal-article",
+      "title": "Data Organization in Spreadsheets",
+      "journal": "The American Statistician",
+      "year": 2018,
+      "volume": "72",
+      "issue": "1",
+      "pages": "2-10",
+      "authors": [
+        {
+          "family": "Broman",
+          "given": "Karl W."
+        },
+        {
+          "family": "Woo",
+          "given": "Kara H."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "vandenbroeck2005",
+      "topic": "cleaning",
+      "why": "A framework for screening, diagnosing and editing data abnormalities.",
+      "status": "verified",
+      "doi": "10.1371/journal.pmed.0020267",
+      "type": "journal-article",
+      "title": "Data Cleaning: Detecting, Diagnosing, and Editing Data Abnormalities",
+      "journal": "PLoS Medicine",
+      "year": 2005,
+      "volume": "2",
+      "issue": "10",
+      "pages": "e267",
+      "authors": [
+        {
+          "family": "Van den Broeck",
+          "given": "Jan"
+        },
+        {
+          "family": "Argeseanu Cunningham",
+          "given": "Solveig"
+        },
+        {
+          "family": "Eeckels",
+          "given": "Roger"
+        },
+        {
+          "family": "Herbst",
+          "given": "Kobus"
+        }
+      ],
+      "fulltext": {
+        "url": "https://journals.plos.org/plosmedicine/article/file?id=10.1371/journal.pmed.0020267&type=printable",
+        "kind": "PDF",
+        "oa_status": "gold",
+        "host": "PLoS Medicine"
+      }
+    },
+    {
+      "key": "schafer2002",
+      "topic": "cleaning",
+      "why": "Missing-data mechanisms (MCAR, MAR, MNAR) and modern handling methods.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1037/1082-989x.7.2.147",
+      "type": "journal-article",
+      "title": "Missing data: Our view of the state of the art.",
+      "journal": "Psychological Methods",
+      "year": 2002,
+      "volume": "7",
+      "issue": "2",
+      "pages": "147-177",
+      "authors": [
+        {
+          "family": "Schafer",
+          "given": "Joseph L."
+        },
+        {
+          "family": "Graham",
+          "given": "John W."
+        }
+      ],
+      "fulltext": {
+        "url": null,
+        "oa_status": "closed",
+        "tried": []
+      }
+    },
+    {
+      "key": "leys2013",
+      "topic": "cleaning",
+      "why": "A robust rule for flagging outliers during cleaning.",
+      "match_score": 1.0,
+      "status": "verified",
+      "doi": "10.1016/j.jesp.2013.03.013",
+      "type": "journal-article",
+      "title": "Detecting outliers: Do not use standard deviation around the mean, use absolute deviation around the median",
+      "journal": "Journal of Experimental Social Psychology",
+      "year": 2013,
+      "volume": "49",
+      "issue": "4",
+      "pages": "764-766",
+      "authors": [
+        {
+          "family": "Leys",
+          "given": "Christophe"
+        },
+        {
+          "family": "Ley",
+          "given": "Christophe"
+        },
+        {
+          "family": "Klein",
+          "given": "Olivier"
+        },
+        {
+          "family": "Bernard",
+          "given": "Philippe"
+        },
+        {
+          "family": "Licata",
+          "given": "Laurent"
+        }
+      ],
+      "fulltext": {
+        "url": "http://hdl.handle.net/2013/ULB-DIPOT:oai:dipot.ulb.ac.be:2013/139499",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "Dépôt institutionnel de l'Université libre de Bruxelles (Université Libre de Bruxelles)"
+      }
+    },
+    {
+      "key": "wasserstein2016",
+      "topic": "cleaning",
+      "why": "The ASA statement on p-values — how to report and interpret significance in your results chapter.",
+      "status": "verified",
+      "doi": "10.1080/00031305.2016.1154108",
+      "type": "journal-article",
+      "title": "The ASA Statement on p -Values: Context, Process, and Purpose",
+      "journal": "The American Statistician",
+      "year": 2016,
+      "volume": "70",
+      "issue": "2",
+      "pages": "129-133",
+      "authors": [
+        {
+          "family": "Wasserstein",
+          "given": "Ronald L."
+        },
+        {
+          "family": "Lazar",
+          "given": "Nicole A."
+        }
+      ],
+      "fulltext": {
+        "url": "https://repositorio.unal.edu.co/handle/unal/79677",
+        "kind": "Free full text",
+        "oa_status": "bronze",
+        "host": "LA Referencia (Red Federada de Repositorios Institucionales de Publicaciones Científicas)"
+      }
+    }
+  ]
+}

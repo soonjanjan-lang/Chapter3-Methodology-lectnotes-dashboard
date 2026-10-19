@@ -1,0 +1,196 @@
+<!--meta
+id: b2
+group: B
+code: B2
+title: 3.2 The RQ–method table
+short: 3.2 RQ–method table
+-->
+<header class="tab-head">
+  <h1 id="h-b2"><span class="secnum">B2</span>3.2 The RQ–method table</h1>
+  <p class="lede">One table that pairs every research question with the method that answers it. It is the fastest way to show an examiner that your design is complete, and the fastest way for you to find a research question that has no method.</p>
+  <ul class="tab-facts"><li>About 20 minutes</li><li>Four real examples</li><li>Template and worksheet</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>build an RQ–method table with the right columns for your study;</li>
+      <li>match each question to a method suited to its outcome and data structure;</li>
+      <li>spot a question the design cannot answer before the examiner does.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="b2-why">Why the table matters</h2>
+  <p>Chapter 1 promises research questions; Chapter 4 delivers answers. The RQ–method table in Chapter 3 is the bridge. An examiner reads it first and checks that every question has data, variables and a model, and that each method suits the question it is paired with.</p>
+
+  <h2 id="b2-cols">Which columns to include</h2>
+  <table class="bt">
+    <caption><b>Table B2.1.</b> Columns for an RQ–method table</caption>
+    <thead><tr><th>Column</th><th>When to include it</th></tr></thead>
+    <tbody>
+      <tr><th>Research question (and sub-questions)</th><td>Always. Use exactly the numbering and wording of Chapter 1.</td></tr>
+      <tr><th>Method or model</th><td>Always. Name the estimator (“ordered logit”), not just “regression”.</td></tr>
+      <tr><th>Outcome variable(s)</th><td>Recommended. The outcome's measurement level decides the model.</td></tr>
+      <tr><th>Main explanatory variable(s)</th><td>Recommended.</td></tr>
+      <tr><th>Data source and unit</th><td>When different questions use different data or units.</td></tr>
+      <tr><th>Hypothesis</th><td>When the thesis is hypothesis-testing.</td></tr>
+      <tr><th>Data collection method; theory</th><td>Optional. Useful in mixed-methods designs.</td></tr>
+      <tr><th>Section where answered</th><td>Optional. A pointer to the Chapter 4 section helps long theses.</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="b2-rules">Rules for a good table</h2>
+  <ol>
+    <li><strong>One row per question or sub-question.</strong> If a row needs two unrelated methods, the question probably needs splitting.</li>
+    <li><strong>The method must fit the outcome.</strong> “What are their intentions?” needs summary statistics. “How intense are their intentions?” on an ordered scale needs an ordinal model. “Did the policy change outcomes?” needs a design such as DiD (see <a href="#b4">B4</a>).</li>
+    <li><strong>The method must fit the data structure.</strong> A panel question needs a panel estimator; a single cross-section cannot answer a question about change over time (<a href="#c2">C2</a>).</li>
+    <li><strong>Descriptive questions get descriptive methods.</strong> Not every row needs a regression.</li>
+    <li><strong>Wording must match Chapter 1 exactly.</strong> Examiners notice when RQ2 has quietly changed.</li>
+  </ol>
+  <aside class="ex-note is-query"><b>Examiner:</b> If a method appears in 3.4 but in no row of this table, I will ask which question it answers.</aside>
+
+  <h2 id="b2-eg">Four examples</h2>
+  <h3 id="b2-eg1">Example 1: non-return intentions of international students</h3>
+  <table class="bt">
+    <caption><b>Table B2.2.</b> RQ, sub-RQ and analysis method</caption>
+    <thead><tr><th>RQ</th><th>Sub-RQ</th><th>Analysis method</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3">RQ1: What is the extent of non-return intentions of international students studying in New Zealand?</td><td>RQ1a: What are their non-return intentions?</td><td>Summary statistics</td></tr>
+      <tr><td>RQ1b: How intense or definite are their non-return intentions?</td><td>Partial proportional odds model</td></tr>
+      <tr><td>RQ1c: What are the key determinants of their non-return intentions?</td><td>Partial proportional odds model</td></tr>
+      <tr class="rule-above"><td rowspan="2">RQ2: To what extent do intended return timeframes differ?</td><td>RQ2a: What are the students' intended return timeframes?</td><td>Summary statistics</td></tr>
+      <tr><td>RQ2b: How do the characteristics differ between students who intend to return immediately, delay their return, and not return at all?</td><td>Multinomial logit model</td></tr>
+    </tbody>
+  </table>
+  <p class="table-note">The table may also include columns for data collection method, hypothesis, data source or theory.</p>
+
+  <h3 id="b2-eg2">Example 2: the 2015 refugee crisis and immigrants' life satisfaction</h3>
+  <table class="bt">
+    <caption><b>Table B2.3.</b> RQ and method</caption>
+    <thead><tr><th>Research question</th><th>Method</th></tr></thead>
+    <tbody>
+      <tr><td>(1) Does the 2015 refugee crisis have any negative impact on resident immigrants' life satisfaction?</td><td>Difference-in-differences model</td></tr>
+      <tr><td>(2) To what extent can resident immigrants' education levels insulate against the impact of the crisis on their life satisfaction?</td><td>DiD model by subsample</td></tr>
+      <tr><td>(3) Does the type of host country play a role in whether resident immigrants' life satisfaction is affected by the crisis?</td><td>DiD model by subsample</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="b2-eg3">Example 3: naturalisation and labour-market outcomes</h3>
+  <table class="bt">
+    <caption><b>Table B2.4.</b> RQ and method, with the stage of a fuzzy RD design for each question</caption>
+    <thead><tr><th>Research question</th><th>Method</th></tr></thead>
+    <tbody>
+      <tr><td>(1) Are naturalised immigrants really better off than non-naturalised immigrants in income and employment chances? If yes, by how much?</td><td>Summary statistics; fuzzy RD model: second-stage equation</td></tr>
+      <tr><td>(2) Does the naturalisation eligibility rule itself have any significant impact on the likelihood of naturalisation and on labour-market outcomes?</td><td>Fuzzy RD model: first-stage equation; fuzzy RD model: reduced-form equation</td></tr>
+    </tbody>
+  </table>
+
+  <h3 id="b2-eg4">Example 4: digital financial literacy and saving (five columns)</h3>
+  <table class="bt">
+    <caption><b>Table B2.5.</b> A fuller RQ–method table</caption>
+    <thead><tr><th>Research question</th><th>Outcome variable(s)</th><th>Main explanatory variable(s)</th><th>Data source and unit</th><th>Method or model</th></tr></thead>
+    <tbody>
+      <tr><td>RQ1: What is the relationship between digital financial literacy and saving behaviour?</td><td>Monthly saving amount; saving rate; binary indicator for saving regularly</td><td>Digital financial literacy score</td><td>Household survey; individual respondent</td><td>Descriptive statistics; OLS; logit for binary saving</td></tr>
+      <tr><td>RQ2: Does exposure to a financial education programme improve saving behaviour?</td><td>Pre/post saving rate</td><td>Treatment exposure; post period; treatment × post</td><td>Programme and comparison groups; repeated observations</td><td>Difference-in-differences</td></tr>
+      <tr><td>RQ3: Through what mechanisms does the programme influence behaviour?</td><td>Perceived control; budgeting confidence; reported habits</td><td>Programme exposure; qualitative themes</td><td>Survey plus interviews</td><td>Mediation-style descriptive analysis; thematic analysis</td></tr>
+    </tbody>
+  </table>
+  <p>Notice how Example 4's columns make the design auditable: RQ2 needs repeated observations of treated and comparison groups, and the table shows they exist.</p>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Every research question and sub-question gets a row and a named method.</li>
+      <li>The outcome's measurement level and the data structure decide the method.</li>
+      <li>Keep RQ wording identical to Chapter 1, and make sure every model in 3.4 appears in the table.</li>
+    </ol>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="b2-ex">Worked example: building the table for the e-wallet study</h2>
+  <p>Start from the research questions, identify each outcome and its measurement level, then choose the model. The models below are estimated in <code>06_model_specification.do</code> and its notebook (<a href="#b4/example">B4</a>).</p>
+  <table class="bt">
+    <caption><b>Table B2.6.</b> RQ–method table for the e-wallet survey (hypothetical)</caption>
+    <thead><tr><th>Research question</th><th>Outcome (level)</th><th>Main explanatory variables</th><th>Data</th><th>Method</th></tr></thead>
+    <tbody>
+      <tr><td>RQ1: What share of undergraduates use e-wallets, and how often?</td><td>Use in past 30 days (binary); days used in past week (0–7)</td><td>—</td><td rowspan="4">Survey of 400 undergraduates; individual</td><td>Proportions; means; cross-tabulation by faculty</td></tr>
+      <tr><td>RQ2: Which perceptions and characteristics are associated with being an e-wallet user?</td><td>ewallet_user (binary)</td><td>PU, PS, EOU, financial literacy</td><td>Logit with average marginal effects; LPM as robustness check</td></tr>
+      <tr><td>RQ3: Among users, what is associated with more frequent use?</td><td>ewallet_days (0–7, ratio)</td><td>PU, PS, EOU, allowance</td><td>OLS with robust standard errors, users only</td></tr>
+      <tr><td>RQ4: What is associated with intending to keep using e-wallets?</td><td>intention (1–5, ordinal)</td><td>PU, PS, EOU</td><td>Ordered logit; partial proportional odds if parallel lines fail</td></tr>
+    </tbody>
+  </table>
+  <aside class="ex-note"><b>Examiner:</b> RQ3 analyses users only. Say so in the table, and acknowledge in 3.4 that this conditions on a choice.</aside>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="b2-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.2 Research questions and methods</h3>
+      <p><span class="anno">Table 3.2 links each research question to its outcome variables, data and method of analysis.</span><span class="anno-n">1</span> <span class="anno">RQ1 is descriptive and is answered with proportions and means. RQ2 to RQ4 concern associations between perceptions and behaviour, and are answered with regression models chosen for the measurement level of each outcome: a logit model for the binary indicator of use, OLS for the number of days of use, and an ordered logit for the five-point intention scale.</span><span class="anno-n">2</span> <span class="anno">The models are specified in Section 3.4.</span><span class="anno-n">3</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>Introduce the table; do not repeat it row by row.</li>
+      <li>Summarise the logic: descriptive versus inferential questions, and why each model fits.</li>
+      <li>Point forward to the specification.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> The table itself carries the detail.</figcaption>
+  </figure>
+
+  <h3 id="b2-template">Template</h3>
+  <table class="bt">
+    <caption><b>Template.</b> Copy into your thesis and fill in (also in the ZIP as a Word file)</caption>
+    <thead><tr><th>Research question</th><th>Outcome (measurement level)</th><th>Main explanatory variable(s)</th><th>Data source and unit</th><th>Method or model</th></tr></thead>
+    <tbody>
+      <tr><td><span class="slot">RQ1 as in Chapter 1</span></td><td><span class="slot">variable (level)</span></td><td><span class="slot">variables</span></td><td><span class="slot">dataset; unit</span></td><td><span class="slot">estimator</span></td></tr>
+      <tr><td><span class="slot">RQ2</span></td><td></td><td></td><td></td><td></td></tr>
+      <tr><td><span class="slot">RQ3</span></td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="b2-ws">Worksheet B2</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>For each question, name a suitable method and the measurement level of the outcome: (a) What proportion of B40 households have an emergency fund? (b) What factors are associated with the number of children a household has? (c) Which characteristics distinguish households that save in ASB, in a bank account, or not at all? (d) Did the 2022 increase in the minimum wage change working hours? <span class="ws-marks">(8 marks)</span></p>
+      <x-draft key="b2-q1"></x-draft>
+      <x-answer><p>(a) Binary outcome; proportion with a confidence interval, using survey weights. (b) Count outcome (ratio level, non-negative integers); Poisson or negative binomial regression. (c) Nominal outcome with three unordered categories; multinomial logit. (d) Ratio-level outcome, causal policy question; difference-in-differences comparing affected and less-affected workers before and after 2022, or a panel with individual fixed effects.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>What is wrong with this row? “RQ2: How has household debt changed between 2016 and 2022? | Method: OLS regression | Data: 2022 household survey.” <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="b2-q2"></x-draft>
+      <x-answer><p>The question is about change over time, but the data are a single cross-section from 2022, so they cannot show change. The design needs at least two time points: pooled cross-sections from both survey years (comparing distributions or estimating with a year dummy) or a panel. “OLS regression” is also too vague; the table should name the outcome and the specification.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Draft a three-row RQ–method table for your own thesis (or for the topic “remittances and household education spending in Malaysia”). <span class="ws-marks">(6 marks)</span></p>
+      <x-draft key="b2-q3"></x-draft>
+      <x-answer><p>A possible answer: RQ1 “What share of households receive remittances, and how much?” uses a household survey with proportions and means. RQ2 “Are remittances associated with higher education spending?” takes the education budget share as the outcome (ratio level), remittance receipt as the main explanatory variable, and OLS with controls; a fractional response model if many zeros. RQ3 “Does the association differ for daughters and sons?” adds an interaction of remittances and the share of daughters. Marks for wording, levels and named estimators.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="b2-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. RQ: “How intense are students' non-return intentions?” measured on a five-point definite-to-unlikely scale. A suitable method is…</legend>
+      <label class="opt"><input type="radio" name="b2q1" data-correct><span>an ordinal model such as ordered logit or partial proportional odds<span class="why">Yes. The outcome is ordered categories.</span></span></label>
+      <label class="opt"><input type="radio" name="b2q1"><span>multinomial logit<span class="why">Multinomial logit ignores the ordering, which wastes information.</span></span></label>
+      <label class="opt"><input type="radio" name="b2q1"><span>a t-test<span class="why">A t-test compares two means; it does not model an ordinal outcome on many predictors.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. Which column is essential in every RQ–method table?</legend>
+      <label class="opt"><input type="radio" name="b2q2"><span>Hypothesis<span class="why">Only for hypothesis-testing theses.</span></span></label>
+      <label class="opt"><input type="radio" name="b2q2" data-correct><span>Method or model<span class="why">Yes. Without it the table has no purpose.</span></span></label>
+      <label class="opt"><input type="radio" name="b2q2"><span>Theory<span class="why">Optional.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. In Example 3, the first-stage equation of the fuzzy RD answers…</legend>
+      <label class="opt"><input type="radio" name="b2q3"><span>whether naturalised immigrants earn more<span class="why">That is the second stage.</span></span></label>
+      <label class="opt"><input type="radio" name="b2q3" data-correct><span>whether the eligibility rule raises the probability of naturalising<span class="why">Yes: the effect of the cut-off on treatment take-up.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

@@ -1,0 +1,166 @@
+<!--meta
+id: c4
+group: C
+code: C4
+title: Collecting secondary data: where to find it and how to report it
+short: Secondary data
+-->
+<header class="tab-head">
+  <h1 id="h-c4"><span class="secnum">C4</span>Collecting secondary data: where to find it and how to report it</h1>
+  <p class="lede">Secondary data were collected by someone else, usually a statistics agency, central bank or international organisation, for their own purposes. They are cheaper and often larger and better sampled than anything a PhD student can collect. The cost is that you must understand exactly how they were produced.</p>
+  <ul class="tab-facts"><li>About 25 minutes</li><li>Directory of 20 verified sources</li><li>How to cite a dataset</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>find a suitable public dataset for an economics research question;</li>
+      <li>evaluate a dataset's fitness for your question before you commit to it;</li>
+      <li>cite and describe datasets so another researcher can retrieve the same data.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="c4-evaluate">Before you commit: six questions about any dataset</h2>
+  <ol>
+    <li><strong>Who collected it, and why?</strong> An administrative register, a household survey and a model-based estimate have very different error properties.</li>
+    <li><strong>How was it collected?</strong> For surveys: the sampling design, sample size, mode and response rate. Most national household surveys need their weights, and often their strata and clusters, in your estimation.</li>
+    <li><strong>Does its definition match your concept?</strong> “Unemployment” in the WDI is a modelled ILO estimate; in DOSM's Labour Force Survey it is a survey estimate. They can differ.</li>
+    <li><strong>What is the coverage?</strong> Years, countries or states, gaps, and breaks in series when methods change.</li>
+    <li><strong>Which version?</strong> Datasets are revised. Penn World Table results can change between versions (Johnson et al., 2013). Record the version and the date you downloaded it.</li>
+    <li><strong>Can you use it?</strong> The licence, any registration, restricted microdata agreements, and the time they take to approve.</li>
+  </ol>
+  <aside class="ex-note"><b>Examiner:</b> Large surveys are not immune to error. Response rates and reporting quality in major household surveys have been falling (Meyer et al., 2015). Say what you know about your dataset's quality.</aside>
+
+  <h2 id="c4-directory">A directory of public data sources</h2>
+  <p>Every link below was checked when this guide was built. Portals reorganise; if a link moves, search for the dataset's name.</p>
+  <table class="bt wide">
+    <caption><b>Table C4.1.</b> Data sources for economics theses, with a Malaysian emphasis</caption>
+    <thead><tr><th>Source</th><th>What it offers</th><th>Typical thesis use</th></tr></thead>
+    <tbody>
+      <tr class="group"><td colspan="3">Malaysia</td></tr>
+      <tr><td><a href="https://open.dosm.gov.my/" target="_blank" rel="noopener">OpenDOSM</a> (Department of Statistics Malaysia)</td><td>Official statistics with downloadable tables: CPI, labour force, GDP, trade, household income, population</td><td>State or national time series; descriptive context</td></tr>
+      <tr><td><a href="https://www.dosm.gov.my/" target="_blank" rel="noopener">DOSM main site</a></td><td>Publications and methodology reports; microdata requests for surveys such as HIES and the Labour Force Survey</td><td>Household microdata (by application)</td></tr>
+      <tr><td><a href="https://data.gov.my/" target="_blank" rel="noopener">data.gov.my</a></td><td>Malaysia's open data portal across ministries</td><td>Administrative series (education, health, transport)</td></tr>
+      <tr><td><a href="https://www.bnm.gov.my/statistics" target="_blank" rel="noopener">Bank Negara Malaysia statistics</a> and <a href="https://apikijangportal.bnm.gov.my/" target="_blank" rel="noopener">BNM OpenAPI</a></td><td>Monetary, banking, interest-rate and exchange-rate data</td><td>Monetary policy, exchange rates, credit</td></tr>
+      <tr class="group"><td colspan="3">International macroeconomic data</td></tr>
+      <tr><td><a href="https://databank.worldbank.org/source/world-development-indicators" target="_blank" rel="noopener">World Bank World Development Indicators</a></td><td>About 1,400 indicators for over 200 economies from 1960</td><td>Cross-country panels; growth, poverty, trade</td></tr>
+      <tr><td><a href="https://data.imf.org/" target="_blank" rel="noopener">IMF Data</a> and the <a href="https://www.imf.org/en/Publications/SPROLLs/world-economic-outlook-databases" target="_blank" rel="noopener">World Economic Outlook databases</a></td><td>Balance of payments, financial statistics, fiscal data, WEO forecasts</td><td>Macro and international finance</td></tr>
+      <tr><td><a href="https://fred.stlouisfed.org/" target="_blank" rel="noopener">FRED</a> (Federal Reserve Bank of St. Louis)</td><td>Hundreds of thousands of US and international time series, with an easy download and API</td><td>Time series; global variables such as oil prices and US rates</td></tr>
+      <tr><td><a href="https://www.rug.nl/ggdc/productivity/pwt/" target="_blank" rel="noopener">Penn World Table</a></td><td>Real GDP, capital, productivity and prices for about 180 countries</td><td>Growth accounting and convergence (Feenstra et al., 2015)</td></tr>
+      <tr><td><a href="https://ilostat.ilo.org/" target="_blank" rel="noopener">ILOSTAT</a></td><td>Labour statistics: employment, wages, informality</td><td>Labour markets across countries</td></tr>
+      <tr><td><a href="https://data-explorer.oecd.org/" target="_blank" rel="noopener">OECD Data Explorer</a></td><td>OECD statistics on economy, education, tax and trade</td><td>Comparisons with OECD economies</td></tr>
+      <tr><td><a href="https://kidb.adb.org/" target="_blank" rel="noopener">ADB Key Indicators Database</a></td><td>Asia–Pacific economic and social indicators</td><td>Regional panels for Asia</td></tr>
+      <tr><td><a href="https://comtradeplus.un.org/" target="_blank" rel="noopener">UN Comtrade</a></td><td>Detailed bilateral trade by product</td><td>Trade flows; gravity models</td></tr>
+      <tr class="group"><td colspan="3">Household, individual and firm microdata</td></tr>
+      <tr><td><a href="https://www.worldbank.org/en/publication/globalfindex" target="_blank" rel="noopener">Global Findex</a></td><td>Individual-level survey of account ownership, saving, borrowing and digital payments in more than 120 economies</td><td>Financial inclusion; digital payments</td></tr>
+      <tr><td><a href="https://www.enterprisesurveys.org/" target="_blank" rel="noopener">World Bank Enterprise Surveys</a></td><td>Firm-level surveys on finance, regulation, innovation</td><td>Firm performance and constraints</td></tr>
+      <tr><td><a href="https://international.ipums.org/" target="_blank" rel="noopener">IPUMS International</a></td><td>Harmonised census microdata from many countries</td><td>Migration, education, labour across countries</td></tr>
+      <tr><td><a href="https://dhsprogram.com/" target="_blank" rel="noopener">Demographic and Health Surveys</a></td><td>Household surveys on health, fertility and wealth in developing countries</td><td>Health and development economics</td></tr>
+      <tr><td><a href="https://www.lisdatacenter.org/" target="_blank" rel="noopener">Luxembourg Income Study</a></td><td>Harmonised household income microdata (remote access)</td><td>Inequality and poverty comparisons</td></tr>
+      <tr><td><a href="https://www.wider.unu.edu/database/world-income-inequality-database-wiid" target="_blank" rel="noopener">UNU-WIDER World Income Inequality Database</a></td><td>Gini coefficients and income shares across countries and years</td><td>Inequality panels</td></tr>
+      <tr class="group"><td colspan="3">Values, education and human capital</td></tr>
+      <tr><td><a href="https://www.worldvaluessurvey.org/" target="_blank" rel="noopener">World Values Survey</a></td><td>Individual-level values, trust, life satisfaction, in waves since 1981</td><td>Trust, culture and economic outcomes</td></tr>
+      <tr><td><a href="https://www.asianbarometer.org/" target="_blank" rel="noopener">Asian Barometer</a></td><td>Political attitudes and values in East and Southeast Asia</td><td>Institutions and attitudes</td></tr>
+      <tr><td><a href="https://www.oecd.org/en/about/programmes/pisa/pisa-data.html" target="_blank" rel="noopener">OECD PISA data</a></td><td>Student test scores and background questionnaires for 15-year-olds; Malaysia participates</td><td>Education production functions</td></tr>
+      <tr><td><a href="http://www.barrolee.com/" target="_blank" rel="noopener">Barro–Lee educational attainment</a></td><td>Years of schooling by country, five-year intervals</td><td>Human capital in growth regressions</td></tr>
+      <tr><td><a href="https://ourworldindata.org/" target="_blank" rel="noopener">Our World in Data</a></td><td>Charts and cleaned series compiled from primary sources</td><td>Exploration. Cite the original source it draws on, not the aggregator</td></tr>
+    </tbody>
+  </table>
+
+  <h2 id="c4-cite">Citing a dataset</h2>
+  <p>Treat a dataset like a publication: author (the organisation), year, title, version, “[Data set]”, publisher and URL, with the access date for data that change.</p>
+  <div class="box">
+    <p>World Bank. (2026). <i>World Development Indicators</i> [Data set]. https://databank.worldbank.org/source/world-development-indicators (accessed 14 January 2026).</p>
+    <p class="small">Penn World Table: cite the version you used and its documentation paper (Feenstra et al., 2015, for version 8 onwards), and record the version number, for example PWT 10.01 or 11.0.</p>
+  </div>
+
+  <h2 id="c4-merge">Combining datasets</h2>
+  <p>Theses often merge sources, such as WDI controls with PWT productivity. Merge on standard identifiers (ISO 3-letter country codes and year; DOSM state codes), check how many observations matched, and report the final sample.</p>
+  <x-listing title="Merging two country-year datasets and checking the match">
+<x-stata file="(example)">
+use wdi_extract.dta, clear                    // iso3 year inflation unemp growth
+merge 1:1 iso3 year using pwt_extract.dta     // iso3 year rgdpna ctfp
+tabulate _merge                               // 3 = matched in both
+keep if _merge == 3
+drop _merge
+</x-stata>
+<x-python file="(example)">
+wdi = pd.read_csv("wdi_extract.csv")          # iso3, year, inflation, unemp, growth
+pwt = pd.read_csv("pwt_extract.csv")          # iso3, year, rgdpna, ctfp
+m = wdi.merge(pwt, on=["iso3", "year"], how="outer", indicator=True, validate="one_to_one")
+print(m["_merge"].value_counts())             # both / left_only / right_only
+panel = m[m["_merge"] == "both"].drop(columns="_merge")
+</x-python>
+  </x-listing>
+  <aside class="ex-note is-query"><b>Examiner:</b> How many country-years were lost in the merge, and are the missing ones random? Report it.</aside>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Know who collected the data, how, and whether the definitions match your concepts.</li>
+      <li>Record version and access date; cite datasets like publications.</li>
+      <li>Report merges and the observations they cost.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Feenstra, R. C., Inklaar, R., &amp; Timmer, M. P. (2015). The next generation of the Penn World Table. <i>American Economic Review, 105</i>(10), 3150–3182.</li>
+      <li>Johnson, S., Larson, W., Papageorgiou, C., &amp; Subramanian, A. (2013). Is newer better? Penn World Table revisions and their impact on growth estimates. <i>Journal of Monetary Economics, 60</i>(2), 255–274.</li>
+      <li>Meyer, B. D., Mok, W. K. C., &amp; Sullivan, J. X. (2015). Household surveys in crisis. <i>Journal of Economic Perspectives, 29</i>(4), 199–226.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="c4-ex">Worked example: choosing data for a financial-inclusion thesis</h2>
+  <p>Research question: <em>Is mobile-money adoption associated with higher saving among adults in ASEAN economies?</em></p>
+  <table class="bt">
+    <caption><b>Table C4.2.</b> Candidate datasets, judged against the question</caption>
+    <thead><tr><th>Dataset</th><th>Fit</th><th>Problem</th><th>Decision</th></tr></thead>
+    <tbody>
+      <tr><td>Global Findex microdata</td><td>Individual adults; saving and digital-payment questions; several waves</td><td>Repeated cross-sections, not a panel; about 1,000 respondents per country-wave</td><td>Main dataset; pooled cross-sections with country and wave fixed effects</td></tr>
+      <tr><td>WDI country indicators</td><td>Country-level controls (GDP per capita, inflation)</td><td>Aggregates only</td><td>Merge as country-year controls</td></tr>
+      <tr><td>DOSM HIES microdata</td><td>Rich Malaysian household data</td><td>One country only; access by application</td><td>Robustness check for Malaysia if approved in time</td></tr>
+    </tbody>
+  </table>
+  <p>The design follows from the data: Findex is a set of repeated cross-sections, so the model is \(save_{ict} = \beta\, mobile_{ict} + \mathbf{x}_{ict}'\boldsymbol\gamma + \mu_c + \lambda_t + u_{ict}\), with individual \(i\), country \(c\) and wave \(t\), estimated with Findex's survey weights and standard errors clustered by country.</p>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="c4-ws">Worksheet C4</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Suggest a dataset for each question and state its unit and structure: (a) Did Malaysian state-level unemployment respond differently to the 2020 lockdown? (b) Does trust in institutions predict support for tax compliance across countries? (c) Has Malaysia's export structure diversified since 2000? <span class="ws-marks">(6 marks)</span></p>
+      <x-draft key="c4-q1"></x-draft>
+      <x-answer><p>(a) DOSM Labour Force Survey state estimates (via OpenDOSM): state-quarter or state-year panel. (b) World Values Survey: individuals in many countries across waves, so pooled cross-sections, with country effects. (c) UN Comtrade: Malaysia's exports by product and partner per year, a time series of product-level cross-sections; compute a diversification index each year.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Write a dataset citation and a one-sentence description for the Penn World Table version you would use. <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="c4-q2"></x-draft>
+      <x-answer><p>“Feenstra, R. C., Inklaar, R., &amp; Timmer, M. P. (2015). The next generation of the Penn World Table. American Economic Review, 105(10), 3150–3182; data: Penn World Table version 11.0, Groningen Growth and Development Centre, https://www.rug.nl/ggdc/productivity/pwt/ (accessed date).” Description: “PWT provides PPP-adjusted real GDP, capital stocks and total factor productivity for about 180 countries; the study uses real GDP at constant national prices (rgdpna) for 1990–2019.”</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="c4-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Why record the dataset version and download date?</legend>
+      <label class="opt"><input type="radio" name="c4q1" data-correct><span>Datasets are revised, and results can change between versions<span class="why">Yes (Johnson et al., 2013, show this for PWT).</span></span></label>
+      <label class="opt"><input type="radio" name="c4q1"><span>It is required only for paid datasets<span class="why">It matters for all data that are revised.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. You use a figure from Our World in Data. You should cite…</legend>
+      <label class="opt"><input type="radio" name="c4q2"><span>Our World in Data only<span class="why">It is an aggregator.</span></span></label>
+      <label class="opt"><input type="radio" name="c4q2" data-correct><span>the original source it compiles from<span class="why">Yes, and say where you retrieved it.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. Global Findex waves interview different adults each time. The structure is…</legend>
+      <label class="opt"><input type="radio" name="c4q3"><span>a panel<span class="why">A panel follows the same people.</span></span></label>
+      <label class="opt"><input type="radio" name="c4q3" data-correct><span>pooled cross-sections<span class="why">Yes.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

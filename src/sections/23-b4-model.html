@@ -1,0 +1,241 @@
+<!--meta
+id: b4
+group: B
+code: B4
+title: 3.4 Model specification
+short: 3.4 Model specification
+-->
+<header class="tab-head">
+  <h1 id="h-b4"><span class="secnum">B4</span>3.4 Model specification</h1>
+  <p class="lede">Section 3.4 states the econometric model that answers each research question: the estimating equation with every symbol defined, the estimator and why it suits the outcome and the identification problem, how inference is done, and how robustness will be checked. If your method is unusual, this is where you review the methodological literature that justifies it.</p>
+  <ul class="tab-facts"><li>About 40 minutes</li><li>Equation templates for 10 models</li><li>Stata and Python estimation</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>write an estimating equation with correct subscripts, error term and defined symbols;</li>
+      <li>choose an estimator from the outcome's measurement level, the data structure and the identification problem;</li>
+      <li>write a methodological justification for a less familiar estimator.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="b4-contents">What Section 3.4 contains</h2>
+  <ol>
+    <li><strong>The estimating equation(s)</strong>, numbered (3.1), (3.2)…, one per research question or model. Use subscripts that match the data structure: \(i\) for units, \(t\) for time, \(it\) for panels (<a href="#c2">C2</a>).</li>
+    <li><strong>A definition for every symbol</strong>: outcome, regressors (pointing to the codebook in 3.3), parameters, the error term, fixed effects.</li>
+    <li><strong>The estimator and its justification</strong>: why this estimator suits the outcome variable and your identification problem.</li>
+    <li><strong>The key assumptions</strong> and the diagnostic tests you will run.</li>
+    <li><strong>Inference</strong>: robust, clustered or bootstrapped standard errors, and why.</li>
+    <li><strong>What will be reported</strong>: coefficients, odds ratios, marginal effects, elasticities.</li>
+    <li><strong>Robustness checks</strong>: alternative estimators, samples, variable definitions.</li>
+    <li><strong>A short methodological review</strong> when the method is less standard (semi-nonparametric, partial proportional odds, fuzzy RD, spatial models), citing methods papers rather than textbook definitions.</li>
+  </ol>
+
+  <h2 id="b4-choose">Choosing the model from the outcome</h2>
+  <table class="bt">
+    <caption><b>Table B4.1.</b> Outcome variable, model and what to report</caption>
+    <thead><tr><th>Outcome variable</th><th>Example</th><th>Model</th><th>Report</th></tr></thead>
+    <tbody>
+      <tr><td>Continuous (interval or ratio)</td><td>Saving rate; log wage</td><td>OLS</td><td>Coefficients; elasticities for logs</td></tr>
+      <tr><td>Binary</td><td>Evacuated or not; uses an e-wallet</td><td>Logit, probit; linear probability model as a check</td><td>Average marginal effects; odds ratios</td></tr>
+      <tr><td>Ordinal</td><td>Five-point intention; income band</td><td>Ordered logit/probit; partial proportional odds if parallel lines fail</td><td>Marginal effects on each category's probability</td></tr>
+      <tr><td>Nominal, more than two categories</td><td>Bank, ASB, or no saving</td><td>Multinomial logit</td><td>Relative-risk ratios; marginal effects</td></tr>
+      <tr><td>Count</td><td>Number of children; days of use</td><td>Poisson, negative binomial (or OLS when counts are spread out)</td><td>Incidence-rate ratios; marginal effects</td></tr>
+      <tr><td>Censored at zero</td><td>Charitable giving with many zeros</td><td>Tobit; two-part model</td><td>Effects on the probability and on the amount</td></tr>
+      <tr><td>Fraction 0–1</td><td>Budget share for education</td><td>Fractional logit</td><td>Average marginal effects</td></tr>
+    </tbody>
+  </table>
+  <aside class="ex-note"><b>Examiner:</b> With a binary outcome, report marginal effects, not just logit coefficients. Readers cannot interpret a log-odds of 0.874.</aside>
+
+  <h2 id="b4-templates">Equation templates</h2>
+  <p>Copy the form that matches your design, and replace the generic \(x\) with your variables.</p>
+  <h3 id="b4-t-ols">Cross-section, continuous outcome (OLS)</h3>
+  <div class="formula">$$y_i = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \dots + \beta_k x_{ki} + u_i \tag{3.1}$$</div>
+  <h3 id="b4-t-logit">Binary outcome (logit)</h3>
+  <div class="formula">$$\Pr(y_i = 1 \mid \mathbf{x}_i) = \Lambda(\mathbf{x}_i'\boldsymbol\beta) = \dfrac{\exp(\mathbf{x}_i'\boldsymbol\beta)}{1 + \exp(\mathbf{x}_i'\boldsymbol\beta)} \tag{3.2}$$</div>
+  <h3 id="b4-t-ologit">Ordinal outcome (ordered logit)</h3>
+  <div class="formula">$$y_i^* = \mathbf{x}_i'\boldsymbol\beta + \varepsilon_i, \qquad y_i = j \text{ if } \kappa_{j-1} < y_i^* \le \kappa_j,\; j = 1,\dots,J \tag{3.3}$$</div>
+  <p>In the partial proportional odds model (Williams, 2006), some coefficients are allowed to differ across the cut-points \(j\): \(\Pr(y_i > j) = \Lambda(\alpha_j + \mathbf{x}_{1i}'\boldsymbol\beta_1 + \mathbf{x}_{2i}'\boldsymbol\beta_{2j})\).</p>
+  <h3 id="b4-t-mlogit">Nominal outcome (multinomial logit)</h3>
+  <div class="formula">$$\Pr(y_i = m \mid \mathbf{x}_i) = \dfrac{\exp(\mathbf{x}_i'\boldsymbol\beta_m)}{\displaystyle\sum_{h=1}^{M}\exp(\mathbf{x}_i'\boldsymbol\beta_h)}, \quad \boldsymbol\beta_1 = \mathbf{0} \tag{3.4}$$</div>
+  <h3 id="b4-t-ts">Time series (one unit, many periods)</h3>
+  <div class="formula">$$y_t = \beta_0 + \beta_1 x_t + \beta_2 y_{t-1} + u_t \tag{3.5}$$</div>
+  <h3 id="b4-t-did">Pooled cross-sections, difference-in-differences</h3>
+  <div class="formula">$$y_{it} = \beta_0 + \delta_0\, Post_t + \beta_1\, Treat_i + \delta_1 (Post_t \times Treat_i) + \mathbf{x}_{it}'\boldsymbol\gamma + u_{it} \tag{3.6}$$</div>
+  <h3 id="b4-t-fe">Panel, fixed effects</h3>
+  <div class="formula">$$y_{it} = \mathbf{x}_{it}'\boldsymbol\beta + a_i + \lambda_t + u_{it} \tag{3.7}$$</div>
+  <h3 id="b4-t-iv">Instrumental variables (two-stage least squares)</h3>
+  <div class="formula">$$x_i = \pi_0 + \pi_1 z_i + \mathbf{w}_i'\boldsymbol\pi + v_i, \qquad y_i = \beta_0 + \beta_1 \hat x_i + \mathbf{w}_i'\boldsymbol\gamma + u_i \tag{3.8}$$</div>
+  <h3 id="b4-t-rd">Regression discontinuity</h3>
+  <div class="formula">$$y_i = \alpha + \tau D_i + f(r_i - c) + D_i\, g(r_i - c) + u_i, \quad D_i = \mathbf{1}[r_i \ge c] \tag{3.9}$$</div>
+  <p>In a fuzzy RD, crossing the cut-off \(c\) raises the probability of treatment without determining it, and \(D_i\) instruments actual treatment, giving a first stage, a reduced form and a second stage (see <a href="#b2">B2</a>, Example 3).</p>
+  <aside class="ex-note is-query"><b>Examiner:</b> Why is there no error term in Equation (3.4)? Because a probability model has none. Know which of your equations should have one.</aside>
+
+  <h2 id="b4-inference">Inference: which standard errors?</h2>
+  <dl class="defs">
+    <dt>Heteroskedasticity-robust</dt><dd>The default for cross-sections (<code>vce(robust)</code> in Stata; <code>cov_type="HC1"</code> in Python).</dd>
+    <dt>Clustered</dt><dd>When observations are grouped (students in classes, households in villages, years within a state). Cluster at the level of treatment assignment or sampling (<code>vce(cluster id)</code>). With fewer than about 30 clusters, say how you deal with it (for example, a wild cluster bootstrap).</dd>
+    <dt>Newey–West (HAC)</dt><dd>For time series with serial correlation (<code>newey</code>).</dd>
+    <dt>Survey design</dt><dd>With complex survey data (strata, clusters, weights), use the design (<code>svyset</code> then <code>svy:</code>).</dd>
+  </dl>
+
+  <h2 id="b4-review">When the method needs a methodological review</h2>
+  <p>A standard estimator needs only a sentence and a textbook citation. A less familiar one needs a short review of the methods literature: what problem the method solves, why the usual alternative fails here, and evidence that the method works. Two examples:</p>
+  <ul>
+    <li><strong>Partial proportional odds.</strong> The ordered logit assumes each regressor's effect is the same at every cut-point (parallel lines). When a Brant test rejects this for some regressors, Williams (2006) shows how to relax it only for those, keeping the model parsimonious.</li>
+    <li><strong>Semi-nonparametric binary choice.</strong> Logit and probit fix the error distribution. Gallant and Nychka (1987) proposed approximating an unknown density with a Hermite series, so the error distribution is estimated rather than assumed. Soon et al. (2018) use this approach for flood evacuation decisions.</li>
+  </ul>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Number every equation, define every symbol, and match subscripts to the data structure.</li>
+      <li>The outcome's measurement level chooses the family of model; the identification problem chooses the design.</li>
+      <li>State the standard errors and what you will report; review the methods literature for non-standard estimators.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Gallant, A. R., &amp; Nychka, D. W. (1987). Semi-nonparametric maximum likelihood estimation. <i>Econometrica, 55</i>(2), 363–390.</li>
+      <li>Soon, J.-J., Kamaruddin, R., &amp; Anuar, A. R. (2018). Flood victims' evacuation decisions: A semi-nonparametric estimation. <i>International Journal of Emergency Services, 7</i>(2), 134–146.</li>
+      <li>Williams, R. (2006). Generalized ordered logit/partial proportional odds models for ordinal dependent variables. <i>The Stata Journal, 6</i>(1), 58–82.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="b4-ex">Worked example: three outcomes, three models</h2>
+  <p>The e-wallet survey (400 students, hypothetical) has three outcomes at three measurement levels, so Section 3.4 specifies three models. Here they are estimated on the clean data, using <code>06_model_specification.do</code> and its notebook.</p>
+  <x-listing title="Estimating the three models">
+<x-stata file="06_model_specification.do">
+use "$data/ewallet_survey_clean.dta", clear
+global X "PU PS EOU finlit female ln_allow urban"
+
+* RQ2: binary outcome. LPM for comparison, logit as the main model
+regress ewallet_user $X, vce(robust)
+logit ewallet_user $X, vce(robust) nolog
+margins, dydx(*)                                      // average marginal effects
+
+* RQ3: days of use in the past week, users only
+regress ewallet_days $X i.year_study if ewallet_user == 1, vce(robust)
+
+* RQ4: ordinal outcome
+ologit intention $X, vce(robust) nolog
+margins, dydx(PU) predict(outcome(5))                 // effect on Pr(strongly agree)
+</x-stata>
+<x-python file="06_model_specification.ipynb">
+import statsmodels.formula.api as smf
+from statsmodels.miscmodels.ordinal_model import OrderedModel
+
+df = load("ewallet_survey_clean.csv")
+X = "PU + PS + EOU + finlit + female + ln_allow + urban"
+
+lpm = smf.ols(f"ewallet_user ~ {X}", df).fit(cov_type="HC1")
+logit = smf.logit(f"ewallet_user ~ {X}", df).fit(disp=False, cov_type="HC1")
+print(logit.get_margeff(at="overall").summary_frame())        # average marginal effects
+
+ols_days = smf.ols(f"ewallet_days ~ {X} + C(year_study)", df[df["ewallet_user"] == 1]).fit(cov_type="HC1")
+
+d3 = df.dropna(subset=["intention", "PU", "PS", "EOU", "finlit", "female", "ln_allow", "urban"])
+ologit = OrderedModel(d3["intention"].astype(int), d3[["PU", "PS", "EOU", "finlit", "female", "ln_allow", "urban"]],
+                      distr="logit").fit(method="bfgs", disp=False)
+</x-python>
+  </x-listing>
+
+  <table class="bt">
+    <caption><b>Table B4.2.</b> Selected estimates (robust standard errors in parentheses; N = 394 after missing allowance)</caption>
+    <thead><tr><th></th><th class="num">LPM: user</th><th class="num">Logit: user</th><th class="num">Logit AME</th><th class="num">Ordered logit: intention</th></tr></thead>
+    <tbody>
+      <tr><th>PU</th><td class="num">0.128 (0.021)</td><td class="num">0.874 (0.153)</td><td class="num">0.119 (0.019)</td><td class="num">1.563 (0.133)</td></tr>
+      <tr><th>PS</th><td class="num">0.088 (0.020)</td><td class="num">0.618 (0.148)</td><td class="num">0.084 (0.018)</td><td class="num">0.923 (0.119)</td></tr>
+      <tr><th>EOU</th><td class="num">0.046 (0.022)</td><td class="num">0.320 (0.150)</td><td class="num">0.044 (0.020)</td><td class="num">0.705 (0.121)</td></tr>
+      <tr><th>finlit</th><td class="num">0.010 (0.019)</td><td class="num">0.092 (0.139)</td><td class="num">0.013 (0.019)</td><td class="num">0.006 (0.097)</td></tr>
+    </tbody>
+  </table>
+  <p class="table-note">Source: <code>06_model_specification.log</code>. Data are simulated for teaching.</p>
+  <h3 id="b4-interp">Reading the output</h3>
+  <ul>
+    <li>The LPM coefficient on PU (0.128) and the logit average marginal effect (0.119) tell the same story: one more point of perceived usefulness goes with a 12–13 percentage-point higher probability of using an e-wallet. When the two agree, the result does not hinge on the functional form.</li>
+    <li>The logit coefficient (0.874) is a change in log-odds; \(e^{0.874} = 2.40\) is the odds ratio.</li>
+    <li>Financial literacy has no detectable association with use once perceptions are controlled for. That is a substantive finding for Chapter 4, so the model is not “wrong”.</li>
+  </ul>
+  <p>The ordered logit's effect of PU on the probability of answering “strongly agree” is 0.162: one more point of PU goes with a 16-point higher chance of the top category.</p>
+</div>
+
+<div class="panel" data-panel="writeup" data-label="Write-up">
+  <h2 id="b4-wu">How it reads in the thesis</h2>
+  <figure class="specimen">
+    <div class="sheet">
+      <h3>3.4 Model specification</h3>
+      <h4>3.4.1 E-wallet use (RQ2)</h4>
+      <p>Because e-wallet use is binary, its association with perceptions is estimated with a logit model:</p>
+      <p>$$\Pr(user_i = 1 \mid \mathbf{x}_i) = \Lambda(\beta_0 + \beta_1 PU_i + \beta_2 PS_i + \beta_3 EOU_i + \beta_4 finlit_i + \mathbf{w}_i'\boldsymbol\gamma) \tag{3.1}$$</p>
+      <p><span class="anno">where \(\Lambda(\cdot)\) is the logistic distribution function, \(PU_i\), \(PS_i\) and \(EOU_i\) are respondent \(i\)'s perceived usefulness, perceived security and ease-of-use scores, \(finlit_i\) is the financial literacy score, and \(\mathbf{w}_i\) contains gender, log allowance and urban origin (Table 3.3).</span><span class="anno-n">1</span> <span class="anno">Results are reported as average marginal effects, and a linear probability model is estimated as a check on functional form.</span><span class="anno-n">2</span> <span class="anno">Standard errors are robust to heteroskedasticity; because respondents were sampled individually within faculties rather than in clusters, clustering is not required.</span><span class="anno-n">3</span></p>
+      <h4>3.4.2 Intention to continue (RQ4)</h4>
+      <p><span class="anno">Intention is measured on a five-point ordered scale, so it is modelled with an ordered logit (Equation 3.3). The parallel-lines assumption is tested with a Brant test; if it fails for a regressor, the partial proportional odds model (Williams, 2006) relaxes the assumption for that regressor only.</span><span class="anno-n">4</span></p>
+    </div>
+    <ol class="anno-notes">
+      <li>Every symbol defined, pointing to the codebook rather than repeating it.</li>
+      <li>What will be reported, plus a functional-form check.</li>
+      <li>The choice of standard errors is justified by the sampling design.</li>
+      <li>The model's key assumption, its test, and the fallback, with a methods citation.</li>
+    </ol>
+    <figcaption><b>Model write-up.</b> Adapt to your study.</figcaption>
+  </figure>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="b4-ws">Worksheet B4</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Write the estimating equation, with subscripts, for: household monthly saving (RM) regressed on financial literacy, income, age and number of children, using a 2024 household survey. Then rewrite it for a panel of the same households observed in 2020, 2022 and 2024 with household fixed effects. <span class="ws-marks">(6 marks)</span></p>
+      <x-draft key="b4-q1"></x-draft>
+      <x-answer>
+        <p>Cross-section: \(saving_i = \beta_0 + \beta_1 finlit_i + \beta_2 income_i + \beta_3 age_i + \beta_4 children_i + u_i\).</p>
+        <p>Panel: \(saving_{it} = \beta_1 finlit_{it} + \beta_2 income_{it} + \beta_3 children_{it} + a_i + \lambda_t + u_{it}\), \(t \in \{2020, 2022, 2024\}\). Age drops out (or is collinear with \(\lambda_t\) and \(a_i\)) because everyone ages two years between waves. The intercept is absorbed by the fixed effects.</p>
+      </x-answer>
+    </li>
+    <li class="ws-q">
+      <p>A student plans to estimate “the number of times a household used BNM's online banking in the past month” with OLS. Comment on the choice and suggest an alternative. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="b4-q2"></x-draft>
+      <x-answer><p>The outcome is a non-negative count, probably with many zeros and a long right tail. OLS can predict negative counts and gives poor inference here. Poisson regression with robust standard errors is the natural choice (consistent if the mean is correctly specified); a negative binomial model handles overdispersion. Report incidence-rate ratios or marginal effects. OLS can still be reported as a robustness check.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Write a three-sentence methodological justification for using clustered standard errors in a study of 1,200 students sampled by randomly selecting 40 tutorial classes. <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="b4-q3"></x-draft>
+      <x-answer><p>“Students were sampled in clusters (tutorial classes), and students in the same class share instructors and peer influences, so their errors are likely to be correlated. Ignoring this correlation would understate standard errors and overstate significance. Standard errors are therefore clustered at the class level, the level at which sampling took place; with 40 clusters, conventional cluster-robust inference is adequate.”</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="b4-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. Saving in a bank, in ASB, or not at all, as the outcome. The model is…</legend>
+      <label class="opt"><input type="radio" name="b4q1"><span>ordered logit<span class="why">The categories have no natural order.</span></span></label>
+      <label class="opt"><input type="radio" name="b4q1" data-correct><span>multinomial logit<span class="why">Yes: nominal outcome with three categories.</span></span></label>
+      <label class="opt"><input type="radio" name="b4q1"><span>Tobit<span class="why">Tobit is for a continuous outcome censored at a limit.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. In \(y_{it} = \mathbf{x}_{it}'\boldsymbol\beta + a_i + \lambda_t + u_{it}\), the term \(a_i\) is…</legend>
+      <label class="opt"><input type="radio" name="b4q2" data-correct><span>a unit fixed effect: time-invariant, unit-specific<span class="why">Yes.</span></span></label>
+      <label class="opt"><input type="radio" name="b4q2"><span>a time fixed effect<span class="why">That is \(\lambda_t\).</span></span></label>
+      <label class="opt"><input type="radio" name="b4q2"><span>the error term<span class="why">That is \(u_{it}\).</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. A logit coefficient of 0.874 means…</legend>
+      <label class="opt"><input type="radio" name="b4q3"><span>an 87.4 percentage-point higher probability<span class="why">Logit coefficients are on the log-odds scale, not probabilities.</span></span></label>
+      <label class="opt"><input type="radio" name="b4q3" data-correct><span>odds multiplied by \(e^{0.874} \approx 2.40\) per unit<span class="why">Yes. Report marginal effects for probabilities.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>4. Which standard errors suit students sampled by class?</legend>
+      <label class="opt"><input type="radio" name="b4q4"><span>Conventional OLS standard errors<span class="why">These assume independent errors.</span></span></label>
+      <label class="opt"><input type="radio" name="b4q4" data-correct><span>Clustered by class<span class="why">Yes. Cluster at the sampling or assignment level.</span></span></label>
+      <label class="opt"><input type="radio" name="b4q4"><span>Newey–West<span class="why">That is for serial correlation in time series.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

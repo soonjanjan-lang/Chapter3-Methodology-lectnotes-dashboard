@@ -1,0 +1,244 @@
+<!--meta
+id: c2
+group: C
+code: C2
+title: Data structures and how the model is written
+short: Data structures
+-->
+<header class="tab-head">
+  <h1 id="h-c2"><span class="secnum">C2</span>Data structures and how the model is written</h1>
+  <p class="lede">Cross-section, time series, pooled cross-sections and panel data answer different questions, and each changes how you write the econometric model: which subscripts appear, which terms you add, and which estimator you use.</p>
+  <ul class="tab-facts"><li>About 30 minutes</li><li>Four example datasets</li><li>Stata and Python estimation</li></ul>
+  <div class="outcomes">
+    <p>After this section you can:</p>
+    <ol>
+      <li>recognise the four data structures from a dataset's layout;</li>
+      <li>match a research question to the structure that can answer it;</li>
+      <li>write the model with the subscripts and terms each structure requires.</li>
+    </ol>
+  </div>
+</header>
+
+<div class="panel" data-panel="notes" data-label="Notes">
+  <h2 id="c2-cs">Cross-sectional data: many units, one point in time</h2>
+  <p>Each row is a different unit (individual, household, firm or country), all observed at roughly the same time.</p>
+  <table class="bt">
+    <caption><b>Table C2.1.</b> Cross-section: students in one semester (first 8 of 22 rows)</caption>
+    <thead><tr><th>Student_ID</th><th class="num">Study_Hours</th><th class="num">Attendance</th><th class="num">Sleep_Hours</th><th class="num">PT_Job</th><th class="num">HH_Income_k</th><th class="num">Final_Score</th><th>Gender</th><th class="num">Form</th></tr></thead>
+    <tbody>
+      <tr><td>STU001</td><td class="num">18</td><td class="num">100</td><td class="num">8</td><td class="num">1</td><td class="num">75</td><td class="num">96.7</td><td>Female</td><td class="num">5</td></tr>
+      <tr><td>STU002</td><td class="num">16</td><td class="num">78</td><td class="num">5</td><td class="num">0</td><td class="num">34</td><td class="num">77.0</td><td>Female</td><td class="num">5</td></tr>
+      <tr><td>STU003</td><td class="num">16</td><td class="num">88</td><td class="num">9</td><td class="num">1</td><td class="num">102</td><td class="num">95.0</td><td>Female</td><td class="num">3</td></tr>
+      <tr><td>STU004</td><td class="num">20</td><td class="num">91</td><td class="num">9</td><td class="num">1</td><td class="num">128</td><td class="num">98.0</td><td>Male</td><td class="num">2</td></tr>
+      <tr><td>STU005</td><td class="num">7</td><td class="num">64</td><td class="num">7</td><td class="num">1</td><td class="num">33</td><td class="num">62.6</td><td>Female</td><td class="num">5</td></tr>
+      <tr><td>STU006</td><td class="num">29</td><td class="num">61</td><td class="num">7</td><td class="num">1</td><td class="num">43</td><td class="num">100.0</td><td>Male</td><td class="num">1</td></tr>
+      <tr><td>STU007</td><td class="num">25</td><td class="num">63</td><td class="num">5</td><td class="num">1</td><td class="num">139</td><td class="num">100.0</td><td>Male</td><td class="num">5</td></tr>
+      <tr><td>STU008</td><td class="num">7</td><td class="num">90</td><td class="num">8</td><td class="num">0</td><td class="num">129</td><td class="num">84.6</td><td>Male</td><td class="num">3</td></tr>
+    </tbody>
+  </table>
+  <p>The model carries the unit subscript \(i\):</p>
+  <div class="formula">
+    $$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 x_3 + \dots + \beta_k x_k + u$$
+    $$y_i = \beta_0 + \beta_1 x_{1i} + \beta_2 x_{2i} + \beta_3 x_{3i} + \dots + \beta_k x_{ki} + u_i$$
+    $$Wage_i = \beta_0 + \beta_1 Educ_i + \beta_2 Exp_i + \beta_3 Age_i + \beta_4 Male_i + \beta_5 CGPA_i + u_i$$
+  </div>
+
+  <h2 id="c2-ts">Time-series data: one unit, many periods</h2>
+  <p>Each row is a different period for the same unit, usually a country.</p>
+  <table class="bt">
+    <caption><b>Table C2.2.</b> Time series: one economy, 2000–2023 (selected years; values as in the lecture notes)</caption>
+    <thead><tr><th>Year</th><th class="num">GDP (USDb)</th><th class="num">Unemployment</th><th class="num">Inflation</th><th class="num">Export (USDb)</th><th class="num">Import (USDb)</th></tr></thead>
+    <tbody>
+      <tr><td>2000</td><td class="num">102.15</td><td class="num">3.00</td><td class="num">1.53</td><td class="num">112.37</td><td class="num">94.35</td></tr>
+      <tr><td>2001</td><td class="num">101.05</td><td class="num">3.53</td><td class="num">1.42</td><td class="num">102.44</td><td class="num">86.25</td></tr>
+      <tr><td>2008</td><td class="num">241.95</td><td class="num">3.32</td><td class="num">5.44</td><td class="num">229.66</td><td class="num">178.11</td></tr>
+      <tr><td>2009</td><td class="num">211.85</td><td class="num">3.66</td><td class="num">0.58</td><td class="num">184.90</td><td class="num">143.89</td></tr>
+      <tr><td>2020</td><td class="num">337.46</td><td class="num">4.54</td><td class="num">−1.14</td><td class="num">207.80</td><td class="num">186.31</td></tr>
+      <tr><td>2023</td><td class="num">399.71</td><td class="num">3.87</td><td class="num">2.49</td><td class="num">274.13</td><td class="num">253.74</td></tr>
+    </tbody>
+  </table>
+  <p>The subscript is \(t\). One city or one country over time:</p>
+  <div class="formula">
+    $$y_t = \beta_0 + \beta_1 x_{1t} + \beta_2 x_{2t} + \beta_3 x_{3t} + \dots + \beta_k x_{kt} + u_t$$
+    $$Crimerate_t = \beta_0 + \beta_1 Unemp_t + \beta_2 PrisonPop_t + \beta_3 YoungMales_t + u_t$$
+    $$GDP_t = \beta_0 + \beta_1 EmpRate_t + \beta_2 InfRate_t + \beta_3 NetExp_t + u_t$$
+  </div>
+  <p>Time series bring their own issues: lags (\(y_{t-1}\)), trends, serial correlation (Newey–West standard errors), and non-stationarity (unit-root tests; cointegration or differencing).</p>
+  <aside class="ex-note"><b>Examiner:</b> With 24 annual observations, every extra lag costs you degrees of freedom. Justify the lag length.</aside>
+
+  <h2 id="c2-pooled">Pooled cross-sections: new units each period</h2>
+  <p>Several cross-sections taken at different times. Different units are drawn each time, independently, from the same population. A unit occasionally appears twice by chance, but you cannot follow anyone over time.</p>
+  <table class="bt">
+    <caption><b>Table C2.3.</b> Pooled cross-section: two survey years, different respondents (selected rows)</caption>
+    <thead><tr><th>Year</th><th>ID</th><th class="num">Age</th><th class="num">Income</th><th class="num">Educ_yrs</th><th>Employed</th></tr></thead>
+    <tbody>
+      <tr><td>2022</td><td>101</td><td class="num">25</td><td class="num">45,000</td><td class="num">14</td><td>Yes</td></tr>
+      <tr><td>2022</td><td>102</td><td class="num">34</td><td class="num">60,000</td><td class="num">16</td><td>Yes</td></tr>
+      <tr><td>2022</td><td>103</td><td class="num">22</td><td class="num">15,000</td><td class="num">12</td><td>No</td></tr>
+      <tr><td>2023</td><td>201</td><td class="num">28</td><td class="num">52,000</td><td class="num">14</td><td>Yes</td></tr>
+      <tr><td>2023</td><td>202</td><td class="num">31</td><td class="num">58,000</td><td class="num">16</td><td>Yes</td></tr>
+      <tr><td>2023</td><td>203</td><td class="num">40</td><td class="num">75,000</td><td class="num">16</td><td>Yes</td></tr>
+    </tbody>
+  </table>
+  <p>Pooling lets you ask whether relationships changed between periods, and it supports difference-in-differences. Kiel and McClain (1995) studied house prices near a planned incinerator, with houses sold in 1978 (before) and 1981 (after). The hypothesis \(H_0\) is that house prices fall if a house is located near the incinerator, where \(near = 1\) if within 3 km and 0 otherwise.</p>
+  <div class="formula">
+    $$Hprice_i = \beta_0 + \beta_1 near_i + u_i \qquad \text{(1981 only: mixes the effect with pre-existing differences)}$$
+    $$Hprice_i = \beta_0 + \beta_1\, year81_i + \beta_2\, near_i + \beta_3\, (year81_i \cdot near_i) + u_i$$
+  </div>
+  <p>\(\beta_3\) is the <strong>coefficient of interest</strong>: the difference-in-differences estimate of the incinerator's effect.</p>
+
+  <h2 id="c2-panel">Panel (longitudinal) data: the same units, many periods</h2>
+  <p>The same units are observed at several points in time. Each row is a unit–period pair.</p>
+  <table class="bt">
+    <caption><b>Table C2.4.</b> Panel: the same five countries, 2021–2023 (selected rows; values as in the lecture notes)</caption>
+    <thead><tr><th>Country</th><th>Year</th><th class="num">GDP (USDb)</th><th class="num">Inflation</th><th class="num">Unemp</th><th class="num">Pop (m)</th><th class="num">TradeBal (USDb)</th></tr></thead>
+    <tbody>
+      <tr><td>USA</td><td>2021</td><td class="num">23,315</td><td class="num">4.7</td><td class="num">5.3</td><td class="num">332</td><td class="num">−845</td></tr>
+      <tr><td>USA</td><td>2022</td><td class="num">25,462</td><td class="num">8.0</td><td class="num">3.6</td><td class="num">333</td><td class="num">−948</td></tr>
+      <tr><td>USA</td><td>2023</td><td class="num">27,360</td><td class="num">4.1</td><td class="num">3.6</td><td class="num">334</td><td class="num">−773</td></tr>
+      <tr><td>China</td><td>2021</td><td class="num">17,734</td><td class="num">0.9</td><td class="num">3.9</td><td class="num">1,412</td><td class="num">676</td></tr>
+      <tr><td>China</td><td>2022</td><td class="num">17,963</td><td class="num">2.0</td><td class="num">4.2</td><td class="num">1,412</td><td class="num">877</td></tr>
+      <tr><td>China</td><td>2023</td><td class="num">17,700</td><td class="num">0.2</td><td class="num">5.2</td><td class="num">1,410</td><td class="num">823</td></tr>
+    </tbody>
+  </table>
+  <p>The model carries both subscripts and, usually, unit and time effects:</p>
+  <div class="formula">
+    $$y_{it} = \beta_0 + \beta_1 x_{1it} + \dots + \beta_k x_{kit} + a_i + u_{it}$$
+    $$y_{it} = \beta_1 x_{1it} + \dots + \beta_k x_{kit} + a_i + \lambda_t + u_{it} \qquad \text{(two-way fixed effects)}$$
+    $$Saving_{it} = \beta_1 FinLit_{it} + \beta_2 Income_{it} + a_i + \lambda_t + u_{it}$$
+  </div>
+  <p>\(a_i\) captures everything about unit \(i\) that does not change over time, observed or not (geography, institutions, culture). \(\lambda_t\) captures shocks common to all units in year \(t\), such as 2020. Fixed effects remove \(a_i\) by comparing each unit with itself over time; random effects assume \(a_i\) is unrelated to the regressors. The Hausman test helps choose between them.</p>
+  <aside class="ex-note is-query"><b>Examiner:</b> If \(a_i\) is in the equation, tell me how you estimate it away. If it is not, tell me why you are sure there is no unobserved heterogeneity.</aside>
+
+  <h2 id="c2-match">Matching the data structure to the research question</h2>
+  <table class="bt">
+    <caption><b>Table C2.5.</b> Research questions and the structures that can answer them</caption>
+    <thead><tr><th>Research question</th><th>Structure</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>What factors correlate with household income in 2024?</td><td>Cross-section</td><td>One point in time is sufficient.</td></tr>
+      <tr><td>How has the inflation–unemployment relationship in Malaysia evolved?</td><td>Time series</td><td>One economy followed over time.</td></tr>
+      <tr><td>Did a 2020 policy change affect consumption patterns differently in 2024 compared with 2019?</td><td>Pooled cross-sections</td><td>Independent samples before and after the change.</td></tr>
+      <tr><td>Does retirement affect an individual's cognitive decline?</td><td>Panel</td><td>You need to observe the same people before and after retirement.</td></tr>
+    </tbody>
+  </table>
+
+  <section class="takeaways">
+    <h2>Key takeaways</h2>
+    <ol>
+      <li>Cross-section \(y_i\); time series \(y_t\); pooled cross-sections and panels \(y_{it}\), but only panels follow the same units.</li>
+      <li>Pooled cross-sections support before/after comparisons and DiD; panels add unit fixed effects.</li>
+      <li>Write the subscripts and the extra terms (\(a_i\), \(\lambda_t\), lags) that your structure requires.</li>
+    </ol>
+  </section>
+  <section class="refs">
+    <h2>References cited</h2>
+    <ul>
+      <li>Kiel, K. A., &amp; McClain, K. T. (1995). House prices during siting decision stages: The case of an incinerator from rumor through operation. <i>Journal of Environmental Economics and Management, 28</i>(2), 241–255.</li>
+      <li>Wooldridge, J. M. (2020). <i>Introductory econometrics: A modern approach</i> (7th ed.). Cengage. Chapters 1, 10, 13 and 14 cover the four structures.</li>
+    </ul>
+  </section>
+</div>
+
+<div class="panel" data-panel="example" data-label="Worked example">
+  <h2 id="c2-ex">Worked example: estimating each structure</h2>
+  <p>All four structures are estimated in <code>05_data_structures.do</code> and its notebook. The pooled and panel datasets are simulated, with known true values, so you can see each estimator succeed or fail.</p>
+  <x-listing title="One estimator per structure">
+<x-stata file="05_data_structures.do">
+* 1. Cross-section
+use "$data/ds_crosssection_students.dta", clear
+generate byte female = Gender == "Female"
+regress Final_Score Study_Hours Attendance Sleep_Hours PT_Job HH_Income_k female, vce(robust)
+
+* 2. Time series: declare the time variable, then lags work
+use "$data/ds_timeseries_macro.dta", clear
+tsset Year
+newey Inflation Unemployment L.Inflation, lag(2)
+
+* 3. Pooled cross-sections: difference-in-differences
+use "$data/pooled_incinerator_sim.dta", clear
+regress price i.y81##i.nearinc age rooms area, vce(robust)
+
+* 4. Panel: declare unit and time, then fixed effects
+use "$data/panel_states_sim.dta", clear
+encode state, generate(state_id)
+xtset state_id year
+xtreg saving_rate finlit_index income_k i.year, fe vce(cluster state_id)
+</x-stata>
+<x-python file="05_data_structures.ipynb">
+import statsmodels.formula.api as smf
+from linearmodels.panel import PanelOLS
+
+cs = load("ds_crosssection_students.csv")
+cs["female"] = (cs["Gender"] == "Female").astype(int)
+smf.ols("Final_Score ~ Study_Hours + Attendance + Sleep_Hours + PT_Job + HH_Income_k + female", cs).fit(cov_type="HC1")
+
+ts = load("ds_timeseries_macro.csv").set_index("Year")
+ts["Inflation_lag1"] = ts["Inflation"].shift(1)
+smf.ols("Inflation ~ Unemployment + Inflation_lag1", ts.dropna()).fit(cov_type="HAC", cov_kwds={"maxlags": 2})
+
+pool = load("pooled_incinerator_sim.csv")
+smf.ols("price ~ y81 * nearinc + age + rooms + area", pool).fit(cov_type="HC1")
+
+panel = load("panel_states_sim.csv").set_index(["state", "year"])
+PanelOLS.from_formula("saving_rate ~ finlit_index + income_k + EntityEffects + TimeEffects", panel).fit(
+    cov_type="clustered", cluster_entity=True)
+</x-python>
+  </x-listing>
+
+  <h3 id="c2-results">What the panel example shows</h3>
+  <table class="bt">
+    <caption><b>Table C2.6.</b> Effect of the financial literacy index on the saving rate, 13 states, 2012–2022 (simulated; true value 0.15)</caption>
+    <thead><tr><th>Estimator</th><th class="num">Coefficient</th><th class="num">Std. error</th><th>Verdict</th></tr></thead>
+    <tbody>
+      <tr><td>Pooled OLS with year dummies</td><td class="num">0.347</td><td class="num">0.070</td><td>Biased upwards: ignores \(a_i\), which is correlated with literacy</td></tr>
+      <tr><td>Two-way fixed effects (clustered)</td><td class="num">0.149</td><td class="num">0.029</td><td>Close to the true 0.15</td></tr>
+      <tr><td>Random effects (trend + 2020 dummy)</td><td class="num">0.175</td><td class="num">0.026</td><td>Biased; the Hausman test rejects RE (p &lt; 0.001)</td></tr>
+    </tbody>
+  </table>
+  <p>In the pooled incinerator data, the DiD estimate is −11,729 (robust SE 3,112) against a true −11,500. Without the 1978 comparison, the 1981 price gap would also include the area's pre-existing price disadvantage.</p>
+</div>
+
+<div class="panel" data-panel="worksheet" data-label="Worksheet">
+  <h2 id="c2-ws">Worksheet C2</h2>
+  <ol class="worksheet">
+    <li class="ws-q">
+      <p>Identify the structure: (a) DOSM's Household Income and Expenditure Survey 2019 and 2022, with different households in each; (b) the World Bank's GDP series for ASEAN-10, 1990–2023; (c) the Malaysian Labour Force Survey for 2023 alone; (d) Malaysia's quarterly GDP, 2000Q1–2024Q4. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="c2-q1"></x-draft>
+      <x-answer><p>(a) Pooled cross-sections, since different households are drawn in each round. (b) Panel: the same ten countries every year. (c) Cross-section. (d) Time series.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>Write the model for this question, with correct subscripts: “Does minimum-wage coverage affect employment across Malaysia's 13 states, 2012–2022, controlling for state GDP?” Name the term that handles time-invariant state characteristics. <span class="ws-marks">(4 marks)</span></p>
+      <x-draft key="c2-q2"></x-draft>
+      <x-answer><p>\(Emp_{st} = \beta_1 Coverage_{st} + \beta_2 \ln GDP_{st} + a_s + \lambda_t + u_{st}\), with \(s\) = state and \(t\) = year. \(a_s\) is the state fixed effect, absorbing time-invariant state characteristics; \(\lambda_t\) absorbs national shocks common to all states. Standard errors are clustered by state.</p></x-answer>
+    </li>
+    <li class="ws-q">
+      <p>In the incinerator model, what would \(\beta_2\) (the coefficient on <em>near</em>) measure, and why is it not the effect of the incinerator? <span class="ws-marks">(3 marks)</span></p>
+      <x-draft key="c2-q3"></x-draft>
+      <x-answer><p>\(\beta_2\) is the price difference between houses near and far from the site in 1978, before the incinerator was rumoured. It captures pre-existing differences in the neighbourhood (the site was chosen in a cheaper area), not the incinerator. The effect is \(\beta_3\), the extra change in the near group's prices between 1978 and 1981.</p></x-answer>
+    </li>
+  </ol>
+</div>
+
+<div class="panel" data-panel="quiz" data-label="Quiz">
+  <h2 id="c2-quiz">Check your understanding</h2>
+  <form class="quiz" onsubmit="return false">
+    <fieldset>
+      <legend>1. “Does retirement affect cognitive decline?” needs…</legend>
+      <label class="opt"><input type="radio" name="c2q1"><span>a cross-section<span class="why">One time point cannot show change within a person.</span></span></label>
+      <label class="opt"><input type="radio" name="c2q1" data-correct><span>a panel<span class="why">Yes. Observe the same people before and after retirement.</span></span></label>
+      <label class="opt"><input type="radio" name="c2q1"><span>a time series of national data<span class="why">National averages cannot show individual change.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>2. The correct subscript for a variable in a time series of one country is…</legend>
+      <label class="opt"><input type="radio" name="c2q2" data-correct><span>\(t\)<span class="why">Yes.</span></span></label>
+      <label class="opt"><input type="radio" name="c2q2"><span>\(i\)<span class="why">\(i\) indexes units in a cross-section.</span></span></label>
+      <label class="opt"><input type="radio" name="c2q2"><span>\(it\)<span class="why">\(it\) is for several units over time.</span></span></label>
+    </fieldset>
+    <fieldset>
+      <legend>3. In \(y_{it} = \mathbf{x}_{it}'\boldsymbol\beta + a_i + u_{it}\), fixed effects are preferred to random effects when…</legend>
+      <label class="opt"><input type="radio" name="c2q3" data-correct><span>\(a_i\) is correlated with the regressors<span class="why">Yes. RE is then inconsistent; Hausman tests this.</span></span></label>
+      <label class="opt"><input type="radio" name="c2q3"><span>there are many time periods<span class="why">The number of periods is not the criterion.</span></span></label>
+    </fieldset>
+    <div class="btn-row"><button type="button" class="btn" data-quiz-check>Check answers</button><button type="button" class="btn secondary" data-quiz-reset>Start again</button><p class="quiz-score" aria-live="polite"></p></div>
+  </form>
+</div>

@@ -1,0 +1,37 @@
+/* Print / PDF: every section, every panel, every model answer, on white paper. */
+@page { size: A4; margin: 18mm 17mm 20mm; }
+
+:root, :root[data-theme="dark"] {
+  --paper: #fff; --paper-sunk: #f4f1ea; --paper-raised: #fff;
+  --ink: #111; --ink-2: #333; --rule: #111; --hairline: #bbb;
+  --pen: #7a1a27; --highlight: #f1e1a6;
+  --code-kw: #7a1a27; --code-str: #1f5a3a; --code-num: #5a3d00; --code-com: #555; --code-fn: #1f3f8f;
+}
+html { font-size: 11.5pt !important; }
+body { background: #fff; color: #111; }
+
+.rail, .running-head, .scrim, .page-foot .pager, .subtabs, .tools, .copy-btn, .lang-switch,
+.skip-link, dialog, .draft, .draft-label, [data-quiz-check], [data-quiz-reset], .btn-row,
+.calc, .rl-filter, .sort-choices, .no-print { display: none !important; }
+
+.app { display: block; }
+main { padding: 0; container-type: normal; }
+.tab, .tab[hidden], .panel[hidden], pre[hidden] { display: block !important; }
+/* interactive-only panels stay on screen */
+.panel[data-panel="quiz"], .panel[data-panel="calculators"], .panel[data-panel="simulator"] { display: none !important; }
+.tab { max-width: none; break-before: page; }
+.tab:first-of-type { break-before: auto; }
+.panel { display: block; }
+.panel::before { content: attr(data-panel); display: block; font-family: var(--font-display); font-weight: 700; text-transform: capitalize; margin: 1.2em 0 0.4em; border-bottom: 1px solid #999; }
+.panel[data-panel="notes"]::before { content: none; }
+.ex-note { break-inside: avoid; }
+h1, h2, h3, h4 { break-after: avoid; }
+table, figure, .listing, .sheet, details.answer { break-inside: avoid; }
+.listing { background: #fafafa; }
+.listing pre { white-space: pre-wrap; font-size: 9.5pt; }
+details.answer > summary { display: none; }
+details.answer > .answer-body { box-shadow: none; border-left: 0; }
+details.answer > .answer-body::before { content: "Model answer"; display: block; font-weight: 700; color: var(--pen); margin-bottom: 0.3em; }
+a { color: inherit; text-decoration: none; }
+.sheet { box-shadow: none; }
+.colophon { margin-top: 2em; }
